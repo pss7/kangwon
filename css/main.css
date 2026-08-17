@@ -43,6 +43,8 @@
 
 
 /* 공통 - 레이아웃 */
+.sectionWrap .container{max-width: 1920px; padding: 0;}
+.sectionWrap .sectionLayoutBox{display: flex; height: 100%;}
 .sectionWrap{display: flex; border: 1px solid #666; border-width: 1px 0 0 0; overflow: hidden;}
 .sectionWrap .titleBox{flex-shrink: 0; padding:60px 50px 0 0; width: 320px; border-right: 1px solid #666; text-align: right;}
 .sectionWrap .layoutBox{flex: 1; display: flex; }
@@ -78,6 +80,13 @@
 .sectionWrap.active .titleBox,
 .sectionWrap.active .layoutBox{animation: fadeEffect 1s .2s both;}
 .sectionWrap.active .layoutBox{animation-delay: .5s;}
+
+@media (max-width: 1480px){
+
+    #reserveWrap .sectionLayoutBox,
+    #calendarWrap .sectionLayoutBox{flex-direction: column;}
+
+}
 
 @media (max-width: 1199px){
 
@@ -224,6 +233,7 @@
 
 /* 활성화, 호버 */
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .3);}
+#reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active{border: 1px solid #fff;}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{background-color: #1D439C;}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveWeekday{background-color: #fff; color: #1D439C; font-weight: 700;}
 #reserveWrap .reserveList li a:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .2);}
@@ -237,7 +247,6 @@
 
 @media (max-width: 1480px){
 
-    #reserveWrap{flex-direction: column;}
     #reserveWrap .titleBox{width: 100%; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, .6); border-right: 0;}
     #reserveWrap .reserveListBox,
     #reserveWrap .reserveCalendarBox{width: 50%; padding: 0 20px;} 
@@ -279,13 +288,13 @@
     #reserveWrap .titleBox .enTitle,
     #reserveWrap .reserveDate,
     #reserveWrap .reserveCalendarBox .reserveWeek strong{color: #1D439C;}
-    #reserveWrap .reserveCalendarBox .reserveDateList li{box-shadow: 0 10px 10px rgba(0,0,0,.1);}
-    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{color: #fff;}
+   
     #reserveWrap .reserveCalendarBox .reserveDateList li span{color: #333;}
     #reserveWrap .reserveList li a,
-    #reserveWrap .reserveCalendarBox .reserveDateList li{border: 1px solid #ccc;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn{border: 1px solid #ccc; box-shadow: 0 10px 10px rgba(0,0,0,.1);}
     #reserveWrap .reserveList li .reserveTime,
     #reserveWrap .reserveList li .reserveEquipment{color: #333;}
+     #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{color: #fff;}
         
 }   
 

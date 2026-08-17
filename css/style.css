@@ -19,7 +19,7 @@
 .primaryColor{color: #0066FF;}
 
 /* 가운데영역 */
-.container{max-width: 1560px; margin: 0 auto; padding: 0 20px;}
+.container{max-width: 1560px; width: 100%; margin: 0 auto; padding: 0 20px;}
 
 /* 헤더 */
 #headerWrap::after{content: ''; opacity: 0; visibility: hidden; position: absolute;  left:0; right:0; bottom: 0; height: 15px; box-shadow:  0 10px 10px rgba(0,0,0,.1); transition: all .3s;}
