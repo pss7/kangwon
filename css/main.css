@@ -1,0 +1,676 @@
+@charset "UTF-8";
+
+/* 공통 - 제목 */
+.titleBox .title{color: #333; font-size: 30px; font-weight: 700; font-family: 'HD';}
+.titleBox .enTitle{font-weight: 800; font-size: 40px; color: #fff; text-shadow: 0 0 30px rgba(1, 145, 68, .6);} 
+
+@media (max-width: 1199px){
+
+    .titleBox .title{font-size: 26px;}
+    .titleBox .enTitle{font-size: 30px;}
+
+}
+
+@media (max-width: 1199px){
+
+    .titleBox .title{font-size: 24px;}
+    .titleBox .enTitle{font-size: 28px;}
+
+}
+
+@media (max-width: 768px){
+
+    .titleBox .title{font-size: 22px;}
+    .titleBox .enTitle{font-size: 26px;}
+
+}
+
+/* 공통 - 애니메이션 */
+.fadeEffect{animation: fadeEffect 1.5s .3s both;}
+
+@keyframes fadeEffect {
+
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+
+/* 공통 - 레이아웃 */
+.sectionWrap{display: flex; border: 1px solid #666; border-width: 1px 0 0 0; overflow: hidden;}
+.sectionWrap .titleBox{flex-shrink: 0; padding:60px 50px 0 0; width: 320px; border-right: 1px solid #666; text-align: right;}
+.sectionWrap .layoutBox{flex: 1; display: flex; }
+#reserveWrap .titleBox{padding-top: 96px;}
+#calendarWrap .titleBox .title,
+#reserveWrap .titleBox .title{color: #fff;}
+#calendarWrap .titleBox .enTitle,
+#reserveWrap .titleBox .enTitle{color: #7C8EA7; text-shadow: 0 0 30px rgba(13, 79, 201, .2);}
+#calendarWrap,
+#reserveWrap,
+#calendarWrap .titleBox,
+#reserveWrap .titleBox{border-color: #fff;}
+
+.sectionWrap .titleBox em{display: inline-block; animation: fadeEffect 1.5s .3s both;}
+.sectionWrap .titleBox .enTitle em:nth-child(1){animation-delay: .3s;}
+.sectionWrap .titleBox .enTitle em:nth-child(2){animation-delay: .4s;}
+.sectionWrap .titleBox .enTitle em:nth-child(3){animation-delay: .5s;}
+.sectionWrap .titleBox .enTitle em:nth-child(4){animation-delay: .6s;}
+.sectionWrap .titleBox .enTitle em:nth-child(5){animation-delay: .7s;}
+.sectionWrap .titleBox .enTitle em:nth-child(6){animation-delay: .8s;}
+.sectionWrap .titleBox .enTitle em:nth-child(7){animation-delay: .9s;}
+.sectionWrap .titleBox .enTitle em:nth-child(8){animation-delay: 1s;}
+.sectionWrap .titleBox .enTitle em:nth-child(9){animation-delay: 1.1s;}
+.sectionWrap .titleBox .enTitle em:nth-child(10){animation-delay: 1.2s;}
+.sectionWrap .titleBox .enTitle em:nth-child(11){animation-delay: 1.3s;}
+.sectionWrap .titleBox .enTitle em:nth-child(12){animation-delay: 1.4s;}
+.sectionWrap .titleBox .enTitle em:nth-child(13){animation-delay: 1.5s;}
+.sectionWrap .titleBox .enTitle em:nth-child(14){animation-delay: 1.6s;}
+.sectionWrap .titleBox .enTitle em:nth-child(15){animation-delay: 1.7s;}
+
+.sectionWrap .titleBox,
+.sectionWrap .layoutBox{opacity: 0;}
+.sectionWrap.active .titleBox,
+.sectionWrap.active .layoutBox{animation: fadeEffect 1s .2s both;}
+.sectionWrap.active .layoutBox{animation-delay: .5s;}
+
+@media (max-width: 1199px){
+
+    .sectionWrap .titleBox{width: 240px;}
+
+}
+
+@media (max-width: 768px){
+    
+    .sectionWrap{flex-direction: column;}
+    .sectionWrap .titleBox{width: 100%; padding: 60px 20px; text-align: center; border: 0;}
+    .sectionWrap .titleBox{border-bottom: 1px solid #ccc;}
+
+}
+
+/* 비주얼영역 */
+#visualWrap{position: relative; height: 954px; margin-bottom: -429px; overflow: hidden;}
+#visualWrap .visualImgBox{position: absolute; top:0; left:0; right:0; bottom: 0; }
+#visualWrap .visualImgBox::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main_bg.png)no-repeat center / cover;}
+#visualWrap .visualImgBox img{display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.7); transition: all 8s;}
+#visualWrap .visualTitleBox{position: relative; padding-top: 148px;} 
+#visualWrap .visualLayoutBox{display: flex; align-items: flex-start; justify-content: space-between; gap: 0 30px;}
+#visualWrap .visualTextBox .visualTitle{opacity: 0; margin-bottom: 30px; color: #fff; font-size: 60px; font-family: 'HD'; line-height: 1.1; word-break: keep-all; letter-spacing: 5px; filter: blur(5px); transition: all 3s;}
+#visualWrap .visualTextBox .visualText{color: #fff; font-weight: 500; word-break: keep-all;}
+#visualWrap .visualLinkBox{padding-top: 130px; animation-delay: .8s;}
+#visualWrap .visualLinkBox .visualTabBtnBox{display: flex; gap: 10px; margin-bottom: 26px;}
+#visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{position: relative; padding: 9px 24px; border: 1px solid rgba(255,255,255.5); background: rgba(255,255,255, .2); border-radius: 8px; font-size: 18px; font-weight: 500; font-family: 'HD'; color: #fff; overflow: hidden; z-index: 1; word-break: keep-all;}
+#visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn::before{content: ''; width: 0; position: absolute; top:0; left:0; bottom: 0; width: 0; background-color: #fff; transition: all .3s; z-index: -1;}
+#visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn:hover::before{width: 100%;}
+#visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn:hover{color: #1D439C; border: 1px solid #fff;}
+#visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn.active{background-color: #fff; color: #1D439C; border: 1px solid #fff;}
+#visualWrap .visualLinkBox .visualLinkList{display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px 24px;}
+#visualWrap .visualLinkBox .visualLinkList li a{display: block;}
+#visualWrap .visualLinkBox .visualLinkList li:nth-child(1) a{animation-delay: .1s;}
+#visualWrap .visualLinkBox .visualLinkList li:nth-child(2) a{animation-delay: .2s;}
+#visualWrap .visualLinkBox .visualLinkList li:nth-child(3) a{animation-delay: .3s;}
+#visualWrap .visualLinkBox .visualLinkList li:nth-child(4) a{animation-delay: .4s;}
+#visualWrap .visualLinkBox .visualLinkList li:nth-child(5) a{animation-delay: .5s;}
+#visualWrap .visualLinkBox .visualLinkList li:nth-child(6) a{animation-delay: .6s;}
+#visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{margin:0 auto 14px; display: flex; align-items: center; justify-content: center; width: 120px; height: 120px; border-radius: 50%; border: 1px solid rgba(255, 255, 225, .5); background: rgba(255,255,255,.2); transition: all .3s;}
+#visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img{display: block;}
+#visualWrap .visualLinkBox .visualLinkList li a h3{text-align: center; font-size: 14px; font-weight: 500; color: #fff; line-height: 1.2;}
+
+/* 활성화, 호버 */
+#visualWrap.active .visualImgBox img{transform: scale(1);}
+#visualWrap.active .visualTextBox .visualTitle{opacity: 1; filter: blur(0); letter-spacing: 0;}
+#visualWrap .visualLinkBox .visualLinkList li a:hover .visualLinkIconBox{transform: translateY(-7px); background-color: #fff;}
+
+@media (max-width: 1480px) {
+    
+    #visualWrap{height: 1249px; margin-bottom: -640px;}
+    #visualWrap .container,
+    #visualWrap .visualBox,
+    #visualWrap .visualLayoutBox{height: 100%;}
+    #visualWrap .visualTitleBox{padding-top: 112px;}
+    #visualWrap .visualTextBox .visualTitle{font-size: 42px;}
+    #visualWrap .visualLayoutBox{flex-direction: column; align-items: center; justify-content: center; gap: 60px 0;}
+    #visualWrap .visualLinkBox{padding-top: 0; margin-bottom: 0;}
+    #visualWrap .visualLinkBox .visualTabBtnBox{margin-bottom: 40px; justify-content: center;}
+    #visualWrap .visualTextBox .visualText,
+    #visualWrap .visualTextBox .visualTitle{text-align: center;}
+
+}
+
+@media (max-width: 1199px){
+
+    #visualWrap{height: 1212px; margin-bottom: -613px;}
+
+}
+
+@media (max-width: 1024px){
+
+    #visualWrap{position: relative; height: 100vh; margin-bottom: 0;}
+    #visualWrap .visualTitleBox{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -57%); padding-top: 0;}
+
+}
+
+@media (max-width: 960px){
+
+    #visualWrap .visualLayoutBox{gap: 46px 0;}
+    #visualWrap .visualTextBox .visualTitle{margin-bottom: 20px; font-size: 36px;}
+    #visualWrap .visualLinkBox{width: 100%;}
+    #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{font-size: 16px;}
+    #visualWrap .visualLinkBox .visualLinkList{grid-template-columns: repeat(3, 1fr);}
+    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{width: 100px; height: 100px;}
+    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img{width: 50px;}
+    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img.visualIcon01{width: 60px;}
+
+}
+
+@media (max-width: 480px){
+
+    #visualWrap .visualLayoutBox{gap: 37px 0;}
+    #visualWrap .visualTextBox .visualTitle{ font-size: 28px;}
+    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{margin: 0 auto 6px; width: 80px; height: 80px;}
+    #visualWrap .visualLinkBox .visualLinkList li a h3{font-size: 12px;}
+    #visualWrap .visualLinkBox .visualTabBtnBox{margin-bottom: 28px;}
+    #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{font-size: 14px;}
+    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img{width: 40px;}
+    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img.visualIcon01{width: 50px;}
+
+}
+
+@media (max-width: 414px){
+
+    #visualWrap .visualLinkBox .visualLinkList{grid-template-columns: repeat(2, 1fr);}
+
+}
+
+/* 예약현황 영역 */
+#reserveWrap .titleBox,
+#reserveWrap .layoutBox{animation: fadeEffect 1.5s .3s both;}
+#reserveWrap{position: relative; z-index: 999; min-height: 429px; background-color: rgba(2, 18, 54, 0.2); backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);}
+#reserveWrap .reserveLayoutBox{padding: 34px 0;}
+#reserveWrap .reserveListBox,
+#reserveWrap .reserveCalendarBox{padding: 48px 80px 0;}
+#reserveWrap .reserveCalendarBox{max-width: 640px; width: 100%; border-right: 1px solid rgba(255,255,255, .6);}
+#reserveWrap .reserveCalendarBox .reserveWeekBox{padding-left: 44px;}
+#reserveWrap .reserveCalendarBox .reserveWeek{display: block; margin-bottom: 38px; font-size: 24px; font-weight: 700; color: #fff; font-family: 'HD';}
+#reserveWrap .reserveCalendarBox .reserveWeek strong{color: #49F498;} 
+#reserveWrap .reserveCalendarBox .reserveDateList{width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;}
+#reserveWrap .reserveCalendarBox .reserveDateList li{ max-width: 70px; width: 100%; height: 100px;}
+#reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn{width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;  border: 1px solid rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .2); border-radius: 8px; overflow: hidden;}
+#reserveWrap .reserveCalendarBox .reserveDateList li span{display: block; padding: 12px 0; width: 100%; font-family: 'HD'; color: #fff;}
+#reserveWrap .reserveCalendarBox .reserveDateList li .reserveDay{font-weight: 700; font-size: 20px; transition: all .3s;}
+#reserveWrap .reserveCalendarBox .reserveDateList li .reserveWeekday{height: 100%; font-weight: 500; font-size: 18px; transition: all .3s;}
+#reserveWrap .reserveCalendarBox .reserveDateBox{display: flex; align-items: center; gap: 0 20px;}
+#reserveWrap .reserveCalendarBox .reserveDateBox .reserveArrowBtn{flex-shrink: 0; position: relative; width: 24px; height: 24px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 4px rgba(0,0,0,25%);}
+#reserveWrap .reserveCalendarBox .reserveDateBox .reserveArrowBtn::before{content: ''; width: 7px; height: 10px; position: absolute;top: 50%;left: 50%; transform: translate(-50%, -50%);}
+#reserveWrap .reserveCalendarBox .reserveDateBox .reservePrev::before{background: url(../images/main/arrow_icon03.svg)no-repeat center;}
+#reserveWrap .reserveCalendarBox .reserveDateBox .reserveNext::before{background: url(../images/main/arrow_icon03.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
+#reserveWrap .reserveListBox{flex: auto; display: flex; align-items: flex-start; gap: 15px;}
+#reserveWrap .reserveDate{min-width: 102px; font-size: 18px; font-weight: 700; color: #49F498; font-family: 'HD';} 
+#reserveWrap .reserveList{max-width: 602px; width: 100%; }
+#reserveWrap .reserveList li{margin-bottom: 14px;}
+#reserveWrap .reserveList li a{display: block; padding: 15px 20px; display: flex; align-items: center; border: 1px solid rgba(255,255,255, .5); background: rgba(255,255,255,.1); border-radius: 8px;}
+#reserveWrap .reserveList li:last-child{margin-bottom: 0;}
+#reserveWrap .reserveList li .reserveCategory{margin-right: 14px;padding: 2px 8px;
+    border-radius: 8px; color: #fff; font-size: 14px; font-weight: 500;}  
+#reserveWrap .reserveList li .reserveEquipment{padding-right: 10px; flex: 1; font-weight: 500; color: #fff;}
+#reserveWrap .reserveList li .reserveTime{justify-self: flex-end; font-weight: 700; font-size: 14px; color: #fff;}
+
+/* 활성화, 호버 */
+#reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .3);}
+#reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{background-color: #1D439C;}
+#reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveWeekday{background-color: #fff; color: #1D439C; font-weight: 700;}
+#reserveWrap .reserveList li a:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .2);}
+
+@media (max-width: 1580px){
+
+    #reserveWrap .reserveListBox{flex-direction: column;}
+    #reserveWrap .reserveDate{min-width: 0; width: 100%;}
+
+}
+
+@media (max-width: 1480px){
+
+    #reserveWrap{flex-direction: column;}
+    #reserveWrap .titleBox{width: 100%; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, .6); border-right: 0;}
+    #reserveWrap .reserveListBox,
+    #reserveWrap .reserveCalendarBox{width: 50%; padding: 0 20px;} 
+    #reserveWrap .reserveList{max-width: none;}
+    #reserveWrap .reserveLayoutBox{padding: 50px 0;}
+    #reserveWrap .titleBox{padding: 60px 20px;}
+    #reserveWrap .reserveCalendarBox{max-width: none;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li{max-width: none;}
+    #reserveWrap .reserveCalendarBox .reserveWeek{margin-bottom: 30px;}    
+
+}
+
+@media (max-width: 1199px){
+
+    #reserveWrap .reserveCalendarBox .reserveWeek{margin-bottom: 22px; font-size: 20px;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDay{font-size: 18px;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveWeekday{font-size: 16px;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li{height: 92px;}
+    #reserveWrap .reserveCalendarBox .reserveDateBox .reserveArrowBtn{display: none;}
+   
+}
+
+@media (max-width: 1024px){
+
+    #reserveWrap{border-color: #666; background-color: transparent;}
+    #reserveWrap .titleBox .title{color: #333;}
+    #reserveWrap .titleBox{border-color: #666;}
+    #reserveWrap .reserveLayoutBox{padding: 0; flex-direction: column; align-items: center;}
+    #reserveWrap .reserveCalendarBox .reserveWeek{padding: 0; text-align: center;}
+    #reserveWrap .reserveCalendarBox .reserveDateBox{justify-content: center;}
+    #reserveWrap .reserveCalendarBox{max-width: none; border-right: 0; border-bottom: 1px solid #666;}
+
+    #reserveWrap .reserveListBox, 
+    #reserveWrap .reserveCalendarBox{width: 100%; padding: 40px 20px;}
+    #reserveWrap .reserveDate{text-align: center;}
+    #reserveWrap .reserveCalendarBox .reserveWeekBox{padding: 0;}
+    #reserveWrap .reserveCalendarBox .reserveWeek{color: #333}
+    #reserveWrap .titleBox .enTitle{text-shadow: 0 0 30px rgba(13, 79, 201, .6);}
+    #reserveWrap .titleBox .enTitle,
+    #reserveWrap .reserveDate,
+    #reserveWrap .reserveCalendarBox .reserveWeek strong{color: #1D439C;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li{box-shadow: 0 10px 10px rgba(0,0,0,.1);}
+    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{color: #fff;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li span{color: #333;}
+    #reserveWrap .reserveList li a,
+    #reserveWrap .reserveCalendarBox .reserveDateList li{border: 1px solid #ccc;}
+    #reserveWrap .reserveList li .reserveTime,
+    #reserveWrap .reserveList li .reserveEquipment{color: #333;}
+        
+}   
+
+@media (max-width: 768px){
+
+    #reserveWrap .reserveCalendarBox .reserveWeek{font-size: 18px;}
+
+}
+
+@media (max-width: 480px){
+
+    #reserveWrap .reserveList li .reserveTime{display: none;}
+    #reserveWrap .reserveList li .reserveEquipment{padding-right: 0;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li{height: 87px;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDay{font-size: 16px;}
+    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveWeekday{font-size: 14px;}
+    #reserveWrap .reserveList li a .reserveEquipment{font-size: 15px;}
+
+}
+
+@media (max-width: 414px){
+
+    #visualWrap .visualTitleBox{transform: translate(-50%, -54%);}
+
+}
+
+/* 연구소개 영역 */
+#researchWrap .researchLinkBox{max-width: 917px; width: 100%;}
+#researchWrap .researchLinkBox .researchTitleBox{justify-self: flex-start; padding: 52px 20px 52px 52px;}
+#researchWrap .researchLinkBox .researchTitleBox span,
+#researchWrap .researchLinkBox .researchTitleBox h4{display: block; font-weight: 500; color: #333; font-size: 40px; font-family: 'HD'; line-height: 1.2;}
+#researchWrap .researchLinkBox .researchTitleBox h4{margin-bottom: 5px;}
+#researchWrap .researchLinkBox .researchTitleBox p{position: relative; padding: 0 10px; color: #fff; font-size: 30px; font-weight: 500; z-index: 1;}
+#researchWrap .researchLinkBox .researchTitleBox p::before{content: ''; position: absolute; top:0; left:0; width: 0; bottom: 0;  background-color: #333; z-index: -1; transition: all .7s 1s;}
+#researchWrap .researchLinkBox .researchLinkList{display: grid; grid-template-columns: repeat(3, 1fr);}
+#researchWrap .researchLinkBox .researchLinkList li{margin-bottom: -1px;}
+#researchWrap .researchLinkBox .researchLinkList li:nth-child(n + 4) a{border-bottom: 0;}
+#researchWrap .researchLinkBox .researchLinkList li:nth-child(3n) a{border-right: 0;}
+#researchWrap .researchLinkBox .researchLinkList li a{display: flex; align-items: flex-end; justify-content: flex-end; padding: 24px; position: relative; height: 194px; border: 1px solid #ccc; border-width: 1px 1px 1px 0; transition: all .3s;}
+#researchWrap .researchLinkBox .researchLinkList li a span{display: flex; align-items: center; gap: 0 12px; color: #555; font-size: 20px; word-break: keep-all;}
+#researchWrap .researchLinkBox .researchLinkList li a span::after{content: ''; flex-shrink: 0; width: 21px; height: 21px; background: url(../images/main/arrow_icon01.svg)no-repeat center / contain; transition: all .3s;}
+#researchWrap .researchSlideBox{position: relative; flex-shrink: 0; width: 523px; border: 1px solid #666; border-width: 0 1px 0 1px;}
+#researchWrap .researchSlideBox .researchSlide img{display: block; width: 100%; height: 100%; object-fit: cover;}
+#researchWrap .researchSlideBox .controlBox{display: flex; gap: 0 16px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 35px;}
+#researchWrap .researchSlideBox .controlBox .controlBtn{position: relative; width: 40px; height: 40px; border-radius: 50%; background-color: #fff;}
+#researchWrap .researchSlideBox .controlBox .controlBtn::after{content: ''; width: 21px; height: 21px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#researchWrap .researchSlideBox .controlBox .prev::after{background: url(../images/main/arrow_icon02.svg)no-repeat center;}
+#researchWrap .researchSlideBox .controlBox .next::after{background: url(../images/main/arrow_icon02.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
+#researchWrap .researchLayoutBox{margin: 90px 0 0; border-top: 1px solid #666;}
+
+/* 활성화, 호버 */
+#researchWrap .researchLinkBox .researchLinkList li a:hover{background-color: #1D439C; border-color: #1D439C;}
+#researchWrap .researchLinkBox .researchLinkList li a:hover span::after{background: url(../images/main/arrow_icon06.svg)no-repeat center / contain; animation: arrowMove .8s infinite;}
+#researchWrap .researchLinkBox .researchLinkList li a:hover span{color: #fff;}
+#researchWrap.active .researchLinkBox .researchTitleBox p::before{width: 100%;}
+
+@keyframes arrowMove{
+    0%, 100%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(5px);
+    }
+}
+
+@media (max-width: 1480px){
+
+    #researchWrap .researchSlideBox{width: 435px;}
+    #researchWrap .researchSlideBox .slick-slider,
+    #researchWrap .researchSlideBox .slick-track,
+    #researchWrap .researchSlideBox .slick-list,
+    #researchWrap .researchSlideBox .slick-slide{height: 100%;}
+
+}
+
+@media (max-width: 1199px){
+
+    #researchWrap .researchLinkBox .researchTitleBox{padding: 40px 20px;}
+    #researchWrap .researchLinkBox .researchTitleBox span,
+    #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 22px;}
+    #researchWrap .researchLinkBox .researchTitleBox p{font-size: 18px;}
+    #researchWrap .researchLinkBox .researchLinkList li a{padding: 20px;}
+    #researchWrap .researchLinkBox .researchLinkList li a span{font-size: 16px;}
+    #researchWrap .researchLinkBox .researchLinkList li a span::after{width: 16px; height: 16px;}
+    #researchWrap .researchSlideBox .controlBox{display: none;}
+    
+}
+
+@media (max-width: 1024px){
+
+    #researchWrap .researchLayoutBox{flex-direction: column; width: calc(100% - 240px);}
+    #researchWrap .researchLinkBox{max-width: none;}
+    #researchWrap .researchSlideBox{width: 100%;  height: 500px; border-width: 1px 0 0 0;}
+
+}
+
+@media (max-width: 768px){
+
+    #researchWrap .researchLinkBox .researchLinkList li a{height: 156px;}
+    #researchWrap .researchLinkBox .researchTitleBox span,
+    #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 20px;}
+    #researchWrap .researchLayoutBox{margin: 0; width: 100%; border-top: 0;}
+    #researchWrap .researchSlideBox{height: 350px;}
+    
+}
+
+@media (max-width: 480px){
+
+    #researchWrap .researchLinkBox .researchLinkList{grid-template-columns: repeat(2, 1fr);}
+    #researchWrap .researchLinkBox .researchTitleBox{padding: 30px 20px;}
+    #researchWrap .researchLinkBox .researchLinkList li:nth-child(n + 4) a{border-bottom: 1px solid #ccc;}
+    #researchWrap .researchLinkBox .researchLinkList li:nth-child(3n) a{border-right: 1px solid #ccc;}
+    #researchWrap .researchLinkBox .researchLinkList li:nth-child(2n) a{border-right: 0;}
+    #researchWrap .researchLinkBox .researchLinkList li:last-child{grid-column: 1 / -1;}
+    #researchWrap .researchLinkBox .researchLinkList li:last-child a{border-right: 0;}
+
+}
+
+/* 공지사항 영역 */
+#noticeWrap .noticeLayoutBox{align-items: center; padding: 58px 50px;}
+#noticeWrap .noticeTabBtnBox{margin-bottom: 40px; display: flex; gap: 9px;}
+#noticeWrap .noticeTabBtnBox .noticeTabBtn{min-width: 120px; padding: 8px 10px; color: #333; border: 1px solid #ccc; border-radius: 8px; transition: all .3s;}
+#noticeWrap .noticeTabContentBox .noticeContentLayoutBox{display: flex; align-items: center;}
+#noticeWrap .noticeTabContentBox .noticeContent .noticeViewLink::before{background: url(../images/main/view01.svg) no-repeat center / contain;}
+#noticeWrap .noticeTabContentBox .projectContent .noticeViewLink::before{background: url(../images/main/view02.svg) no-repeat center / contain;}
+#noticeWrap .noticeTabContentBox .performanceContent .noticeViewLink::before{background: url(../images/main/view03.svg) no-repeat center / contain;}
+#noticeWrap .noticeTabContentBox .noticeContent .noticeViewLink::before{animation: megaphoneShake 1.3s ease-in-out infinite;}
+
+@keyframes megaphoneShake{
+    0%, 100%{
+        transform: rotate(0);
+    }
+    20%{
+        transform: rotate(-5deg);
+    }
+    40%{
+        transform: rotate(5deg);
+    }
+    60%{
+        transform: rotate(-3deg);
+    }
+    80%{
+        transform: rotate(3deg);
+    }
+}
+
+#noticeWrap .noticeTabContentBox .projectContent .noticeViewLink::before{animation: documentMove 1s ease-in-out infinite;}
+
+@keyframes documentMove{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-6px);
+    }
+}
+
+#noticeWrap .noticeTabContentBox .performanceContent .noticeViewLink::before{animation: trophyShake 1.3s ease-in-out infinite;}
+
+@keyframes trophyShake{
+    0%, 100%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-6deg);
+    }
+    50%{
+        transform: rotate(6deg);
+    }
+    75%{
+        transform: rotate(-4deg);
+    }
+}
+
+#noticeWrap .noticeListBox{flex: 1;}
+#noticeWrap .noticeLinkList{flex: 1;}
+#noticeWrap .noticeLinkList li{margin-bottom: -1px; border: 1px solid #ccc; border-width: 1px 0;}
+#noticeWrap .noticeLinkList li a{position: relative; display: flex; align-items: center; padding: 37px 110px 37px 20px;}
+#noticeWrap .noticeLinkList li a .noticeType{flex-shrink: 0; margin-right: 8px; padding: 2px 8px; background-color: #1D439C; border-radius: 8px; color: #fff; font-size: 14px; font-weight: 500;}
+#noticeWrap .noticeLinkList li a .noticeTitle{font-size: 18px; font-weight: 500; color: #000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#noticeWrap .noticeLinkList li a .noticeCategory{flex-shrink: 0; margin-right: 10px; padding: 2px 8px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: 500;}
+#noticeWrap .noticeLinkList li a .noticeDate{position: absolute; top :50%; transform: translateY(-50%); right:20px; font-size: 14px; font-weight: 500; color: #888;}
+#noticeWrap .noticeViewBox{flex-shrink: 0; width: 502px;}
+#noticeWrap .noticeViewBox .noticeViewLink{display: flex; flex-direction: column;
+    align-items: center; gap: 35px 0;}
+#noticeWrap .noticeViewBox .noticeViewLink::before{ content: ''; width: 166px;
+    height: 166px;}
+#noticeWrap .noticeViewBox .noticeViewLink span{display: flex; align-items: center; gap: 14px;  font-weight: 500; color: #000; font-size: 14px;}
+#noticeWrap .noticeViewBox .noticeViewLink span::after{content: ''; width: 42px;
+    height: 30px; flex-shrink: 0; background: url(../images/main/arrow_icon04.svg) no-repeat center / contain;}
+
+/* 활성화, 호버 */
+#noticeWrap .noticeLinkList li a:hover .noticeTitle{text-decoration: underline;}
+#noticeWrap .noticeTabBtnBox .noticeTabBtn:hover,
+#noticeWrap .noticeTabBtnBox .noticeTabBtn.active{background-color: #EDF2FF; border: 1px solid #1D439C; color: #1D439C;     text-shadow:
+        0.3px 0 0 currentColor,
+        -0.3px 0 0 currentColor;}
+#noticeWrap .noticeViewBox .noticeViewLink:hover span::after{ animation: arrowMove .8s infinite;}
+
+@media (max-width: 1480px){
+
+    #noticeWrap .noticeViewBox{width: 360px;}
+
+}
+
+@media (max-width: 1199px){
+
+    #noticeWrap .noticeLayoutBox{padding: 58px 20px; flex-direction: column; gap: 58px 0;} 
+
+}
+
+@media (max-width: 1024px){
+
+    #noticeWrap .noticeTabContentBox .noticeContentLayoutBox{flex-direction: column; gap: 50px;}
+    #noticeWrap .noticeListBox,
+    #noticeWrap .noticeLinkList{width: 100%;}
+
+}
+
+@media (max-width: 768px){
+
+    #noticeWrap{flex-direction: column;}
+    #noticeWrap .noticeLayoutBox{padding: 58px 20px;}
+    #noticeWrap .noticeTabBtnBox .noticeTabBtn{flex: 1; min-width: 0;}
+    #noticeWrap .noticeLinkList li a .noticeTitle{font-size: 16px;}
+    #noticeWrap .noticeViewBox .noticeViewLink::before{width: 130px; height: 130px;}
+    #noticeWrap .noticeViewBox .noticeViewLink span::after{width: 30px; height: 21px;}
+
+}
+
+@media (max-width: 480px){
+
+    #noticeWrap .noticeLinkList li a .noticeDate{display: none;}
+    #noticeWrap .noticeLinkList li a{padding: 30px 20px 30px 10px;}
+
+}
+
+@media (max-width: 414px){
+
+    #noticeWrap .noticeLinkList li a .noticeCategory{display: none;}
+
+}
+
+/* 모아보기 영역 */
+#contentWrap{border-width: 1px 0 1px 0;}
+#contentWrap .contentLayoutBox,
+#contentWrap .contentListBox{min-width: 0;}
+#contentWrap .contentLayoutBox{min-width: 0; padding: 60px 0 60px 50px;}
+#contentWrap .contentList li{margin-right: 24px;}
+#contentWrap .contentList li a{display: block; width: 340px; height: 450px; position: relative;}
+#contentWrap .contentList li a::before,
+#contentWrap .contentList li a::after{content: ''; position: absolute; z-index: 1; pointer-events: none;
+box-sizing: border-box;}
+#contentWrap .contentList li a::before{top: 0; left: 0; width: 0; height: 100%;  border-top: 2px solid #1D439C; border-bottom: 2px solid #1D439C; transition: all .7s;}
+#contentWrap .contentList li a::after{top: 0; left: 0; width: 100%; height: 0; border-left: 2px solid #1D439C; border-right: 2px solid #1D439C; transition: all .7s;}
+#contentWrap .contentList li img{display: block; width: 100%; height: 100%; object-fit: contain;}
+#contentWrap .contentList li a:hover::before{width: 100%;}
+#contentWrap .contentList li a:hover::after{height: 100%;}
+
+@media (max-width: 1199px){
+
+    #contentWrap .contentList li a::before,
+    #contentWrap .contentList li a::after{display: none;}
+
+}
+
+@media (max-width: 768px){
+
+    #contentWrap .contentList li a{width: 211px; height: 280px;}
+    #contentWrap .contentLayoutBox{padding: 60px 0 60px 20px;}
+
+}
+
+@media (max-width: 480px){
+
+    #contentWrap .contentLayoutBox{padding: 30px 0 30px 20px;}
+    #contentWrap .contentList li a{width: 160px; height: 230px;}
+
+}
+
+/* 월간 일정 영역 */
+#calendarWrap{position: relative; z-index: 1; border: 0;}
+#calendarWrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main_bg02.jpg)no-repeat center / cover; overflow: hidden;  z-index: -1;  transform: scale(.6);  border-radius: 50px; transition: all 2.5s;}
+#calendarWrap .calendarBox{max-width: 640px; width: 100%; padding: 90px 60px; border-right: 1px solid rgba(255, 255, 255, .6);}
+#calendarWrap .calendar{padding: 30px; border: 1px solid rgba(255, 255, 255.5);
+    background: rgba(255, 255, 255, .1); border-radius: 20px;}
+#calendarWrap .calendar .calendarHeader{margin-bottom: 38px; display: flex; align-items: center; justify-content: center; gap: 0 26px;}
+#calendarWrap .calendar .calendarHeader h4{color: #fff; font-weight: 600; font-size: 24px;}
+#calendarWrap .calendar .calendarHeader .calendarBtn{width: 12px; height: 20px; }
+#calendarWrap .calendar .calendarHeader .calendarBtn.calendarPrev{background: url(../images/main/arrow_icon05.svg)no-repeat center / contain;}
+#calendarWrap .calendar .calendarHeader .calendarBtn.calendarNext{background: url(../images/main/arrow_icon05.svg)no-repeat center / contain; transform: rotate(180deg);}
+#calendarWrap .calendar .calendarWeek{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden; border: 1px solid rgba(255, 255, 255, .8); border-width: 1px 0;}
+#calendarWrap .calendar .calendarWeek .week{height: 59px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;}
+#calendarWrap .calendar .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));}
+#calendarWrap .calendar .calendarGrid .calendarCell {display: flex; align-items: center; justify-content: center; height: 59px; border-bottom: 1px solid rgba(255, 255, 255, .8);}
+#calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.today{background-color: #365DDD; font-weight: 700;}
+#calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.selected{background-color: #49F498; font-weight: 700;}
+#calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.scheduled{position: relative;}
+#calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.scheduled::after{content: ''; position: absolute; top:0; right:-8px; width: 8px; height: 8px; border-radius: 50%; background-color: #FF443D;}
+#calendarWrap .calendar .calendarGrid .calendarCell .dateBtn{width: 42px; height: 42px; border-radius: 50%; color: #fff;}
+#calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.disabled{cursor: default;}
+#calendarWrap .calendarBox .calendarLegend{margin-right: 10px; padding: 30px 0 0; display: flex; align-items: center; justify-content: flex-end; gap: 20px;}
+#calendarWrap .calendarBox .calendarLegendItem{display: flex; align-items: center; gap: 0 9px; color: #fff;}
+#calendarWrap .calendarBox .calendarLegendDot{width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%;}
+#calendarWrap .calendarBox .calendarLegendDot.today{background-color: #365DDD;}
+#calendarWrap .calendarBox .calendarLegendDot.choice{background-color: #49F498;}
+#calendarWrap .calendarBox .calendarLegendDot.schedule{background-color: #FF443D;}
+#calendarWrap .calendarListBox{padding: 90px 70px; flex: auto; display: flex; gap: 45px;}
+#calendarWrap .calendarListBox .calendarDateBox{flex-shrink: 0; display: flex; flex-direction: column;}
+#calendarWrap .calendarListBox .calendarDay{font-size: 30px; font-weight: 600; color: #49F498;}
+#calendarWrap .calendarListBox .calendarMonth{font-size: 20px; font-weight: 600; color: #49F498;}
+#calendarWrap .calendarListBox .calendarList{max-width: 602px; width: 100%; padding-top: 70px;}
+#calendarWrap .calendarListBox .calendarList li{margin-bottom: 20px;}
+#calendarWrap .calendarListBox .calendarList li:last-child{margin-bottom: 0;}
+#calendarWrap .calendarListBox .calendarList li a{position: relative; display: block; padding: 15px 118px 15px 20px;
+    display: flex; align-items: center; border: 1px solid rgba(255, 255, 255.5); background: rgba(255, 255, 255, .1); border-radius: 8px; color: #fff;}
+#calendarWrap .calendarListBox .calendarList li a .calendarCategory{flex-shrink: 0;
+    margin-right: 14px; padding: 2px 8px; border-radius: 8px; color: #fff; font-size: 14px;
+    font-weight: 500;}
+#calendarWrap .calendarListBox .calendarList li a .calendarTitle{font-weight: 500; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#calendarWrap .calendarListBox .calendarList li a .calendarTime{position: absolute; top: 50%; right:20px; transform: translateY(-50%); font-size: 14px; font-weight: 700;}
+
+/* 활성화, 호버 */
+#calendarWrap.active::after{transform: scale(1); border-radius: 0;}
+#calendarWrap .calendarListBox .calendarList li a:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .2);}
+
+@media (max-width: 1580px){
+
+    #calendarWrap .calendarListBox{flex-direction: column; gap: 27px 0;}
+    #calendarWrap .calendarListBox .calendarList{padding-top: 0;}
+
+}
+
+@media (max-width: 1480px) {
+    
+    #calendarWrap{flex-direction: column;}        
+    #calendarWrap .titleBox{width: 100%; padding: 60px 20px; text-align: center; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .6);}
+    #calendarWrap .calendarListBox,
+    #calendarWrap .calendarBox{padding: 70px 40px; max-width: none; width: 50%;}
+    #calendarWrap .calendarListBox .calendarList{max-width: none;}
+    #calendarWrap .calendar .calendarHeader{margin-bottom: 30px;}
+
+}
+
+@media (max-width: 1199px){
+
+    #calendarWrap .calendarListBox .calendarDay{font-size: 26px;}
+    #calendarWrap .calendarListBox .calendarMonth{font-size: 18px;}
+    #calendarWrap .calendar .calendarHeader h4{font-size: 22px;}
+    #calendarWrap .calendar .calendarHeader .calendarBtn{width: 10px; height: 18px;}
+
+}
+
+@media (max-width: 1024px){
+
+  #calendarWrap .calendarLayoutBox{flex-direction: column;}
+  #calendarWrap .calendarBox{ border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .6);}
+  #calendarWrap .calendarBox,
+  #calendarWrap .calendarListBox{width: 100%; padding: 60px 20px;} 
+  #calendarWrap .calendarListBox .calendarDateBox{align-items: center;}
+  
+}
+
+@media (max-width: 576px){
+
+  #calendarWrap .calendar .calendarGrid .calendarCell{min-height: 66px;}
+  #calendarWrap .calendar .calendarGrid .calendarCell .scheduleDot{width: 4px; height: 4px;}
+  #calendarWrap .calendar .calendarGrid .calendarCell .scheduleInfoText{display: none;}
+
+}
+
+@media (max-width: 480px){
+
+    #calendarWrap .calendarListBox .calendarList li a .calendarTime{display: none;}
+    #calendarWrap .calendarListBox .calendarList li a{padding: 15px 20px;}
+    #calendarWrap .calendar{padding: 30px 20px;}
+    #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn{width: 36px; height: 36px;}
+    #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn .date{font-size: 14px;}
+    #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.scheduled::after{right: -6px; width: 6px; height: 6px;}
+
+}
+
+@media (max-width: 414px){
+
+  #calendarWrap .calendar .calendarGrid .calendarCell{min-height: 50px;}
+
+}
