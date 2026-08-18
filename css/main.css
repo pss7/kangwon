@@ -232,7 +232,7 @@
 #reserveWrap .reserveList li .reserveTime{justify-self: flex-end; font-weight: 700; font-size: 14px; color: #fff;}
 
 /* 활성화, 호버 */
-#reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .3);}
+ #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .3);}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active{border: 1px solid #fff;}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{background-color: #1D439C;}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveWeekday{background-color: #fff; color: #1D439C; font-weight: 700;}
