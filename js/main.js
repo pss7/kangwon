@@ -55,7 +55,7 @@ $(function () {
 
   //모아보기
   $('#contentWrap .slick').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     dots: false,
     accessibility: false,

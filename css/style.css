@@ -1,5 +1,25 @@
 @charset "UTF-8";
 
+#wrap{display: flex; flex-direction: column;}
+main{flex: 1;}
+#footer{margin-top: auto;}
+
+/* 공통 - 애니메이션 */
+.fadeEffect{animation: fadeEffect 1.5s .3s both;}
+
+@keyframes fadeEffect {
+
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
 /* 공통 - 목록 카테고리 색상 */
 .categoryType01{background-color: #2773FF;}
 .categoryType02{background-color: #B364CE;}
@@ -10,7 +30,7 @@
 .categoryType07{background-color: #A239F2;}
 
 /* 공통 - 스크롤 */
-.customScroll::-webkit-scrollbar{width: 6px; height: 6px;}
+.customScroll::-webkit-scrollbar{width: 6px; height: 6px; background-color: #fff;}
 .customScroll::-webkit-scrollbar-thumb{background-color: #BBB; border-radius: 10px;}
 
 /* 공통 - 색상 */
@@ -25,7 +45,7 @@
 #headerWrap::after{content: ''; opacity: 0; visibility: hidden; position: absolute;  left:0; right:0; bottom: 0; height: 15px; box-shadow:  0 10px 10px rgba(0,0,0,.1); transition: all .3s;}
 #headerWrap.shadow::after{ opacity: 1; visibility: visible;}
 #headerWrap.scroll{ box-shadow: 0 10px 20px rgba(0,0,0,.1);} 
-#headerWrap{padding: 0 60px; position: sticky; top:0; left:0; right:0; background-color: #fff; z-index: 999999; transition: all .3s;}
+#headerWrap{padding: 0 60px; position: sticky; top:0; left:0; right:0; background-color: #fff; z-index: 9999999; transition: all .3s;}
 #headerWrap .headerLogoBox h1 a{display: block; color: #fff; font-size: 32px;}
 #headerWrap .headerLogoBox h1 a img{display: block;}
 #headerWrap .headerBox{display: flex; align-items: center; justify-content: space-between;}

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* 가운데영역 */
+.container{max-width: 1240px;}
+
+/* 서브 상단 제목 영역 */
+#subTitleWrap{position: relative; height: 280px;}
+#subTitleWrap .subVisualBox{position: absolute; top:0; left:0; right:0; bottom: 0;}
+#subTitleWrap .subVisualBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+#subTitleWrap h2{position: absolute; left: 50%; transform: translateX(-50%); top:89px;}
+#subTitleWrap h2 em{display: inline-block; font-weight: 700; color: #fff; font-size: 40px; animation: fadeEffect 1.5s .3s both;}
+#subTitleWrap h2 em:nth-child(1){animation-delay: .1s;}
+#subTitleWrap h2 em:nth-child(2){animation-delay: .2s;}
+#subTitleWrap h2 em:nth-child(3){animation-delay: .3s;}
+#subTitleWrap h2 em:nth-child(4){animation-delay: .4s;}
+#subTitleWrap h2 em:nth-child(5){animation-delay: .5s;}
+#subTitleWrap h2 em:nth-child(6){animation-delay: .6s;}
+#subTitleWrap h2 em:nth-child(7){animation-delay: .7s;}
+#subTitleWrap h2 em:nth-child(8){animation-delay: .8s;}
+#subTitleWrap .subNavBox{position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);}
+#subTitleWrap .subNav ul{display: flex; align-items: center; justify-content: center;}
+#subTitleWrap .subNav ul li{margin-right: -1px;}
+#subTitleWrap .subNav ul li a{display: flex; align-items: center; justify-content: center; padding: 0 10px; min-width: 160px; height: 70px; font-size: 20px; font-weight: 500; color: #fff; border: 1px solid #fff; background-color: rgba(255,255,255, .2);}
+#subTitleWrap .subNav ul li a.active{background-color: #fff; color: #1D439C; font-weight: 700;}
+#subTitleWrap .subNav ul li:first-child a{border-radius: 20px 0 0 0;}
+#subTitleWrap .subNav ul li:last-child a{border-radius: 0 20px 0 0;}
+
+@media (max-width: 1199px){
+
+  #subTitleWrap h2 em{font-size: 34px;}
+  #subTitleWrap .subNav ul li a{height: 57px; font-size: 18px;}
+
+}
+
+@media (max-width: 1024px){
+
+  #subTitleWrap .subNavBox{width: 100%; overflow-x: auto;}
+  #subTitleWrap .subNav{width: 1024px;}
+  #subTitleWrap .subNav ul li:first-child a{border-radius: 0;}
+  #subTitleWrap .subNav ul{justify-content: flex-start;}
+  #subTitleWrap .subNav ul li a{height: 50px; font-size: 16px;}
+
+}
+
+@media (max-width: 768px){
+
+  #subTitleWrap h2{top: 95px;}
+  #subTitleWrap h2 em{font-size: 30px;}
+  #subTitleWrap .subNav ul li a{min-width: 140px; height: 45px; font-size: 16px;}
+
+}
+
+@media (max-width: 480px){
+
+  #subTitleWrap{height: 232px;}
+  #subTitleWrap h2{top: 80px;}
+  #subTitleWrap h2 em{font-size: 24px;}
+  #subTitleWrap .subNav ul li a{height: 50px; font-size: 16px;}
+
+}
+
+/* 서브 콘텐츠 레이아웃 영역 */
+#subContentWrap{padding: 120px 0;}
+#subContentWrap .subContentHeaderBox{margin-bottom: 60px; }
+#subContentWrap .subContentHeader{display: flex; align-items: center; justify-content: space-between;}
+#subContentWrap .subContentHeader h2{font-weight: 700; font-size: 32px; color: #333; font-family: 'HD';}
+#subContentWrap .subContentHeader .breadcrumbBox{display: flex; align-items: center; justify-content: center; padding: 0 18px; height: 36px; background-color: #F4F4F4; border-radius: 50px;}
+#subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink{display: flex; align-items: center; font-weight: 500; color: #333;}
+#subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink img{display: block;}
+#subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink.active{font-weight: 700; color: #1D439C;}
+#subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink::before{content: '';
+ width: 8px; height: 12px; margin: 0 12px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
+#subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink:first-child::before{  display: none;}
+
+@media (max-width: 1199px){
+
+  #subContentWrap .subContentHeader{flex-direction: column; gap: 10px 0;}
+  #subContentWrap .subContentHeader h2{font-size: 30px;}
+
+}
+
+@media (max-width: 768px){
+
+  #subContentWrap{padding: 100px 0;}
+
+}
+
+@media (max-width: 480px){
+
+  #subContentWrap .subContentHeader h2{font-size: 26px;}
+
+}

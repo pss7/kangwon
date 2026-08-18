@@ -5,7 +5,6 @@ $(function () {
   $('.tabWrap .tabContent:first-child').show();
 
   $('.tabWrap .tabBtn').click(function () {
-
     let $tabWrap = $(this).closest('.tabWrap');
     let index = $(this).index();
 
@@ -19,7 +18,6 @@ $(function () {
 
     $tabWrap.find('.tabContent').hide();
     $tabWrap.find('.tabContent').eq(index).show();
-
   });
 
   //공통 - 드롭다운
@@ -36,56 +34,68 @@ $(function () {
 
   //관련사이트 토글
   $('.footerSiteBtn').click(function () {
-
     if ($(this).attr('aria-expanded') === 'false') {
       $(this).attr('aria-label', '관련사이트 열기');
     } else {
       $(this).attr('aria-label', '관련사이트 닫기');
     }
-
   });
 
   //모바일메뉴 토글
   $('.mobileMenuBtn').click(function () {
-
     if ($(this).attr('aria-expanded') === 'false') {
       $(this).attr('aria-label', '모바일메뉴 열기');
     } else {
       $(this).attr('aria-label', '모바일메뉴 닫기');
     }
-
   });
 
   /* 서브메뉴 */
-  let subMenuOpen = false;
-
-  $('#headerWrap .headerMenu > li').mouseover(function () {
-
+  $('#headerWrap .headerMenu > li').mouseenter(function () {
     $('#headerWrap').addClass('shadow');
     $('#headerWrap .headerMenu > li').removeClass('active');
     $(this).addClass('active');
-
-    const $subMenu = $(this).find('.subMenuWrap');
-
-    if (!subMenuOpen) {
-      $subMenu
-        .stop(true, true)
-        .slideDown(300);
-      subMenuOpen = true;
-    } else {
-      $('.subMenuWrap').hide();
-      $subMenu.show();
-    }
-
+    $('#headerWrap .subMenuWrap')
+      .not($(this).find('.subMenuWrap'))
+      .stop(true, true)
+      .slideUp(300);
+    $(this).find('.subMenuWrap')
+      .stop(true, true)
+      .slideDown(300);
   });
 
   $('#headerWrap').mouseleave(function () {
     $('#headerWrap').removeClass('shadow');
-    $('.subMenuWrap')
+    $('#headerWrap .subMenuWrap')
       .stop(true, true)
       .slideUp(300);
+    $('#headerWrap .headerMenu > li')
+      .removeClass('active');
+  });
+
+  /* 서브메뉴 키보드 포커스 */
+  $('#headerWrap .headerMenu > li').focusin(function () {
+    $('#headerWrap').addClass('shadow');
     $('#headerWrap .headerMenu > li').removeClass('active');
-    subMenuOpen = false;
+    $(this).addClass('active');
+    $('.subMenuWrap')
+      .stop(true, true)
+      .hide();
+    $(this)
+      .find('.subMenuWrap')
+      .stop(true, true)
+      .slideDown(300);
+  });
+
+  /* 헤더 영역에서 포커스가 벗어났을 때 */
+  $('#headerWrap').focusout(function () {
+    if (!$(this).find(':focus').length) {
+      $('#headerWrap').removeClass('shadow');
+      $('.subMenuWrap')
+        .stop(true, true)
+        .slideUp(300);
+      $('#headerWrap .headerMenu > li').removeClass('active');
+    }
   });
 
   //헤더 스크롤
@@ -99,7 +109,6 @@ $(function () {
 
   //헤더 메뉴 클릭 시 부드럽게 이동
   $('#headerWrap .link').click(function (e) {
-
     const target = $(this).attr('href');
 
     if (target == '#') return;
@@ -113,7 +122,6 @@ $(function () {
     $('html, body').animate({
       scrollTop: position
     }, 600);
-
   });
 
   /* 상단으로 이동 */
