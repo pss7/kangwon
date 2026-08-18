@@ -116,13 +116,14 @@ main{flex: 1;}
 
 }
 
-@media (max-width: 480px){
+@media (max-width: 1024px){
 
-  #headerWrap .headerLogoBox h1 a img{width: 200px;}
   #headerWrap .headerBox{height: 62px;}
+  #headerWrap .headerLogoBox h1 a img{width: 200px;}
   #mobileMenuWrap .mobileMenuBox{top: 62px;}
 
 }
+
 
 /* 푸터 */
 #footerWrap .footerTopBox{border-bottom: 1px solid #ccc;}
