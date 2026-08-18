@@ -4,6 +4,12 @@
 main{flex: 1;}
 #footer{margin-top: auto;}
 
+/* 스킵 네비게이션 */
+#skipNav a{position: fixed; top: -100px; left: 0;
+    width: 100%; padding: 15px 10px; background-color: #1D439C; color: #fff;
+    text-align: center; z-index: 99999999;}
+#skipNav a:focus{top: 0;}
+
 /* 공통 - 애니메이션 */
 .fadeEffect{animation: fadeEffect 1.5s .3s both;}
 

@@ -5,19 +5,16 @@ $(function () {
   $('.tabWrap .tabContent:first-child').show();
 
   $('.tabWrap .tabBtn').click(function () {
-    let $tabWrap = $(this).closest('.tabWrap');
-    let index = $(this).index();
-
-    $tabWrap.find('.tabBtn')
+    $(this).closest('.tabWrap').find('.tabBtn')
       .removeClass('active')
       .attr('aria-selected', 'false');
-
     $(this)
       .addClass('active')
       .attr('aria-selected', 'true');
-
-    $tabWrap.find('.tabContent').hide();
-    $tabWrap.find('.tabContent').eq(index).show();
+    $(this).closest('.tabWrap').find('.tabContent')
+      .hide()
+      .eq($(this).index())
+      .show();
   });
 
   //공통 - 드롭다운

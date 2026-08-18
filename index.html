@@ -25,6 +25,12 @@
 
 <body>
 
+    <!-- 스킵 네비게이션 -->
+    <div id="skipNav">
+        <a href="#mainWrap">본문 바로가기</a>
+    </div>
+    <!-- //스킵 네비게이션 -->
+
     <div id="wrap">
 
         <!-- 헤더영역 -->
@@ -508,6 +514,7 @@
         </header>
         <!-- //헤더영역 -->
 
+        <!-- 메인 영역 -->
         <main id="mainWrap">
 
             <!-- 비주얼영역 -->
@@ -539,11 +546,13 @@
                             <div class="visualLinkBox tabWrap fadeEffect">
 
                                 <!-- 탭 영역 -->
-                                <div class="visualTabBtnBox tabBtnBox ">
-                                    <button type="button" class="visualTabBtn tabBtn active" aria-selected="true">
+                                <div class="visualTabBtnBox tabBtnBox" role="tablist" aria-label="연구기관 선택">
+                                    <button type="button" class="visualTabBtn tabBtn active" role="tab"
+                                        aria-selected="true" aria-controls="visualTabContent01" id="visualTabBtn01">
                                         의생명연구원
                                     </button>
-                                    <button type="button" class="visualTabBtn tabBtn" aria-selected="false">
+                                    <button type="button" class="visualTabBtn tabBtn" role="tab" aria-selected="false"
+                                        aria-controls="visualTabContent02" id="visualTabBtn02">
                                         강원첨단연구지원센터
                                     </button>
                                 </div>
@@ -552,7 +561,8 @@
                                 <!-- 탭 링크 영역 -->
                                 <div class="visualTabContentBox tabContentBox">
 
-                                    <div class="visualTabContent tabContent">
+                                    <div id="visualTabContent01" class="visualTabContent tabContent" role="tabpanel"
+                                        aria-labelledby="visualTabBtn01">
                                         <ul class="visualLinkList">
                                             <li>
                                                 <a href="#" class="fadeEffect">
@@ -611,7 +621,8 @@
                                         </ul>
                                     </div>
 
-                                    <div class="visualTabContent tabContent">
+                                    <div id="visualTabContent02" class="visualTabContent tabContent" role="tabpanel"
+                                        aria-labelledby="visualTabBtn02">
                                         <ul class="visualLinkList">
                                             <li>
                                                 <a href="#" class="fadeEffect">
@@ -702,7 +713,7 @@
                             <h3 class="title">
                                 예약현황
                             </h3>
-                            <span class="enTitle">
+                            <span class="enTitle" aria-hidden="true">
                                 <em>R</em><em>e</em><em>s</em><em>e</em><em>r</em><em>v</em><em>a</em><em>t</em><em>i</em><em>o</em><em>n</em>
                             </span>
                         </div>
@@ -832,7 +843,7 @@
                             <h3 class="title">
                                 연구소개
                             </h3>
-                            <span class="enTitle">
+                            <span class="enTitle" aria-hidden="true">
                                 <em>R</em><em>e</em><em>s</em><em>e</em><em>a</em><em>r</em><em>c</em><em>h</em>
                             </span>
                         </div>
@@ -919,8 +930,8 @@
                                     </div>
                                 </div>
                                 <div class="controlBox">
-                                    <button type="button" class="controlBtn prev" aria-label="이전 버튼"></button>
-                                    <button type="button" class="controlBtn next" aria-label="다음 버튼"></button>
+                                    <button type="button" class="controlBtn prev" aria-label="연구소개 이전 슬라이드"></button>
+                                    <button type="button" class="controlBtn next" aria-label="연구소개 다음 슬라이드"></button>
                                 </div>
                             </div>
                             <!-- 연구소개 슬라이드 영역 -->
@@ -943,7 +954,7 @@
                             <h3 class="title">
                                 공지사항
                             </h3>
-                            <span class="enTitle">
+                            <span class="enTitle" aria-hidden="true">
                                 <em>N</em><em>o</em><em>t</em><em>i</em><em>c</em><em>e</em>
                             </span>
                         </div>
@@ -956,22 +967,27 @@
                             <div class="noticeListBox tabWrap">
 
                                 <!-- 공지사항 탭버튼 영역 -->
-                                <div class="noticeTabBtnBox tabBtnBox">
-                                    <button type="button" class="noticeTabBtn tabBtn active">
+                                <div class="noticeTabBtnBox tabBtnBox" role="tablist" aria-label="공지사항 분류">
+                                    <button type="button" id="noticeTabBtn01" class="noticeTabBtn tabBtn active"
+                                        role="tab" aria-selected="true" aria-controls="noticeTabContent01">
                                         공지사항
                                     </button>
-                                    <button type="button" class="noticeTabBtn tabBtn">
+                                    <button type="button" class="noticeTabBtn tabBtn" role="tab" aria-selected="false"
+                                        aria-controls="noticeTabContent02" id="noticeTabBtn02">
                                         사업공고
                                     </button>
-                                    <button type="button" class="noticeTabBtn tabBtn">
+                                    <button type="button" class="noticeTabBtn tabBtn" role="tab" aria-selected="false"
+                                        aria-controls="noticeTabContent03" id="noticeTabBtn03">
                                         성과보고
                                     </button>
+
                                 </div>
                                 <!-- //공지사항 탭버튼 영역 -->
 
                                 <!-- 공지사항 탭 콘텐츠 영역 -->
                                 <div class="noticeTabContentBox">
-                                    <div class="noticeTabContent tabContent noticeContent">
+                                    <div id="noticeTabContent01" class="noticeTabContent tabContent noticeContent"
+                                        role="tabpanel" aria-labelledby="noticeTabBtn01">
                                         <div class="noticeContentLayoutBox">
 
                                             <!-- 공지사항 목록 영역 -->
@@ -1055,7 +1071,7 @@
 
                                             <!-- 공지사항 더보기 영역 -->
                                             <div class="noticeViewBox">
-                                                <a href="#" class="noticeViewLink">
+                                                <a href="#" class="noticeViewLink" aria-label="공지사항 더보기">
                                                     <span>
                                                         View More
                                                     </span>
@@ -1066,7 +1082,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="noticeTabContent tabContent projectContent">
+                                    <div id="noticeTabContent02" class="noticeTabContent tabContent projectContent" role="tabpanel" aria-labelledby="noticeTabBtn02">
                                         <div class="noticeContentLayoutBox">
 
                                             <!-- 사업공고 목록 영역 -->
@@ -1141,7 +1157,7 @@
 
                                             <!-- 사업공고 더보기 영역 -->
                                             <div class="noticeViewBox">
-                                                <a href="#" class="noticeViewLink">
+                                                <a href="#" class="noticeViewLink" aria-label="사업공고 더보기">
                                                     <span>
                                                         View More
                                                     </span>
@@ -1152,7 +1168,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="noticeTabContent tabContent performanceContent">
+                                    <div id="noticeTabContent03" class="noticeTabContent tabContent performanceContent" role="tabpanel" aria-labelledby="noticeTabBtn03">
                                         <div class="noticeContentLayoutBox">
 
                                             <!-- 성과보고 목록 영역 -->
@@ -1227,7 +1243,7 @@
 
                                             <!-- 성과보고 더보기 영역 -->
                                             <div class="noticeViewBox">
-                                                <a href="#" class="noticeViewLink">
+                                                <a href="#" class="noticeViewLink" aria-label="성과보고 더보기">
                                                     <span>
                                                         View More
                                                     </span>
@@ -1262,7 +1278,7 @@
                             <h3 class="title">
                                 모아보기
                             </h3>
-                            <span class="enTitle">
+                            <span class="enTitle" aria-hidden="true">
                                 <em>C</em><em>o</em><em>n</em><em>t</em><em>e</em><em>n</em><em>t</em>
                             </span>
                         </div>
@@ -1336,7 +1352,7 @@
                             <h3 class="title">
                                 월간 일정
                             </h3>
-                            <span class="enTitle">
+                            <span class="enTitle" aria-hidden="true">
                                 <em>C</em><em>a</em><em>l</em><em>e</em><em>n</em><em>d</em><em>a</em><em>r</em>
                             </span>
                         </div>
@@ -1629,6 +1645,7 @@
             <!-- //월간 일정 영역 -->
 
         </main>
+        <!-- //메인 영역 -->
 
         <!-- 푸터영역 -->
         <footer id="footerWrap">
