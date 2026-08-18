@@ -126,7 +126,7 @@
     #visualWrap .visualLayoutBox{height: 100%;}
     #visualWrap .visualTitleBox{padding-top: 112px;}
     #visualWrap .visualTextBox .visualTitle{font-size: 42px;}
-    #visualWrap .visualLayoutBox{flex-direction: column; align-items: center; justify-content: center; gap: 60px 0;}
+    #visualWrap .visualLayoutBox{flex-direction: column; align-items: center; justify-content: center; gap: 30px 0;}
     #visualWrap .visualLinkBox{padding-top: 0; margin-bottom: 0;}
     #visualWrap .visualLinkBox .visualTabBtnBox{margin-bottom: 40px; justify-content: center;}
     #visualWrap .visualTextBox .visualText,
@@ -149,7 +149,6 @@
 
 @media (max-width: 960px){
 
-    #visualWrap .visualLayoutBox{gap: 46px 0;}
     #visualWrap .visualTextBox .visualTitle{margin-bottom: 20px; font-size: 36px;}
     #visualWrap .visualLinkBox{width: 100%;}
     #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{font-size: 16px;}
@@ -160,9 +159,14 @@
 
 }
 
+@media (max-width: 768px){
+
+    #visualWrap .visualTitleBox{transform: translate(-50%, -55%);}
+
+}
+
 @media (max-width: 480px){
 
-    #visualWrap .visualLayoutBox{gap: 37px 0;}
     #visualWrap .visualTextBox .visualTitle{ font-size: 28px;}
     #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{margin: 0 auto 6px; width: 80px; height: 80px;}
     #visualWrap .visualLinkBox .visualLinkList li a h3{font-size: 12px;}
