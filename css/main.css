@@ -79,7 +79,7 @@
 
 @media (max-width: 768px){
     
-    .sectionWrap{flex-direction: column;}
+    .sectionWrap .sectionLayoutBox{flex-direction: column;}
     .sectionWrap .titleBox{width: 100%; padding: 60px 20px; text-align: center; border: 0;}
     .sectionWrap .titleBox{border-bottom: 1px solid #ccc;}
 
