@@ -62,7 +62,7 @@
 .sectionWrap .layoutBox{opacity: 0;}
 .sectionWrap.active .titleBox,
 .sectionWrap.active .layoutBox{animation: fadeEffect 1s .2s both;}
-.sectionWrap.active .layoutBox{animation-delay: .5s;}
+.sectionWrap.active .layoutBox{animation-delay: .5s!important;}
 
 @media (max-width: 1480px){
 
@@ -186,6 +186,7 @@
 /* 예약현황 영역 */
 #reserveWrap .titleBox,
 #reserveWrap .layoutBox{animation: fadeEffect 1.5s .3s both;}
+#reserveWrap .layoutBox{animation-delay: .5s;}
 #reserveWrap{position: relative; z-index: 999; min-height: 429px; background-color: rgba(2, 18, 54, 0.2); backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);}
 #reserveWrap .reserveLayoutBox{padding: 34px 0;}
