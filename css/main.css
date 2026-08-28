@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 공통 - 제목 */
-.titleBox .title{color: #333; font-size: 30px; font-weight: 700; font-family: 'HD';}
+.titleBox .title{color: #333; font-size: 30px; font-weight: 700; font-family: "HD", sans-serif;}
 .titleBox .enTitle{font-weight: 800; font-size: 40px; color: #fff; text-shadow: 0 0 30px rgba(1, 145, 68, .6);} 
 
 @media (max-width: 1199px){
@@ -92,11 +92,11 @@
 #visualWrap .visualImgBox img{display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.7); transition: all 8s;}
 #visualWrap .visualTitleBox{position: relative; padding-top: 148px;} 
 #visualWrap .visualLayoutBox{display: flex; align-items: flex-start; justify-content: space-between; gap: 0 30px;}
-#visualWrap .visualTextBox .visualTitle{opacity: 0; margin-bottom: 30px; color: #fff; font-size: 60px; font-family: 'HD'; line-height: 1.1; word-break: keep-all; letter-spacing: 5px; filter: blur(5px); transition: all 3s;}
+#visualWrap .visualTextBox .visualTitle{opacity: 0; margin-bottom: 30px; color: #fff; font-size: 60px; font-family: "HD", sans-serif; line-height: 1.1; word-break: keep-all; letter-spacing: 5px; filter: blur(5px); transition: all 3s;}
 #visualWrap .visualTextBox .visualText{color: #fff; font-weight: 500; word-break: keep-all;}
 #visualWrap .visualLinkBox{padding-top: 130px; animation-delay: .8s;}
 #visualWrap .visualLinkBox .visualTabBtnBox{display: flex; gap: 10px; margin-bottom: 26px;}
-#visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{position: relative; padding: 9px 24px; border: 1px solid rgba(255,255,255.5); background: rgba(255,255,255, .2); border-radius: 8px; font-size: 18px; font-weight: 500; font-family: 'HD'; color: #fff; overflow: hidden; z-index: 1; word-break: keep-all;}
+#visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{position: relative; padding: 9px 24px; border: 1px solid rgba(255,255,255.5); background: rgba(255,255,255, .2); border-radius: 8px; font-size: 18px; font-weight: 500; font-family: "HD", sans-serif; color: #fff; overflow: hidden; z-index: 1; word-break: keep-all;}
 #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn::before{content: ''; width: 0; position: absolute; top:0; left:0; bottom: 0; width: 0; background-color: #fff; transition: all .3s; z-index: -1;}
 #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn:hover::before{width: 100%;}
 #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn:hover{color: #1D439C; border: 1px solid #fff;}
@@ -194,13 +194,13 @@
 #reserveWrap .reserveCalendarBox{padding: 48px 80px 0;}
 #reserveWrap .reserveCalendarBox{max-width: 640px; width: 100%; border-right: 1px solid rgba(255,255,255, .6);}
 #reserveWrap .reserveCalendarBox .reserveWeekBox{padding-left: 44px;}
-#reserveWrap .reserveCalendarBox .reserveWeek{display: block; margin-bottom: 38px; font-size: 24px; font-weight: 700; color: #fff; font-family: 'HD';}
+#reserveWrap .reserveCalendarBox .reserveWeek{display: block; margin-bottom: 38px; font-size: 24px; font-weight: 700; color: #fff; font-family: "HD", sans-serif;}
 #reserveWrap .reserveCalendarBox .reserveWeek strong{color: #49F498;} 
 #reserveWrap .reserveCalendarBox .reserveDateList{width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;}
 #reserveWrap .reserveCalendarBox .reserveDateList li{ max-width: 70px; width: 100%; height: 100px;}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn{width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;  border: 1px solid rgba(255, 255, 255, .5);
     background: rgba(255, 255, 255, .2); border-radius: 8px; overflow: hidden;}
-#reserveWrap .reserveCalendarBox .reserveDateList li span{display: block; padding: 12px 0; width: 100%; font-family: 'HD'; color: #fff;}
+#reserveWrap .reserveCalendarBox .reserveDateList li span{display: block; padding: 12px 0; width: 100%; font-family: "HD", sans-serif; color: #fff;}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDay{font-weight: 700; font-size: 20px; transition: all .3s;}
 #reserveWrap .reserveCalendarBox .reserveDateList li .reserveWeekday{height: 100%; font-weight: 500; font-size: 18px; transition: all .3s;}
 #reserveWrap .reserveCalendarBox .reserveDateBox{display: flex; align-items: center; gap: 0 20px;}
@@ -209,7 +209,7 @@
 #reserveWrap .reserveCalendarBox .reserveDateBox .reservePrev::before{background: url(../images/main/arrow_icon03.svg)no-repeat center;}
 #reserveWrap .reserveCalendarBox .reserveDateBox .reserveNext::before{background: url(../images/main/arrow_icon03.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
 #reserveWrap .reserveListBox{flex: auto; display: flex; align-items: flex-start; gap: 15px;}
-#reserveWrap .reserveDate{min-width: 102px; font-size: 18px; font-weight: 700; color: #49F498; font-family: 'HD';} 
+#reserveWrap .reserveDate{min-width: 102px; font-size: 18px; font-weight: 700; color: #49F498; font-family: "HD", sans-serif;} 
 #reserveWrap .reserveList{max-width: 602px; width: 100%; }
 #reserveWrap .reserveList li{margin-bottom: 14px;}
 #reserveWrap .reserveList li a{display: block; padding: 15px 20px; display: flex; align-items: center; border: 1px solid rgba(255,255,255, .5); background: rgba(255,255,255,.1); border-radius: 8px;}
@@ -313,7 +313,7 @@
 #researchWrap .researchLinkBox{max-width: 917px; width: 100%;}
 #researchWrap .researchLinkBox .researchTitleBox{justify-self: flex-start; padding: 52px 20px 52px 52px;}
 #researchWrap .researchLinkBox .researchTitleBox span,
-#researchWrap .researchLinkBox .researchTitleBox h4{display: block; font-weight: 500; color: #333; font-size: 40px; font-family: 'HD'; line-height: 1.2;}
+#researchWrap .researchLinkBox .researchTitleBox h4{display: block; font-weight: 500; color: #333; font-size: 40px; font-family: "HD", sans-serif; line-height: 1.2;}
 #researchWrap .researchLinkBox .researchTitleBox h4{margin-bottom: 5px;}
 #researchWrap .researchLinkBox .researchTitleBox p{position: relative; padding: 0 10px; color: #fff; font-size: 30px; font-weight: 500; z-index: 1;}
 #researchWrap .researchLinkBox .researchTitleBox p::before{content: ''; position: absolute; top:0; left:0; width: 0; bottom: 0;  background-color: #333; z-index: -1; transition: all .7s 1s;}

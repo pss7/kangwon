@@ -1,5 +1,94 @@
 @charset "UTF-8";
 
+/* 공통 - 폼 */
+label{display: block; font-size: 14px; color: #333;}
+.requiredMark{color: #FF443D;}
+input{display: block; width: 100%; padding: 0 10px; height: 40px; border-radius: 10px; background-color: #F4F4F4; color: #333; border: 0;}
+
+
+
+
+/* 공통 - 버튼 */
+.commonBtnBox.verticalBtnBox{flex-direction:column; gap:14px 0;}
+.commonBtnBox.verticalBtnBox .commonBtn{flex:none; width:100%; max-width:none;}
+.commonBtnBox{display:flex; align-items:center; justify-content:center; gap:0 14px;}
+.commonBtnBox .commonBtn{flex:1; max-width:220px;}
+.commonBtn{display:inline-flex; align-items:center; justify-content:center; min-height:60px; padding:10px; border:1px solid transparent; border-radius:20px;font-size:16px; font-weight:700; transition: all .3s;}
+.commonBtn.primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
+.commonBtn.primaryBtn:hover{border-color:#153577; background-color:#153577;}
+.commonBtn.borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
+.commonBtn.borderBtn:hover{background-color:#f2f5fc;}
+.commonBtn:disabled{opacity:.5; cursor:default;}
+
+@media (max-width: 480px){
+
+  .commonBtn{min-height: 56px; border-radius: 10px;}
+
+}
+
+/* 공통 - 제목 */
+.commonTitle01{margin: 80px 0 60px; color: #333; font-size: 32px; font-weight: 700; font-family: "HD", sans-serif;}
+
+@media (max-width: 1199px){
+
+  .commonTitle01{margin: 70px 0 50px; font-size: 26px;}
+
+}
+
+@media (max-width: 768px){
+
+  .commonTitle01{margin: 50px 0 30px; font-size: 22px;}
+
+}
+
+@media (max-width: 480px){
+
+  .commonTitle01{margin: 30px 0; font-size: 20px;}
+
+}
+
+/* 공통 - 탭 */
+.commonTab{padding: 0 20px; margin-bottom: 100px; display: flex; justify-content: center; flex-wrap: wrap; gap:8px;}
+.commonTab .commonTabBtn{min-width: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-weight: 500; color: #333;}
+.commonTab .commonTabBtn.active{border: 1px solid #1D439C; background-color: #EDF2FF; color: #1D439C; font-weight: 700;}
+
+@media (max-width: 768px){
+
+  .commonTab{margin-bottom: 60px;}
+
+}
+
+/* 공통 - 리스트 */
+.dotList li{margin-bottom: 6px; display: flex; color: #333; font-weight: 500; text-align: left;}
+.dotList li:last-child{margin-bottom: 0;}
+.dotList li::before{content: ''; flex-shrink: 0; margin: 10px; width: 3px; height: 3px; background-color: #333; border-radius: 50%;}
+
+@media (max-width: 480px){
+
+  .dotList li{margin-bottom: 0; font-size: 14px;}
+  .dotList li::before{margin: 8px;}
+
+}
+
+/* 공통 - 테이블 */
+.commonTable{width: 100%;}
+.commonTable thead tr th{height: 40px; background-color: #1D439C; color: #fff; font-weight: 500; border: 1px solid #1D439C;}
+.commonTable tbody tr td{padding: 20px 14px; border: 1px solid #bbb; font-weight: 500; color: #333; text-align: center;}
+
+@media (max-width: 768px){
+
+  .tableScrollBox{overflow-x: auto;}
+  .tableScrollBox table{width: 768px;}
+
+}
+
+@media (max-width: 480px){
+
+  .commonTable thead tr th,
+  .commonTable tbody tr td{font-size: 14px;}
+
+}
+
 /* 가운데영역 */
 .container{max-width: 1240px;}
 
@@ -17,9 +106,10 @@
 #subTitleWrap h2 em:nth-child(6){animation-delay: .6s;}
 #subTitleWrap h2 em:nth-child(7){animation-delay: .7s;}
 #subTitleWrap h2 em:nth-child(8){animation-delay: .8s;}
-#subTitleWrap .subNavBox{position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);}
+#subTitleWrap .subNavBox{max-width: 960px; width: 100%; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);}
 #subTitleWrap .subNav ul{display: flex; align-items: center; justify-content: center;}
-#subTitleWrap .subNav ul li{margin-right: -1px;}
+#subTitleWrap .subNav ul li{  flex: 1;
+    min-width: 0; margin-right: -1px;}
 #subTitleWrap .subNav ul li a{display: flex; align-items: center; justify-content: center; padding: 0 10px; min-width: 160px; height: 70px; font-size: 20px; font-weight: 500; color: #fff; border: 1px solid #fff; background-color: rgba(255,255,255, .2);}
 #subTitleWrap .subNav ul li a.active{background-color: #fff; color: #1D439C; font-weight: 700;}
 #subTitleWrap .subNav ul li:first-child a{border-radius: 20px 0 0 0;}
@@ -34,7 +124,7 @@
 
 @media (max-width: 1024px){
 
-  #subTitleWrap .subNavBox{width: 100%; overflow-x: auto;}
+  #subTitleWrap .subNavBox{overflow-x: auto;}
   #subTitleWrap .subNav{width: 1024px;}
   #subTitleWrap .subNav ul li:first-child a{border-radius: 0;}
   #subTitleWrap .subNav ul{justify-content: flex-start;}
@@ -63,13 +153,13 @@
 #subContentWrap{padding: 120px 0;}
 #subContentWrap .subContentHeaderBox{margin-bottom: 60px; }
 #subContentWrap .subContentHeader{display: flex; align-items: center; justify-content: space-between;}
-#subContentWrap .subContentHeader h2{font-weight: 700; font-size: 32px; color: #333; font-family: 'HD';}
-#subContentWrap .subContentHeader .breadcrumbBox{display: flex; align-items: center; justify-content: center; padding: 0 18px; height: 36px; background-color: #F4F4F4; border-radius: 50px;}
-#subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink{display: flex; align-items: center; font-weight: 500; color: #333;}
+#subContentWrap .subContentHeader h2{font-weight: 700; font-size: 32px; color: #333; font-family: "HD", sans-serif;}
+#subContentWrap .subContentHeader .breadcrumbBox{display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 7px 0; padding: 6px 18px; background-color: #F4F4F4; border-radius: 50px;}
+#subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink{display: flex; align-items: center; font-weight: 500; color: #333; word-break: keep-all;}
 #subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink img{display: block;}
 #subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink.active{font-weight: 700; color: #1D439C;}
 #subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink::before{content: '';
- width: 8px; height: 12px; margin: 0 12px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
+ width: 8px; height: 12px; margin: 0 12px; background: url(../images/sub/arrow_icon01.svg)no-repeat center / contain;}
 #subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink:first-child::before{  display: none;}
 
 @media (max-width: 1199px){
@@ -87,6 +177,423 @@
 
 @media (max-width: 480px){
 
-  #subContentWrap .subContentHeader h2{font-size: 26px;}
+  #subContentWrap .subContentHeaderBox{margin-bottom: 46px;}
+  #subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink{font-size: 13px;}
+  #subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink img{width: 18px;}
+  #subContentWrap .subContentHeader h2{font-size: 24px;}
+  #subContentWrap .subContentHeader .breadcrumbBox .breadcrumbLink::before{width: 6px; height: 9px; margin: 0 10px;}
+
+}
+
+/* 인사말 */
+.greetingWrap .greetingBox{display: flex; justify-content: space-between; gap: 60px; padding: 80px 60px; background-color: #fff; border-radius: 30px; border: 1px solid #eee; box-shadow: 0 0 30px rgba(13, 79, 201, 0.2);}
+.greetingWrap .greetingTitle{margin-bottom: 22px; font-size: 30px; font-weight: 500; color: #333; font-family: "HD", sans-serif; word-break: keep-all;} 
+.greetingWrap .greetingTitle strong{color:#1D439C;}
+.greetingWrap .greetingText01{margin-bottom: 30px; font-size: 24px; font-weight: 500; color: #333;}
+.greetingWrap .greetingText02{color: #444;}
+.greetingWrap .greetingLogoBox{margin-bottom: 26px;}
+.greetingWrap .greetingImgBox{flex-shrink: 0;padding-top: 18px;}
+.greetingWrap .greetingImgBox .greetingProfileImgBox{margin-bottom: 33px; }
+.greetingWrap .greetingImgBox img{display: block; max-width: 100%; margin: 0 auto;} 
+.greetingWrap .greetingDirectorInfo{display: flex; align-items: center; justify-content: center; gap:0 15px; font-size: 24px; font-weight: 500; color: #444; font-family: "HD", sans-serif;}
+.greetingWrap .greetingDirectorInfo .greetingDirectorName{font-size: 34px;}
+
+@media (max-width: 1199px){
+
+  .greetingWrap .greetingBox{padding: 60px;}
+  .greetingWrap .greetingTitle{font-size: 26px;}
+  .greetingWrap .greetingText01{font-size: 20px;}
+  .greetingWrap .greetingDirectorInfo{font-size: 20px;}
+  .greetingWrap .greetingDirectorInfo .greetingDirectorName{font-size: 30px;}
+
+}
+
+@media (max-width: 1024px){
+  
+  .greetingWrap .greetingBox{flex-direction: column;}
+  
+}
+
+@media(max-width: 768px){
+
+  .greetingWrap .greetingBox{padding: 50px 20px; border-radius: 20px;}
+  .greetingWrap .greetingTitle{font-size: 24px;}
+  .greetingWrap .greetingText01{font-size: 18px;}
+  .greetingWrap .greetingDirectorInfo{font-size: 18px;}
+  .greetingWrap .greetingDirectorInfo .greetingDirectorName{font-size: 26px;}
+
+}
+
+@media(max-width: 480px){
+
+  .greetingWrap .greetingBox{gap: 40px 0;}
+  .greetingWrap .greetingTitle{font-size: 20px;}
+  .greetingWrap .greetingText01{margin-bottom: 22px; font-size: 16px;}
+  .greetingWrap .greetingDirectorInfo{font-size: 16px;}
+  .greetingWrap .greetingDirectorInfo .greetingDirectorName{font-size: 22px;}
+  .greetingWrap .greetingText02{font-size: 15px;}
+
+}
+
+/* 조직도 */
+.organizationChartWrap .organizationChartNode{margin: 0 auto 67px; max-width: 200px; height: 80px;  border: 8px solid #fff; border-radius: 10px;}
+.organizationChartWrap .organizationChartLabel{display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-size: 20px; font-weight: 500; color: #fff; border-radius: 10px;}
+.organizationChartWrap .organizationChartList01{position: relative; margin-bottom: 222px;}
+.organizationChartWrap .organizationChartList01::after{content:''; width: 1px; position: absolute; left: 50%; top:0; bottom: 154px; background-color: #ddd; z-index: -1;}
+.organizationChartWrap .organizationChartList01 > li > .organizationChartNode{box-shadow: 0 0 10px 4px rgba(0, 169, 79, 0.2); border-radius: 50px;}
+.organizationChartWrap .organizationChartList01 > li > .organizationChartNode > span{background-color: #00A94F;  border-radius: 50px;}
+.organizationChartWrap .organizationChartList02 > li > .organizationChartNode{box-shadow: 0 0 20px 4px rgba(0, 139, 239, 0.2); max-width: 140px;}
+.organizationChartWrap .organizationChartList02 > li > .organizationChartNode > span{background-color: #2773FF; border-radius: 10px;}
+.organizationChartWrap .organizationChartList03 > li > .organizationChartNode{margin-bottom: 92px; box-shadow: 0 0 20px 4px rgba(0, 139, 239, 0.2);}
+.organizationChartWrap .organizationChartList03 > li > .organizationChartNode > span{background-color: #1D429B; }
+.organizationChartWrap .organizationChartList04{padding-top: 90px; position: relative; display: flex;  justify-content: center; gap: 0 33px;}
+.organizationChartWrap .organizationChartList04 > li + li::before{content: ""; position: absolute;
+  top: -90px; right: 50%; width: 100%; height: 1px; padding-left: 33px; background-color: #ddd;
+  z-index: -1;}  
+.organizationChartWrap .organizationChartList04 li{padding: 0 10px; position: relative; display: flex; align-items: center; justify-content: center; flex: 1 1 0;   min-width: 0;
+  max-width: 200px; width: 100%; height: 64px; border-radius: 10px; font-size: 20px; font-weight: 500; color: #333; background-color: #fff; text-align: center; }
+.organizationChartWrap .organizationChartList04 li::after{content: ''; position: absolute;
+    top: -90px; left: 50%; bottom: 0; width: 1px; background-color: #ddd; z-index: -1;}
+.organizationChartWrap .organizationChartList04 li.orgUnit01{box-shadow: 0 0 20px 5px rgba(0, 139, 239, 0.2);}
+.organizationChartWrap .organizationChartList04 li.orgUnit02{box-shadow: 0 0 20px 5px rgba(151, 118, 65, 0.2);}
+.organizationChartWrap .organizationChartList04 li.orgUnit03{box-shadow: 0 0 20px 5px rgba(245, 118, 146, 0.2);}
+.organizationChartWrap .organizationChartList04 li.orgUnit04{box-shadow: 0 0 20px 5px rgba(179, 100, 206, 0.2);}
+.organizationChartWrap .organizationChartList04 li.orgUnit05{box-shadow: 0 0 20px 5px rgba(74, 175, 121, 0.2);}
+
+.organizationChartWrap .tableWrap{max-width: 910px; margin: 0 auto 80px;}
+.organizationChartWrap .tableWrap .tableTitle{margin-bottom: 24px; display: flex; align-items: center; justify-content: center; height: 56px; padding: 0 20px; font-size: 20px; font-weight: 500; color: #333; border-radius: 10px;}
+.organizationChartWrap .tableWrap .tableTitle.researchSupport{border: 1px solid #2773FF; box-shadow: 0 0 20px rgba(0, 139, 239, 0.2);}
+.organizationChartWrap .tableWrap .tableTitle.clinicalTrial{border: 1px solid #977641; box-shadow: 0 0 20px rgba(151, 118, 65, 0.2);}
+.organizationChartWrap .tableWrap .tableTitle.researchProtection{border: 1px solid #F57692; box-shadow: 0 0 20px rgba(245, 118, 146, 0.2);}
+.organizationChartWrap .tableWrap .tableTitle.bioresourceBank{border: 1px solid #B364CE; box-shadow: 0 0 20px rgba(179, 100, 206, 0.2);}
+.organizationChartWrap .tableWrap .tableTitle.advancedResearchSupport{border: 1px solid #4AAF79; box-shadow: 0 0 20px rgba(74, 175, 121, 0.2);}
+.organizationChartWrap .tableWrap .tableLogoBox{margin-bottom: 5px;}
+.organizationChartWrap .tableWrap .tableLogoBox img{display: block; max-width: 100%;}
+
+@media (max-width: 1199px) {
+
+  .organizationChartWrap .organizationChartList01 {margin-bottom: 80px;}
+  .organizationChartWrap .organizationChartList04{gap: 0 20px;}
+  .organizationChartWrap
+  .organizationChartList04 > li + li::before { padding-left: 20px;}
+  .organizationChartWrap
+  .organizationChartList04 li{max-width: 170px; font-size: 18px;}
+
+  .organizationChartWrap .tableWrap{max-width: none;}
+  .organizationChartWrap .tableWrap .tableTitle{height: 48px; font-size: 18px;}
+
+}
+
+@media (max-width: 768px) {
+
+  .organizationChartWrap .organizationChartList03 > li > .organizationChartNode{margin-bottom: 26px;}
+  .organizationChartWrap .organizationChartNode {max-width: 180px; height: 70px; margin-bottom: 50px;
+    border-width: 6px; }
+  .organizationChartWrap .organizationChartLabel {font-size: 18px;}
+  .organizationChartWrap
+  .organizationChartList01::after{bottom: 30px;}
+  .organizationChartWrap.organizationChartList03 > li > .organizationChartNode{margin-bottom: 0;}
+  .organizationChartWrap .organizationChartList04 {flex-direction: column; align-items: center;
+    gap: 18px 0; width: 100%; padding-top: 50px;}
+  .organizationChartWrap .organizationChartList04 li {flex: none; width: 100%; max-width: 280px;  height: 60px;font-size: 16px;}
+  .organizationChartWrap .organizationChartList04 > li + li::before,
+  .organizationChartWrap .organizationChartList04 li::after {content: none;}
+
+  .organizationChartWrap .tableWrap .tableTitle{height: 42px; font-size: 16px;}
+
+}
+
+/* 오시는 길 */
+.locationWrap .locationMapBox{margin-bottom: 40px; height: 710px; border-radius: 30px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,.2); border: 1px solid #bbb;}
+.locationWrap .locationMapBox iframe{width: 100%; height: 100%;}
+.locationWrap .locationInfo{padding: 14px 30px; display: flex; align-items: center; gap: 20px 40px; border: 1px solid #bbb; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); border-radius: 10px;}
+.locationWrap .locationInfo .locationInfoLabel{flex-shrink: 0; font-size: 20px; font-weight: 700; color: #333;}
+.locationWrap .locationInfo .locationInfoValue{font-size: 20px; font-weight: 500; color: #333;} 
+
+@media (max-width: 1199px){
+
+  .locationWrap .locationMapBox{height: 500px; border-radius: 20px;}
+  .locationWrap .locationInfo .locationInfoLabel,
+  .locationWrap .locationInfo .locationInfoValue{font-size: 18px;}
+
+}
+
+@media (max-width: 768px){
+
+  .locationWrap .locationMapBox{height: 360px; border-radius: 10px;}
+  .locationWrap .locationInfo .locationInfoLabel,
+  .locationWrap .locationInfo .locationInfoValue{font-size: 16px;}
+  .locationWrap .locationInfo{gap: 20px 30px;}
+
+}
+
+/* 통합예약·신청 - 장비예약 */
+.equipmentReservationWrap .equipmentTitle{margin-bottom: 20px; padding: 15px 10px 15px 24px; font-size: 20px; font-weight: 700; color: #1D439C; background-color: #EDF2FF;}
+
+/* 장비예약 공통 */
+.commonShadowBox{margin-bottom: 30px; padding: 40px;
+    border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
+.commonTitle{margin-bottom: 20px;
+    font-size: 20px; font-weight: 500; color: #333; font-family: "HD", sans-serif;}
+.equipmentReservationWrap .border{display: block; margin: 30px 0; height: 1px; background-color: #ccc;}
+.equipmentReservationWrap .commonLayoutBox{display: flex; gap: 30px;}
+.equipmentReservationWrap .commonRightBox{flex-shrink: 1; width: 360px;}
+.equipmentReservationWrap .commonLeftBox{flex: 1;}
+.equipmentReservationWrap .commonTitle{margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+
+/* 장비 예약 공통 - 진행 단계 영역 */
+.equipmentReservationWrap .equipmentStepList{position:relative; margin-bottom:30px; padding:22px 38px; display:flex; align-items:flex-start; justify-content:space-between; border-radius:20px; background-color:#f4f4f4; isolation:isolate;}
+.equipmentReservationWrap .equipmentStepList::before{content:""; position:absolute; top:89px; left:60px; right:60px; height:4px; border-radius:2px; background-color:#ccc; transform:translateY(-50%); z-index:0;}
+.equipmentReservationWrap .equipmentStepList.step02::before{background:linear-gradient(to right, #2773ff 0, #2773ff 33.333%, #ccc 33.333%, #ccc 100%);}
+.equipmentReservationWrap .equipmentStepList.step03::before{background:linear-gradient(to right, #2773ff 0, #2773ff 66.666%, #ccc 66.666%, #ccc 100%);}
+.equipmentReservationWrap .equipmentStepList.step04::before{background-color:#2773ff;}
+.equipmentReservationWrap .equipmentStepList li{position:relative; flex:0 0 120px; width:120px; text-align:center; z-index:1;}
+.equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:6px; display:block; font-size:15px; font-weight:700; color:#666;}
+.equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{margin:0 auto 6px; display:flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background-color:#fff;}
+.equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{display:block;}
+.equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break: keep-all;}
+.equipmentReservationWrap .equipmentStepList li.active .equipmentStepNumber,
+.equipmentReservationWrap .equipmentStepList li.active .equipmentStepTitle{color:#2773ff;}
+.equipmentReservationWrap .equipmentStepList li.active .equipmentStepImgBox{background-color:#2773ff;}
+
+/* 장비예약 공통 - 장비 및 시간 정보 영역 */
+.equipmentTimeInfoBox{padding: 23px 20px 20px;}
+.equipmentTimeInfoBox .commonTitle{text-align: center;}
+.equipmentTimeInfoBox .equipmentTimeInfoImgBox{margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+.equipmentTimeInfoBox .equipmentTimeInfoImgBox img{display: block; max-width: 100%; margin: 0 auto;}
+.equipmentReservationWrap .equipmentTimeInfoTitBox{margin-bottom: 20px; text-align: center;}
+.equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentDepartment{padding: 2px 8px; display: inline-block; margin-bottom: 10px; background-color: #2773FF; color: #fff; border-radius: 8px; font-size: 14px; font-weight: 500;}
+.equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentName{font-size: 18px; font-weight: 700; color: #333;}
+.equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentNameEn{font-size: 16px; font-weight: 500; color: #333;} 
+
+.equipmentReservationWrap .equipmentTimeInfo{ display: flex; align-items: center; justify-content: center; gap: 10px 18px;} 
+.equipmentReservationWrap .equipmentTimeInfo span{min-width: 112px; padding: 8px 5px; color: #fff; font-weight: 500; border-radius: 10px; text-align: center;}
+.equipmentReservationWrap .equipmentReservationDate{background-color: #365BD3;}
+.equipmentReservationWrap .equipmentReservationTime{background-color: #3DCD80;}
+
+@media (max-width: 1199px) {
+  
+  .commonTitle{font-size: 18px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .equipmentReservationWrap .commonLayoutBox{flex-direction: column;}
+
+  .equipmentReservationWrap .equipmentStepList{padding:18px 24px; border-radius:16px;}
+  .equipmentReservationWrap .equipmentStepList::before{top:78px; left:50px; right:50px; height:3px;}
+  .equipmentReservationWrap .equipmentStepList li{flex:0 0 100px; width:100px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:5px; font-size:14px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{margin-bottom:5px; width:70px; height:70px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{font-size:14px;}
+
+  .equipmentReservationWrap .commonRightBox{width: 100%;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 45px;}
+
+}
+
+@media (max-width: 768px){
+
+  .equipmentReservationWrap .equipmentStepList{margin-bottom:20px; padding:16px 10px; border-radius:14px;}
+  .equipmentReservationWrap .equipmentStepList::before{top:65px; left:36px; right:36px; height:3px;}
+  .equipmentReservationWrap .equipmentStepList li{flex:0 0 72px; width:72px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:4px; font-size:12px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{margin-bottom:4px; width:56px; height:56px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 35px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{font-size:12px; line-height:1.3;}
+
+}
+
+@media (max-width: 576px) {
+
+   .commonShadowBox{padding: 30px 20px;}
+
+}
+
+@media (max-width:480px){
+
+  .equipmentReservationWrap .equipmentStepList{padding:14px 8px; border-radius:12px;}
+  .equipmentReservationWrap .equipmentStepList::before{top:59px; left:32px; right:32px;}
+  .equipmentReservationWrap .equipmentStepList li{flex-basis:64px; width:64px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{font-size:11px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{width:52px; height:52px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{font-size:11px;}
+  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 27px;}
+
+  .equipmentReservationWrap .equipmentTimeInfo{flex-direction: column;}
+  .equipmentReservationWrap .equipmentTimeInfo span{width: 100%; min-width: auto;}
+
+}
+  
+/* 장비예약 목록 */
+.equipmentReservationWrap .equipmentReservationList{display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+.equipmentReservationWrap .equipmentReservationList li a{display: block; border: 1px solid #ccc; border-radius: 10px; overflow: hidden;}
+.equipmentReservationWrap .equipmentReservationList li a .equipmentImgBox{display: flex; align-items: center; justify-content: center; height: 220px; border-bottom: 1px solid #ccc;}
+.equipmentReservationWrap .equipmentReservationList li a .equipmentImgBox img{display: block; max-width: 100%;  }
+.equipmentReservationWrap .equipmentReservationList li a .equipmentTextBox{padding: 16px 10px 16px 24px; background-color: #1D439C;}
+.equipmentReservationWrap .equipmentReservationList li a .equipmentTextBox h4{color: #fff; font-weight: 700;}
+.equipmentReservationWrap .equipmentReservationList li a .equipmentTextBox span{display: block; font-weight: 500; color: #fff;}
+
+/* 장비예약 상세 */
+.equipmentReservationWrap .equipmentDetailInfo{display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 40px; margin-bottom: 30px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
+.equipmentReservationWrap .equipmentDetailInfo .equipmentDepartment{display: inline-block; margin-bottom: 17px; padding: 7px 14px; color: #fff; font-weight: 700; background-color: #2773FF; border-radius: 8px;}
+.equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-weight: 700; font-size: 30px; color: #333;}
+.equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 20px; color: #333;}
+.equipmentReservationWrap .equipmentDetailInfo .equipmentDetailImgBox img{display: block; max-width: 100%;}
+.equipmentReservationWrap .equipmentDetailTableWrap{padding: 40px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
+.equipmentReservationWrap .equipmentDetailTableWrap .equipmentDetailTableTitle{margin-bottom: 20px; font-size: 20px; font-weight: 500; color: #333;} 
+.equipmentReservationWrap .equipmentDetailSection{margin-bottom: 30px;}
+.equipmentReservationWrap .equipmentDetailSection01{padding-bottom: 30px; border-bottom: 1px solid #ccc;}
+.equipmentReservationWrap .equipmentDetailSection:last-child{margin-bottom: 0;}
+.equipmentReservationWrap .equipmentDetailTable{width: 100%; table-layout:fixed;}
+.equipmentReservationWrap .equipmentDetailTable tbody td,
+.equipmentReservationWrap .equipmentDetailTable tbody th{padding: 12px 10px; font-size: 14px; color: #333; font-weight: 400; text-align: left; border: 1px solid #ccc; border-width: 1px 0;}
+.equipmentReservationWrap .equipmentDetailTable tbody th{background-color: #F7F8F9;}
+.equipmentReservationWrap .equipmentDetailCalendarBox{margin-bottom: 30px; padding: 24px 22px;border: 1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,.2); border-radius: 30px;}
+.equipmentReservationWrap .equipmentDetailCalendar{margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 0 20px;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader h4{font-weight: 600; font-size: 18px; color: #333; font-weight: 500;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader .calendarBtn{width: 5px; height: 10px; }
+.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader .calendarBtn.calendarPrev{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader .calendarBtn.calendarNext{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain; transform: rotate(180deg);}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarWeek{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden; border: 1px solid rgba(255, 255, 255, .8); border-width: 1px 0;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarWeek .week{margin: 0 auto; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-align: center; color: #666; font-size: 14px;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell {display: flex; align-items: center; justify-content: center; height: 40px; border-bottom: 1px solid rgba(255, 255, 255, .8);}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 40px; height: 40px; border-radius: 8px; color: #666; font-size: 14px; background-color: #f4f4f4;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn.disabled{cursor: default;}
+.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn.active{color: #fff; background-color: #365BD3; font-weight: 700;}
+.equipmentReservationWrap .equipmentDetailTimeList{display: flex; flex-wrap: wrap; gap: 8px;}
+.equipmentReservationWrap .equipmentDetailTimeList .reservationTimeBtn{display: flex; align-items: center; justify-content: center; width: 70px; height: 40px; padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; color: #333;}
+.equipmentReservationWrap .equipmentDetailTimeList .reservationTimeBtn:disabled{background-color: #F4F4F4; color: #666; font-size: 14px; cursor: default; pointer-events: none; border: 0;}
+
+/* 장비예약 신청 */
+.equipmentReservationWrap .equipmentReservationApplyBox .formBox{margin-bottom: 30px;}
+.equipmentReservationWrap .equipmentReservationApplyBox .formBox label{margin-bottom: 8px;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginField legend{margin-bottom:8px; font-size:14px; color:#333;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginContent{display:flex; align-items:center; gap:21px;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadioGroup{display:grid; grid-template-columns:repeat(2, 140px); gap:10px;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio{position:relative;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio input{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio label{margin: 0; display:flex; align-items:center; justify-content:center; height:40px; border-radius:10px; color:#333; background-color:#f4f4f4; cursor:pointer; font-size: 14px;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio input:checked + label{margin: 0; color:#fff; background-color:#1d439c;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio input:focus-visible + label{outline:3px solid rgba(29,67,156,.25); outline-offset:2px;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox{display:flex; align-items:center; gap:14px; flex:1;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox label{margin: 0; flex-shrink:0; color:#bbb; font-size: 14px;}
+.equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox input:disabled{color:#999; background-color:#f4f4f4;}
+
+/* 장비예약 완료 */
+.equipmentReservationCompleteBox .equipmentReservationInfoList{margin-bottom: 30px; padding: 0 0 30px; border-bottom: 1px solid #ccc;}
+.equipmentReservationCompleteBox .equipmentReservationInfoItem{padding: 10px 10px 10px 0; display: flex; align-items: center;}
+.equipmentReservationCompleteBox .equipmentReservationInfoItem dt{width: 170px; flex-shrink: 0; font-size: 14px; font-weight: 500; color: #333;}
+.equipmentReservationCompleteBox .equipmentReservationInfoItem dd{font-size: 14px; color: #333;}
+.equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{gap: 10px 8px;}
+.equipmentReservationCompleteBox .equipmentCompleteInfoTextBox{padding: 10px 20px; background-color: #F8FCFF; border: 1px solid #CFE8FB; border-radius: 10px;}
+.equipmentReservationCompleteBox .equipmentCompleteInfoTextBox h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
+.equipmentReservationCompleteBox .equipmentCompleteInfoTextBox h4{display: flex; align-items: center; gap: 0 4px; margin-bottom: 7px; font-weight: 500; font-size: 16px; color: #1D439C;}
+.equipmentReservationCompleteBox .equipmentCompleteInfoTextBox .dotList li{font-size: 14px; font-weight: 500; color: #333;}
+.equipmentReservationCompleteBox .equipmentCompleteMessage{display: flex; flex-direction: column; align-items: center;  padding: 26px 20px 54px; margin-bottom: 30px; background-color: #EDF2FF; border-radius: 20px; text-align: center;}
+.equipmentReservationCompleteBox .equipmentCompleteMessage::before{content: ''; margin-bottom: 15px; width: 78px; height: 83px; background: url(../images/sub/complete_icon.svg)no-repeat center / contain;}
+.equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 30px; font-weight: 500; color: #333; font-family: 'HD',sans-serif;}
+.equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle strong{color: #2773FF; font-weight: 500;}
+.equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteDescription{font-size: 24px; font-weight: 500; font-family: 'HD',sans-serif; color: #333;}
+.equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteDescription strong{color: #1D439C; font-weight: 500;}
+
+/* 활성화 */
+.equipmentReservationWrap .equipmentStepList li.active .equipmentStepNumber,
+.equipmentReservationWrap .equipmentStepList li.active .equipmentStepTitle{color: #2773FF; font-weight: 700;}
+.equipmentReservationWrap .equipmentStepList li.active .equipmentStepImgBox{background-color: #2773FF;}
+.equipmentReservationWrap .equipmentStepList li + li.active::before{background-color: #2773FF;}
+
+@media (max-width: 1199px){
+
+  .equipmentReservationWrap .equipmentDetailInfo .equipmentDepartment{margin-bottom: 10px;}
+  .equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-size: 26px;}
+  .equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 18px;}
+
+  .equipmentReservationWrap .equipmentDetailTableWrap .equipmentDetailTableTitle{font-size: 18px;}
+
+  .equipmentReservationCompleteBox .equipmentCompleteMessage{padding: 26px 20px 42px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 26px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteDescription{font-size: 20px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .equipmentReservationWrap .equipmentReservationList{grid-template-columns: repeat(2, 1fr);}
+  .equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 100%; height: 100%;}
+
+}
+
+@media (max-width: 768px){
+
+  .equipmentReservationWrap .equipmentReservationList{grid-template-columns: 1fr;}
+  .equipmentReservationWrap .equipmentTitle{padding: 10px 20px; font-size: 18px;}
+
+  .equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-size: 24px;}
+  .equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 16px;}
+
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable colgroup{display:none;}
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable,
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable tbody{display:block; width:100%;}
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable tr{display:grid; grid-template-columns:120px 1fr; width:100%;}
+    .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable th,
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable td{display:flex; align-items:center; width:auto; min-width:0; margin-bottom: -1px;} 
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable td{overflow-wrap:anywhere;}
+
+  .equipmentReservationWrap .equipmentDetailCalendarBox{border-radius: 20px;}
+  .equipmentReservationWrap .equipmentDetailCalendar .calendarHeader{margin-bottom: 15px;}
+
+  .equipmentReservationWrap.equipmentReservationApplyBox .sampleOriginContent{align-items:stretch; flex-direction:column;}
+  .equipmentReservationWrap.equipmentReservationApplyBox .sampleRadioGroup{grid-template-columns:repeat(2,1fr);}
+  .equipmentReservationWrap.equipmentReservationApplyBox .sampleTypeBox{width:100%;}
+  .equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginContent{flex-direction: column; align-items: flex-start;}
+  .equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox{width: 100%;}
+
+  
+  .equipmentReservationCompleteBox .equipmentReservationInfoList{margin-bottom:24px; padding-bottom:24px;}
+  .equipmentReservationCompleteBox .equipmentReservationInfoItem{padding:9px 0; align-items:flex-start;}
+  .equipmentReservationCompleteBox .equipmentReservationInfoItem dt{width:140px;}
+  .equipmentReservationCompleteBox .equipmentReservationInfoItem dd{flex:1; width:auto; min-width:0; overflow-wrap:anywhere;}
+  .equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{flex-wrap:wrap;}
+
+  .equipmentReservationCompleteBox .equipmentCompleteMessage{padding: 26px 20px 36px; border-radius: 10px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage::before{width: 70px; height: 74px; margin-bottom: 10px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 22px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteDescription{font-size: 18px;}
+
+}
+
+@media (max-width: 576px){
+  
+  .equipmentReservationWrap .equipmentDetailInfo{padding: 30px 20px; flex-direction: column; text-align: center;}
+  .equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-size: 22px;}
+  .equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 16px;}
+
+  .equipmentReservationWrap .equipmentDetailTableWrap{padding: 30px 20px;}
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable tr{grid-template-columns:100px 1fr;}
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable th,
+  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable td{font-size:14px;}
+
+}
+
+@media (max-width: 480px){
+
+  .equipmentReservationWrap .equipmentReservationApplyBox .sampleRadioGroup{width: 100%;    grid-template-columns: 1fr;}
+  
+  .equipmentReservationCompleteBox .equipmentReservationInfoList{margin-bottom:20px; padding-bottom:20px;}
+  .equipmentReservationCompleteBox .equipmentReservationInfoItem{padding:8px 0;}
+  .equipmentReservationCompleteBox .equipmentReservationInfoItem dt{width:110px; padding-right:10px; box-sizing:border-box; line-height:1.5; word-break:keep-all;}
+  .equipmentReservationCompleteBox .equipmentReservationInfoItem dd{line-height:1.5;}
+  .equipmentReservationCompleteBox .equipmentReservationInfoItem .equipmentNameEn{display:block;}
+  .equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{gap:6px;}
+
+  .equipmentReservationCompleteBox .equipmentCompleteMessage{padding: 26px 20px 30px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage::before{width: 70px; height: 74px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 18px;}
+  .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteDescription{font-size: 16px;}
+
 
 }

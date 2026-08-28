@@ -124,9 +124,8 @@ main{flex: 1;}
 
 }
 
-
 /* 푸터 */
-#footerWrap .footerTopBox{border-bottom: 1px solid #ccc;}
+#footerWrap .footerTopBox{border: 1px solid #ccc; border-width: 1px 0;}
 #footerWrap .footerTopBox .footerLinkBox .footerLink{display: flex;}
 #footerWrap .footerTopBox .footerLinkBox .footerLink li a{padding: 28px 30px; display: block; font-weight: 600; color: #1D439C; transition: all .3s;}
 #footerWrap .footerTopBox .footerLinkBox .footerLink li a:hover{text-shadow: 0 0 20px rgba(13, 79, 201, .9);}
