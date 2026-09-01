@@ -93,8 +93,8 @@
 #visualWrap .visualTitleBox{position: relative; padding-top: 148px;} 
 #visualWrap .visualLayoutBox{display: flex; align-items: flex-start; justify-content: space-between; gap: 0 30px;}
 #visualWrap .visualTextBox .visualTitle{opacity: 0; margin-bottom: 30px; color: #fff; font-size: 60px; font-family: "HD", sans-serif; line-height: 1.1; word-break: keep-all; letter-spacing: 5px; filter: blur(5px); transition: all 3s;}
-#visualWrap .visualTextBox .visualText{color: #fff; font-weight: 500; word-break: keep-all;}
-#visualWrap .visualLinkBox{padding-top: 130px; animation-delay: .8s;}
+#visualWrap .visualTextBox .visualText{color: #fff; font-weight: 500; word-break: keep-all; filter: blur(5px); letter-spacing: 2px; transition: all 3s;}
+#visualWrap .visualLinkBox{padding-top: 130px; animation-delay: .2s;}
 #visualWrap .visualLinkBox .visualTabBtnBox{display: flex; gap: 10px; margin-bottom: 26px;}
 #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{position: relative; padding: 9px 24px; border: 1px solid rgba(255,255,255.5); background: rgba(255,255,255, .2); border-radius: 8px; font-size: 18px; font-weight: 500; font-family: "HD", sans-serif; color: #fff; overflow: hidden; z-index: 1; word-break: keep-all;}
 #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn::before{content: ''; width: 0; position: absolute; top:0; left:0; bottom: 0; width: 0; background-color: #fff; transition: all .3s; z-index: -1;}
@@ -115,8 +115,13 @@
 
 /* 활성화, 호버 */
 #visualWrap.active .visualImgBox img{transform: scale(1);}
-#visualWrap.active .visualTextBox .visualTitle{opacity: 1; filter: blur(0); letter-spacing: 0;}
+#visualWrap.active .visualTextBox .visualTitle,
+#visualWrap.active .visualTextBox .visualText{opacity: 1; filter: blur(0); letter-spacing: 0;}
 #visualWrap .visualLinkBox .visualLinkList li a:hover .visualLinkIconBox{transform: translateY(-7px); background-color: #fff;}
+
+
+
+
 
 @media (max-width: 1480px) {
     
@@ -566,7 +571,7 @@ box-sizing: border-box;}
 
 /* 월간 일정 영역 */
 #calendarWrap{position: relative; z-index: 1; border: 0;}
-#calendarWrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main_bg02.jpg)no-repeat center / cover; overflow: hidden;  z-index: -1;  transform: scale(.6);  border-radius: 50px; transition: all 2.5s;}
+#calendarWrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main_bg02.jpg)no-repeat center / cover; overflow: hidden;  z-index: -1; transition: all 2.5s;}
 #calendarWrap .calendarBox{max-width: 640px; width: 100%; padding: 90px 60px; border-right: 1px solid rgba(255, 255, 255, .6);}
 #calendarWrap .calendar{padding: 30px; border: 1px solid rgba(255, 255, 255.5);
     background: rgba(255, 255, 255, .1); border-radius: 20px;}
@@ -607,7 +612,6 @@ box-sizing: border-box;}
 #calendarWrap .calendarListBox .calendarList li a .calendarTime{position: absolute; top: 50%; right:20px; transform: translateY(-50%); font-size: 14px; font-weight: 700;}
 
 /* 활성화, 호버 */
-#calendarWrap.active::after{transform: scale(1); border-radius: 0;}
 #calendarWrap .calendarListBox .calendarList li a:hover{border: 1px solid #fff; background-color: rgba(255, 255, 225, .2);}
 
 @media (max-width: 1580px){

@@ -42,8 +42,10 @@ $(function () {
   $('.mobileMenuBtn').click(function () {
     if ($(this).attr('aria-expanded') === 'false') {
       $(this).attr('aria-label', '모바일메뉴 열기');
+      $('body').removeClass('mobileMenuOpen');
     } else {
       $(this).attr('aria-label', '모바일메뉴 닫기');
+      $('body').addClass('mobileMenuOpen');
     }
   });
 
@@ -59,6 +61,8 @@ $(function () {
     $(this).find('.subMenuWrap')
       .stop(true, true)
       .slideDown(300);
+
+    $('body').addClass('subMenuOpen');
   });
 
   $('#headerWrap').mouseleave(function () {
@@ -68,6 +72,8 @@ $(function () {
       .slideUp(300);
     $('#headerWrap .headerMenu > li')
       .removeClass('active');
+
+    $('body').removeClass('subMenuOpen');
   });
 
   /* 서브메뉴 키보드 포커스 */
@@ -138,6 +144,8 @@ $(function () {
       $('#aside').fadeOut();
     }
   });
+
+
 
 });
 

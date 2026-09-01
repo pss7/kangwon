@@ -3,12 +3,27 @@
 #wrap{display: flex; flex-direction: column;}
 main{flex: 1;}
 #footer{margin-top: auto;}
+.overlay{opacity: 0; visibility: hidden; position: fixed; inset: 0; background-color: rgba(0, 0, 0, .6); backdrop-filter: blur(3px); z-index: 99999; transition: all .3s;}
+
+body.subMenuOpen .overlay{opacity: 1; visibility: visible;}
+
+@media (max-width: 1199px){
+
+  body.mobileMenuOpen .overlay{opacity: 1; visibility: visible;}
+
+}
 
 /* 스킵 네비게이션 */
 #skipNav a{position: fixed; top: -100px; left: 0;
     width: 100%; padding: 15px 10px; background-color: #1D439C; color: #fff;
     text-align: center; z-index: 99999999;}
 #skipNav a:focus{top: 0;}
+
+@media (max-width: 1199px){
+
+  #skipNav{display: none;}
+
+}
 
 /* 공통 - 애니메이션 */
 .fadeEffect{animation: fadeEffect 1.5s .3s both;}
@@ -48,9 +63,6 @@ main{flex: 1;}
 .container{max-width: 1560px; width: 100%; margin: 0 auto; padding: 0 20px;}
 
 /* 헤더 */
-#headerWrap::after{content: ''; opacity: 0; visibility: hidden; position: absolute;  left:0; right:0; bottom: 0; height: 15px; box-shadow:  0 10px 10px rgba(0,0,0,.1); transition: all .3s;}
-#headerWrap.shadow::after{ opacity: 1; visibility: visible;}
-#headerWrap.scroll{ box-shadow: 0 10px 20px rgba(0,0,0,.1);} 
 #headerWrap{padding: 0 60px; position: sticky; top:0; left:0; right:0; background-color: #fff; z-index: 9999999; transition: all .3s;}
 #headerWrap .headerLogoBox h1 a{display: block; color: #fff; font-size: 32px;}
 #headerWrap .headerLogoBox h1 a img{display: block;}
@@ -70,7 +82,7 @@ main{flex: 1;}
 #headerWrap .subMenuWrap .subMenuTitleBox{padding: 30px 30px 10px 10px; flex: 0 0 370px; border-radius: 0 0 60px 0; background-color: #1D439C;}
 #headerWrap .subMenuWrap .subMenuTitleBox h2{font-size: 30px; font-weight: 700; color: #fff; text-align: right;}
 #headerWrap .subMenuWrap .subMenuListBox{flex: 1; height: 100%; padding: 30px 30px 10px;}
-#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01{display: flex; gap: 8px;}
+#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01{display: flex; gap: 8px;  max-width: calc(1142px + (100vw - 1920px));}
 #headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 > li{flex: 1;}
 #headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 li h3 a{padding: 10px 10px 10px 18px; display: block; color: #333; border: 1px solid #ccc; border-radius: 8px; background-color: #fff; font-weight: 400; font-size: 16px; transition: all .3s; word-break: keep-all;}
 #headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 li:hover h3 a{background-color: #EDF2FF; border: 1px solid #1D439C; color: #1D439C;}
