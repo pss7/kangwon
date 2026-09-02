@@ -8,7 +8,7 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>장비예약 신청</title>
+    <title>회원가입 정보입력</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -31,7 +31,11 @@
     </div>
     <!-- //스킵 네비게이션 -->
 
-    <div id="wrap">
+    <!-- 
+        회원페이지 memberWrap 클래스 적용
+    -->
+
+    <div id="wrap" class="memberWrap">
 
         <!-- 헤더영역 -->
         <header id="headerWrap">
@@ -433,58 +437,61 @@
         <!-- 메인 영역 -->
         <main id="subWrap">
 
-            <!-- 서브 상단 제목 영역 -->
-            <div id="subTitleWrap">
-                <div class="subVisualBox">
-                    <img src="../images/sub/sub_bg01.jpg" alt="">
-                </div>
-                <h2>
-                    <em>통</em><em>합</em><em>예</em><em>약</em><em>·</em><em>신</em><em>청</em>
-                </h2>
-                <div class="subNavBox customScroll">
-                    <nav class="subNav">
-                        <ul>
-                            <li>
-                                <a href="#">의생명연구원</a>
-                            </li>
-                            <li>
-                                <a href="#" class="active">강원첨단연구지원센터</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <!-- //서브 상단 제목 영역 -->
-
             <!-- 서브 콘텐츠 레이아웃 영역 -->
             <div id="subContentWrap">
-
-                <!-- 공통 탭 영역 -->
-                <div class="commonTab">
-                    <button type="button" class="commonTabBtn active">장비예약</button>
-                    <button type="button" class="commonTabBtn">통계상담예약</button>
-                    <button type="button" class="commonTabBtn">모니터링실 예약</button>
-                    <button type="button" class="commonTabBtn">연구컨설팅 신청</button>
-                </div>
-                <!-- //공통 탭 영역 -->
 
                 <!-- 서브 콘텐츠 헤더 영역 -->
                 <div class="subContentHeaderBox">
                     <div class="container">
-
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                장비예약
+                                회원가입
                             </h2>
-
-                            <div class="breadcrumbBox">
-                                <a href="/" class="breadcrumbLink"><img src="../images/sub/home_icon.svg" alt=""></a>
-                                <a href="#" class="breadcrumbLink">통합 예약 · 신청</a>
-                                <a href="#" class="breadcrumbLink">강원첨단연구지원센터</a>
-                                <a href="#" class="breadcrumbLink active" aria-current="page">장비예약</a>
-                            </div>
                         </div>
 
+                        <ol class="stepList step03">
+                            <li class="stepItem">
+                                <span class="stepNumber" lang="en">
+                                    Step 01
+                                </span>
+
+                                <div class="stepImgBox">
+                                    <img src="../images/sub/join_icon01.svg" alt="">
+                                </div>
+
+                                <strong class="stepTitle">
+                                    약관 동의
+                                </strong>
+                            </li>
+
+                            <li class="stepItem active">
+                                <span class="stepNumber" lang="en">
+                                    Step 02
+                                </span>
+
+                                <div class="stepImgBox">
+                                    <img src="../images/sub/join_icon02.svg" alt="">
+                                </div>
+
+                                <strong class="stepTitle">
+                                    정보 입력
+                                </strong>
+                            </li>
+
+                            <li class="stepItem">
+                                <span class="stepNumber" lang="en">
+                                    Step 03
+                                </span>
+
+                                <div class="stepImgBox">
+                                    <img src="../images/sub/join_icon03.svg" alt="">
+                                </div>
+
+                                <strong class="stepTitle">
+                                    가입 신청 완료
+                                </strong>
+                            </li>
+                        </ol>
                     </div>
                 </div>
                 <!-- //서브 콘텐츠 헤더 영역 -->
@@ -492,365 +499,35 @@
                 <!-- 서브 콘텐츠 영역 -->
                 <div class="subContentBox">
 
-                    <!-- 장비예약 영역 -->
-                    <div class="equipmentReservationWrap">
-                        <div class="container">
-                            <div class="equipmentReservationBox">
+                    <!-- 회원 콘텐츠 영역 -->
+                    <div class="memberBox">
 
-                                <!-- 장비예약 신청 영역 -->
-                                <div class="equipmentReservationApplyBox commonLayoutBox">
+                        <!-- 회원가입 영역 -->
+                        <div class="memberJoinBox">
 
-                                    <!-- 폼 영역 -->
-                                    <div class="commonLeftBox">
+                            <!-- 회원 입력 영역 -->
+                            <div class="memberJoinFormBox">
+                                <div class="container">
 
-                                        <!-- 단계 영역 -->
-                                        <ol class="equipmentStepList step03">
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 01
-                                                </span>
 
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon01.svg" alt="">
-                                                </div>
 
-                                                <strong class="equipmentStepTitle">
-                                                    장비 선택
-                                                </strong>
-                                            </li>
 
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 02
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon_type02.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    날짜 · 시간 선택
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem active">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 03
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon03.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약자 정보 입력
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 04
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon04.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약 신청 완료
-                                                </strong>
-                                            </li>
-                                        </ol>
-                                        <!-- //진행 단계 영역 -->
-
-                                        <div class="commonShadowBox">
-                                            <h3 class="commonTitle">
-                                                예약자정보
-                                            </h3>
-
-                                            <form action="" method="">
-
-                                                <!-- 신청자이름 -->
-                                                <div class="formBox">
-                                                    <label for="applicantName">
-                                                        신청자 이름
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="applicantName" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //신청자이름 -->
-
-                                                <!-- 소속 -->
-                                                <div class="formBox">
-                                                    <label for="affiliation">
-                                                        소속
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="affiliation" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //소속 -->
-
-                                                <!-- 연구책임자 -->
-                                                <div class="formBox">
-                                                    <label for="principalInvestigator">
-                                                        연구책임자
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="principalInvestigator" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //연구책임자 -->
-
-                                                <!-- 연락처 -->
-                                                <div class="formBox">
-                                                    <label for="contactNumber">
-                                                        연락처
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="contactNumber" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //연락처 -->
-
-                                                <!-- 이메일 -->
-                                                <div class="formBox">
-                                                    <label for="email">
-                                                        이메일
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="email" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //이메일 -->
-
-                                                <!-- 분석내용 -->
-                                                <div class="formBox">
-                                                    <label for="analysisDetails">
-                                                        분석내용
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="analysisDetails" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //분석내용 -->
-
-                                                <!-- 감염유래시료 여부 -->
-                                                <div class="formBox">
-                                                    <fieldset class="sampleOriginField">
-                                                        <legend>
-                                                            감염유래시료여부
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </legend>
-
-                                                        <div class="sampleOriginContent">
-                                                            <div class="sampleRadioGroup">
-                                                                <div class="sampleRadio">
-                                                                    <input type="radio" id="infectiousSampleYes"
-                                                                        name="infectiousSample" value="yes" required>
-                                                                    <label for="infectiousSampleYes">예</label>
-                                                                </div>
-
-                                                                <div class="sampleRadio">
-                                                                    <input type="radio" id="infectiousSampleNo"
-                                                                        name="infectiousSample" value="no" checked>
-                                                                    <label for="infectiousSampleNo">아니오</label>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="sampleTypeBox">
-                                                                <label for="infectiousSampleType">종류</label>
-
-                                                                <input type="text" id="infectiousSampleType"
-                                                                    name="infectiousSampleType" disabled>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-                                                </div>
-                                                <!-- //감염유래시료 여부 -->
-
-                                                <span aria-hidden="true" class="border"></span>
-
-                                                <!-- 세금계산서 발행 정보 -->
-                                                <h3 class="commonTitle">
-                                                    세금계산서 발행 정보
-                                                </h3>
-                                                <div class="formBox">
-                                                    <label for="businessRegistrationNumber">
-                                                        사업자번호
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="businessRegistrationNumber"
-                                                            name="businessRegistrationNumber" inputmode="numeric"
-                                                            required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formBox">
-                                                    <label for="companyName">
-                                                        회사명
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="companyName" name="companyName"
-                                                            autocomplete="organization" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formBox">
-                                                    <label for="representativeName">
-                                                        대표자명
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="representativeName"
-                                                            name="representativeName" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formBox">
-                                                    <label for="businessAddress">
-                                                        사업장 주소
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="businessAddress" name="businessAddress"
-                                                            autocomplete="street-address" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formRowBox">
-                                                    <div class="formBox">
-                                                        <label for="businessType">
-                                                            업태
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </label>
-
-                                                        <div class="inputTextBox">
-                                                            <input type="text" id="businessType" name="businessType"
-                                                                required>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="formBox">
-                                                        <label for="businessItem">
-                                                            종목
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </label>
-
-                                                        <div class="inputTextBox">
-                                                            <input type="text" id="businessItem" name="businessItem"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formBox">
-                                                    <label for="businessRegistrationFile">
-                                                        사업자등록증 업로드
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-
-                                                    <div class="fileUploadBox">
-                                                        <input type="file" id="businessRegistrationFile"
-                                                            name="businessRegistrationFile" class="blind"
-                                                            accept=".pdf,.jpg,.jpeg,.png" required>
-
-                                                        <label for="businessRegistrationFile" class="fileUploadLabel">
-                                                            <span class="fileUploadText">
-                                                                사업자등록증을 업로드 해주세요
-                                                            </span>
-                                                            <img src="../images/sub/file_icon02.svg" alt="파일">
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <!-- //세금계산서 발행 정보 -->
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- //폼 영역 -->
-
-                                    <!-- 장비 및 시간 정보 영역 -->
-                                    <div class="commonRightBox">
-
-                                        <div class="equipmentTimeInfoBox commonShadowBox">
-
-                                            <h3 class="commonTitle">
-                                                장비 및 시간 정보
-                                            </h3>
-
-                                            <div class="equipmentTimeInfoTitBox">
-
-                                                <!-- 
-                                                    강원첨단연구지원센터 karc 클래스적용
-                                                -->
-
-                                                <span class="equipmentDepartment karc">
-                                                    멀티오믹스 코어
-                                                </span>
-
-                                                <h3 class="equipmentName">
-                                                    자동화 핵산 추출 장비
-                                                </h3>
-
-                                                <span class="equipmentNameEn" lang="en">
-                                                    KingFisher Apex
-                                                </span>
-                                            </div>
-
-                                            <div class="equipmentTimeInfoImgBox">
-                                                <img src="../images/sub/equipment_img06.jpg" alt="">
-                                            </div>
-
-                                            <div class="equipmentTimeInfo">
-                                                <span class="equipmentReservationDate">
-                                                    2026.08.12
-                                                </span>
-
-                                                <span class="equipmentReservationTime">
-                                                    13:00~14:00
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="commonBtnBox verticalBtnBox">
-                                            <button type="button" class="commonBtn primaryBtn">
-                                                예약 신청하기
-                                            </button>
-                                            <a href="#" class="commonBtn borderBtn">
-                                                이전
-                                            </a>
-                                        </div>
-
-                                    </div>
-                                    <!-- //장비 및 시간 정보 영역 -->
 
                                 </div>
-                                <!-- //장비 상세 정보 영역 -->
-
                             </div>
-                            <!-- //장비예약 신청 영역 -->
+                            <!-- //회원 입력 영역 -->
 
                         </div>
+                        <!-- //회원가입 영역 -->
+
                     </div>
+                    <!-- //회원 콘텐츠 영역 -->
+
                 </div>
-                <!-- //장비예약 영역 -->
+                <!-- //서브 콘텐츠 영역 -->
 
             </div>
-            <!-- //서브 콘텐츠 영역 -->
+            <!-- //서브 콘텐츠 레이아웃 영역 -->
 
         </main>
         <!-- //메인 영역 -->
@@ -901,7 +578,7 @@
 
                         <div class="footerInfoBox">
                             <div class="footerLogoBox">
-                                <img src="../../images/common/logo02.svg" alt="KNU 강원대학교병원 의생명연구원">
+                                <img src="../images/common/logo02.svg" alt="KNU 강원대학교병원 의생명연구원">
                             </div>
 
                             <address>

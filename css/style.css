@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#wrap{display: flex; flex-direction: column;}
+#wrap{display: flex; flex-direction: column; min-height: 100vh;}
 main{flex: 1;}
 #footer{margin-top: auto;}
 .overlay{opacity: 0; visibility: hidden; position: fixed; inset: 0; background-color: rgba(0, 0, 0, .6); backdrop-filter: blur(3px); z-index: 99999; transition: all .3s;}

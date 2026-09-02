@@ -17,6 +17,21 @@
 label{display: block; font-size: 14px; color: #333;}
 .requiredMark{color: #FF443D;}
 input{display: block; width: 100%; padding: 0 10px; height: 40px; border-radius: 10px; background-color: #F4F4F4; color: #333; border: 0;}
+input[type="checkbox"] + label{display: flex; align-items: center; gap: 0 8px; color: #333; font-weight: 500; font-size: 14px; cursor: pointer;}
+input[type="checkbox"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/check_icon.svg)no-repeat center / contain;}
+input[type="checkbox"]:checked + label::before{content: ''; background: url(../images/sub/check_icon02.svg)no-repeat center / contain;}
+input[type="checkbox"]:checked + label{font-weight: 700;}
+
+
+
+
+
+
+
+
+
+
+
 
 /* 공통 - 버튼 */
 .commonBtnBox.verticalBtnBox{flex-direction:column; gap:14px 0;}
@@ -337,8 +352,8 @@ input{display: block; width: 100%; padding: 0 10px; height: 40px; border-radius:
 .equipmentReservationWrap .equipmentTitle{margin-bottom: 20px; padding: 15px 10px 15px 24px; font-size: 20px; font-weight: 700; color: #1D439C; background-color: #EDF2FF;}
 
 /* 장비예약 공통 */
-.commonShadowBox{margin-bottom: 30px; padding: 40px;
-    border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
+.commonShadowBox{margin-bottom: 30px; padding: 40px 40px 30px;
+    border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2); background-color: #fff;}
 .commonTitle{margin-bottom: 30px; font-size: 20px; font-weight: 500; color: #333; font-family: "HD", sans-serif;}
 .equipmentReservationWrap .border{display: block; margin: 30px 0; height: 1px; background-color: #ccc;}
 .equipmentReservationWrap .commonLayoutBox{display: flex; gap: 30px;}
@@ -484,30 +499,6 @@ input{display: block; width: 100%; padding: 0 10px; height: 40px; border-radius:
 .equipmentReservationWrap .equipmentDetailTable tbody th{padding: 12px 10px; font-size: 14px; color: #333; font-weight: 400; text-align: left; border: 1px solid #ccc; border-width: 1px 0;}
 .equipmentReservationWrap .equipmentDetailTable thead th,
 .equipmentReservationWrap .equipmentDetailTable tbody th{background-color: #F7F8F9;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .equipmentReservationWrap .equipmentDetailCalendarBox{margin-bottom: 30px; padding: 24px 22px;border: 1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,.2); border-radius: 30px;}
 .equipmentReservationWrap .equipmentDetailCalendar{margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;}
 .equipmentReservationWrap .equipmentDetailCalendar .calendarHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 0 20px;}
@@ -529,25 +520,9 @@ input{display: block; width: 100%; padding: 0 10px; height: 40px; border-radius:
 /* 장비예약 신청 */
 .equipmentReservationWrap .equipmentReservationApplyBox .formBox{margin-bottom: 30px;}
 .equipmentReservationWrap .equipmentReservationApplyBox .formBox label{margin-bottom: 8px;}
-
-
-
-
-
-
 .equipmentReservationWrap .fileUploadLabel{position: relative; width: 100%; height: 40px; padding: 10px 40px 10px 10px; display: flex; align-items: center; justify-content: space-between; border-radius: 10px;
     background-color: #f5f5f5;  cursor: pointer;}
 .equipmentReservationWrap .fileUploadLabel img{position: absolute; top: 50%; transform: translateY(-50%); right:15px;}
-
-
-
-
-
-
-
-
-
-
 .equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginField legend{margin-bottom:8px; font-size:14px; color:#333;}
 .equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginContent{display:flex; align-items:center; gap:21px;}
 .equipmentReservationWrap .equipmentReservationApplyBox .sampleRadioGroup{display:grid; grid-template-columns:repeat(2, 140px); gap:10px;}
@@ -693,7 +668,6 @@ input{display: block; width: 100%; padding: 0 10px; height: 40px; border-radius:
 .boardViewFileList li a{display: flex; text-decoration: underline;}
 .boardViewFileList li a .boardViewFileIcon{margin: 3px 0; flex-shrink: 0; width: 18px; height: 14px; margin-right: 6px; background: url(../images/sub/file_icon.svg)no-repeat center / contain;}
 .boardViewFileList li a .boardViewFileName{font-size: 14px; color: #333;}
-
 .equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentDepartment.karc{background-color: #A139F1;}
 
 @media (max-width: 480px){
@@ -701,3 +675,87 @@ input{display: block; width: 100%; padding: 0 10px; height: 40px; border-radius:
   .boardViewFileBox{flex-direction: column; gap: 10px 0;}
 
 }
+
+/* 공통 - 회원페이지  */
+.memberWrap .memberBox{position: relative; z-index: 1; }
+.memberWrap .memberBox::after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: -100%; right: -100%; height: 711px; background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #e8ebed 50%,
+        #fff 100%
+    );
+ z-index: -1;}
+.memberWrap .container{max-width: 940px;}
+.memberWrap #headerWrap{box-shadow: 0 10px 10px rgba(0,0,0,.1);}
+.memberWrap #subContentWrap .subContentHeaderBox{position: relative; margin-bottom: 70px; z-index: 9;}
+.memberWrap #subContentWrap .subContentHeader h2{color: #1D439C;}
+.memberWrap #subContentWrap .subContentHeader{margin-bottom: 60px;}
+.memberWrap .commonBtnBox{margin: 60px 0;}
+.memberWrap .commonBtnBox .commonBtn{max-width: 360px;}
+.memberWrap #footerWrap{position: relative; z-index: 9;}
+
+/* 회원가입 - 약관동의 */
+.memberJoinAgreeBox .memberAgreeInfoBox .memberAgreeTopBox{margin-bottom: 24px; display: flex; gap: 20px; align-items: center; justify-content: space-between;}
+.memberJoinAgreeBox .memberAgreeInfoBox .commonShadowBox{margin-bottom: 50px;}
+.memberJoinAgreeBox .memberAgreeInfoBox .commonTitle{margin-bottom: 0;}
+.memberJoinAgreeBox .memberAllAgreeBox{display: flex; justify-content: flex-end;}
+.policyContent .policySection,
+.policyContent .policySection .policyTitle,
+.policyContent .policySection .policySubTitle,
+.policyContent .policySection .policyText,
+.policyContent .policySection .policyList li,
+.policyContent .policySection strong{color: #333; font-size: 14px; font-weight: 400;}
+.policyContent .policySection .policyTitle{margin-bottom: 10px;}
+.policyContent .policySection .policyArticle{margin-bottom: 20px;}
+.policyContent .policySection .policyList{margin: 10px 0;}
+
+/* 단계 영역  */
+.stepList{max-width: 640px; position:relative; margin: 0 auto; display:flex; align-items:flex-start; justify-content:space-between;}
+.stepList::before{content:""; position:absolute; top:50%; left:60px; right:60px;
+    height:4px; border-radius:2px; background-color:#ccc; transform:translateY(-50%); z-index:0;}
+.stepList li{position:relative; flex:0 0 120px; width:120px; text-align:center; z-index:1;}
+.stepList li .stepNumber{margin-bottom:6px; display:block; font-size:15px; font-weight:700; color:#666;}
+.stepList li .stepImgBox{margin:0 auto 6px; display:flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background-color:#fff; border: 1px solid #ccc;}
+.stepList li .stepImgBox img{display:block;}
+.stepList li .stepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break: keep-all;}
+.stepList li.active .stepNumber,
+.stepList li.active .stepTitle{color:#2773ff; font-weight: 700;}
+.stepList li.active .stepImgBox{background-color:#2773ff; border-color: #2773ff;}
+
+@media (max-width: 1024px){
+
+  .stepList{padding:18px 24px; border-radius:16px;}
+  .stepList::before{top:78px; left:50px; right:50px; height:3px;}
+  .stepList li{flex:0 0 100px; width:100px;}
+  .stepList li .stepNumber{margin-bottom:5px; font-size:14px;}
+  .stepList li .stepImgBox{margin-bottom:5px; width:70px; height:70px;}
+  .stepList li .stepTitle{font-size:14px;}
+  .stepList li .stepImgBox img{width: 45px;}
+
+}
+
+@media (max-width: 768px){
+
+  .stepList{margin-bottom:20px; padding:16px 10px; border-radius:14px;}
+  .stepList::before{top:65px; left:36px; right:36px; height:3px;}
+  .stepList li{flex:0 0 72px; width:72px;}
+  .stepList li .stepNumber{margin-bottom:4px; font-size:12px;}
+  .stepList li .stepImgBox{margin-bottom:4px; width:56px; height:56px;}
+  .stepList li .stepImgBox img{width: 35px;}
+  .stepList li .stepTitle{font-size:12px; line-height:1.3;}
+
+}
+
+
+@media (max-width:480px){
+
+  .stepList{padding:14px 8px; border-radius:12px;}
+  .stepList::before{top:59px; left:32px; right:32px;}
+  .stepList li{flex-basis:64px; width:64px;}
+  .stepList li .stepNumber{font-size:11px;}
+  .stepList li .stepImgBox{width:52px; height:52px;}
+  .stepList li .stepTitle{font-size:11px;}
+  .stepList li .stepImgBox img{width: 27px;}
+
+}
+  

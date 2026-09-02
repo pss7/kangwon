@@ -27,7 +27,7 @@ $(function () {
   });
 
   //파일
-  $('businessRegistrationFile').change(function () {
+  $('#businessRegistrationFile').change(function () {
     const fileName = this.files.length
       ? this.files[0].name
       : '사업자등록증을 업로드해 주세요';
