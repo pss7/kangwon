@@ -6,9 +6,12 @@ $(function () {
     $(this).addClass('active');
   });
 
-  
-  /* 감염유래시료 여부 */
+  /* 감염 유래 시료 여부 */
   $('input[name="infectiousSample"]').change(function () {
+    $('.sampleTypeBox').toggleClass(
+      'active',
+      $('#infectiousSampleYes').is(':checked')
+    );
 
     if ($('#infectiousSampleYes').is(':checked')) {
       $('#infectiousSampleType')
@@ -21,10 +24,19 @@ $(function () {
         .prop('required', false)
         .val('');
     }
-
   });
 
+  //파일
+  $('businessRegistrationFile').change(function () {
+    const fileName = this.files.length
+      ? this.files[0].name
+      : '사업자등록증을 업로드해 주세요';
 
+    $(this)
+      .siblings('.fileUploadLabel')
+      .find('.fileUploadText')
+      .text(fileName);
+  });
 
 
 
