@@ -1,5 +1,131 @@
 @charset "UTF-8";
 
+/* 공통 */
+#wrap{overflow-x: hidden;}
+.border{display: block; margin: 30px 0; height: 1px; background-color: #ccc;}
+
+.infoText{padding: 10px 20px; background-color: #F8FCFF; border: 1px solid #CFE8FB; border-radius: 10px;}
+.infoText h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
+.infoText h4{display: flex; align-items: center; gap: 0 4px; margin-bottom: 7px; font-weight: 500; font-size: 16px; color: #1D439C;}
+.infoText .dotList li{font-size: 14px; font-weight: 500; color: #333;}
+
+/* 공통 - 단계 영역  */
+.stepList{max-width: 640px; position:relative; margin: 0 auto; display:flex; align-items:flex-start; justify-content:space-between;}
+.stepList::before{content:""; position:absolute; top:50%; left:60px; right:60px;
+    height:4px; border-radius:2px; background-color:#ccc; transform:translateY(-50%); z-index:0;}
+.stepList li{position:relative; flex:0 0 120px; width:120px; text-align:center; z-index:1;}
+.stepList li .stepNumber{margin-bottom:6px; display:block; font-size:15px; font-weight:700; color:#666;}
+.stepList li .stepImgBox{margin:0 auto 6px; display:flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background-color:#fff; border: 1px solid #ccc;}
+.stepList li .stepImgBox img{display:block;}
+.stepList li .stepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break: keep-all;}
+.stepList li.active .stepNumber,
+.stepList li.active .stepTitle{color:#2773ff; font-weight: 700;}
+.stepList li.active .stepImgBox{background-color:#2773ff; border-color: #2773ff;}
+
+@media (max-width: 1024px){
+
+  .stepList{padding:18px 24px; border-radius:16px;}
+  .stepList::before{top:78px; left:50px; right:50px; height:3px;}
+  .stepList li{flex:0 0 100px; width:100px;}
+  .stepList li .stepNumber{margin-bottom:5px; font-size:14px;}
+  .stepList li .stepImgBox{margin-bottom:5px; width:70px; height:70px;}
+  .stepList li .stepTitle{font-size:14px;}
+  .stepList li .stepImgBox img{width: 45px;}
+
+}
+
+@media (max-width: 768px){
+
+  .stepList{margin-bottom:20px; padding:16px 10px; border-radius:14px;}
+  .stepList::before{top:65px; left:36px; right:36px; height:3px;}
+  .stepList li{flex:0 0 72px; width:72px;}
+  .stepList li .stepNumber{margin-bottom:4px; font-size:12px;}
+  .stepList li .stepImgBox{margin-bottom:4px; width:56px; height:56px;}
+  .stepList li .stepImgBox img{width: 35px;}
+  .stepList li .stepTitle{font-size:12px; line-height:1.3;}
+
+}
+
+@media (max-width:480px){
+
+  .stepList{padding:14px 8px; border-radius:12px;}
+  .stepList::before{top:59px; left:32px; right:32px;}
+  .stepList li{flex-basis:64px; width:64px;}
+  .stepList li .stepNumber{font-size:11px;}
+  .stepList li .stepImgBox{width:52px; height:52px;}
+  .stepList li .stepTitle{font-size:11px;}
+  .stepList li .stepIbordergBox img{width: 27px;}
+
+}
+
+/* 공통 - 완료메세지 */
+.completeMessageBox{display: flex; flex-direction: column; align-items: center;  padding: 26px 20px 54px; margin-bottom: 30px; background-color: #EDF2FF; border-radius: 20px; text-align: center;}
+.completeMessageBox::before{content: ''; margin-bottom: 15px; width: 78px; height: 83px; background: url(../images/sub/complete_icon.svg)no-repeat center / contain;}
+.completeMessageBox .completeMessageTitle{font-size: 30px; font-weight: 500; color: #333; font-family: 'HD',sans-serif;}
+.completeMessageBox .completeMessageTitle strong{color: #2773FF; font-weight: 500;}
+.completeMessageBox .completeMessageDes{font-size: 16px; font-weight: 500; font-family: 'HD',sans-serif; color: #333;}
+.completeMessageBox .completeMessageDes strong{color: #1D439C; font-weight: 500;}
+
+@media (max-width: 1199px){
+
+  .completeMessageBox{padding: 26px 20px 42px;}
+  .completeMessageBox .completeMessageTitle{font-size: 26px;}
+
+}
+
+@media (max-width: 768px){
+
+  .completeMessageBox{padding: 26px 20px 36px; border-radius: 10px;}
+  .completeMessageBox::before{width: 70px; height: 74px; margin-bottom: 10px;}
+  .completeMessageBox .completeMessageTitle{font-size: 22px;}
+
+}
+
+@media (max-width: 480px){
+
+  .completeMessageBox{padding: 26px 20px 30px;}
+  .completeMessageBox::before{width: 70px; height: 74px;}
+  .completeMessageBox .completeMessageTitle{font-size: 18px;}
+
+}
+
+/* 공통 - 달력 */
+#ui-datepicker-div {max-width: 285px; width: 100%; padding: 16px; border: 1px solid #eee;
+  border-radius: var(--radius-m); background: #F4F4F4; box-shadow: 0 0 20px rgba(0,0,0, .25); z-index: 9999 !important; border-radius: 20px;}
+#ui-datepicker-div .ui-datepicker-year,
+#ui-datepicker-div .ui-datepicker-month {width: 72px; height: 32px; padding: 0 8px;
+  border-radius:8px; border: 0; background-color:#fff; font-size: 14px; font-weight:700; color: #1B1D1F; cursor: pointer;}
+#ui-datepicker-div .ui-datepicker-header {padding: 0; position: relative; margin-bottom: 16px; border: 0; background: transparent;}
+#ui-datepicker-div .ui-datepicker-prev,
+#ui-datepicker-div .ui-datepicker-next {position: absolute; top: 0; width: 32px; height: 32px;
+  border-radius: 50%; background-color: var(--white); cursor: pointer;}
+#ui-datepicker-div .ui-datepicker-prev {left: 0;}
+#ui-datepicker-div .ui-datepicker-next {right: 0;}
+#ui-datepicker-div .ui-datepicker-prev span,
+#ui-datepicker-div .ui-datepicker-next span {display: none;}
+#ui-datepicker-div .ui-corner-all:hover{border: 0;}
+#ui-datepicker-div .ui-corner-all::before{content: '';}
+#ui-datepicker-div .ui-datepicker-prev::before {background: url(../images/sub/arrow.svg)no-repeat center;}
+#ui-datepicker-div .ui-datepicker-next::before {transform: rotate(180deg);
+  background: url(../images/sub/arrow.svg)no-repeat center;}
+.ui-datepicker .ui-datepicker-title{display: flex; align-items: center; justify-content: center; gap: 0 4px; margin: 0!important; line-height: 1!important;}
+#ui-datepicker-div .ui-datepicker-prev::before,
+#ui-datepicker-div .ui-datepicker-next::before {display: flex; align-items: center; justify-content: center; height: 100%;
+  font-size: 24px; color: var(--gray-900);}
+#ui-datepicker-div .ui-datepicker-calendar{display: block; margin-bottom: 8px; padding-bottom: 16px; width: 100%; border-bottom: 1px solid #eee;}
+#ui-datepicker-div .ui-datepicker-calendar th{padding: 0 0 8px; width: 32px; height: 32px; font-weight: 700; font-size: 12px; color: #454C53;}
+#ui-datepicker-div .ui-datepicker-calendar td{padding: 2px;}
+#ui-datepicker-div .ui-datepicker-calendar td a {display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; color: #454C53; border-radius: 8px; font-weight: 500;
+  background-color: #ffff; border-radius: 4px; border: 0; font-size: 14px;}
+#ui-datepicker-div .ui-datepicker-calendar td a:hover {background: #ddd;}
+#ui-datepicker-div .ui-datepicker-current-day a,
+#ui-datepicker-div .ui-state-active {background: #365BD3!important; color: #fff !important; font-weight: 700;}
+#ui-datepicker-div .ui-state-disabled span {padding: 0; text-align: center; font-size: 14px; font-weight: 500; color: #9EA4AA; border: 0;}
+#ui-datepicker-div .ui-datepicker-close{padding: 0; margin: 0; border: 0;  display: flex; align-items: center; justify-content: center; width: 64px; height: 28px; border-radius: 8px; background-color: #fff; font-weight: 700; color: #454C53; font-size: 14px;}
+.ui-datepicker .ui-datepicker-buttonpane{border: 0;}
+#ui-datepicker-div .ui-datepicker-current {display: none;}
+
 /* 공통 - 레이아웃 */
 .commonBorderBox{padding: 24px; border: 1px solid #eee; border-radius: 20px; }
 .formRowBox{display: flex; gap: 0 14px;}
@@ -21,17 +147,8 @@ input[type="checkbox"] + label{display: flex; align-items: center; gap: 0 8px; c
 input[type="checkbox"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/check_icon.svg)no-repeat center / contain;}
 input[type="checkbox"]:checked + label::before{content: ''; background: url(../images/sub/check_icon02.svg)no-repeat center / contain;}
 input[type="checkbox"]:checked + label{font-weight: 700;}
-
-
-
-
-
-
-
-
-
-
-
+.formBox{margin-bottom: 30px;}
+.formBox label{margin-bottom: 8px;}
 
 /* 공통 - 버튼 */
 .commonBtnBox.verticalBtnBox{flex-direction:column; gap:14px 0;}
@@ -355,7 +472,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .commonShadowBox{margin-bottom: 30px; padding: 40px 40px 30px;
     border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2); background-color: #fff;}
 .commonTitle{margin-bottom: 30px; font-size: 20px; font-weight: 500; color: #333; font-family: "HD", sans-serif;}
-.equipmentReservationWrap .border{display: block; margin: 30px 0; height: 1px; background-color: #ccc;}
 .equipmentReservationWrap .commonLayoutBox{display: flex; gap: 30px;}
 .equipmentReservationWrap .commonRightBox{flex-shrink: 1; width: 360px;}
 .equipmentReservationWrap .commonLeftBox{flex: 1;}
@@ -518,8 +634,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .equipmentReservationWrap .equipmentDetailTimeList .reservationTimeBtn:disabled{background-color: #F4F4F4; color: #666; font-size: 14px; cursor: default; pointer-events: none; border: 0;}
 
 /* 장비예약 신청 */
-.equipmentReservationWrap .equipmentReservationApplyBox .formBox{margin-bottom: 30px;}
-.equipmentReservationWrap .equipmentReservationApplyBox .formBox label{margin-bottom: 8px;}
 .equipmentReservationWrap .fileUploadLabel{position: relative; width: 100%; height: 40px; padding: 10px 40px 10px 10px; display: flex; align-items: center; justify-content: space-between; border-radius: 10px;
     background-color: #f5f5f5;  cursor: pointer;}
 .equipmentReservationWrap .fileUploadLabel img{position: absolute; top: 50%; transform: translateY(-50%); right:15px;}
@@ -546,12 +660,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteInfoTextBox h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
 .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteInfoTextBox h4{display: flex; align-items: center; gap: 0 4px; margin-bottom: 7px; font-weight: 500; font-size: 16px; color: #1D439C;}
 .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteInfoTextBox .dotList li{font-size: 14px; font-weight: 500; color: #333;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage{display: flex; flex-direction: column; align-items: center;  padding: 26px 20px 54px; margin-bottom: 30px; background-color: #EDF2FF; border-radius: 20px; text-align: center;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage::before{content: ''; margin-bottom: 15px; width: 78px; height: 83px; background: url(../images/sub/complete_icon.svg)no-repeat center / contain;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 30px; font-weight: 500; color: #333; font-family: 'HD',sans-serif;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle strong{color: #2773FF; font-weight: 500;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteDescription{font-size: 16px; font-weight: 500; font-family: 'HD',sans-serif; color: #333;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteDescription strong{color: #1D439C; font-weight: 500;}
+
 
 /* 활성화 */
 .equipmentReservationWrap .equipmentStepList li.active .equipmentStepNumber,
@@ -566,9 +675,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 18px;}
 
   .equipmentReservationWrap .equipmentDetailTableWrap .equipmentDetailTableTitle{font-size: 18px;}
-
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage{padding: 26px 20px 42px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 26px;}
 
 }
 
@@ -611,10 +717,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dd{flex:1; width:auto; min-width:0; overflow-wrap:anywhere;}
   .equipmentReservationWrap .equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{flex-wrap:wrap;}
 
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage{padding: 26px 20px 36px; border-radius: 10px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage::before{width: 70px; height: 74px; margin-bottom: 10px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 22px;}
-
 }
 
 @media (max-width: 576px){
@@ -640,10 +742,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dd{line-height:1.5;}
   .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem .equipmentNameEn{display:block;}
   .equipmentReservationWrap .equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{gap:6px;}
-
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage{padding: 26px 20px 30px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage::before{width: 70px; height: 74px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteMessage .equipmentCompleteTitle{font-size: 18px;}
 
 }
 
@@ -708,54 +806,56 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .policyContent .policySection .policyTitle{margin-bottom: 10px;}
 .policyContent .policySection .policyArticle{margin-bottom: 20px;}
 .policyContent .policySection .policyList{margin: 10px 0;}
+  
+/* 회원가입 - 정보입력 */
+.memberJoinFormBox .formBox legend{margin-bottom: 8px; font-size: 14px; color: #333;}
+.memberJoinFormBox .formBox .emailConsentText{margin-bottom: 10px; padding: 10px 20px; border: 1px solid #CFE8FB; border-radius: 10px; background-color: #F8FCFF; color: #1D439C; font-weight: 500; font-size: 14px;}
+.memberJoinFormBox .formBox .formRadioRowBox{display: flex; gap: 10px;}
+.memberJoinFormBox .formBox input[type="radio"] + label{margin: 0; display: flex; align-items: center; justify-content: center; width: 140px; height: 40px; font-size: 14px; color: #333; border: 1px solid #cccc; border-radius: 10px; cursor: pointer;}
+.memberJoinFormBox .formBox input[type="radio"]:checked + label{background-color: #1D439C; color: #fff; border-color: #1D439C;}
+.memberJoinFormBox .dateInput{background: #f4f4f4 url(../images/sub/claendar_icon.svg) no-repeat right 20px center;}
 
-/* 단계 영역  */
-.stepList{max-width: 640px; position:relative; margin: 0 auto; display:flex; align-items:flex-start; justify-content:space-between;}
-.stepList::before{content:""; position:absolute; top:50%; left:60px; right:60px;
-    height:4px; border-radius:2px; background-color:#ccc; transform:translateY(-50%); z-index:0;}
-.stepList li{position:relative; flex:0 0 120px; width:120px; text-align:center; z-index:1;}
-.stepList li .stepNumber{margin-bottom:6px; display:block; font-size:15px; font-weight:700; color:#666;}
-.stepList li .stepImgBox{margin:0 auto 6px; display:flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background-color:#fff; border: 1px solid #ccc;}
-.stepList li .stepImgBox img{display:block;}
-.stepList li .stepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break: keep-all;}
-.stepList li.active .stepNumber,
-.stepList li.active .stepTitle{color:#2773ff; font-weight: 700;}
-.stepList li.active .stepImgBox{background-color:#2773ff; border-color: #2773ff;}
 
-@media (max-width: 1024px){
 
-  .stepList{padding:18px 24px; border-radius:16px;}
-  .stepList::before{top:78px; left:50px; right:50px; height:3px;}
-  .stepList li{flex:0 0 100px; width:100px;}
-  .stepList li .stepNumber{margin-bottom:5px; font-size:14px;}
-  .stepList li .stepImgBox{margin-bottom:5px; width:70px; height:70px;}
-  .stepList li .stepTitle{font-size:14px;}
-  .stepList li .stepImgBox img{width: 45px;}
+@media (max-width: 480px){
+
+  .memberJoinFormBox .formBox .formRadioRowBox{flex-direction: column;}
+  .memberJoinFormBox .formBox input[type="radio"] + label{width: 100%;}
 
 }
+
+/* 로그인 */
+.memberLoginBox .commonShadowBox{padding: 80px 20px 40px;}
+.memberLoginBox .memberLoginContentBox{max-width: 420px; margin: 0 auto;}
+.memberLoginBox .memberLoginTopBox{margin-bottom: 50px; text-align: center;}
+.memberLoginBox .memberLoginTopBox h3{font-size: 32px; font-weight: 700; font-family: "HD", sans-serif; color: #1D439C; word-break: keep-all;}
+.memberLoginBox .memberLoginTopBox span{display: block; font-weight: 500; font-family: "HD", sans-serif; color: #BBB;}
+.memberLoginBox .memberLoginFormBox{margin-bottom: 20px;}
+.memberLoginBox .memberLoginFormBox .inputTextBox{margin-bottom: 14px;}
+.memberLoginBox .memberLoginFormBox input{ padding: 0 10px 0 52px; height: 60px;}
+.memberLoginBox .memberLoginFormBox input::placeholder{color: #BBBBBB;}
+.memberLoginBox .memberLoginFormBox input#id{background: #F4F4F4 url(../images/sub/login_icon.svg)no-repeat center left 16px;}
+.memberLoginBox .memberLoginFormBox input#password{background: #F4F4F4 url(../images/sub/password_icon.svg)no-repeat center left 14px;}
+.memberLoginBox .memberLoginChkBox{display: flex; justify-content: flex-end;}
+.memberLoginBox .commonBtnBox{margin: 46px 0 30px; }
+.memberLoginBox .memberLoginLinkList{display: flex; align-items: center; justify-content: center;}
+.memberLoginBox .memberLoginLinkList li{display: flex; flex-wrap: wrap; align-items: center;}
+.memberLoginBox .memberLoginLinkList li::after{content: ""; margin: 0 12px; width: 1px; height: 12px; background: #bbb;}
+.memberLoginBox .memberLoginLinkList li:last-child::after{display: none;}
+.memberLoginBox .memberLoginLinkList li a{color: #333; font-size: 14px; font-weight: 500;}
 
 @media (max-width: 768px){
 
-  .stepList{margin-bottom:20px; padding:16px 10px; border-radius:14px;}
-  .stepList::before{top:65px; left:36px; right:36px; height:3px;}
-  .stepList li{flex:0 0 72px; width:72px;}
-  .stepList li .stepNumber{margin-bottom:4px; font-size:12px;}
-  .stepList li .stepImgBox{margin-bottom:4px; width:56px; height:56px;}
-  .stepList li .stepImgBox img{width: 35px;}
-  .stepList li .stepTitle{font-size:12px; line-height:1.3;}
+  .memberLoginBox .memberLoginTopBox h3{font-size: 28px;}
 
 }
 
+@media (max-width: 480px){
 
-@media (max-width:480px){
-
-  .stepList{padding:14px 8px; border-radius:12px;}
-  .stepList::before{top:59px; left:32px; right:32px;}
-  .stepList li{flex-basis:64px; width:64px;}
-  .stepList li .stepNumber{font-size:11px;}
-  .stepList li .stepImgBox{width:52px; height:52px;}
-  .stepList li .stepTitle{font-size:11px;}
-  .stepList li .stepImgBox img{width: 27px;}
+  .memberLoginBox .commonShadowBox{padding: 50px 20px;}
+  .memberLoginBox .memberLoginTopBox{margin-bottom: 38px;}
+  .memberLoginBox .memberLoginTopBox h3{font-size: 22px;}
+  .memberLoginBox .memberLoginTopBox span{font-size: 14px;}
+  .memberLoginBox .memberLoginFormBox input{height: 50px; font-size: 14px;}
 
 }
-  

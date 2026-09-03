@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/sub.js"></script>
@@ -456,7 +459,7 @@
                                 </span>
 
                                 <div class="stepImgBox">
-                                    <img src="../images/sub/join_icon01.svg" alt="">
+                                    <img src="../images/sub/join__off_icon01.svg" alt="">
                                 </div>
 
                                 <strong class="stepTitle">
@@ -502,23 +505,199 @@
                     <!-- 회원 콘텐츠 영역 -->
                     <div class="memberBox">
 
-                        <!-- 회원가입 영역 -->
-                        <div class="memberJoinBox">
+                        <!-- 회원 입력 영역 -->
+                        <div class="memberJoinFormBox">
+                            <div class="container">
 
-                            <!-- 회원 입력 영역 -->
-                            <div class="memberJoinFormBox">
-                                <div class="container">
+                                <div class="commonShadowBox">
+                                    <form action="" method="">
+
+                                        <!-- 아이디 -->
+                                        <div class="formBox">
+                                            <label for="id">
+                                                아아디
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="id" required>
+                                            </div>
+                                        </div>
+                                        <!-- //아이디 -->
+
+                                        <!-- 비밀번호 -->
+                                        <div class="formBox">
+                                            <label for="password">
+                                                비밀번호
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="password" required>
+                                            </div>
+                                        </div>
+                                        <!-- //비밀번호 -->
+
+                                        <!-- 비밀번호 확인 -->
+                                        <div class="formBox">
+                                            <label for="password02">
+                                                비밀번호 확인
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="password02" required>
+                                            </div>
+                                        </div>
+                                        <!-- //비밀번호 확인 -->
+
+                                        <!-- 이름 -->
+                                        <div class="formBox">
+                                            <label for="name">
+                                                이름
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="name" required>
+                                            </div>
+                                        </div>
+                                        <!-- //이름 -->
+
+                                        <!-- 연락처 -->
+                                        <div class="formBox">
+                                            <label for="number">
+                                                연락처
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="number" required>
+                                            </div>
+                                        </div>
+                                        <!-- //연락처 -->
+
+                                        <!-- 이메일 -->
+                                        <div class="formBox">
+                                            <label for="number">
+                                                이메일
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="number" required>
+                                            </div>
+                                        </div>
+                                        <!-- //이메일 -->
+
+                                        <!-- 성별 -->
+                                        <div class="formBox">
+                                            <fieldset class="genderField">
+                                                <legend>
+                                                    성별
+                                                    <span class="requiredMark" aria-hidden="true">*</span>
+                                                </legend>
+
+                                                <div class="formRadioRowBox">
+
+                                                    <div class="genderRadio">
+                                                        <input type="radio" id="genderFemale" name="gender"
+                                                            value="female" class="blind">
+                                                        <label for="genderFemale">여자</label>
+                                                    </div>
+
+                                                    <div class="genderRadio">
+                                                        <input type="radio" id="genderMale" name="gender" value="male"
+                                                            class="blind" required>
+                                                        <label for="genderMale">남자</label>
+                                                    </div>
+
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <!-- //성별 -->
+
+                                        <!-- 생년월일 -->
+                                        <div class="formBox">
+                                            <label for="birthdate">
+                                                생년월일
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="birthdate" class="dateInput" required>
+                                            </div>
+                                        </div>
+                                        <!-- //생년월일 -->
+
+                                        <!-- 이메일 -->
+                                        <div class="formBox">
+                                            <label for="email">
+                                                이메일
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="email" required>
+                                            </div>
+                                        </div>
+                                        <!-- //이메일 -->
+
+                                        <!-- 이메일 -->
+                                        <div class="formBox">
+                                            <label for="organization">
+                                                소속(기관명)*
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="organization" required>
+                                            </div>
+                                        </div>
+                                        <!-- //소속(기관명)* -->
+
+                                        <span aria-hidden="true" class="border"></span>
+
+                                        <!-- 이메일/SMS 수신 동의 -->
+                                        <div class="formBox">
+                                            <fieldset class="emailConsentField">
+                                                <legend>
+                                                    이메일/SMS 수신 동의
+                                                    <span class="requiredMark" aria-hidden="true">*</span>
+                                                </legend>
+
+                                                <div class="emailConsentContent">
+                                                    <p class="emailConsentText">
+                                                        이벤트 및 콘텐츠 업데이트 등 정보성 E-mail/SMS를
+                                                        받아보시겠습니까?
+                                                    </p>
+
+                                                    <div class="formRadioRowBox">
+                                                        <div class="sampleRadio">
+                                                            <input type="radio" id="marketingConsentAgree"
+                                                                name="marketingConsent" value="agree" required
+                                                                class="blind">
+                                                            <label for="marketingConsentAgree">동의</label>
+                                                        </div>
+
+                                                        <div class="sampleRadio">
+                                                            <input type="radio" id="marketingConsentDisagree"
+                                                                name="marketingConsent" value="disagree" class="blind">
+                                                            <label for="marketingConsentDisagree">동의 안 함</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <!-- //이메일/SMS 수신 동의 -->
 
 
 
 
 
+                                    </form>
                                 </div>
-                            </div>
-                            <!-- //회원 입력 영역 -->
 
+                                <div class="commonBtnBox ">
+                                    <button type="button" class="commonBtn primaryBtn">
+                                        가입하기
+                                    </button>
+                                </div>
+
+                            </div>
                         </div>
-                        <!-- //회원가입 영역 -->
+                        <!-- //회원 입력 영역 -->
 
                     </div>
                     <!-- //회원 콘텐츠 영역 -->
@@ -619,6 +798,38 @@
     <!-- //wrap -->
 
     <div class="overlay" aria-hidden="true"></div>
+
+    <script>
+        $(function () {
+
+            //달력
+            $(".dateInput").datepicker({
+                dateFormat: "yy-mm-dd",
+
+                changeYear: true,
+                changeMonth: true,
+                showMonthAfterYear: true,
+
+                showOtherMonths: true,
+                selectOtherMonths: false,
+
+                showButtonPanel: true,
+                closeText: "닫기",
+
+                monthNamesShort: [
+                    "1월", "2월", "3월", "4월", "5월", "6월",
+                    "7월", "8월", "9월", "10월", "11월", "12월"
+                ],
+                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                yearRange: "2020:2030"
+            });
+
+            $(".calendarBtn").click(function () {
+                $(this).siblings(".dateInput").datepicker("show");
+            });
+
+        });
+    </script>
 
 </body>
 
