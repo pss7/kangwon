@@ -476,57 +476,28 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .reservationWrap .commonRightBox{flex-shrink: 1; width: 360px;}
 .reservationWrap .commonLeftBox{flex: 1;}
 .reservationWrap .equipmentStepList{position:relative; margin-bottom:30px; padding:22px 38px; display:flex; align-items:flex-start; justify-content:space-between; border-radius:20px; background-color:#f4f4f4; isolation:isolate;}
-.reservationWrap .equipmentStepList::before{content:""; position:absolute; top:89px; left:60px; right:60px;
-    height:4px; border-radius:2px; background-color:#ccc; transform:translateY(-50%); z-index:0;}
-.reservationWrap .equipmentStepList.step02::before{background:linear-gradient(
-        to right,
-        #2773ff 0,
-        #2773ff 33.333%,
-        #ccc 33.333%,
-        #ccc 100%
-    );
-}
-.reservationWrap .equipmentStepList.step03::before{
-    background:linear-gradient(
-        to right,
-        #666 0,
-        #666 33.333%,
-        #2773ff 33.333%,
-        #2773ff 66.666%,
-        #ccc 66.666%,
-        #ccc 100%
-    );
-}
-
-.reservationWrap .equipmentStepList.step04::before{
-    background:linear-gradient(
-        to right,
-        #666 0,
-        #666 66.666%,
-        #2773ff 66.666%,
-        #2773ff 100%
-    );
-}
+.reservationWrap .equipmentStepList::before{content:""; position:absolute; top:89px; left:60px; right:60px; height:4px; border-radius:2px; background-color:#ccc; transform:translateY(-50%); z-index:0;}
+.reservationWrap .equipmentStepList.step02:has(> li:nth-child(3):last-child)::before{background:linear-gradient(to right, #2773ff 0, #2773ff 50%, #ccc 50%, #ccc 100%);}
+.reservationWrap .equipmentStepList.step03:has(> li:nth-child(3):last-child)::before{background:linear-gradient(to right, #666 0, #666 50%, #2773ff 50%, #2773ff 100%);}
+.reservationWrap .equipmentStepList.step02:has(> li:nth-child(4):last-child)::before{background:linear-gradient(to right, #2773ff 0, #2773ff 33.333%, #ccc 33.333%, #ccc 100%);}
+.reservationWrap .equipmentStepList.step03:has(> li:nth-child(4):last-child)::before{background:linear-gradient(to right, #666 0, #666 33.333%, #2773ff 33.333%, #2773ff 66.666%, #ccc 66.666%, #ccc 100%);}
+.reservationWrap .equipmentStepList.step04:has(> li:nth-child(4):last-child)::before{background:linear-gradient(to right, #666 0, #666 66.666%, #2773ff 66.666%, #2773ff 100%);}
 .reservationWrap .equipmentStepList li{position:relative; flex:0 0 120px; width:120px; text-align:center; z-index:1;}
 .reservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:6px; display:block; font-size:15px; font-weight:700; color:#666;}
 .reservationWrap .equipmentStepList li .equipmentStepImgBox{margin:0 auto 6px; display:flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background-color:#fff;}
 .reservationWrap .equipmentStepList li .equipmentStepImgBox img{display:block;}
-.reservationWrap .equipmentStepList li .equipmentStepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break: keep-all;}
+.reservationWrap .equipmentStepList li .equipmentStepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break:keep-all;}
 .reservationWrap .equipmentStepList li.active .equipmentStepNumber,
 .reservationWrap .equipmentStepList li.active .equipmentStepTitle{color:#2773ff;}
 .reservationWrap .equipmentStepList li.active .equipmentStepImgBox{background-color:#2773ff;}
-
-/* 장비예약 공통 - 장비 및 시간 정보 영역 */
 .reservationTimeInfoBox{padding: 23px 20px 20px;}
 .reservationTimeInfoBox  .commonTitle{padding-bottom: 20px; text-align: center; border-bottom: 1px solid #ccc;}
-
 .reservationTimeInfoBox .reservationTimeInfoImgBox{margin-bottom: 20px; padding-bottom: 40px; border-bottom: 1px solid #ccc;}
 .reservationTimeInfoBox .reservationTimeInfoImgBox img{display: block; max-width: 100%; margin: 0 auto;}
 .reservationWrap .reservationTimeInfoTitBox{margin-bottom: 40px; text-align: center;}
 .reservationWrap .reservationTimeInfoTitBox .reservationDepartment{padding: 2px 8px; display: inline-block; margin-bottom: 10px; background-color: #2773FF; color: #fff; border-radius: 8px; font-size: 14px; font-weight: 500;}
 .reservationWrap .reservationTimeInfoTitBox .reservationName{font-size: 18px; font-weight: 700; color: #333;}
 .reservationWrap .reservationTimeInfoTitBox .reservationNameEn{font-size: 16px; font-weight: 500; color: #333;} 
-
 .reservationWrap .reservationTimeInfo{ display: flex; align-items: center; justify-content: center; gap: 10px 18px;} 
 .reservationWrap .reservationTimeInfo span{min-width: 112px; padding: 8px 5px; color: #fff; font-weight: 500; border-radius: 10px; text-align: center;}
 .reservationWrap .reservationReservationDate{background-color: #365BD3;}
