@@ -466,19 +466,19 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 }
 
 /* 통합예약·신청 - 장비예약 */
-.equipmentReservationWrap .equipmentTitle{margin-bottom: 20px; padding: 15px 10px 15px 24px; font-size: 20px; font-weight: 700; color: #1D439C; background-color: #EDF2FF;}
+.reservationWrap .equipmentTitle{margin-bottom: 20px; padding: 15px 10px 15px 24px; font-size: 20px; font-weight: 700; color: #1D439C; background-color: #EDF2FF;}
 
 /* 장비예약 공통 */
 .commonShadowBox{margin-bottom: 30px; padding: 40px 40px 30px;
     border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2); background-color: #fff;}
-.commonTitle{margin-bottom: 30px; font-size: 20px; font-weight: 500; color: #333; font-family: "HD", sans-serif;}
-.equipmentReservationWrap .commonLayoutBox{display: flex; gap: 30px;}
-.equipmentReservationWrap .commonRightBox{flex-shrink: 1; width: 360px;}
-.equipmentReservationWrap .commonLeftBox{flex: 1;}
-.equipmentReservationWrap .equipmentStepList{position:relative; margin-bottom:30px; padding:22px 38px; display:flex; align-items:flex-start; justify-content:space-between; border-radius:20px; background-color:#f4f4f4; isolation:isolate;}
-.equipmentReservationWrap .equipmentStepList::before{content:""; position:absolute; top:89px; left:60px; right:60px;
+.commonTitle{margin-bottom: 20px; font-size: 20px; font-weight: 500; color: #333; font-family: "HD", sans-serif;}
+.reservationWrap .commonLayoutBox{display: flex; gap: 30px;}
+.reservationWrap .commonRightBox{flex-shrink: 1; width: 360px;}
+.reservationWrap .commonLeftBox{flex: 1;}
+.reservationWrap .equipmentStepList{position:relative; margin-bottom:30px; padding:22px 38px; display:flex; align-items:flex-start; justify-content:space-between; border-radius:20px; background-color:#f4f4f4; isolation:isolate;}
+.reservationWrap .equipmentStepList::before{content:""; position:absolute; top:89px; left:60px; right:60px;
     height:4px; border-radius:2px; background-color:#ccc; transform:translateY(-50%); z-index:0;}
-.equipmentReservationWrap .equipmentStepList.step02::before{background:linear-gradient(
+.reservationWrap .equipmentStepList.step02::before{background:linear-gradient(
         to right,
         #2773ff 0,
         #2773ff 33.333%,
@@ -486,7 +486,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
         #ccc 100%
     );
 }
-.equipmentReservationWrap .equipmentStepList.step03::before{
+.reservationWrap .equipmentStepList.step03::before{
     background:linear-gradient(
         to right,
         #666 0,
@@ -498,7 +498,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     );
 }
 
-.equipmentReservationWrap .equipmentStepList.step04::before{
+.reservationWrap .equipmentStepList.step04::before{
     background:linear-gradient(
         to right,
         #666 0,
@@ -507,30 +507,30 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
         #2773ff 100%
     );
 }
-.equipmentReservationWrap .equipmentStepList li{position:relative; flex:0 0 120px; width:120px; text-align:center; z-index:1;}
-.equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:6px; display:block; font-size:15px; font-weight:700; color:#666;}
-.equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{margin:0 auto 6px; display:flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background-color:#fff;}
-.equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{display:block;}
-.equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break: keep-all;}
-.equipmentReservationWrap .equipmentStepList li.active .equipmentStepNumber,
-.equipmentReservationWrap .equipmentStepList li.active .equipmentStepTitle{color:#2773ff;}
-.equipmentReservationWrap .equipmentStepList li.active .equipmentStepImgBox{background-color:#2773ff;}
+.reservationWrap .equipmentStepList li{position:relative; flex:0 0 120px; width:120px; text-align:center; z-index:1;}
+.reservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:6px; display:block; font-size:15px; font-weight:700; color:#666;}
+.reservationWrap .equipmentStepList li .equipmentStepImgBox{margin:0 auto 6px; display:flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background-color:#fff;}
+.reservationWrap .equipmentStepList li .equipmentStepImgBox img{display:block;}
+.reservationWrap .equipmentStepList li .equipmentStepTitle{display:block; font-size:15px; font-weight:500; color:#666; word-break: keep-all;}
+.reservationWrap .equipmentStepList li.active .equipmentStepNumber,
+.reservationWrap .equipmentStepList li.active .equipmentStepTitle{color:#2773ff;}
+.reservationWrap .equipmentStepList li.active .equipmentStepImgBox{background-color:#2773ff;}
 
 /* 장비예약 공통 - 장비 및 시간 정보 영역 */
-.equipmentTimeInfoBox{padding: 23px 20px 20px;}
-.equipmentTimeInfoBox  .commonTitle{padding-bottom: 20px; text-align: center; border-bottom: 1px solid #ccc;}
+.reservationTimeInfoBox{padding: 23px 20px 20px;}
+.reservationTimeInfoBox  .commonTitle{padding-bottom: 20px; text-align: center; border-bottom: 1px solid #ccc;}
 
-.equipmentTimeInfoBox .equipmentTimeInfoImgBox{margin-bottom: 20px; padding-bottom: 40px; border-bottom: 1px solid #ccc;}
-.equipmentTimeInfoBox .equipmentTimeInfoImgBox img{display: block; max-width: 100%; margin: 0 auto;}
-.equipmentReservationWrap .equipmentTimeInfoTitBox{margin-bottom: 40px; text-align: center;}
-.equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentDepartment{padding: 2px 8px; display: inline-block; margin-bottom: 10px; background-color: #2773FF; color: #fff; border-radius: 8px; font-size: 14px; font-weight: 500;}
-.equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentName{font-size: 18px; font-weight: 700; color: #333;}
-.equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentNameEn{font-size: 16px; font-weight: 500; color: #333;} 
+.reservationTimeInfoBox .reservationTimeInfoImgBox{margin-bottom: 20px; padding-bottom: 40px; border-bottom: 1px solid #ccc;}
+.reservationTimeInfoBox .reservationTimeInfoImgBox img{display: block; max-width: 100%; margin: 0 auto;}
+.reservationWrap .reservationTimeInfoTitBox{margin-bottom: 40px; text-align: center;}
+.reservationWrap .reservationTimeInfoTitBox .reservationDepartment{padding: 2px 8px; display: inline-block; margin-bottom: 10px; background-color: #2773FF; color: #fff; border-radius: 8px; font-size: 14px; font-weight: 500;}
+.reservationWrap .reservationTimeInfoTitBox .reservationName{font-size: 18px; font-weight: 700; color: #333;}
+.reservationWrap .reservationTimeInfoTitBox .reservationNameEn{font-size: 16px; font-weight: 500; color: #333;} 
 
-.equipmentReservationWrap .equipmentTimeInfo{ display: flex; align-items: center; justify-content: center; gap: 10px 18px;} 
-.equipmentReservationWrap .equipmentTimeInfo span{min-width: 112px; padding: 8px 5px; color: #fff; font-weight: 500; border-radius: 10px; text-align: center;}
-.equipmentReservationWrap .equipmentReservationDate{background-color: #365BD3;}
-.equipmentReservationWrap .equipmentReservationTime{background-color: #3DCD80;}
+.reservationWrap .reservationTimeInfo{ display: flex; align-items: center; justify-content: center; gap: 10px 18px;} 
+.reservationWrap .reservationTimeInfo span{min-width: 112px; padding: 8px 5px; color: #fff; font-weight: 500; border-radius: 10px; text-align: center;}
+.reservationWrap .reservationReservationDate{background-color: #365BD3;}
+.reservationWrap .reservationReservationTime{background-color: #3DCD80;}
 
 @media (max-width: 1199px) {
   
@@ -540,29 +540,29 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 
 @media (max-width: 1024px){
 
-  .equipmentReservationWrap .commonLayoutBox{flex-direction: column;}
+  .reservationWrap .commonLayoutBox{flex-direction: column;}
 
-  .equipmentReservationWrap .equipmentStepList{padding:18px 24px; border-radius:16px;}
-  .equipmentReservationWrap .equipmentStepList::before{top:78px; left:50px; right:50px; height:3px;}
-  .equipmentReservationWrap .equipmentStepList li{flex:0 0 100px; width:100px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:5px; font-size:14px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{margin-bottom:5px; width:70px; height:70px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{font-size:14px;}
+  .reservationWrap .equipmentStepList{padding:18px 24px; border-radius:16px;}
+  .reservationWrap .equipmentStepList::before{top:78px; left:50px; right:50px; height:3px;}
+  .reservationWrap .equipmentStepList li{flex:0 0 100px; width:100px;}
+  .reservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:5px; font-size:14px;}
+  .reservationWrap .equipmentStepList li .equipmentStepImgBox{margin-bottom:5px; width:70px; height:70px;}
+  .reservationWrap .equipmentStepList li .equipmentStepTitle{font-size:14px;}
 
-  .equipmentReservationWrap .commonRightBox{width: 100%;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 45px;}
+  .reservationWrap .commonRightBox{width: 100%;}
+  .reservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 45px;}
 
 }
 
 @media (max-width: 768px){
 
-  .equipmentReservationWrap .equipmentStepList{margin-bottom:20px; padding:16px 10px; border-radius:14px;}
-  .equipmentReservationWrap .equipmentStepList::before{top:65px; left:36px; right:36px; height:3px;}
-  .equipmentReservationWrap .equipmentStepList li{flex:0 0 72px; width:72px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:4px; font-size:12px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{margin-bottom:4px; width:56px; height:56px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 35px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{font-size:12px; line-height:1.3;}
+  .reservationWrap .equipmentStepList{margin-bottom:20px; padding:16px 10px; border-radius:14px;}
+  .reservationWrap .equipmentStepList::before{top:65px; left:36px; right:36px; height:3px;}
+  .reservationWrap .equipmentStepList li{flex:0 0 72px; width:72px;}
+  .reservationWrap .equipmentStepList li .equipmentStepNumber{margin-bottom:4px; font-size:12px;}
+  .reservationWrap .equipmentStepList li .equipmentStepImgBox{margin-bottom:4px; width:56px; height:56px;}
+  .reservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 35px;}
+  .reservationWrap .equipmentStepList li .equipmentStepTitle{font-size:12px; line-height:1.3;}
 
 }
 
@@ -574,191 +574,194 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 
 @media (max-width:480px){
 
-  .equipmentReservationWrap .equipmentStepList{padding:14px 8px; border-radius:12px;}
-  .equipmentReservationWrap .equipmentStepList::before{top:59px; left:32px; right:32px;}
-  .equipmentReservationWrap .equipmentStepList li{flex-basis:64px; width:64px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepNumber{font-size:11px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox{width:52px; height:52px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepTitle{font-size:11px;}
-  .equipmentReservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 27px;}
+  .reservationWrap .equipmentStepList{padding:14px 8px; border-radius:12px;}
+  .reservationWrap .equipmentStepList::before{top:59px; left:32px; right:32px;}
+  .reservationWrap .equipmentStepList li{flex-basis:64px; width:64px;}
+  .reservationWrap .equipmentStepList li .equipmentStepNumber{font-size:11px;}
+  .reservationWrap .equipmentStepList li .equipmentStepImgBox{width:52px; height:52px;}
+  .reservationWrap .equipmentStepList li .equipmentStepTitle{font-size:11px;}
+  .reservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 27px;}
 
-  .equipmentReservationWrap .equipmentTimeInfo{flex-direction: column;}
-  .equipmentReservationWrap .equipmentTimeInfo span{width: 100%; min-width: auto;}
+  .reservationWrap .reservationTimeInfo{flex-direction: column;}
+  .reservationWrap .reservationTimeInfo span{width: 100%; min-width: auto;}
 
 }
   
-/* 장비예약 목록 */
-.equipmentReservationWrap .equipmentReservationListBox{margin-bottom: 80px;}
-.equipmentReservationWrap .equipmentReservationListBox:last-child{margin-bottom: 0;}
-.equipmentReservationWrap .equipmentReservationList{display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
-.equipmentReservationWrap .equipmentReservationList li a{display: block; border: 1px solid #ccc; border-radius: 10px; overflow: hidden;}
-.equipmentReservationWrap .equipmentReservationList li a .equipmentImgBox{display: flex; align-items: center; justify-content: center; height: 220px; border-bottom: 1px solid #ccc; overflow: hidden;}
-.equipmentReservationWrap .equipmentReservationList li a .equipmentImgBox img{display: block; max-width: 100%;  transition: all .5s;}
-.equipmentReservationWrap .equipmentReservationList li a .equipmentTextBox{padding: 16px 10px 16px 24px; background-color: #1D439C;}
-.equipmentReservationWrap .equipmentReservationList li a .equipmentTextBox h4{color: #fff; font-weight: 700;}
-.equipmentReservationWrap .equipmentReservationList li a .equipmentTextBox span{display: block; font-weight: 500; color: #fff;}
-.equipmentReservationWrap .equipmentReservationList li a:hover img{transform: scale(1.3);}
+/* 예약 목록 */
+.reservationWrap .equipmentReservationListBox{margin-bottom: 80px;}
+.reservationWrap .equipmentReservationListBox:last-child{margin-bottom: 0;}
+.reservationWrap .equipmentReservationList{display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+.reservationWrap .equipmentReservationList li a{display: block; border: 1px solid #ccc; border-radius: 10px; overflow: hidden;}
+.reservationWrap .equipmentReservationList li a .equipmentImgBox{display: flex; align-items: center; justify-content: center; height: 220px; border-bottom: 1px solid #ccc; overflow: hidden;}
+.reservationWrap .equipmentReservationList li a .equipmentImgBox img{display: block; max-width: 100%;  transition: all .5s;}
+.reservationWrap .equipmentReservationList li a .equipmentTextBox{padding: 16px 10px 16px 24px; background-color: #1D439C;}
+.reservationWrap .equipmentReservationList li a .equipmentTextBox h4{color: #fff; font-weight: 700;}
+.reservationWrap .equipmentReservationList li a .equipmentTextBox span{display: block; font-weight: 500; color: #fff;}
+.reservationWrap .equipmentReservationList li a:hover img{transform: scale(1.3);}
 
-/* 장비예약 상세 */
-.equipmentReservationWrap .equipmentDetailInfo{min-height: 250px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 40px; margin-bottom: 30px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
-.equipmentReservationWrap .equipmentDetailInfo .equipmentDepartment{display: inline-block; margin-bottom: 17px; padding: 7px 14px; color: #fff; font-weight: 700; background-color: #2773FF; border-radius: 8px;}
-.equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-weight: 700; font-size: 30px; color: #333;}
-.equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 20px; color: #333;}
-.equipmentReservationWrap .equipmentDetailInfo .equipmentDetailImgBox img{display: block; max-width: 100%;}
-.equipmentReservationWrap .equipmentDetailTableWrap{padding: 40px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
-.equipmentReservationWrap .equipmentDetailTableWrap .equipmentDetailTableTitle{margin-bottom: 20px; font-size: 20px; font-weight: 500; color: #333;} 
-.equipmentReservationWrap .equipmentDetailSection{margin-bottom: 30px;}
-.equipmentReservationWrap .equipmentDetailSection01{padding-bottom: 30px; border-bottom: 1px solid #ccc;}
-.equipmentReservationWrap .equipmentDetailSection:last-child{margin-bottom: 0;}
-.equipmentReservationWrap .equipmentDetailTable{width: 100%; table-layout:fixed;}
-.equipmentReservationWrap .equipmentDetailTable tbody td,
-.equipmentReservationWrap .equipmentDetailTable tbody th{padding: 12px 10px; font-size: 14px; color: #333; font-weight: 400; text-align: left; border: 1px solid #ccc; border-width: 1px 0;}
-.equipmentReservationWrap .equipmentDetailTable thead th,
-.equipmentReservationWrap .equipmentDetailTable tbody th{background-color: #F7F8F9;}
-.equipmentReservationWrap .equipmentDetailCalendarBox{margin-bottom: 30px; padding: 24px 22px;border: 1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,.2); border-radius: 30px;}
-.equipmentReservationWrap .equipmentDetailCalendar{margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 0 20px;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader h4{font-weight: 600; font-size: 18px; color: #333; font-weight: 500;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader .calendarBtn{width: 5px; height: 10px; }
-.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader .calendarBtn.calendarPrev{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarHeader .calendarBtn.calendarNext{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain; transform: rotate(180deg);}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarWeek{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden; border: 1px solid rgba(255, 255, 255, .8); border-width: 1px 0;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarWeek .week{margin: 0 auto; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-align: center; color: #666; font-size: 14px;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell {display: flex; align-items: center; justify-content: center; height: 40px; border-bottom: 1px solid rgba(255, 255, 255, .8);}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 40px; height: 40px; border-radius: 8px; color: #666; font-size: 14px; background-color: #f4f4f4;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn.disabled{cursor: default;}
-.equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn.active{color: #fff; background-color: #365BD3; font-weight: 700;}
-.equipmentReservationWrap .equipmentDetailTimeList{display: flex; flex-wrap: wrap; gap: 8px;}
-.equipmentReservationWrap .equipmentDetailTimeList .reservationTimeBtn{display: flex; align-items: center; justify-content: center; width: 70px; height: 40px; padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; color: #333;}
-.equipmentReservationWrap .equipmentDetailTimeList .reservationTimeBtn:disabled{background-color: #F4F4F4; color: #666; font-size: 14px; cursor: default; pointer-events: none; border: 0;}
+/* 예약 상세 */
+.reservationWrap .equipmentDetailInfo{min-height: 250px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 40px; margin-bottom: 30px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
+.reservationWrap .equipmentDetailInfo .equipmentDepartment{display: inline-block; margin-bottom: 17px; padding: 7px 14px; color: #fff; font-weight: 700; background-color: #2773FF; border-radius: 8px;}
+.reservationWrap .equipmentDetailInfo .equipmentName{font-weight: 700; font-size: 30px; color: #333;}
+.reservationWrap .equipmentDetailInfo .nameEn{font-size: 20px; color: #333;}
+.reservationWrap .equipmentDetailInfo .equipmentDetailImgBox img{display: block; max-width: 100%;}
+.reservationWrap .reservationDetailTableWrap{padding: 40px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
+.reservationWrap .reservationDetailTableTitle{margin-bottom: 20px; font-size: 20px; font-weight: 500; color: #333;} 
+.reservationWrap .reservationDetailSection.reservationDetailFileSection{padding: 24px; background-color: #F7F8F9; border-radius: 20px;}
+.reservationWrap .reservationDetailSection{margin-bottom: 30px;}
+.reservationWrap .reservationDetailSection :last-child{margin-bottom: 0;}
+.reservationWrap .reservationDetailSection .dotList{margin: 0 0 30px;}
+.reservationWrap .reservationDetailTable{width: 100%; table-layout:fixed;}
+.reservationWrap .reservationDetailTable tbody td,
+.reservationWrap .reservationDetailTable tbody th{padding: 12px 10px; font-size: 14px; color: #333; font-weight: 400; text-align: left; border: 1px solid #ccc; border-width: 1px 0;}
+.reservationWrap .reservationDetailTable thead th,
+.reservationWrap .reservationDetailTable tbody th{background-color: #F7F8F9;}
+.reservationWrap .reservationDetailCalendarBox{margin-bottom: 30px; padding: 24px 22px;border: 1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,.2); border-radius: 30px;}
+.reservationWrap .reservationDetailCalendar{margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;}
+.reservationWrap .reservationDetailCalendar .calendarHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 0 20px;}
+.reservationWrap .reservationDetailCalendar .calendarHeader h4{font-weight: 600; font-size: 18px; color: #333; font-weight: 500;}
+.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn{width: 5px; height: 10px; }
+.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn.calendarPrev{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain;}
+.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn.calendarNext{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain; transform: rotate(180deg);}
+.reservationWrap .reservationDetailCalendar .calendarWeek{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden; border: 1px solid rgba(255, 255, 255, .8); border-width: 1px 0;}
+.reservationWrap .reservationDetailCalendar .calendarWeek .week{margin: 0 auto; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-align: center; color: #666; font-size: 14px;}
+.reservationWrap .reservationDetailCalendar .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px;}
+.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell {display: flex; align-items: center; justify-content: center; height: 40px; border-bottom: 1px solid rgba(255, 255, 255, .8);}
+.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 40px; height: 40px; border-radius: 8px; color: #666; font-size: 14px; background-color: #f4f4f4;}
+.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn.disabled{cursor: default;}
+.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn.active{color: #fff; background-color: #365BD3; font-weight: 700;}
+.reservationWrap .reservationDetailTimeList{display: flex; flex-wrap: wrap; gap: 8px;}
+.reservationWrap .reservationDetailTimeList .reservationTimeBtn{display: flex; align-items: center; justify-content: center; width: 70px; height: 40px; padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; color: #333;}
+.reservationWrap .reservationDetailTimeList .reservationTimeBtn:disabled{background-color: #F4F4F4; color: #666; font-size: 14px; cursor: default; pointer-events: none; border: 0;}
 
-/* 장비예약 신청 */
-.equipmentReservationWrap .fileUploadLabel{position: relative; width: 100%; height: 40px; padding: 10px 40px 10px 10px; display: flex; align-items: center; justify-content: space-between; border-radius: 10px;
+/* 예약 신청 */
+.reservationWrap .fileUploadLabel{position: relative; width: 100%; height: 40px; padding: 10px 40px 10px 10px; display: flex; align-items: center; justify-content: space-between; border-radius: 10px;
     background-color: #f5f5f5;  cursor: pointer;}
-.equipmentReservationWrap .fileUploadLabel img{position: absolute; top: 50%; transform: translateY(-50%); right:15px;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginField legend{margin-bottom:8px; font-size:14px; color:#333;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginContent{display:flex; align-items:center; gap:21px;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadioGroup{display:grid; grid-template-columns:repeat(2, 140px); gap:10px;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio{position:relative;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio input{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio label{margin: 0; display:flex; align-items:center; justify-content:center; height:40px; border-radius:10px; color:#333; background-color:#f4f4f4; cursor:pointer; font-size: 14px;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio input:checked + label{margin: 0; color:#fff; background-color:#1d439c;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleRadio input:focus-visible + label{outline:3px solid rgba(29,67,156,.25); outline-offset:2px;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox{display:flex; align-items:center; gap:14px; flex:1;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox label{margin: 0; flex-shrink:0; color:#bbb; font-size: 14px;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox input:disabled{color:#999; background-color:#f4f4f4;}
-.equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox.active label{color: #333;}
+.reservationWrap .fileUploadLabel img{position: absolute; top: 50%; transform: translateY(-50%); right:15px;}
+.reservationWrap .reservationApplyBox .sampleOriginField legend{margin-bottom:8px; font-size:14px; color:#333;}
+.reservationWrap .reservationApplyBox .sampleOriginContent{display:flex; align-items:center; gap:21px;}
+.reservationWrap .reservationApplyBox .sampleRadioGroup{display:grid; grid-template-columns:repeat(2, 140px); gap:10px;}
+.reservationWrap .reservationApplyBox .sampleRadio{position:relative;}
+.reservationWrap .reservationApplyBox .sampleRadio input{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);}
+.reservationWrap .reservationApplyBox .sampleRadio label{margin: 0; display:flex; align-items:center; justify-content:center; height:40px; border-radius:10px; color:#333; background-color:#f4f4f4; cursor:pointer; font-size: 14px;}
+.reservationWrap .reservationApplyBox .sampleRadio input:checked + label{margin: 0; color:#fff; background-color:#1d439c;}
+.reservationWrap .reservationApplyBox .sampleRadio input:focus-visible + label{outline:3px solid rgba(29,67,156,.25); outline-offset:2px;}
+.reservationWrap .reservationApplyBox .sampleTypeBox{display:flex; align-items:center; gap:14px; flex:1;}
+.reservationWrap .reservationApplyBox .sampleTypeBox label{margin: 0; flex-shrink:0; color:#bbb; font-size: 14px;}
+.reservationWrap .reservationApplyBox .sampleTypeBox input:disabled{color:#999; background-color:#f4f4f4;}
+.reservationWrap .reservationApplyBox .sampleTypeBox.active label{color: #333;}
 
 /* 장비예약 완료 */
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoList{margin-bottom: 30px; padding: 0 0 30px; border-bottom: 1px solid #ccc;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem{padding: 10px 10px 10px 0; display: flex; align-items: center;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dt{width: 170px; flex-shrink: 0; font-size: 14px; font-weight: 500; color: #333;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dd{font-size: 14px; color: #333;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{gap: 10px 8px;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteInfoTextBox{padding: 10px 20px; background-color: #F8FCFF; border: 1px solid #CFE8FB; border-radius: 10px;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteInfoTextBox h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteInfoTextBox h4{display: flex; align-items: center; gap: 0 4px; margin-bottom: 7px; font-weight: 500; font-size: 16px; color: #1D439C;}
-.equipmentReservationWrap .equipmentReservationCompleteBox .equipmentCompleteInfoTextBox .dotList li{font-size: 14px; font-weight: 500; color: #333;}
-
+.reservationWrap .reservationCompleteBox .reservationInfoList{margin-bottom: 30px; padding: 20px 0 30px; border: 1px solid #ccc; border-width: 1px 0;}
+.reservationWrap .reservationCompleteBox .reservationInfoItem{padding: 10px 10px 10px 0; display: flex; align-items: center;}
+.reservationWrap .reservationCompleteBox .reservationInfoItem .downloadLink{font-size: 14px;
+    color: #333; text-decoration: underline;}
+.reservationWrap .reservationCompleteBox .reservationInfoItem .reservationTimeInfo{justify-content: flex-start;}
+.reservationWrap .reservationCompleteBox .reservationInfoItem dt{width: 170px; flex-shrink: 0; font-size: 14px; font-weight: 500; color: #333;}
+.reservationWrap .reservationCompleteBox .reservationInfoItem dd{font-size: 14px; color: #333;}
+.reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{gap: 10px 8px;}
+.reservationWrap .reservationInfoTextBox{padding: 10px 20px; background-color: #F8FCFF; border: 1px solid #CFE8FB; border-radius: 10px;}
+.reservationWrap .reservationInfoTextBox h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
+.reservationWrap .reservationInfoTextBox h4{display: flex; align-items: center; gap: 0 4px; margin-bottom: 7px; font-weight: 500; font-size: 16px; color: #1D439C;}
+.reservationWrap .reservationInfoTextBox .dotList li{font-size: 14px; font-weight: 500; color: #333;}
 
 /* 활성화 */
-.equipmentReservationWrap .equipmentStepList li.active .equipmentStepNumber,
-.equipmentReservationWrap .equipmentStepList li.active .equipmentStepTitle{color: #2773FF; font-weight: 700;}
-.equipmentReservationWrap .equipmentStepList li.active .equipmentStepImgBox{background-color: #2773FF;}
-.equipmentReservationWrap .equipmentStepList li + li.active::before{background-color: #2773FF;}
+.reservationWrap .equipmentStepList li.active .equipmentStepNumber,
+.reservationWrap .equipmentStepList li.active .equipmentStepTitle{color: #2773FF; font-weight: 700;}
+.reservationWrap .equipmentStepList li.active .equipmentStepImgBox{background-color: #2773FF;}
+.reservationWrap .equipmentStepList li + li.active::before{background-color: #2773FF;}
 
 @media (max-width: 1199px){
 
-  .equipmentReservationWrap .equipmentDetailInfo .equipmentDepartment{margin-bottom: 10px;}
-  .equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-size: 26px;}
-  .equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 18px;}
+  .reservationWrap .equipmentDetailInfo .equipmentDepartment{margin-bottom: 10px;}
+  .reservationWrap .equipmentDetailInfo .equipmentName{font-size: 26px;}
+  .reservationWrap .equipmentDetailInfo .nameEn{font-size: 18px;}
 
-  .equipmentReservationWrap .equipmentDetailTableWrap .equipmentDetailTableTitle{font-size: 18px;}
+  .reservationWrap .reservationDetailTableTitle{font-size: 18px;}
 
 }
 
 @media (max-width: 1024px){
 
-  .equipmentReservationWrap .equipmentReservationList{grid-template-columns: repeat(2, 1fr);}
-  .equipmentReservationWrap .equipmentDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 100%; height: 100%;}
+  .reservationWrap .equipmentReservationList{grid-template-columns: repeat(2, 1fr);}
+  .reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 100%; height: 100%;}
 
 }
 
 @media (max-width: 768px){
 
-  .equipmentReservationWrap .equipmentReservationList{grid-template-columns: 1fr;}
-  .equipmentReservationWrap .equipmentTitle{padding: 10px 20px; font-size: 18px;}
+  .reservationWrap .equipmentReservationList{grid-template-columns: 1fr;}
+  .reservationWrap .equipmentTitle{padding: 10px 20px; font-size: 18px;}
 
-  .equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-size: 24px;}
-  .equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 16px;}
+  .reservationWrap .equipmentDetailInfo .equipmentName{font-size: 24px;}
+  .reservationWrap .equipmentDetailInfo .nameEn{font-size: 16px;}
 
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable colgroup{display:none;}
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable,
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable tbody{display:block; width:100%;}
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable tr{display:grid; grid-template-columns:120px 1fr; width:100%;}
-    .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable th,
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable td{display:flex; align-items:center; width:auto; min-width:0; margin-bottom: -1px;} 
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable td{overflow-wrap:anywhere;}
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable colgroup{display:none;}
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable,
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable tbody{display:block; width:100%;}
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable tr{display:grid; grid-template-columns:120px 1fr; width:100%;}
+    .reservationWrap .reservationDetailSection  .equipmentDetailTable th,
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable td{display:flex; align-items:center; width:auto; min-width:0; margin-bottom: -1px;} 
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable td{overflow-wrap:anywhere;}
 
-  .equipmentReservationWrap .equipmentDetailCalendarBox{border-radius: 20px;}
-  .equipmentReservationWrap .equipmentDetailCalendar .calendarHeader{margin-bottom: 15px;}
+  .reservationWrap .reservationDetailCalendarBox{border-radius: 20px;}
+  .reservationWrap .reservationDetailCalendar .calendarHeader{margin-bottom: 15px;}
 
-  .equipmentReservationWrap.equipmentReservationApplyBox .sampleOriginContent{align-items:stretch; flex-direction:column;}
-  .equipmentReservationWrap.equipmentReservationApplyBox .sampleRadioGroup{grid-template-columns:repeat(2,1fr);}
-  .equipmentReservationWrap.equipmentReservationApplyBox .sampleTypeBox{width:100%;}
-  .equipmentReservationWrap .equipmentReservationApplyBox .sampleOriginContent{flex-direction: column; align-items: flex-start;}
-  .equipmentReservationWrap .equipmentReservationApplyBox .sampleTypeBox{width: 100%;}
+  .reservationWrap.reservationApplyBox .sampleOriginContent{align-items:stretch; flex-direction:column;}
+  .reservationWrap.reservationApplyBox .sampleRadioGroup{grid-template-columns:repeat(2,1fr);}
+  .reservationWrap.reservationApplyBox .sampleTypeBox{width:100%;}
+  .reservationWrap .reservationApplyBox .sampleOriginContent{flex-direction: column; align-items: flex-start;}
+  .reservationWrap .reservationApplyBox .sampleTypeBox{width: 100%;}
 
   
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoList{margin-bottom:24px; padding-bottom:24px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem{padding:9px 0; align-items:flex-start;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dt{width:140px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dd{flex:1; width:auto; min-width:0; overflow-wrap:anywhere;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{flex-wrap:wrap;}
+  .reservationWrap .reservationCompleteBox .reservationInfoList{margin-bottom:24px; padding-bottom:24px;}
+  .reservationWrap .reservationCompleteBox .reservationInfoItem{padding:9px 0; align-items:flex-start;}
+  .reservationWrap .reservationCompleteBox .reservationInfoItem dt{width:140px;}
+  .reservationWrap .reservationCompleteBox .reservationInfoItem dd{flex:1; width:auto; min-width:0; overflow-wrap:anywhere;}
+  .reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{flex-wrap:wrap;}
 
 }
 
 @media (max-width: 576px){
   
-  .equipmentReservationWrap .equipmentDetailInfo{padding: 30px 20px; flex-direction: column; text-align: center;}
-  .equipmentReservationWrap .equipmentDetailInfo .equipmentName{font-size: 22px;}
-  .equipmentReservationWrap .equipmentDetailInfo .equipmentNameEn{font-size: 16px;}
+  .reservationWrap .equipmentDetailInfo{padding: 30px 20px; flex-direction: column; text-align: center;}
+  .reservationWrap .equipmentDetailInfo .equipmentName{font-size: 22px;}
+  .reservationWrap .equipmentDetailInfo .nameEn{font-size: 16px;}
 
-  .equipmentReservationWrap .equipmentDetailTableWrap{padding: 30px 20px;}
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable tr{grid-template-columns:100px 1fr;}
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable th,
-  .equipmentReservationWrap .equipmentDetailSection .equipmentDetailTable td{font-size:14px;}
+  .reservationWrap .reservationDetailTableWrap{padding: 30px 20px;}
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable tr{grid-template-columns:100px 1fr;}
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable th,
+  .reservationWrap .reservationDetailSection  .equipmentDetailTable td{font-size:14px;}
 
 }
 
 @media (max-width: 480px){
 
-  .equipmentReservationWrap .equipmentReservationApplyBox .sampleRadioGroup{width: 100%;    grid-template-columns: 1fr;}
+  .reservationWrap .reservationApplyBox .sampleRadioGroup{width: 100%;    grid-template-columns: 1fr;}
   
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoList{margin-bottom:20px; padding-bottom:20px;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem{padding:8px 0;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dt{width:110px; padding-right:10px; box-sizing:border-box; line-height:1.5; word-break:keep-all;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem dd{line-height:1.5;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .equipmentReservationInfoItem .equipmentNameEn{display:block;}
-  .equipmentReservationWrap .equipmentReservationCompleteBox .commonLeftBox .equipmentTimeInfo{gap:6px;}
+  .reservationWrap .reservationCompleteBox .reservationInfoList{margin-bottom:20px; padding-bottom:20px;}
+  .reservationWrap .reservationCompleteBox .reservationInfoItem{padding:8px 0;}
+  .reservationWrap .reservationCompleteBox .reservationInfoItem dt{width:110px; padding-right:10px; box-sizing:border-box; line-height:1.5; word-break:keep-all;}
+  .reservationWrap .reservationCompleteBox .reservationInfoItem dd{line-height:1.5;}
+  .reservationWrap .reservationCompleteBox .reservationInfoItem .nameEn{display:block;}
+  .reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{gap:6px;}
 
 }
 
-/* 강원첨단연구지원센터 - 장비예약 */
-.equipmentReservationWrap .equipmentReservationDetailBox .commonBorderBox{margin-bottom: 30px;}
-.equipmentReservationWrap .equipmentReservationDetailBox .commonBorderBox:last-child{margin-bottom: 0;}
-.equipmentReservationWrap .equipmentReservationDetailBox .equipmentDetailInfo .equipmentDepartment.karc{background-color: #A239F2;}
-.equipmentReservationWrap .equipmentReservationDetailBox .equipmentDetailTableType02 thead tr th{padding: 4px 10px;
+/* 강원첨단연구지원센터 - 예약 */
+.reservationWrap .reservationDetailBox .commonBorderBox{margin-bottom: 30px;}
+.reservationWrap .reservationDetailBox .commonBorderBox:last-child{margin-bottom: 0;}
+.reservationWrap .reservationDetailBox .equipmentDetailInfo .equipmentDepartment.karc{background-color: #A239F2;}
+.reservationWrap .reservationDetailBox .reservationDetailTableType02 thead tr th{padding: 4px 10px;
     font-size: 14px; color: #333; font-weight: 400; border: 1px solid #ccc; border-width: 1px 1px 0 0;}
-.equipmentReservationWrap .equipmentReservationDetailBox .equipmentDetailTableType02 thead tr:first-child th:last-child {
+.reservationWrap .reservationDetailBox .reservationDetailTableType02 thead tr:first-child th:last-child {
     border-right: 0;}
-.equipmentReservationWrap .equipmentReservationDetailBox .equipmentDetailTableType02 tbody td{padding: 4px 10px; text-align: center; border: 1px solid #ccc;}
-.equipmentReservationWrap .equipmentReservationDetailBox .equipmentDetailTableType02 tbody tr td:first-child{border-left: 0;}
-.equipmentReservationWrap .equipmentReservationDetailBox .equipmentDetailTableType02 tbody tr td:last-child{border-right: 0;}
-.equipmentReservationWrap .equipmentReservationDetailBox .equipmentDetailInfoTitle{margin-bottom: 10px; font-weight: 700; font-size: 16px;}
-.equipmentReservationWrap .equipmentReservationDetailBox .dotList li{font-size: 14px;}
-.equipmentReservationWrap .equipmentDetailFileSection{background-color: #F7F8F9; border: 1px solid #eee; border-radius: 20px; padding: 24px;} 
+.reservationWrap .reservationDetailBox .reservationDetailTableType02 tbody td{padding: 4px 10px; text-align: center; border: 1px solid #ccc;}
+.reservationWrap .reservationDetailBox .reservationDetailTableType02 tbody tr td:first-child{border-left: 0;}
+.reservationWrap .reservationDetailBox .reservationDetailTableType02 tbody tr td:last-child{border-right: 0;}
+.reservationWrap .reservationDetailBox .equipmentDetailInfoTitle{margin-bottom: 10px; font-weight: 700; font-size: 16px;}
+.reservationWrap .reservationDetailBox .dotList li{font-size: 14px;}
+.reservationWrap .equipmentDetailFileSection{background-color: #F7F8F9; border: 1px solid #eee; border-radius: 20px; padding: 24px;} 
 .boardViewFileBox{display: flex; align-items: flex-start;}
 .boardViewFileTitle{ margin-right: 35px; font-weight: 700; color: #333; font-size: 16px;}
 .boardViewFileList li{margin-bottom:10px;}
@@ -766,7 +769,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .boardViewFileList li a{display: flex; text-decoration: underline;}
 .boardViewFileList li a .boardViewFileIcon{margin: 3px 0; flex-shrink: 0; width: 18px; height: 14px; margin-right: 6px; background: url(../images/sub/file_icon.svg)no-repeat center / contain;}
 .boardViewFileList li a .boardViewFileName{font-size: 14px; color: #333;}
-.equipmentReservationWrap .equipmentTimeInfoTitBox .equipmentDepartment.karc{background-color: #A139F1;}
+.reservationWrap .reservationTimeInfoTitBox .equipmentDepartment.karc{background-color: #A139F1;}
 
 @media (max-width: 480px){
 
@@ -808,19 +811,18 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .policyContent .policySection .policyList{margin: 10px 0;}
   
 /* 회원가입 - 정보입력 */
-.memberJoinFormBox .formBox legend{margin-bottom: 8px; font-size: 14px; color: #333;}
 .memberJoinFormBox .formBox .emailConsentText{margin-bottom: 10px; padding: 10px 20px; border: 1px solid #CFE8FB; border-radius: 10px; background-color: #F8FCFF; color: #1D439C; font-weight: 500; font-size: 14px;}
-.memberJoinFormBox .formBox .formRadioRowBox{display: flex; gap: 10px;}
-.memberJoinFormBox .formBox input[type="radio"] + label{margin: 0; display: flex; align-items: center; justify-content: center; width: 140px; height: 40px; font-size: 14px; color: #333; border: 1px solid #cccc; border-radius: 10px; cursor: pointer;}
-.memberJoinFormBox .formBox input[type="radio"]:checked + label{background-color: #1D439C; color: #fff; border-color: #1D439C;}
 .memberJoinFormBox .dateInput{background: #f4f4f4 url(../images/sub/claendar_icon.svg) no-repeat right 20px center;}
-
+.formBox legend{margin-bottom: 8px; font-size: 14px; color: #333;}
+.formBox .formRadioRowBox{display: flex; gap: 10px;}
+.formBox input[type="radio"] + label{margin: 0; display: flex; align-items: center; justify-content: center; width: 140px; height: 40px; font-size: 14px; color: #333; border: 1px solid #cccc; border-radius: 10px; cursor: pointer;}
+.formBox input[type="radio"]:checked + label{background-color: #1D439C; color: #fff; border-color: #1D439C;}
 
 
 @media (max-width: 480px){
 
-  .memberJoinFormBox .formBox .formRadioRowBox{flex-direction: column;}
-  .memberJoinFormBox .formBox input[type="radio"] + label{width: 100%;}
+ .formBox .formRadioRowBox{flex-direction: column;}
+ .formBox input[type="radio"] + label{width: 100%;}
 
 }
 

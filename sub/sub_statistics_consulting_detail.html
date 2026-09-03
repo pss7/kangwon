@@ -8,7 +8,7 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>장비예약 신청완료</title>
+    <title>통계상담예약 상세</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -461,8 +461,8 @@
 
                 <!-- 공통 탭 영역 -->
                 <div class="commonTab">
-                    <button type="button" class="commonTabBtn active">장비예약</button>
-                    <button type="button" class="commonTabBtn">통계상담예약</button>
+                    <button type="button" class="commonTabBtn">장비예약</button>
+                    <button type="button" class="commonTabBtn active">통계상담예약</button>
                     <button type="button" class="commonTabBtn">모니터링실 예약</button>
                 </div>
                 <!-- //공통 탭 영역 -->
@@ -474,14 +474,14 @@
 
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                장비예약
+                                통계상담
                             </h2>
 
                             <div class="breadcrumbBox">
                                 <a href="/" class="breadcrumbLink"><img src="../images/sub/home_icon.svg" alt=""></a>
                                 <a href="#" class="breadcrumbLink">통합 예약 · 신청</a>
                                 <a href="#" class="breadcrumbLink">의생명연구원</a>
-                                <a href="#" class="breadcrumbLink active" aria-current="page">장비예약</a>
+                                <a href="#" class="breadcrumbLink active" aria-current="page">통계상담</a>
                             </div>
                         </div>
 
@@ -492,26 +492,26 @@
                 <!-- 서브 콘텐츠 영역 -->
                 <div class="subContentBox">
 
-                    <!-- 장비예약 영역 -->
+                    <!-- 통계상담예약 영역 -->
                     <div class="reservationWrap">
                         <div class="container">
                             <div class="reservationBox">
 
-                                <!-- 장비예약 신청 영역 -->
-                                <div class="reservationCompleteBox commonLayoutBox">
+                                <!-- 통계상담예약 상세 영역-->
+                                <div class="reservationDetailBox commonLayoutBox">
 
-                                    <!-- 폼 영역 -->
-                                    <div class="commonLeftBox">
+                                    <!-- 통계상담예약 정보 영역 -->
+                                    <div class="reservationDetailLeftBox commonLeftBox">
 
-                                        <!-- 단계 영역 -->
-                                        <ol class="equipmentStepList step04">
-                                            <li class="equipmentStepItem">
+                                        <!-- 진행 단계 영역 -->
+                                        <ol class="equipmentStepList">
+                                            <li class="equipmentStepItem active">
                                                 <span class="equipmentStepNumber" lang="en">
                                                     Step 01
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon01.svg" alt="">
+                                                    <img src="../images/sub/step_icon02.svg" alt="">
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
@@ -525,11 +525,11 @@
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon_type02.svg" alt="">
+                                                    <img src="../images/sub/step_icon03.svg" alt="">
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
-                                                    날짜 · 시간 선택
+                                                   예약자정보 입력
                                                 </strong>
                                             </li>
 
@@ -539,113 +539,98 @@
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon_type03.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약자 정보 입력
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem active">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 04
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
                                                     <img src="../images/sub/step_icon04.svg" alt="">
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
-                                                    예약 신청 완료
+                                                 예약신청 완료
                                                 </strong>
                                             </li>
                                         </ol>
                                         <!-- //진행 단계 영역 -->
 
-                                        <div class="commonShadowBox">
-                                            <div class="completeMessageBox">
-                                                <p class="completeMessageTitle">
-                                                    장비예약 신청이
-                                                    <strong>완료</strong>되었습니다.
-                                                </p>
+                                        <!-- 통계상담예약 테이블 영역 -->
+                                        <div class="reservationDetailTableWrap">
 
-                                                <p class="completeMessageDes">
-                                                    예약 승인 진행은
-                                                    <strong>마이페이지 &gt; 신청내역</strong>에서
-                                                    확인하실 수 있습니다.
-                                                </p>
+                                            <div class="reservationDetailSection">
+                                                <h4 class="reservationDetailTableTitle">세부정보</h4>
+
+                                                <div class="reservationDetailTableBox">
+                                                    <table class="reservationDetailTable">
+                                                        <caption class="blind">
+                                                            원심분리기 장비 세부정보
+                                                        </caption>
+
+                                                        <colgroup>
+                                                            <col style="width: 18%;">
+                                                            <col style="width: 32%;">
+                                                            <col style="width: 18%;">
+                                                            <col style="width: 32%;">
+                                                        </colgroup>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    상담 교수
+                                                                </th>
+                                                                <td>
+                                                                    임명남 연구교수
+                                                                </td>
+
+                                                                <th scope="row">
+                                                                    교수 이메일
+                                                                </th>
+                                                                <td lang="en">
+                                                                    lmn99054@kangwon.ac.kr
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    문의처
+                                                                </th>
+                                                                <td>
+                                                                    033-258-4997
+                                                                </td>
+
+                                                                <th scope="row">
+                                                                    문의 이메일
+                                                                </th>
+                                                                <td>
+                                                                    knuh.bri@gmail.com
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
 
-                                            <h3 class="commonTitle">
-                                                예약자정보
-                                            </h3>
-
-                                            <div class="reservationInfoList">
-                                                <dl class="reservationInfoItem">
-                                                    <dt>장비명</dt>
-                                                    <dd>
-                                                        원심분리기
-                                                        <span class="nameEn" lang="en">
-                                                            Centrifuge
-                                                        </span>
-                                                    </dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>예약일시</dt>
-                                                    <dd>
-                                                        <div class="equipmentTimeInfo">
-                                                            <span class="reservationDate">
-                                                                2026.08.12
-                                                            </span>
-
-                                                            <span class="reservationTime">
-                                                                13:00~14:00
-                                                            </span>
-                                                        </div>
-                                                    </dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>신청자</dt>
-                                                    <dd>홍길동</dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>소속</dt>
-                                                    <dd>정신건강의학과</dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>연구책임자</dt>
-                                                    <dd>홍길동</dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>연락처</dt>
-                                                    <dd>010-0000-0000</dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>이메일</dt>
-                                                    <dd>honggildong@naver.com</dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>분석내용</dt>
-                                                    <dd>혈청분리</dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>감염유래시료여부</dt>
-                                                    <dd>아니오</dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
-                                                    <dt>세금계산서 발행 정보</dt>
-                                                    <dd>000-00-00000</dd>
-                                                </dl>
+                                            <h4 class="reservationDetailTableTitle">서식 다운로드</h4>
+                                            <div class="reservationDetailSection reservationDetailFileSection">
+                                                <h4 class="commonTitle">
+                                                    관련자료
+                                                </h4>
+                                                <div class="boardViewFileBox">
+                                                    <h5 class="boardViewFileTitle">첨부파일</h5>
+                                                    <ul class="boardViewFileList">
+                                                        <li class="boardViewFileItem">
+                                                            <a href="#" class="boardViewFileLink">
+                                                                <span class="boardViewFileIcon"
+                                                                    aria-hidden="true"></span>
+                                                                <span class="boardViewFileName">강원첨단연구지원센터 장비
+                                                                    안내.PDF</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="boardViewFileItem">
+                                                            <a href="#" class="boardViewFileLink">
+                                                                <span class="boardViewFileIcon"
+                                                                    aria-hidden="true"></span>
+                                                                <span class="boardViewFileName">장비 운영 세칙.hwp</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
 
                                             <div class="reservationInfoTextBox">
@@ -654,76 +639,264 @@
                                                 </h4>
                                                 <ul class="dotList">
                                                     <li>
-                                                        예약 신청 후 담당자의 승인이 완료되어야 장비 사용이 가능합니다.
+                                                        위 서식을 다운로드하여 작성하신 뒤 다음 페이지에서 파일을 첨부해주세요.
                                                     </li>
                                                 </ul>
                                             </div>
+
                                         </div>
+                                        <!-- //통계상담예약 테이블 영역 -->
 
                                     </div>
-                                    <!-- //폼 영역 -->
+                                    <!-- //통계상담예약 정보 영역 -->
 
-                                    <!-- 장비 및 시간 정보 영역 -->
-                                    <div class="commonRightBox">
+                                    <!-- 달력 영역 -->
+                                    <div class="reservationDetailRightBox commonRightBox">
 
-                                        <div class="reservationTimeInfoBox commonShadowBox">
+                                        <div class="reservationDetailCalendarBox">
+                                            <div class="reservationDetailCalendar">
+                                                <header class="calendarHeader">
+                                                    <button type="button" class="calendarBtn calendarPrev"
+                                                        aria-label="이전달"></button>
+                                                    <h4>2026.4</h4>
+                                                    <button type="button" class="calendarBtn calendarNext"
+                                                        aria-label="다음달"></button>
+                                                </header>
 
-                                            <h3 class="commonTitle">
-                                                장비 및 시간 정보
-                                            </h3>
+                                                <div class="calendarWeek">
+                                                    <div class="week">일</div>
+                                                    <div class="week">월</div>
+                                                    <div class="week">화</div>
+                                                    <div class="week">수</div>
+                                                    <div class="week">목</div>
+                                                    <div class="week">금</div>
+                                                    <div class="week">토</div>
+                                                </div>
 
-                                            <div class="reservationTimeInfoTitBox">
-                                                <span class="reservationDepartment">
-                                                    연구지원부
-                                                </span>
+                                                <div class="calendarGrid">
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn" disabled>
+                                                            <span class="date"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn" disabled>
+                                                            <span class="date"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn" disabled>
+                                                            <span class="date"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">1</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">2</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">3</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">4</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">5</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">6</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">7</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">8</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">9</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">10</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">11</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn active">
+                                                            <span class="date">12</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">13</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn today scheduled">
+                                                            <span class="date">14</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">15</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn selected scheduled">
+                                                            <span class="date">16</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">17</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">18</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">19</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">20</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">21</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn scheduled">
+                                                            <span class="date">22</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">23</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">24</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">25</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">26</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn scheduled">
+                                                            <span class="date">27</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">28</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">29</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn">
+                                                            <span class="date">30</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn" disabled>
+                                                            <span class="date"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendarCell">
+                                                        <button type="button" class="dateBtn" disabled>
+                                                            <span class="date"></span>
+                                                        </button>
+                                                    </div>
 
-                                                <h3 class="reservationName">
-                                                    원심분리기
-                                                </h3>
+                                                </div>
 
-                                                <span class="reservationNameEn" lang="en">
-                                                    Centrifuge
-                                                </span>
                                             </div>
 
-                                            <div class="reservationTimeInfoImgBox">
-                                                <img src="../images/sub/equipment_img01.jpg" alt="">
-                                            </div>
-
-                                            <div class="reservationTimeInfo">
-                                                <span class="reservationReservationDate">
-                                                    2026.08.12
-                                                </span>
-
-                                                <span class="reservationReservationTime">
-                                                    13:00~14:00
-                                                </span>
+                                            <div class="reservationDetailTimeList" role="group" aria-label="예약 시간 선택">
+                                                <button type="button" class="reservationTimeBtn" disabled>08:30</button>
+                                                <button type="button" class="reservationTimeBtn" disabled>09:00</button>
+                                                <button type="button" class="reservationTimeBtn" disabled>09:30</button>
+                                                <button type="button" class="reservationTimeBtn" disabled>10:00</button>
+                                                <button type="button" class="reservationTimeBtn">10:30</button>
+                                                <button type="button" class="reservationTimeBtn">11:00</button>
+                                                <button type="button" class="reservationTimeBtn">11:30</button>
+                                                <button type="button" class="reservationTimeBtn">12:00</button>
+                                                <button type="button" class="reservationTimeBtn">12:30</button>
+                                                <button type="button" class="reservationTimeBtn">13:00</button>
+                                                <button type="button" class="reservationTimeBtn">13:30</button>
+                                                <button type="button" class="reservationTimeBtn">14:00</button>
+                                                <button type="button" class="reservationTimeBtn">14:30</button>
+                                                <button type="button" class="reservationTimeBtn">15:00</button>
+                                                <button type="button" class="reservationTimeBtn">15:30</button>
+                                                <button type="button" class="reservationTimeBtn">16:00</button>
+                                                <button type="button" class="reservationTimeBtn">16:30</button>
+                                                <button type="button" class="reservationTimeBtn">17:00</button>
+                                                <button type="button" class="reservationTimeBtn">17:30</button>
                                             </div>
 
                                         </div>
 
                                         <div class="commonBtnBox verticalBtnBox">
                                             <button type="button" class="commonBtn primaryBtn">
-                                                신청내역 확인
+                                                선택완료
                                             </button>
                                             <a href="#" class="commonBtn borderBtn">
-                                                이전
+                                                목록
                                             </a>
                                         </div>
 
                                     </div>
-                                    <!-- //장비 및 시간 정보 영역 -->
+                                    <!-- //달력 영역 -->
 
                                 </div>
-                                <!-- //장비 상세 정보 영역 -->
+                                <!-- 통계상담예약 상세 영역-->
 
                             </div>
-                            <!-- //장비예약 신청 영역 -->
-
                         </div>
-
                     </div>
-                    <!-- //장비예약 영역 -->
+                    <!-- //통계상담예약 영역 -->
 
                 </div>
                 <!-- //서브 콘텐츠 영역 -->

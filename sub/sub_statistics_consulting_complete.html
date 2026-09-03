@@ -8,7 +8,7 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>장비예약 신청완료</title>
+    <title>통계상담예약 신청완료</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -461,8 +461,8 @@
 
                 <!-- 공통 탭 영역 -->
                 <div class="commonTab">
-                    <button type="button" class="commonTabBtn active">장비예약</button>
-                    <button type="button" class="commonTabBtn">통계상담예약</button>
+                    <button type="button" class="commonTabBtn">장비예약</button>
+                    <button type="button" class="commonTabBtn active">통계상담예약</button>
                     <button type="button" class="commonTabBtn">모니터링실 예약</button>
                 </div>
                 <!-- //공통 탭 영역 -->
@@ -474,14 +474,14 @@
 
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                장비예약
+                                통계상담
                             </h2>
 
                             <div class="breadcrumbBox">
                                 <a href="/" class="breadcrumbLink"><img src="../images/sub/home_icon.svg" alt=""></a>
                                 <a href="#" class="breadcrumbLink">통합 예약 · 신청</a>
                                 <a href="#" class="breadcrumbLink">의생명연구원</a>
-                                <a href="#" class="breadcrumbLink active" aria-current="page">장비예약</a>
+                                <a href="#" class="breadcrumbLink active" aria-current="page">통계상담</a>
                             </div>
                         </div>
 
@@ -504,14 +504,14 @@
                                     <div class="commonLeftBox">
 
                                         <!-- 단계 영역 -->
-                                        <ol class="equipmentStepList step04">
+                                        <ol class="equipmentStepList">
                                             <li class="equipmentStepItem">
                                                 <span class="equipmentStepNumber" lang="en">
                                                     Step 01
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon01.svg" alt="">
+                                                    <img src="../images/sub/step_icon02.svg" alt="">
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
@@ -525,31 +525,17 @@
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon_type02.svg" alt="">
+                                                    <img src="../images/sub/step_icon03.svg" alt="">
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
-                                                    날짜 · 시간 선택
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 03
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon_type03.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약자 정보 입력
+                                                    예약자정보 입력
                                                 </strong>
                                             </li>
 
                                             <li class="equipmentStepItem active">
                                                 <span class="equipmentStepNumber" lang="en">
-                                                    Step 04
+                                                    Step 03
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
@@ -557,7 +543,7 @@
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
-                                                    예약 신청 완료
+                                                    예약신청 완료
                                                 </strong>
                                             </li>
                                         </ol>
@@ -566,7 +552,7 @@
                                         <div class="commonShadowBox">
                                             <div class="completeMessageBox">
                                                 <p class="completeMessageTitle">
-                                                    장비예약 신청이
+                                                    통계예약 신청이
                                                     <strong>완료</strong>되었습니다.
                                                 </p>
 
@@ -583,24 +569,14 @@
 
                                             <div class="reservationInfoList">
                                                 <dl class="reservationInfoItem">
-                                                    <dt>장비명</dt>
-                                                    <dd>
-                                                        원심분리기
-                                                        <span class="nameEn" lang="en">
-                                                            Centrifuge
-                                                        </span>
-                                                    </dd>
-                                                </dl>
-
-                                                <dl class="reservationInfoItem">
                                                     <dt>예약일시</dt>
                                                     <dd>
-                                                        <div class="equipmentTimeInfo">
-                                                            <span class="reservationDate">
+                                                        <div class="reservationTimeInfo">
+                                                            <span class="reservationReservationDate">
                                                                 2026.08.12
                                                             </span>
 
-                                                            <span class="reservationTime">
+                                                            <span class="reservationReservationTime">
                                                                 13:00~14:00
                                                             </span>
                                                         </div>
@@ -609,7 +585,21 @@
 
                                                 <dl class="reservationInfoItem">
                                                     <dt>신청자</dt>
-                                                    <dd>홍길동</dd>
+                                                    <dd>
+                                                        홍길동
+                                                    </dd>
+                                                </dl>
+
+                                                <dl class="reservationInfoItem">
+                                                    <dt>소속</dt>
+                                                    <dd>
+                                                        정신건강의학과
+                                                    </dd>
+                                                </dl>
+
+                                                <dl class="reservationInfoItem">
+                                                    <dt>연구내 역할</dt>
+                                                    <dd>제1저자, 교신저자</dd>
                                                 </dl>
 
                                                 <dl class="reservationInfoItem">
@@ -633,18 +623,22 @@
                                                 </dl>
 
                                                 <dl class="reservationInfoItem">
-                                                    <dt>분석내용</dt>
-                                                    <dd>혈청분리</dd>
+                                                    <dt>상담종류</dt>
+                                                    <dd>자문</dd>
                                                 </dl>
 
                                                 <dl class="reservationInfoItem">
-                                                    <dt>감염유래시료여부</dt>
-                                                    <dd>아니오</dd>
+                                                    <dt>신청서 업로드</dt>
+                                                    <dd>
+                                                        <a href="#" class="downloadLink" download>
+                                                            연구지원부_통계지원_신청폼_홍길동.hwp
+                                                        </a>
+                                                    </dd>
                                                 </dl>
 
                                                 <dl class="reservationInfoItem">
-                                                    <dt>세금계산서 발행 정보</dt>
-                                                    <dd>000-00-00000</dd>
+                                                    <dt>첨부자료</dt>
+                                                    <dd>-</dd>
                                                 </dl>
                                             </div>
 
@@ -654,7 +648,7 @@
                                                 </h4>
                                                 <ul class="dotList">
                                                     <li>
-                                                        예약 신청 후 담당자의 승인이 완료되어야 장비 사용이 가능합니다.
+                                                        예약 신청 후 담당자의 승인이 완료되어야 상담 진행 가능합니다.
                                                     </li>
                                                 </ul>
                                             </div>

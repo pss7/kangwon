@@ -8,7 +8,7 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>장비예약 신청완료</title>
+    <title>통합예약 신청</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -461,8 +461,8 @@
 
                 <!-- 공통 탭 영역 -->
                 <div class="commonTab">
-                    <button type="button" class="commonTabBtn active">장비예약</button>
-                    <button type="button" class="commonTabBtn">통계상담예약</button>
+                    <button type="button" class="commonTabBtn">장비예약</button>
+                    <button type="button" class="commonTabBtn active">통계상담예약</button>
                     <button type="button" class="commonTabBtn">모니터링실 예약</button>
                 </div>
                 <!-- //공통 탭 영역 -->
@@ -474,14 +474,14 @@
 
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                장비예약
+                                통계상담
                             </h2>
 
                             <div class="breadcrumbBox">
                                 <a href="/" class="breadcrumbLink"><img src="../images/sub/home_icon.svg" alt=""></a>
                                 <a href="#" class="breadcrumbLink">통합 예약 · 신청</a>
                                 <a href="#" class="breadcrumbLink">의생명연구원</a>
-                                <a href="#" class="breadcrumbLink active" aria-current="page">장비예약</a>
+                                <a href="#" class="breadcrumbLink active" aria-current="page">통계상담</a>
                             </div>
                         </div>
 
@@ -497,21 +497,19 @@
                         <div class="container">
                             <div class="reservationBox">
 
-                                <!-- 장비예약 신청 영역 -->
-                                <div class="reservationCompleteBox commonLayoutBox">
+                                <!-- 통계상담예약 신청 영역 -->
+                                <div class="reservationApplyBox commonLayoutBox">
 
                                     <!-- 폼 영역 -->
                                     <div class="commonLeftBox">
-
-                                        <!-- 단계 영역 -->
-                                        <ol class="equipmentStepList step04">
+                                        <ol class="equipmentStepList">
                                             <li class="equipmentStepItem">
                                                 <span class="equipmentStepNumber" lang="en">
                                                     Step 01
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon01.svg" alt="">
+                                                    <img src="../images/sub/step_icon02.svg" alt="">
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
@@ -525,31 +523,17 @@
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon_type02.svg" alt="">
+                                                    <img src="../images/sub/step_icon03.svg" alt="">
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
-                                                    날짜 · 시간 선택
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 03
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon_type03.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약자 정보 입력
+                                                    예약자정보 입력
                                                 </strong>
                                             </li>
 
                                             <li class="equipmentStepItem active">
                                                 <span class="equipmentStepNumber" lang="en">
-                                                    Step 04
+                                                    Step 03
                                                 </span>
 
                                                 <div class="equipmentStepImgBox">
@@ -557,138 +541,212 @@
                                                 </div>
 
                                                 <strong class="equipmentStepTitle">
-                                                    예약 신청 완료
+                                                    예약신청 완료
                                                 </strong>
                                             </li>
                                         </ol>
-                                        <!-- //진행 단계 영역 -->
 
                                         <div class="commonShadowBox">
-                                            <div class="completeMessageBox">
-                                                <p class="completeMessageTitle">
-                                                    장비예약 신청이
-                                                    <strong>완료</strong>되었습니다.
-                                                </p>
-
-                                                <p class="completeMessageDes">
-                                                    예약 승인 진행은
-                                                    <strong>마이페이지 &gt; 신청내역</strong>에서
-                                                    확인하실 수 있습니다.
-                                                </p>
-                                            </div>
-
                                             <h3 class="commonTitle">
                                                 예약자정보
                                             </h3>
 
-                                            <div class="reservationInfoList">
-                                                <dl class="reservationInfoItem">
-                                                    <dt>장비명</dt>
-                                                    <dd>
-                                                        원심분리기
-                                                        <span class="nameEn" lang="en">
-                                                            Centrifuge
-                                                        </span>
-                                                    </dd>
-                                                </dl>
+                                            <form action="" method="">
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>예약일시</dt>
-                                                    <dd>
-                                                        <div class="equipmentTimeInfo">
-                                                            <span class="reservationDate">
-                                                                2026.08.12
-                                                            </span>
+                                                <!-- 신청자이름 -->
+                                                <div class="formBox">
+                                                    <label for="applicantName">
+                                                        신청자 이름
+                                                        <span class="requiredMark" aria-hidden="true">*</span>
+                                                    </label>
+                                                    <div class="inputTextBox">
+                                                        <input type="text" id="applicantName" required>
+                                                    </div>
+                                                </div>
+                                                <!-- //신청자이름 -->
 
-                                                            <span class="reservationTime">
-                                                                13:00~14:00
-                                                            </span>
+                                                <!-- 소속 -->
+                                                <div class="formBox">
+                                                    <label for="affiliation">
+                                                        소속
+                                                        <span class="requiredMark" aria-hidden="true">*</span>
+                                                    </label>
+                                                    <div class="inputTextBox">
+                                                        <input type="text" id="affiliation" required>
+                                                    </div>
+                                                </div>
+                                                <!-- //소속 -->
+
+                                                <!-- 연구내 역할 -->
+                                                <div class="formBox">
+                                                    <fieldset class="researchRoleField">
+                                                        <legend>
+                                                            연구내 역할
+                                                            <span class="requiredMark" aria-hidden="true">*</span>
+                                                        </legend>
+
+                                                        <div class="formRadioRowBox">
+
+                                                            <div class="researchRoleRadio">
+                                                                <input type="radio" id="researchRoleFirstAuthor"
+                                                                    name="researchRole" value="firstAuthor"
+                                                                    class="blind" required>
+                                                                <label for="researchRoleFirstAuthor">제1저자</label>
+                                                            </div>
+
+                                                            <div class="researchRoleRadio">
+                                                                <input type="radio" id="researchRoleCorrespondingAuthor"
+                                                                    name="researchRole" value="correspondingAuthor"
+                                                                    class="blind">
+                                                                <label
+                                                                    for="researchRoleCorrespondingAuthor">교신저자</label>
+                                                            </div>
+
                                                         </div>
-                                                    </dd>
-                                                </dl>
+                                                    </fieldset>
+                                                </div>
+                                                <!-- //연구내 역할 -->
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>신청자</dt>
-                                                    <dd>홍길동</dd>
-                                                </dl>
+                                                <!-- 연구책임자 -->
+                                                <div class="formBox">
+                                                    <label for="principalInvestigator">
+                                                        연구책임자
+                                                        <span class="requiredMark" aria-hidden="true">*</span>
+                                                    </label>
+                                                    <div class="inputTextBox">
+                                                        <input type="text" id="principalInvestigator" required>
+                                                    </div>
+                                                </div>
+                                                <!-- //연구책임자 -->
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>소속</dt>
-                                                    <dd>정신건강의학과</dd>
-                                                </dl>
+                                                <!-- 연락처 -->
+                                                <div class="formBox">
+                                                    <label for="contactNumber">
+                                                        연락처
+                                                        <span class="requiredMark" aria-hidden="true">*</span>
+                                                    </label>
+                                                    <div class="inputTextBox">
+                                                        <input type="text" id="contactNumber" required>
+                                                    </div>
+                                                </div>
+                                                <!-- //연락처 -->
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>연구책임자</dt>
-                                                    <dd>홍길동</dd>
-                                                </dl>
+                                                <!-- 이메일 -->
+                                                <div class="formBox">
+                                                    <label for="email">
+                                                        이메일
+                                                        <span class="requiredMark" aria-hidden="true">*</span>
+                                                    </label>
+                                                    <div class="inputTextBox">
+                                                        <input type="text" id="email" required>
+                                                    </div>
+                                                </div>
+                                                <!-- //이메일 -->
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>연락처</dt>
-                                                    <dd>010-0000-0000</dd>
-                                                </dl>
+                                                <!-- 상담 종류 -->
+                                                <div class="formBox">
+                                                    <fieldset class="consultationTypeField">
+                                                        <legend>
+                                                            상담 종류
+                                                            <span class="requiredMark" aria-hidden="true">*</span>
+                                                        </legend>
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>이메일</dt>
-                                                    <dd>honggildong@naver.com</dd>
-                                                </dl>
+                                                        <div class="formRadioRowBox">
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>분석내용</dt>
-                                                    <dd>혈청분리</dd>
-                                                </dl>
+                                                            <div class="consultationTypeRadio">
+                                                                <input type="radio" id="consultationTypeAdvisory"
+                                                                    name="consultationType" value="advisory"
+                                                                    class="blind" required>
+                                                                <label for="consultationTypeAdvisory">자문</label>
+                                                            </div>
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>감염유래시료여부</dt>
-                                                    <dd>아니오</dd>
-                                                </dl>
+                                                            <div class="consultationTypeRadio">
+                                                                <input type="radio" id="consultationTypeAnalysis"
+                                                                    name="consultationType" value="analysis"
+                                                                    class="blind">
+                                                                <label for="consultationTypeAnalysis">분석</label>
+                                                            </div>
 
-                                                <dl class="reservationInfoItem">
-                                                    <dt>세금계산서 발행 정보</dt>
-                                                    <dd>000-00-00000</dd>
-                                                </dl>
-                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <!-- //상담 종류 -->
 
-                                            <div class="reservationInfoTextBox">
-                                                <h4>
-                                                    안내사항
-                                                </h4>
-                                                <ul class="dotList">
-                                                    <li>
-                                                        예약 신청 후 담당자의 승인이 완료되어야 장비 사용이 가능합니다.
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                <span aria-hidden="true" class="border"></span>
+
+                                                <div class="formBox">
+                                                    <h4 class="reservationDetailTableTitle">서식 다운로드</h4>
+                                                    <div class="reservationDetailSection reservationDetailFileSection">
+                                                        <h4 class="commonTitle">
+                                                            관련자료
+                                                        </h4>
+                                                        <div class="boardViewFileBox">
+                                                            <h5 class="boardViewFileTitle">첨부파일</h5>
+                                                            <ul class="boardViewFileList">
+                                                                <li class="boardViewFileItem">
+                                                                    <a href="#" class="boardViewFileLink">
+                                                                        <span class="boardViewFileIcon"
+                                                                            aria-hidden="true"></span>
+                                                                        <span
+                                                                            class="boardViewFileName">연구지원부_통계지원_신청폼.hwp</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="formBox">
+                                                    <label for="applicationFormFile">
+                                                        신청서 업로드
+                                                    </label>
+
+                                                    <div class="fileUploadBox">
+                                                        <input type="file" id="applicationFormFile"
+                                                            name="applicationFormFile" class="blind"
+                                                            accept=".pdf,.jpg,.jpeg,.png">
+
+                                                        <label for="applicationFormFile" class="fileUploadLabel">
+                                                            <span class="fileUploadText">
+                                                                신청서를 업로드 해주세요
+                                                            </span>
+                                                            <img src="../images/sub/file_icon02.svg" alt="파일">
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="formBox">
+                                                    <label for="applicationFormFile">
+                                                        첨부자료
+                                                    </label>
+
+                                                    <div class="fileUploadBox">
+                                                        <input type="file" id="applicationFormFile"
+                                                            name="applicationFormFile" class="blind"
+                                                            accept=".pdf,.jpg,.jpeg,.png">
+
+                                                        <label for="applicationFormFile" class="fileUploadLabel">
+                                                            <span class="fileUploadText">
+                                                                기타 첨부자료를 업로드 해주세요
+                                                            </span>
+                                                            <img src="../images/sub/file_icon02.svg" alt="파일">
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </form>
                                         </div>
-
                                     </div>
                                     <!-- //폼 영역 -->
 
-                                    <!-- 장비 및 시간 정보 영역 -->
+                                    <!-- 날짜 및  시간 정보  -->
                                     <div class="commonRightBox">
 
                                         <div class="reservationTimeInfoBox commonShadowBox">
 
                                             <h3 class="commonTitle">
-                                                장비 및 시간 정보
+                                                날짜 및 시간 정보
                                             </h3>
-
-                                            <div class="reservationTimeInfoTitBox">
-                                                <span class="reservationDepartment">
-                                                    연구지원부
-                                                </span>
-
-                                                <h3 class="reservationName">
-                                                    원심분리기
-                                                </h3>
-
-                                                <span class="reservationNameEn" lang="en">
-                                                    Centrifuge
-                                                </span>
-                                            </div>
-
-                                            <div class="reservationTimeInfoImgBox">
-                                                <img src="../images/sub/equipment_img01.jpg" alt="">
-                                            </div>
 
                                             <div class="reservationTimeInfo">
                                                 <span class="reservationReservationDate">
@@ -704,7 +762,7 @@
 
                                         <div class="commonBtnBox verticalBtnBox">
                                             <button type="button" class="commonBtn primaryBtn">
-                                                신청내역 확인
+                                                예약 신청하기
                                             </button>
                                             <a href="#" class="commonBtn borderBtn">
                                                 이전
@@ -712,24 +770,20 @@
                                         </div>
 
                                     </div>
-                                    <!-- //장비 및 시간 정보 영역 -->
+                                    <!-- //날짜 및  시간 정보  -->
 
                                 </div>
-                                <!-- //장비 상세 정보 영역 -->
+                                <!-- //통계상담예약 영역 -->
 
                             </div>
-                            <!-- //장비예약 신청 영역 -->
+                            <!-- //통계상담예약 신청 영역 -->
 
                         </div>
-
                     </div>
                     <!-- //장비예약 영역 -->
 
                 </div>
                 <!-- //서브 콘텐츠 영역 -->
-
-            </div>
-            <!-- //서브 콘텐츠 레이아웃 영역 -->
 
         </main>
         <!-- //메인 영역 -->

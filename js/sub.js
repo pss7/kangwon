@@ -26,18 +26,18 @@ $(function () {
     }
   });
 
-  //파일
-  $('#businessRegistrationFile').change(function () {
+  /* 파일 업로드 */
+  $('.fileUploadBox input[type="file"]').change(function () {
+    const $fileUploadText = $(this)
+      .siblings('.fileUploadLabel')
+      .find('.fileUploadText');
+
     const fileName = this.files.length
       ? this.files[0].name
-      : '사업자등록증을 업로드해 주세요';
+      : $fileUploadText.data('placeholder');
 
-    $(this)
-      .siblings('.fileUploadLabel')
-      .find('.fileUploadText')
-      .text(fileName);
+    $fileUploadText.text(fileName);
   });
-
 
 
 
