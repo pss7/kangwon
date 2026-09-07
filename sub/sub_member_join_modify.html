@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="Author" content="" />
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <title>회원가입 정보수정</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 스킵 네비게이션 -->
+    <div id="skipNav">
+        <a href="#subWrap">본문 바로가기</a>
+    </div>
+    <!-- //스킵 네비게이션 -->
+
+    <!-- 
+        회원페이지 memberWrap 클래스 적용
+    -->
+
+    <div id="wrap" class="memberWrap noBg">
+
+        <!-- 헤더영역 -->
+        <header id="headerWrap">
+            <div class="headerBox">
+
+                <!-- 로고 영역 -->
+                <div class="headerLogoBox">
+                    <h1>
+                        <a href="#">
+                            <img src="../images/common/logo.svg" alt="KNU 강원대학교병원 의생명연구원">
+                        </a>
+                    </h1>
+                </div>
+                <!-- //로고 영역 -->
+
+                <!-- 메뉴 영역 -->
+                <div class="headerMenuBox">
+
+                    <!-- 네비게이션 영역 -->
+                    <nav class="headerNav">
+                        <ul class="headerMenu">
+                            <li>
+                                <h2>
+                                    <a href="#">연구원 소개</a>
+                                </h2>
+                                <!-- 서브메뉴 -->
+                                <div class="subMenuWrap">
+
+                                    <div class="subMenuBox">
+                                        <div class="subMenuTitleBox">
+                                            <h2>
+                                                소개
+                                            </h2>
+                                        </div>
+                                        <div class="subMenuListBox">
+                                            <ul class="subMenuDepth01">
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">인사말</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">비전 · 미션</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">사업 개요</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">조직도</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">인프라</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">오시는 길</a>
+                                                    </h3>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //서브메뉴 -->
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="#">연구소개</a>
+                                </h2>
+                                <!-- 서브메뉴 -->
+                                <div class="subMenuWrap">
+
+                                    <div class="subMenuBox">
+                                        <div class="subMenuTitleBox">
+                                            <h2>
+                                                연구소개
+                                            </h2>
+                                        </div>
+                                        <div class="subMenuListBox">
+                                            <ul class="subMenuDepth01">
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">의생명연구원</a>
+                                                    </h3>
+                                                    <ul class="subMenuDepth02">
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    연구지원부
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    임상시험센터
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    임상연구보호센터
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    인체자원은행
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //서브메뉴 -->
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="#">연구인프라</a>
+                                </h2>
+                                <!-- 서브메뉴 -->
+                                <div class="subMenuWrap">
+
+                                    <div class="subMenuBox">
+                                        <div class="subMenuTitleBox">
+                                            <h2>
+                                                연구인프라
+                                            </h2>
+                                        </div>
+                                        <div class="subMenuListBox">
+                                            <ul class="subMenuDepth01">
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">의생명연구원</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">강원첨단연구지원센터</a>
+                                                    </h3>
+                                                    <ul class="subMenuDepth02">
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    멀티오믹스 코어
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    첨단재생 및 생체모사 코어
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    혁신바이오마커 및 이미징 코어
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    기초실험실
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //서브메뉴 -->
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="#">통합 예약 · 신청</a>
+                                </h2>
+                                <!-- 서브메뉴 -->
+                                <div class="subMenuWrap">
+
+                                    <div class="subMenuBox">
+                                        <div class="subMenuTitleBox">
+                                            <h2>
+                                                통합 예약 · 신청
+                                            </h2>
+                                        </div>
+                                        <div class="subMenuListBox">
+                                            <ul class="subMenuDepth01">
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">의생명연구원</a>
+                                                    </h3>
+                                                    <ul class="subMenuDepth02">
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    장비 예약
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    통계상담 예약
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    모니터링실 예약
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">강원첨단연구지원센터</a>
+                                                    </h3>
+                                                    <ul class="subMenuDepth02">
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    장비 예약
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    시설 예약
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    교육 신청
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                        <li>
+                                                            <h5>
+                                                                <a href="#">
+                                                                    연구 컨설팅 신청
+                                                                </a>
+                                                            </h5>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //서브메뉴 -->
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="#">소식</a>
+                                </h2>
+                                <!-- 서브메뉴 -->
+                                <div class="subMenuWrap">
+
+                                    <div class="subMenuBox">
+                                        <div class="subMenuTitleBox">
+                                            <h2>
+                                                소식
+                                            </h2>
+                                        </div>
+                                        <div class="subMenuListBox">
+                                            <ul class="subMenuDepth01">
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">공지사항</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">교육 · 세미나 일정</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">사업 · 공고</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">성과 · 보도자료</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">자료실</a>
+                                                    </h3>
+                                                </li>
+                                                <li>
+                                                    <h3>
+                                                        <a href="#">FAQ</a>
+                                                    </h3>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- //서브메뉴 -->
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- //네비게이션 영역 -->
+
+                    <!-- 유틸영역 -->
+                    <div class="headerUtilBox">
+                        <a href="#" class="primaryBG">로그인</a>
+                        <a href="#" class="secondaryBG">회원가입</a>
+                    </div>
+                    <!-- //유틸영역 -->
+
+                </div>
+                <!-- //메뉴 영역 -->
+
+                <!-- 모바일메뉴 영역 -->
+                <div id="mobileMenuWrap">
+                    <button type="button" class="mobileMenuBtn toggleBtn" aria-expanded="false" aria-label="모바일메뉴 열기">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="mobileMenuBox">
+
+                        <nav class="mobileMenuNav">
+                            <ul class="mobileMenu">
+                                <li>
+                                    <h2>
+                                        <a href="#">연구원소개</a>
+                                    </h2>
+                                </li>
+                                <li>
+                                    <h2>
+                                        <a href="#">연구소개</a>
+                                    </h2>
+                                </li>
+                                <li>
+                                    <h2>
+                                        <a href="#">연구인프라</a>
+                                    </h2>
+                                </li>
+                                <li>
+                                    <h2>
+                                        <a href="#">통합 예약 · 신청</a>
+                                    </h2>
+                                </li>
+                                <li>
+                                    <h2>
+                                        <a href="#">소식</a>
+                                    </h2>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="mobileMenuUtilBox">
+                            <a href="#">로그인</a>
+                            <a href="#">회원가입</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- //모바일메뉴 영역 -->
+
+            </div>
+
+        </header>
+        <!-- //헤더영역 -->
+
+        <!-- 메인 영역 -->
+        <main id="subWrap">
+
+            <!-- 서브 콘텐츠 레이아웃 영역 -->
+            <div id="subContentWrap">
+
+                <!-- 서브 콘텐츠 헤더 영역 -->
+                <div class="subContentHeaderBox">
+                    <div class="container">
+                        <div class="subContentHeader">
+                            <h2 class="subContentTitle">
+                                회원정보수정
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- //서브 콘텐츠 헤더 영역 -->
+
+                <!-- 서브 콘텐츠 영역 -->
+                <div class="subContentBox">
+
+                    <!-- 회원 콘텐츠 영역 -->
+                    <div class="memberBox">
+
+                        <!-- 회원가입 신청 수정 영역 -->
+                        <div class="memberJoinFormBox memberJoinModifyFormBox">
+                            <div class="container">
+
+                                <div class="commonShadowBox">
+                                    <form action="" method="post" id="memberJoinModifyForm">
+
+                                        <!-- 아이디 -->
+                                        <div class="formBox">
+                                            <label for="id">
+                                                아아디
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="id" name="id" value="honggildong" readonly>
+                                            </div>
+                                        </div>
+                                        <!-- //아이디 -->
+
+                                        <!-- 비밀번호 -->
+                                        <div class="formBox">
+                                            <label for="password">
+                                                비밀번호
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="password" id="password" name="password"
+                                                    autocomplete="new-password">
+                                            </div>
+                                        </div>
+                                        <!-- //비밀번호 -->
+
+                                        <!-- 비밀번호 확인 -->
+                                        <div class="formBox">
+                                            <label for="password02">
+                                                비밀번호 확인
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="password" id="password02" name="passwordConfirm"
+                                                    autocomplete="new-password">
+                                            </div>
+                                        </div>
+                                        <!-- //비밀번호 확인 -->
+
+                                        <!-- 이름 -->
+                                        <div class="formBox">
+                                            <label for="name">
+                                                이름
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="name" name="name" value="홍길동" required>
+                                            </div>
+                                        </div>
+                                        <!-- //이름 -->
+
+                                        <!-- 연락처 -->
+                                        <div class="formBox">
+                                            <label for="phone">
+                                                연락처
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="tel" id="phone" name="phone" value="010-1234-5678"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <!-- //연락처 -->
+
+                                        <!-- 이메일 -->
+                                        <div class="formBox">
+                                            <label for="email">
+                                                이메일
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="email" id="email" name="email"
+                                                    value="honggildong@example.com" required>
+                                            </div>
+                                        </div>
+                                        <!-- //이메일 -->
+
+                                        <!-- 성별 -->
+                                        <div class="formBox">
+                                            <fieldset class="genderField">
+                                                <legend>
+                                                    성별
+                                                    <span class="requiredMark" aria-hidden="true">*</span>
+                                                </legend>
+
+                                                <div class="formRadioRowBox">
+
+                                                    <div class="genderRadio">
+                                                        <input type="radio" id="genderFemale" name="gender"
+                                                            value="female" class="blind">
+                                                        <label for="genderFemale">여자</label>
+                                                    </div>
+
+                                                    <div class="genderRadio">
+                                                        <input type="radio" id="genderMale" name="gender" value="male"
+                                                            class="blind" required checked>
+                                                        <label for="genderMale">남자</label>
+                                                    </div>
+
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <!-- //성별 -->
+
+                                        <!-- 생년월일 -->
+                                        <div class="formBox">
+                                            <label for="birthdate">
+                                                생년월일
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="birthdate" name="birthdate" class="dateInput"
+                                                    value="1990-01-01" required>
+                                            </div>
+                                        </div>
+                                        <!-- //생년월일 -->
+
+
+
+                                        <!-- 소속(기관명) -->
+                                        <div class="formBox">
+                                            <label for="organization">
+                                                소속(기관명)
+                                                <span class="requiredMark" aria-hidden="true">*</span>
+                                            </label>
+                                            <div class="inputTextBox">
+                                                <input type="text" id="organization" name="organization" value="강원대학교병원"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <!-- //소속(기관명) -->
+
+                                        <span aria-hidden="true" class="border"></span>
+
+                                        <!-- 이메일/SMS 수신 동의 -->
+                                        <div class="formBox">
+                                            <fieldset class="emailConsentField">
+                                                <legend>
+                                                    이메일/SMS 수신 동의
+                                                    <span class="requiredMark" aria-hidden="true">*</span>
+                                                </legend>
+
+                                                <div class="emailConsentContent">
+                                                    <div class="formRadioRowBox">
+                                                        <div class="sampleRadio">
+                                                            <input type="radio" id="marketingConsentAgree"
+                                                                name="marketingConsent" value="agree" required
+                                                                class="blind" checked>
+                                                            <label for="marketingConsentAgree">동의</label>
+                                                        </div>
+
+                                                        <div class="sampleRadio">
+                                                            <input type="radio" id="marketingConsentDisagree"
+                                                                name="marketingConsent" value="disagree" class="blind">
+                                                            <label for="marketingConsentDisagree">동의 안 함</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <!-- //이메일/SMS 수신 동의 -->
+
+                                    </form>
+                                </div>
+
+                                <div class="commonBtnBox">
+                                    <button type="submit" class="commonBtn primaryBtn">
+                                        수정 완료
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- //회원가입 신청 수정 영역 -->
+
+                    </div>
+                    <!-- //회원 콘텐츠 영역 -->
+
+                </div>
+                <!-- //서브 콘텐츠 영역 -->
+
+            </div>
+            <!-- //서브 콘텐츠 레이아웃 영역 -->
+
+        </main>
+        <!-- //메인 영역 -->
+
+        <!-- 푸터영역 -->
+        <footer id="footerWrap">
+
+            <!-- 링크 영역 -->
+            <div class="footerTopBox">
+                <div class="container">
+                    <div class="footerLinkBox">
+                        <ul class="footerLink">
+                            <li>
+                                <a href="#">
+                                    이용약관
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    개인정보처리방침
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    오시는 길
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    연락처
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    예약확인
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //링크 영역 -->
+
+            <!-- 정보 영역 -->
+            <div class="footerBottomBox">
+                <div class="container">
+                    <div class="footerLayoutBox">
+
+                        <div class="footerInfoBox">
+                            <div class="footerLogoBox">
+                                <img src="../images/common/logo02.svg" alt="KNU 강원대학교병원 의생명연구원">
+                            </div>
+
+                            <address>
+                                주소 : 강원특별자치도 춘천시 백령로 156 강원대학교병원 | FAX: 033-258-9299
+                            </address>
+
+                            <span class="copyright">ⓒ2026 KNUH Biomedical Research Institute All copyright
+                                reserved.</span>
+                        </div>
+
+                        <div class="footerSiteBox">
+                            <button type="button" class="footerSiteBtn toggleBtn" aria-expanded="false"
+                                aria-label="관련사이트 열기">
+                                <span>관련사이트</span>
+                            </button>
+                            <ul class="footerSiteList">
+                                <li>
+                                    <a href="#">관련사이트</a>
+                                </li>
+                                <li>
+                                    <a href="#">관련사이트</a>
+                                </li>
+                                <li>
+                                    <a href="#">관련사이트</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- //정보 영역 -->
+
+        </footer>
+        <!-- //푸터영역 -->
+
+    </div>
+    <!-- //wrap -->
+
+    <div class="overlay" aria-hidden="true"></div>
+
+    <script>
+        $(function () {
+
+            //달력
+            $(".dateInput").datepicker({
+                dateFormat: "yy-mm-dd",
+
+                changeYear: true,
+                changeMonth: true,
+                showMonthAfterYear: true,
+
+                showOtherMonths: true,
+                selectOtherMonths: false,
+
+                showButtonPanel: true,
+                closeText: "닫기",
+
+                monthNamesShort: [
+                    "1월", "2월", "3월", "4월", "5월", "6월",
+                    "7월", "8월", "9월", "10월", "11월", "12월"
+                ],
+                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                yearRange: "2020:2030"
+            });
+
+            $(".calendarBtn").click(function () {
+                $(this).siblings(".dateInput").datepicker("show");
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
