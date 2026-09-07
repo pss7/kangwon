@@ -361,7 +361,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 #subTitleWrap{position: relative; height: 280px;}
 #subTitleWrap .subVisualBox{position: absolute; top:0; left:0; right:0; bottom: 0;}
 #subTitleWrap .subVisualBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
-#subTitleWrap h2{position: absolute; left: 50%; transform: translateX(-50%); top:89px;}
+#subTitleWrap h2{padding: 0 20px; width: 100%; position: absolute; left: 50%; transform: translateX(-50%); top:89px; text-align: center;}
 #subTitleWrap h2 em{display: inline-block; font-weight: 700; color: #fff; font-size: 40px; animation: fadeEffect 1.5s .3s both;}
 #subTitleWrap h2 em:nth-child(1){animation-delay: .1s;}
 #subTitleWrap h2 em:nth-child(2){animation-delay: .2s;}
@@ -390,9 +390,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 @media (max-width: 1024px){
 
   #subTitleWrap .subNavBox{overflow-x: auto;}
-  #subTitleWrap .subNav{width: 1024px;}
-  #subTitleWrap .subNav ul li:first-child a{border-radius: 0;}
-  #subTitleWrap .subNav ul{justify-content: flex-start;}
+  #subTitleWrap .subNav ul li{flex: none;}
   #subTitleWrap .subNav ul li a{height: 50px; font-size: 16px;}
 
 }
@@ -411,6 +409,10 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   #subTitleWrap h2{top: 80px;}
   #subTitleWrap h2 em{font-size: 24px;}
   #subTitleWrap .subNav ul li a{height: 50px; font-size: 16px;}
+
+  #subTitleWrap .subNavBox{left:0; transform: none;}
+  #subTitleWrap .subNav ul{justify-content: flex-start;}
+  #subTitleWrap .subNav ul li:first-child a{border-radius: 0;}
 
 }
 
@@ -727,6 +729,8 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .reservationWrap .reservationDetailTimeList{display: flex; flex-wrap: wrap; gap: 8px;}
 .reservationWrap .reservationDetailTimeList .reservationTimeBtn{display: flex; align-items: center; justify-content: center; width: 70px; height: 40px; padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; color: #333;}
 .reservationWrap .reservationDetailTimeList .reservationTimeBtn:disabled{background-color: #F4F4F4; color: #666; font-size: 14px; cursor: default; pointer-events: none; border: 0;}
+.reservationWrap .reservationDetailTimeList .reservationTimeBtn.active{border-color:#3DCD80; background-color:#3DCD80; color:#fff;}
+.reservationWrap .reservationDetailTimeList .reservationTimeBtn.inRange{border-color:#3DCD80; background-color:#fff;}
 
 /* 예약 신청 */
 .reservationWrap .fileUploadLabel{position: relative; width: 100%; height: 40px; padding: 10px 40px 10px 10px; display: flex; align-items: center; justify-content: space-between; border-radius: 10px;
