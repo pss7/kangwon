@@ -8,17 +8,14 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>회원가입 정보입력</title>
+    <title>마이페이지</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/slick.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-
     <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/sub.js"></script>
@@ -36,9 +33,10 @@
 
     <!-- 
         회원페이지 memberWrap 클래스 적용
+        배경 없을 경우 noBg 클래스 적용
     -->
 
-    <div id="wrap" class="memberWrap">
+    <div id="wrap" class="memberWrap noBg">
 
         <!-- 헤더영역 -->
         <header id="headerWrap">
@@ -448,53 +446,9 @@
                     <div class="container">
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                회원가입
+                                장비예약
                             </h2>
                         </div>
-
-                        <ol class="stepList step03" aria-label="회원가입 진행 단계">
-                            <li class="stepItem">
-                                <span class="stepNumber" lang="en">
-                                    Step 01
-                                </span>
-
-                                <div class="stepImgBox">
-                                    <img src="../images/sub/step_off_icon01.svg" alt="">
-                                </div>
-
-                                <strong class="stepTitle">
-                                    약관 동의
-                                </strong>
-                            </li>
-
-                            <li class="stepItem active">
-                                <span class="stepNumber" lang="en">
-                                    Step 02
-                                </span>
-
-                                <div class="stepImgBox">
-                                    <img src="../images/sub/join_icon02.svg" alt="">
-                                </div>
-
-                                <strong class="stepTitle">
-                                    정보 입력
-                                </strong>
-                            </li>
-
-                            <li class="stepItem">
-                                <span class="stepNumber" lang="en">
-                                    Step 03
-                                </span>
-
-                                <div class="stepImgBox">
-                                    <img src="../images/sub/join_icon03.svg" alt="">
-                                </div>
-
-                                <strong class="stepTitle">
-                                    가입 신청 완료
-                                </strong>
-                            </li>
-                        </ol>
                     </div>
                 </div>
                 <!-- //서브 콘텐츠 헤더 영역 -->
@@ -505,232 +459,122 @@
                     <!-- 회원 콘텐츠 영역 -->
                     <div class="memberBox">
 
-                        <!-- 회원 입력 영역 -->
-                        <div class="memberJoinFormBox">
-                            <div class="container">
+                        <!-- 마이페이지 영역 -->
+                        <div class="memberMyPageBox">
 
-                                <div class="commonShadowBox">
-                                    <form action="" method="">
+                            <!-- 마이페이지 상세 영역 -->
+                            <div class="memberMyPageDetailBox">
+                                <div class="container">
 
-                                        <!-- 아이디 -->
-                                        <div class="formBox idFormBox">
-                                            <label for="id">
-                                                아아디
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="id" required>
-                                                <button type="button" class="duplicateCheckBtn">
-                                                    중복확인
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- //아이디 -->
+                                    <div class="commonShadowBox">
+                                        <h3 class="commonTitle">
+                                            예약자정보
+                                        </h3>
 
-                                        <!-- 비밀번호 -->
-                                        <div class="formBox">
-                                            <label for="password">
-                                                비밀번호
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="password" required>
-                                            </div>
-                                        </div>
-                                        <!-- //비밀번호 -->
+                                        <div class="reservationInfoList">
 
-                                        <!-- 비밀번호 확인 -->
-                                        <div class="formBox">
-                                            <label for="password02">
-                                                비밀번호 확인
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="password02" required>
-                                            </div>
-                                        </div>
-                                        <!-- //비밀번호 확인 -->
+                                            <dl class="reservationInfoItem">
+                                                <dt>장비명</dt>
+                                                <dd>
+                                                    원심분리기 Centrifuge
+                                                </dd>
+                                            </dl>
 
-                                        <!-- 이름 -->
-                                        <div class="formBox">
-                                            <label for="name">
-                                                이름
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="name" required>
-                                            </div>
-                                        </div>
-                                        <!-- //이름 -->
+                                            <dl class="reservationInfoItem">
+                                                <dt>예약일시</dt>
+                                                <dd>
+                                                    <div class="reservationTimeInfo">
+                                                        <span class="reservationReservationDate">
+                                                            2026.08.12
+                                                        </span>
 
-                                        <!-- 연락처 -->
-                                        <div class="formBox">
-                                            <label for="number">
-                                                연락처
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="number" required>
-                                            </div>
-                                        </div>
-                                        <!-- //연락처 -->
-
-                                        <!-- 이메일 -->
-                                        <div class="formBox">
-                                            <label for="number">
-                                                이메일
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="number" required>
-                                            </div>
-                                        </div>
-                                        <!-- //이메일 -->
-
-                                        <!-- 성별 -->
-                                        <div class="formBox">
-                                            <fieldset class="genderField">
-                                                <legend>
-                                                    성별
-                                                    <span class="requiredMark" aria-hidden="true">*</span>
-                                                </legend>
-
-                                                <div class="formRadioRowBox">
-
-                                                    <div class="genderRadio">
-                                                        <input type="radio" id="genderFemale" name="gender"
-                                                            value="female" class="blind">
-                                                        <label for="genderFemale">여자</label>
+                                                        <span class="reservationReservationTime">
+                                                            13:00~14:00
+                                                        </span>
                                                     </div>
+                                                </dd>
+                                            </dl>
 
-                                                    <div class="genderRadio">
-                                                        <input type="radio" id="genderMale" name="gender" value="male"
-                                                            class="blind" required>
-                                                        <label for="genderMale">남자</label>
-                                                    </div>
+                                            <dl class="reservationInfoItem">
+                                                <dt>신청자</dt>
+                                                <dd>
+                                                    홍길동
+                                                </dd>
+                                            </dl>
 
-                                                </div>
-                                            </fieldset>
+                                            <dl class="reservationInfoItem">
+                                                <dt>소속</dt>
+                                                <dd>
+                                                    정신건강의학과
+                                                </dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>연구책임자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>소속</dt>
+                                                <dd>정신건강의학과</dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>연구책임자</dt>
+                                                <dd>홍길동</dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>연락처</dt>
+                                                <dd>010-0000-0000</dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>이메일</dt>
+                                                <dd>honggildong@naver.com</dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>분석내용</dt>
+                                                <dd>혈청분리</dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>감염유래시료여부 업로드</dt>
+                                                <dd>
+                                                    아니오
+                                                </dd>
+                                            </dl>
+
+                                            <dl class="reservationInfoItem">
+                                                <dt>세금계산서 발행 정보</dt>
+                                                <dd>000-00-00000</dd>
+                                            </dl>
                                         </div>
-                                        <!-- //성별 -->
+                                    </div>
 
-                                        <!-- 생년월일 -->
-                                        <div class="formBox">
-                                            <label for="birthdate">
-                                                생년월일
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="birthdate" class="dateInput" required>
-                                            </div>
+                                    <div class="boardBtnBox">
+                                        <a href="#" class="boardBtn list">
+                                            목록
+                                        </a>
+
+                                        <div class="boardBtnGroup">
+                                            <button type="button" class="boardBtn cancel">
+                                                취소
+                                            </button>
+
+                                            <button type="button" class="boardBtn modify">
+                                                수정
+                                            </button>
                                         </div>
-                                        <!-- //생년월일 -->
+                                    </div>
 
-                                        <!-- 이메일 -->
-                                        <div class="formBox">
-                                            <label for="email">
-                                                이메일
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="email" required>
-                                            </div>
-                                        </div>
-                                        <!-- //이메일 -->
-
-                                        <!-- 이메일 -->
-                                        <div class="formBox">
-                                            <label for="organization">
-                                                소속(기관명)*
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="organization" required>
-                                            </div>
-                                        </div>
-                                        <!-- //소속(기관명)* -->
-
-                                        <span aria-hidden="true" class="border"></span>
-
-                                        <!-- 이메일/SMS 수신 동의 -->
-                                        <div class="formBox">
-                                            <fieldset class="emailConsentField">
-                                                <legend>
-                                                    이메일/SMS 수신 동의
-                                                    <span class="requiredMark" aria-hidden="true">*</span>
-                                                </legend>
-
-                                                <div class="emailConsentContent">
-                                                    <p class="emailConsentText">
-                                                        이벤트 및 콘텐츠 업데이트 등 정보성 E-mail/SMS를
-                                                        받아보시겠습니까?
-                                                    </p>
-
-                                                    <div class="formRadioRowBox">
-                                                        <div class="sampleRadio">
-                                                            <input type="radio" id="marketingConsentAgree"
-                                                                name="marketingConsent" value="agree" required
-                                                                class="blind">
-                                                            <label for="marketingConsentAgree">동의</label>
-                                                        </div>
-
-                                                        <div class="sampleRadio">
-                                                            <input type="radio" id="marketingConsentDisagree"
-                                                                name="marketingConsent" value="disagree" class="blind">
-                                                            <label for="marketingConsentDisagree">동의 안 함</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </div>
-                                        <!-- //이메일/SMS 수신 동의 -->
-
-                                        <!-- 자동등록방지 -->
-                                        <div class="formBox">
-                                            <label for="captchaCode">
-                                                자동등록방지
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-
-                                            <div class="captchaBox">
-                                                <div class="captchaImgBox">
-                                                    <img src="../images/sub/captcha_img.png" alt="자동등록방지 숫자">
-                                                </div>
-
-                                                <div class="inputTextBox captchaInputBox">
-                                                    <input type="text" id="captchaCode" name="captchaCode"
-                                                        placeholder="자동등록방지 숫자를 순서대로 입력하세요." inputmode="numeric"
-                                                        autocomplete="off" required>
-                                                </div>
-
-                                                <div class="captchaControlBox">
-                                                    <button type="button" class="captchaControlBtn captchaAudioBtn"
-                                                        aria-label="자동등록방지 숫자 음성 듣기">
-                                                        <img src="../images/sub/captcha_audio_icon.svg" alt="">
-                                                    </button>
-
-                                                    <button type="button" class="captchaControlBtn captchaRefreshBtn"
-                                                        aria-label="자동등록방지 숫자 새로고침">
-                                                        <img src="../images/sub/captcha_refresh_icon.svg" alt="">
-                                                    </button>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- //자동등록방지 -->
-
-                                    </form>
                                 </div>
-
-                                <div class="commonBtnBox ">
-                                    <button type="button" class="commonBtn primaryBtn">
-                                        가입하기
-                                    </button>
-                                </div>
-
                             </div>
+                            <!-- //마이페이지 상세 영역 -->
+
                         </div>
-                        <!-- //회원 입력 영역 -->
+                        <!-- //마이페이지 영역 -->
 
                     </div>
                     <!-- //회원 콘텐츠 영역 -->
@@ -831,38 +675,6 @@
     <!-- //wrap -->
 
     <div class="overlay" aria-hidden="true"></div>
-
-    <script>
-        $(function () {
-
-            //달력
-            $(".dateInput").datepicker({
-                dateFormat: "yy-mm-dd",
-
-                changeYear: true,
-                changeMonth: true,
-                showMonthAfterYear: true,
-
-                showOtherMonths: true,
-                selectOtherMonths: false,
-
-                showButtonPanel: true,
-                closeText: "닫기",
-
-                monthNamesShort: [
-                    "1월", "2월", "3월", "4월", "5월", "6월",
-                    "7월", "8월", "9월", "10월", "11월", "12월"
-                ],
-                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-                yearRange: "2020:2030"
-            });
-
-            $(".calendarBtn").click(function () {
-                $(this).siblings(".dateInput").datepicker("show");
-            });
-
-        });
-    </script>
 
 </body>
 

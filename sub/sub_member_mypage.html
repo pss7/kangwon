@@ -8,17 +8,14 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>회원가입 정보입력</title>
+    <title>마이페이지</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/slick.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-
     <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/sub.js"></script>
@@ -36,9 +33,10 @@
 
     <!-- 
         회원페이지 memberWrap 클래스 적용
+        배경 없을 경우 noBg 클래스 적용
     -->
 
-    <div id="wrap" class="memberWrap">
+    <div id="wrap" class="memberWrap noBg">
 
         <!-- 헤더영역 -->
         <header id="headerWrap">
@@ -448,53 +446,9 @@
                     <div class="container">
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                회원가입
+                                마이페이지
                             </h2>
                         </div>
-
-                        <ol class="stepList step03" aria-label="회원가입 진행 단계">
-                            <li class="stepItem">
-                                <span class="stepNumber" lang="en">
-                                    Step 01
-                                </span>
-
-                                <div class="stepImgBox">
-                                    <img src="../images/sub/step_off_icon01.svg" alt="">
-                                </div>
-
-                                <strong class="stepTitle">
-                                    약관 동의
-                                </strong>
-                            </li>
-
-                            <li class="stepItem active">
-                                <span class="stepNumber" lang="en">
-                                    Step 02
-                                </span>
-
-                                <div class="stepImgBox">
-                                    <img src="../images/sub/join_icon02.svg" alt="">
-                                </div>
-
-                                <strong class="stepTitle">
-                                    정보 입력
-                                </strong>
-                            </li>
-
-                            <li class="stepItem">
-                                <span class="stepNumber" lang="en">
-                                    Step 03
-                                </span>
-
-                                <div class="stepImgBox">
-                                    <img src="../images/sub/join_icon03.svg" alt="">
-                                </div>
-
-                                <strong class="stepTitle">
-                                    가입 신청 완료
-                                </strong>
-                            </li>
-                        </ol>
                     </div>
                 </div>
                 <!-- //서브 콘텐츠 헤더 영역 -->
@@ -505,232 +459,329 @@
                     <!-- 회원 콘텐츠 영역 -->
                     <div class="memberBox">
 
-                        <!-- 회원 입력 영역 -->
-                        <div class="memberJoinFormBox">
-                            <div class="container">
+                        <!-- 마이페이지 영역 -->
+                        <div class="memberMyPageBox">
 
-                                <div class="commonShadowBox">
-                                    <form action="" method="">
+                            <!-- 마이페이지 목록 영역 -->
+                            <div class="memberMyPageListBox">
+                                <div class="container">
 
-                                        <!-- 아이디 -->
-                                        <div class="formBox idFormBox">
-                                            <label for="id">
-                                                아아디
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="id" required>
-                                                <button type="button" class="duplicateCheckBtn">
-                                                    중복확인
-                                                </button>
-                                            </div>
+                                    <!-- 상단 영역 -->
+                                    <div class="memberMyPageTopBox">
+                                        <p>
+                                            <strong>홍길동</strong>님, 환영합니다!
+                                        </p>
+
+                                        <div class="memberMyPageActionBox">
+                                            <a href="#" class="memberInfoEditLink">
+                                                회원정보 수정
+                                            </a>
+
+                                            <button type="button" class="memberWithdrawBtn">
+                                                회원 탈퇴
+                                            </button>
                                         </div>
-                                        <!-- //아이디 -->
+                                    </div>
+                                    <!-- //상단 영역 -->
 
-                                        <!-- 비밀번호 -->
-                                        <div class="formBox">
-                                            <label for="password">
-                                                비밀번호
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="password" required>
-                                            </div>
-                                        </div>
-                                        <!-- //비밀번호 -->
+                                    <h3 class="memberMyPageTitle">
+                                        신청내역
+                                    </h3>
 
-                                        <!-- 비밀번호 확인 -->
-                                        <div class="formBox">
-                                            <label for="password02">
-                                                비밀번호 확인
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="password02" required>
-                                            </div>
-                                        </div>
-                                        <!-- //비밀번호 확인 -->
+                                    <!-- 공통 탭 영역 -->
+                                    <div class="commonTab">
+                                        <button type="button" class="commonTabBtn active">장비예약</button>
+                                        <button type="button" class="commonTabBtn">통계상담예약</button>
+                                        <button type="button" class="commonTabBtn">모니터링실 예약</button>
+                                    </div>
+                                    <!-- //공통 탭 영역 -->
 
-                                        <!-- 이름 -->
-                                        <div class="formBox">
-                                            <label for="name">
-                                                이름
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="name" required>
-                                            </div>
-                                        </div>
-                                        <!-- //이름 -->
+                                    <!-- 예약 목록 영역 
+                                    예약 테이블 reservationTable 적용
+                                -->
+                                    <div class="boardTableBox">
+                                        <table class="boardTable reservationTable">
+                                            <caption class="blind">
+                                                장비예약 내역 테이블
+                                            </caption>
+                                            <colgroup>
+                                                <col style="width:60px;">
+                                                <col style="width:130px;">
+                                                <col>
+                                                <col style="width:240px;">
+                                                <col style="width:120px;">
+                                                <col style="width:100px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="textCenter">
+                                                        번호
+                                                    </th>
+                                                    <th scope="col">
+                                                        관리부서
+                                                    </th>
+                                                    <th scope="col">
+                                                        장비명
+                                                    </th>
+                                                    <th scope="col">
+                                                        예약일시
+                                                    </th>
+                                                    <th scope="col" class="textCenter">
+                                                        상태
+                                                    </th>
+                                                    <th scope="col" class="textCenter">
+                                                        상세
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="id">
+                                                        9
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory researchSupport">
+                                                            연구지원부
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            원심분리기
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.09.01｜13:00~14:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus completed">
+                                                            예약완료
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="id">
+                                                        8
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory multiOmics">
+                                                            멀티오믹스코어
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            자동화 핵산 추출 장비
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.09.01｜13:00~14:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus completed">
+                                                            예약완료
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="id">
+                                                        7
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory regenCore">
+                                                            생체모사코어
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            실시간 세포 대사 분석기
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.09.01｜10:00~11:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus completed">
+                                                            예약완료
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="id">
+                                                        6
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory researchSupport">
+                                                            연구지원부
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            실시간유전자증폭장치
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.08.31｜10:00~11:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus pending">
+                                                            예약대기
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="id">
+                                                        5
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory researchSupport">
+                                                            연구지원부
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            이미징시스템
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.08.20｜15:00~16:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus pending">
+                                                            예약대기
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="id">
+                                                        4
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory bioImaging">
+                                                            이미징코어
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            디지털 병리 슬라이드 스캐너
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.08.17｜13:00~14:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus canceled">
+                                                            예약취소
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="id">
+                                                        3
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory regenCore">
+                                                            생체모사코어
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            유세포분석기
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.08.17｜12:00~13:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus completed">
+                                                            예약완료
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="id">
+                                                        2
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableCategory researchSupport">
+                                                            연구지원부
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="tableTitleText">
+                                                            원심분리기
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        2026.08.10｜11:00~12:00
+                                                    </td>
+                                                    <td>
+                                                        <span class="reservationStatus completed">
+                                                            예약완료
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" aria-label="상세페이지로 이동" class="detailViewLink"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 예약 목록 영역 -->
 
-                                        <!-- 연락처 -->
-                                        <div class="formBox">
-                                            <label for="number">
-                                                연락처
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="number" required>
-                                            </div>
-                                        </div>
-                                        <!-- //연락처 -->
+                                    <!-- 페이지네비게이션 영역 -->
+                                    <nav class="paginationBox" aria-label="페이지 네비게이션">
+                                        <a href="#" class="pageLink pageLinkFirst" aria-label="첫 페이지로 이동">
+                                        </a>
+                                        <a href="#" class="pageLink pageLinkPrev" aria-label="이전 페이지로 이동">
+                                        </a>
+                                        <a href="#" class="pageLink active" aria-current="page">
+                                            1
+                                        </a>
+                                        <a href="#" class="pageLink">
+                                            2
+                                        </a>
+                                        <a href="#" class="pageLink">
+                                            3
+                                        </a>
+                                        <a href="#" class="pageLink">
+                                            4
+                                        </a>
+                                        <a href="#" class="pageLink">
+                                            5
+                                        </a>
+                                        <a href="#" class="pageLink pageLinkNext" aria-label="다음 페이지로 이동">
+                                        </a>
+                                        <a href="#" class="pageLink pageLinkLast" aria-label="마지막 페이지로 이동">
+                                        </a>
+                                    </nav>
+                                    <!-- //페이지네비게이션 영역 -->
 
-                                        <!-- 이메일 -->
-                                        <div class="formBox">
-                                            <label for="number">
-                                                이메일
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="number" required>
-                                            </div>
-                                        </div>
-                                        <!-- //이메일 -->
-
-                                        <!-- 성별 -->
-                                        <div class="formBox">
-                                            <fieldset class="genderField">
-                                                <legend>
-                                                    성별
-                                                    <span class="requiredMark" aria-hidden="true">*</span>
-                                                </legend>
-
-                                                <div class="formRadioRowBox">
-
-                                                    <div class="genderRadio">
-                                                        <input type="radio" id="genderFemale" name="gender"
-                                                            value="female" class="blind">
-                                                        <label for="genderFemale">여자</label>
-                                                    </div>
-
-                                                    <div class="genderRadio">
-                                                        <input type="radio" id="genderMale" name="gender" value="male"
-                                                            class="blind" required>
-                                                        <label for="genderMale">남자</label>
-                                                    </div>
-
-                                                </div>
-                                            </fieldset>
-                                        </div>
-                                        <!-- //성별 -->
-
-                                        <!-- 생년월일 -->
-                                        <div class="formBox">
-                                            <label for="birthdate">
-                                                생년월일
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="birthdate" class="dateInput" required>
-                                            </div>
-                                        </div>
-                                        <!-- //생년월일 -->
-
-                                        <!-- 이메일 -->
-                                        <div class="formBox">
-                                            <label for="email">
-                                                이메일
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="email" required>
-                                            </div>
-                                        </div>
-                                        <!-- //이메일 -->
-
-                                        <!-- 이메일 -->
-                                        <div class="formBox">
-                                            <label for="organization">
-                                                소속(기관명)*
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-                                            <div class="inputTextBox">
-                                                <input type="text" id="organization" required>
-                                            </div>
-                                        </div>
-                                        <!-- //소속(기관명)* -->
-
-                                        <span aria-hidden="true" class="border"></span>
-
-                                        <!-- 이메일/SMS 수신 동의 -->
-                                        <div class="formBox">
-                                            <fieldset class="emailConsentField">
-                                                <legend>
-                                                    이메일/SMS 수신 동의
-                                                    <span class="requiredMark" aria-hidden="true">*</span>
-                                                </legend>
-
-                                                <div class="emailConsentContent">
-                                                    <p class="emailConsentText">
-                                                        이벤트 및 콘텐츠 업데이트 등 정보성 E-mail/SMS를
-                                                        받아보시겠습니까?
-                                                    </p>
-
-                                                    <div class="formRadioRowBox">
-                                                        <div class="sampleRadio">
-                                                            <input type="radio" id="marketingConsentAgree"
-                                                                name="marketingConsent" value="agree" required
-                                                                class="blind">
-                                                            <label for="marketingConsentAgree">동의</label>
-                                                        </div>
-
-                                                        <div class="sampleRadio">
-                                                            <input type="radio" id="marketingConsentDisagree"
-                                                                name="marketingConsent" value="disagree" class="blind">
-                                                            <label for="marketingConsentDisagree">동의 안 함</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </div>
-                                        <!-- //이메일/SMS 수신 동의 -->
-
-                                        <!-- 자동등록방지 -->
-                                        <div class="formBox">
-                                            <label for="captchaCode">
-                                                자동등록방지
-                                                <span class="requiredMark" aria-hidden="true">*</span>
-                                            </label>
-
-                                            <div class="captchaBox">
-                                                <div class="captchaImgBox">
-                                                    <img src="../images/sub/captcha_img.png" alt="자동등록방지 숫자">
-                                                </div>
-
-                                                <div class="inputTextBox captchaInputBox">
-                                                    <input type="text" id="captchaCode" name="captchaCode"
-                                                        placeholder="자동등록방지 숫자를 순서대로 입력하세요." inputmode="numeric"
-                                                        autocomplete="off" required>
-                                                </div>
-
-                                                <div class="captchaControlBox">
-                                                    <button type="button" class="captchaControlBtn captchaAudioBtn"
-                                                        aria-label="자동등록방지 숫자 음성 듣기">
-                                                        <img src="../images/sub/captcha_audio_icon.svg" alt="">
-                                                    </button>
-
-                                                    <button type="button" class="captchaControlBtn captchaRefreshBtn"
-                                                        aria-label="자동등록방지 숫자 새로고침">
-                                                        <img src="../images/sub/captcha_refresh_icon.svg" alt="">
-                                                    </button>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- //자동등록방지 -->
-
-                                    </form>
                                 </div>
-
-                                <div class="commonBtnBox ">
-                                    <button type="button" class="commonBtn primaryBtn">
-                                        가입하기
-                                    </button>
-                                </div>
-
                             </div>
+                            <!-- //마이페이지 목록 영역 -->
+
                         </div>
-                        <!-- //회원 입력 영역 -->
+                        <!-- //마이페이지 영역 -->
 
                     </div>
                     <!-- //회원 콘텐츠 영역 -->
@@ -831,38 +882,6 @@
     <!-- //wrap -->
 
     <div class="overlay" aria-hidden="true"></div>
-
-    <script>
-        $(function () {
-
-            //달력
-            $(".dateInput").datepicker({
-                dateFormat: "yy-mm-dd",
-
-                changeYear: true,
-                changeMonth: true,
-                showMonthAfterYear: true,
-
-                showOtherMonths: true,
-                selectOtherMonths: false,
-
-                showButtonPanel: true,
-                closeText: "닫기",
-
-                monthNamesShort: [
-                    "1월", "2월", "3월", "4월", "5월", "6월",
-                    "7월", "8월", "9월", "10월", "11월", "12월"
-                ],
-                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
-                yearRange: "2020:2030"
-            });
-
-            $(".calendarBtn").click(function () {
-                $(this).siblings(".dateInput").datepicker("show");
-            });
-
-        });
-    </script>
 
 </body>
 

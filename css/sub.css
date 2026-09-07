@@ -9,6 +9,121 @@
 .infoText h4{display: flex; align-items: center; gap: 0 4px; margin-bottom: 7px; font-weight: 500; font-size: 16px; color: #1D439C;}
 .infoText .dotList li{font-size: 14px; font-weight: 500; color: #333;}
 
+/* 공통 - 정렬 */
+.textCenter{text-align: center!important;}
+
+/* 공통 - 게시판 */
+.boardTableBox{margin-bottom: 80px;}
+.boardTable{width: 100%; border-collapse:separate; table-layout:fixed;}
+.boardTable thead tr th:first-child{border-left:1px solid #eee; border-radius: 10px 0 0 10px;}
+.boardTable thead tr th:last-child{border-right:1px solid #eee; border-radius: 0 10px 10px 0;}
+.boardTable thead tr th{padding: 8px 10px; background-color: #F7F8F9; font-weight: 600; color: #333; font-size: 16px; border-top:1px solid #eee; border-bottom:1px solid #eee; text-align: left;}
+.boardTable tbody tr:hover{background-color: #F8FCFF;}
+.boardTable tbody tr td{padding: 31px 10px; border-bottom: 1px solid #eee;}
+.boardTable tbody tr td,
+.boardTable tbody tr td a{font-size: 16px; font-weight: 500; color: #333;}
+.boardTable tbody tr td .tableTitleText{overflow:hidden; display:block; text-overflow:ellipsis; white-space:nowrap;}
+.boardTable tbody tr td .TableLink{display:flex; align-items:center; gap:6px;}
+.boardTable tbody tr td .TableLink .tableTitleText{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.boardTable tbody tr td .TableLink .tableFile img{display:block;}
+.boardTable tbody tr td .tableDate{color: #999;}
+.boardTable tbody tr td .tableNotification{display: inline-block; padding: 2px 8px; background-color: #1D439C; color: #fff; font-weight: 500; font-size: 14px; border-radius: 8px;}
+.boardTable tbody tr td .tableCategory{display: inline-block; padding: 1px 8px; font-size: 14px; font-weight: 500; border-radius: 8px;}
+
+/* 의생명연구원 */
+
+/* 연구지원부 */
+.boardTable tbody tr td .tableCategory.researchSupport{border:1px solid #2773FF; color:#2773FF;}
+
+/* 임상시험센터 */
+.boardTable tbody tr td .tableCategory.clinicalTrial{border:1px solid #977641; color:#977641;}
+
+/* 임상연구보호센터 */
+.boardTable tbody tr td .tableCategory.researchProtection{border:1px solid #F57692; color:#F57692;}
+
+/* 인체자원은행 */
+.boardTable tbody tr td .tableCategory.humanBiobank{border:1px solid #B364CE; color:#B364CE;}
+
+
+/* 강원첨단연구지원센터 */
+
+/* 첨단연구지원센터 · 멀티오믹스 코어 · 첨단재생 및 생체모사 코어 */
+.boardTable tbody tr td .tableCategory.advancedResearchSupport,
+.boardTable tbody tr td .tableCategory.multiOmics,
+.boardTable tbody tr td .tableCategory.regenCore{border:1px solid #4AAF79; color:#4AAF79;}
+
+/* 혁신바이오마커 및 이미징 코어 */
+.boardTable tbody tr td .tableCategory.bioImaging{border:1px solid #FF9232; color:#FF9232;}
+
+/* 기초실험실 */
+.boardTable tbody tr td .tableCategory.basicLab{border:1px solid #64748B; color:#64748B;}
+
+.boardTable thead tr th.id, 
+.boardTable tbody tr td.id{text-align: center;}
+
+@media (max-width:1024px){
+
+    .boardTable.noticeTable{display:block; width:100%; border-top:2px solid #000;}
+    .boardTable.noticeTable thead{display:none;}
+    .boardTable.noticeTable tbody{display:block; width:100%;}
+    .boardTable.noticeTable tbody tr{padding:20px 20px 20px 10px; display:flex; align-items:center; flex-wrap:wrap; gap:6px; width:100%; border-bottom:1px solid #eee;}
+    .boardTable.noticeTable tbody tr td{padding:0; border:0;}
+    .boardTable.noticeTable tbody tr td.id{display:none;}
+    .boardTable.noticeTable tbody tr td.id.noticeCell{order:1; display:block; text-align:left;}
+    .boardTable.noticeTable tbody tr td:nth-child(2){order:2;}
+    .boardTable.noticeTable tbody tr td.tableTitle{order:3; flex-basis:100%; width:100%;}
+    .boardTable.noticeTable tbody tr td:nth-child(4){order:4; display:flex; align-items:center;}
+    .boardTable.noticeTable tbody tr td:nth-child(5){order:5;}
+    .boardTable.noticeTable tbody tr td .tableLink,
+    .boardTable.noticeTable tbody tr td .TableLink{padding:16px 0 10px; display:flex; align-items:center; gap:8px;}
+
+}
+
+@media (max-width:480px){
+
+    .boardTable.noticeTable tbody tr td .tableLink,
+    .boardTable.noticeTable tbody tr td .TableLink{padding:14px 0 8px;}
+    .boardTable.noticeTable tbody tr td:nth-child(4),
+    .boardTable.noticeTable tbody tr td:nth-child(5) .tableDate,
+    .boardTable.noticeTable tbody tr td .tableTitleText{font-size:14px;}
+
+}
+
+/* 공통 - 페이지네이션 */
+.paginationBox{margin: 60px 0 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px;}
+.paginationBox .pageLink{position: relative; display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 6px; background-color: #F4F4F4; font-size: 14px; color: #666; border-radius:8px; transition: all .3s;}
+.paginationBox .pageLink:hover{background-color: #e3e3e3;}
+.paginationBox .pageLink.active{color: #fff; background-color: #1D439C; font-weight: 700;}
+.paginationBox .pageLinkFirst,
+.paginationBox .pageLinkLast{z-index: 1; background:0;}
+.paginationBox .pageLinkFirst{background: url(../images/sub/prev_icon02.svg)no-repeat center / contain;}
+.paginationBox .pageLinkPrev{background: url(../images/sub/prev_icon01.svg)no-repeat center / contain; background-size: 40px;}
+.paginationBox .pageLinkNext{transform: rotate(180deg); background: url(../images/sub/prev_icon01.svg)no-repeat center / contain; background-size: 40px;}
+.paginationBox .pageLinkLast{transform: rotate(180deg); background: url(../images/sub/prev_icon02.svg)no-repeat center / contain;}
+
+
+@media (max-width: 480px ){
+
+  .paginationBox .pageLink{min-width: 32px; min-height: 32px;}
+
+}
+
+/* 공통 - 검색 */
+.searchWrap{display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 28px;}
+.searchBox{position: relative; width: 333px;}
+.searchBox .inputTextBox input{ padding: 10px 60px 10px 20px; height: 48px; border: 1px solid #B3D4FF; border-radius: 10px; font-weight: 500; color: #666; background-color: #fff;}
+.searchBox .inputTextBox input::placeholder{color: #666;}
+.searchBox .searchBtn{position: absolute; top: 50%; transform: translateY(-50%); right:8px; width: 34px; height: 34px; border-radius: 10px; background: #1D439C url(../images/sub/search_icon.svg)no-repeat center;}
+.boardCount{padding: 7px 10px; font-size: 14px; font-weight: 500; color: #333; background-color: #F4F4F4; border-radius: 50px;}
+.boardCount strong{color: #2773FF;}
+
+@media (max-width: 768px){
+
+  .searchWrap{flex-direction: column; align-items: flex-start;}
+  .searchBox{width: 100%;}
+
+}
+
 /* 공통 - 단계 영역  */
 .stepList{max-width: 640px; position:relative; margin: 0 auto; display:flex; align-items:flex-start; justify-content:space-between;}
 .stepList::before{content:""; position:absolute; top:50%; left:60px; right:60px;
@@ -161,10 +276,18 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .commonBtn.borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
 .commonBtn.borderBtn:hover{background-color:#f2f5fc;}
 .commonBtn:disabled{opacity:.5; cursor:default;}
+.boardBtnBox{margin: 50px auto; display: flex; align-items: center; justify-content: space-between;}
+.boardBtnGroup{display: flex; gap: 10px;}
+.boardBtn{display: inline-block; min-width: 130px; padding: 6px 10px; border: 1px solid #ccc; border-radius: 8px; color: #333; text-align: center;}
+.boardBtn.list{border: 1px solid #1D439C; background-color: #EDF2FF; color: #1D439C; font-weight: 700;}
+
 
 @media (max-width: 480px){
 
   .commonBtn{min-height: 56px; border-radius: 10px;}
+  .boardBtnBox{flex-direction: column; gap: 10px;}
+  .boardBtnGroup{width: 100%; flex-direction: column;}
+  .boardBtn{width: 100%; }
 
 }
 
@@ -191,7 +314,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 
 /* 공통 - 탭 */
 .commonTab{padding: 0 20px; margin-bottom: 100px; display: flex; justify-content: center; flex-wrap: wrap; gap:8px;}
-.commonTab .commonTabBtn{min-width: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-weight: 500; color: #333;}
+.commonTab .commonTabBtn{min-width: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-weight: 500; color: #333; background-color: #fff;}
 .commonTab .commonTabBtn.active{border: 1px solid #1D439C; background-color: #EDF2FF; color: #1D439C; font-weight: 700;}
 
 @media (max-width: 768px){
@@ -498,10 +621,10 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .reservationWrap .reservationTimeInfoTitBox .reservationDepartment{padding: 2px 8px; display: inline-block; margin-bottom: 10px; background-color: #2773FF; color: #fff; border-radius: 8px; font-size: 14px; font-weight: 500;}
 .reservationWrap .reservationTimeInfoTitBox .reservationName{font-size: 18px; font-weight: 700; color: #333;}
 .reservationWrap .reservationTimeInfoTitBox .reservationNameEn{font-size: 16px; font-weight: 500; color: #333;} 
-.reservationWrap .reservationTimeInfo{ display: flex; align-items: center; justify-content: center; gap: 10px 18px;} 
-.reservationWrap .reservationTimeInfo span{min-width: 112px; padding: 8px 5px; color: #fff; font-weight: 500; border-radius: 10px; text-align: center;}
-.reservationWrap .reservationReservationDate{background-color: #365BD3;}
-.reservationWrap .reservationReservationTime{background-color: #3DCD80;}
+.reservationTimeInfo{ display: flex; align-items: center; justify-content: center; gap: 10px 18px;} 
+.reservationTimeInfo span{min-width: 112px; padding: 8px 5px; color: #fff; font-weight: 500; border-radius: 10px; text-align: center;}
+.reservationReservationDate{background-color: #365BD3;}
+.reservationReservationTime{background-color: #3DCD80;}
 
 @media (max-width: 1199px) {
   
@@ -553,8 +676,8 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .reservationWrap .equipmentStepList li .equipmentStepTitle{font-size:11px;}
   .reservationWrap .equipmentStepList li .equipmentStepImgBox img{width: 27px;}
 
-  .reservationWrap .reservationTimeInfo{flex-direction: column;}
-  .reservationWrap .reservationTimeInfo span{width: 100%; min-width: auto;}
+  .reservationTimeInfo{flex-direction: column;}
+  .reservationTimeInfo span{width: 100%; min-width: auto;}
 
 }
   
@@ -623,13 +746,13 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .reservationWrap .reservationApplyBox .sampleTypeBox.active label{color: #333;}
 
 /* 장비예약 완료 */
-.reservationWrap .reservationCompleteBox .reservationInfoList{margin-bottom: 30px; padding: 20px 0 30px; border: 1px solid #ccc; border-width: 1px 0;}
-.reservationWrap .reservationCompleteBox .reservationInfoItem{padding: 10px 10px 10px 0; display: flex; align-items: center;}
-.reservationWrap .reservationCompleteBox .reservationInfoItem .downloadLink{font-size: 14px;
+.reservationInfoList{margin-bottom: 30px; padding: 20px 0 30px; border: 1px solid #ccc; border-width: 1px 0;}
+.reservationInfoItem{padding: 10px 10px 10px 0; display: flex; align-items: center;}
+.reservationInfoItem .downloadLink{font-size: 14px;
     color: #333; text-decoration: underline;}
-.reservationWrap .reservationCompleteBox .reservationInfoItem .reservationTimeInfo{justify-content: flex-start;}
-.reservationWrap .reservationCompleteBox .reservationInfoItem dt{width: 170px; flex-shrink: 0; font-size: 14px; font-weight: 500; color: #333;}
-.reservationWrap .reservationCompleteBox .reservationInfoItem dd{font-size: 14px; color: #333;}
+.reservationInfoItem .reservationTimeInfo{justify-content: flex-start;}
+.reservationInfoItem dt{width: 170px; flex-shrink: 0; font-size: 14px; font-weight: 500; color: #333;}
+.reservationInfoItem dd{font-size: 14px; color: #333;}
 .reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{gap: 10px 8px;}
 .reservationWrap .reservationInfoTextBox{padding: 10px 20px; background-color: #F8FCFF; border: 1px solid #CFE8FB; border-radius: 10px;}
 .reservationWrap .reservationInfoTextBox h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
@@ -686,9 +809,9 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 
   
   .reservationWrap .reservationCompleteBox .reservationInfoList{margin-bottom:24px; padding-bottom:24px;}
-  .reservationWrap .reservationCompleteBox .reservationInfoItem{padding:9px 0; align-items:flex-start;}
-  .reservationWrap .reservationCompleteBox .reservationInfoItem dt{width:140px;}
-  .reservationWrap .reservationCompleteBox .reservationInfoItem dd{flex:1; width:auto; min-width:0; overflow-wrap:anywhere;}
+  .reservationInfoItem{padding:9px 0; align-items:flex-start;}
+  .reservationInfoItem dt{width:140px;}
+  .reservationInfoItem dd{flex:1; width:auto; min-width:0; overflow-wrap:anywhere;}
   .reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{flex-wrap:wrap;}
 
 }
@@ -711,10 +834,10 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .reservationWrap .reservationApplyBox .sampleRadioGroup{width: 100%;    grid-template-columns: 1fr;}
   
   .reservationWrap .reservationCompleteBox .reservationInfoList{margin-bottom:20px; padding-bottom:20px;}
-  .reservationWrap .reservationCompleteBox .reservationInfoItem{padding:8px 0;}
-  .reservationWrap .reservationCompleteBox .reservationInfoItem dt{width:110px; padding-right:10px; box-sizing:border-box; line-height:1.5; word-break:keep-all;}
-  .reservationWrap .reservationCompleteBox .reservationInfoItem dd{line-height:1.5;}
-  .reservationWrap .reservationCompleteBox .reservationInfoItem .nameEn{display:block;}
+  .reservationInfoItem{padding:8px 0;}
+  .reservationInfoItem dt{width:110px; padding-right:10px; box-sizing:border-box; line-height:1.5; word-break:keep-all;}
+  .reservationInfoItem dd{line-height:1.5;}
+  .reservationInfoItem .nameEn{display:block;}
   .reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{gap:6px;}
 
 }
@@ -749,6 +872,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 }
 
 /* 공통 - 회원페이지  */
+.memberWrap.noBg .memberBox::after{display: none;}
 .memberWrap .memberBox{position: relative; z-index: 1; }
 .memberWrap .memberBox::after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: -100%; right: -100%; height: 711px; background: linear-gradient(
         180deg,
@@ -757,7 +881,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
         #fff 100%
     );
  z-index: -1;}
-.memberWrap .container{max-width: 940px;}
+.memberWrap #subContentWrap .container{max-width: 940px;}
 .memberWrap #headerWrap{box-shadow: 0 10px 10px rgba(0,0,0,.1);}
 .memberWrap #subContentWrap .subContentHeaderBox{position: relative; margin-bottom: 70px; z-index: 9;}
 .memberWrap #subContentWrap .subContentHeader h2{color: #1D439C;}
@@ -782,18 +906,34 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .policyContent .policySection .policyList{margin: 10px 0;}
   
 /* 회원가입 - 정보입력 */
-.memberJoinFormBox .formBox .emailConsentText{margin-bottom: 10px; padding: 10px 20px; border: 1px solid #CFE8FB; border-radius: 10px; background-color: #F8FCFF; color: #1D439C; font-weight: 500; font-size: 14px;}
-.memberJoinFormBox .dateInput{background: #f4f4f4 url(../images/sub/claendar_icon.svg) no-repeat right 20px center;}
 .formBox legend{margin-bottom: 8px; font-size: 14px; color: #333;}
 .formBox .formRadioRowBox{display: flex; gap: 10px;}
 .formBox input[type="radio"] + label{margin: 0; display: flex; align-items: center; justify-content: center; width: 140px; height: 40px; font-size: 14px; color: #333; border: 1px solid #cccc; border-radius: 10px; cursor: pointer;}
 .formBox input[type="radio"]:checked + label{background-color: #1D439C; color: #fff; border-color: #1D439C;}
 
+/* 자동등록방지 */
+.formBox .captchaBox{display: flex; flex-wrap: wrap; gap: 8px;}
+.formBox .captchaBox .captchaImgBox{width: 107px; height: 40px; border: 1px solid #ccc; overflow: hidden;}
+.formBox .captchaBox .captchaImgBox img{display: block; max-width: 100%;}
+.formBox .captchaBox .inputTextBox{width: 237px;}
+.formBox .captchaBox .inputTextBox input{font-size: 12px; font-weight: 500;}
+.formBox .captchaBox .inputTextBox input::placeholder{color: #bbb;}
+.formBox .captchaBox .captchaControlBox{display: flex; gap: 4px;}
+.formBox .captchaBox .captchaControlBox .captchaControlBtn{width: 40px; height: 40px; border: 1px solid #ccc; border-radius: 10px;}
+.formBox .captchaBox .captchaControlBox .captchaControlBtn img{display: block; margin: 0 auto; max-width: 100%;}
+.memberJoinFormBox .formBox .emailConsentText{margin-bottom: 10px; padding: 10px 20px; border: 1px solid #CFE8FB; border-radius: 10px; background-color: #F8FCFF; color: #1D439C; font-weight: 500; font-size: 14px;}
+.memberJoinFormBox .dateInput{background: #f4f4f4 url(../images/sub/claendar_icon.svg) no-repeat right 20px center;}
+.memberJoinFormBox .idFormBox .inputTextBox{position: relative;} 
+.memberJoinFormBox .idFormBox .duplicateCheckBtn{width: 140px; height: 40px; display: flex; align-items: center; justify-content: center; position: absolute; top:50%; transform: translateY(-50%); right:0; border-radius: 10px; border: 1px solid #ccc; font-size: 14px; color: #333; background-color: #fff;}
+.memberJoinFormBox .idFormBox .inputTextBox input{padding: 0 170px 0 10px;}
 
 @media (max-width: 480px){
 
  .formBox .formRadioRowBox{flex-direction: column;}
  .formBox input[type="radio"] + label{width: 100%;}
+ .memberJoinFormBox .idFormBox .inputTextBox input{padding: 0 85px 0 10px;}
+ .memberJoinFormBox .idFormBox .duplicateCheckBtn{font-size: 12px;}
+ .memberJoinFormBox .idFormBox .duplicateCheckBtn{width: 68px;}
 
 }
 
@@ -832,3 +972,59 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .memberLoginBox .memberLoginFormBox input{height: 50px; font-size: 14px;}
 
 }
+
+/* 마이페이지 */
+.memberMyPageBox .memberMyPageTopBox{margin-bottom: 60px; padding: 35px 40px; display: flex; align-items: center; justify-content: space-between; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0, 139, 239, 0.2); background-color: #fff;}
+.memberMyPageBox .memberMyPageTopBox p{color: #333; font-size: 24px; font-weight: 500;}
+.memberMyPageBox .memberMyPageTopBox p strong{color: #2773FF;}
+.memberMyPageBox .memberMyPageTopBox .memberMyPageActionBox{display: flex; align-items: center; gap: 16px;}
+.memberMyPageBox .memberMyPageTopBox .memberMyPageActionBox .memberInfoEditLink{display: flex; align-items: center; justify-content: center; min-width: 110px; height: 38px; padding: 5px; border: 1px solid #ccc; color: #333; border-radius: 8px; text-align: center;}
+.memberMyPageBox .memberMyPageTopBox .memberMyPageActionBox .memberWithdrawBtn{display: flex; align-items: center; justify-content: center;  min-width: 110px; height: 38px; padding: 5px; color: #fff; font-weight: 500; background-color: #474747; border-radius: 8px; text-align: center; line-height: 1;}
+.memberMyPageBox .memberMyPageTitle{margin-bottom: 30px; text-align: center; font-size: 24px; font-weight: 700; color: #333;}
+.memberMyPageBox .commonTab{margin-bottom: 30px ;}
+.memberMyPageBox .detailViewLink{display: block; margin: 0 auto; width: 24px; height: 24px; background: url(../images/sub/arrow_icon03.svg)no-repeat center;}
+.memberMyPageBox .boardTable tbody tr td .reservationStatus{margin: 0 auto; display: flex; align-items: center; justify-content: center; width: 64px; height: 25px; border-radius: 8px; font-size: 14px; font-weight: 500;}
+.memberMyPageBox .boardTable tbody tr td .reservationStatus.completed{border: 1px solid #2773FF; background-color: #EDF2FF; color: #2773FF;}
+.memberMyPageBox .boardTable tbody tr td .reservationStatus.pending{border: 1px solid #bbb; background-color: #F7F8F9; color: #333;}
+.memberMyPageBox .boardTable tbody tr td .reservationStatus.canceled{border: 1px solid #FF686B; background-color: #FFEFEF; color: #FF686B;}
+
+@media (max-width:1024px){
+
+    .memberMyPageBox .memberMyPageTopBox p{font-size: 20px;}
+
+    .boardTable.reservationTable{display:block; width:100%; border-top:2px solid #000;}
+    .boardTable.reservationTable thead{display:none;}
+    .boardTable.reservationTable tbody{display:block; width:100%;}
+    .boardTable.reservationTable tbody tr{padding:20px 20px 20px 10px; display:flex; align-items:center; flex-wrap:wrap; gap:6px; width:100%; border-bottom:1px solid #eee;}
+    .boardTable.reservationTable tbody tr td{padding:0; display:block; width:auto; border:0;}
+    .boardTable.reservationTable tbody tr td:nth-child(1){display:none;}
+    .boardTable.reservationTable tbody tr td:nth-child(2){order:1;}
+    .boardTable.reservationTable tbody tr td:nth-child(3){order:2; padding:16px 0 10px; flex-basis:100%; width:100%; color:#333; font-size:17px; font-weight:600;}
+    .boardTable.reservationTable tbody tr td:nth-child(4){order:3; display:block; color:#777;}
+    .boardTable.reservationTable tbody tr td:nth-child(5){order:4;}
+    .boardTable.reservationTable tbody tr td:nth-child(6){order:5; margin-left:auto;}
+    .boardTable.reservationTable tbody tr td .tableCategory{padding:3px 8px; font-size:13px;}
+    .boardTable.reservationTable tbody tr td .reservationStatus{font-size:13px;}
+    .boardTable.reservationTable tbody tr td .detailViewLink{display:block;}
+
+}
+
+@media (max-width:768px){
+
+  .memberMyPageBox .memberMyPageTopBox{flex-direction: column; gap: 15px 0; padding: 30px;}
+  .memberMyPageBox .memberMyPageTopBox .memberMyPageActionBox{gap: 0 10px;}
+  .memberMyPageBox .memberMyPageTopBox p{font-size: 18px;}
+  .memberMyPageBox .memberMyPageTopBox .memberMyPageActionBox{flex-wrap: wrap; justify-content: center; gap: 5px;}
+  
+}
+
+@media (max-width:480px){
+
+    .boardTable.reservationTable tbody tr td:nth-child(3){padding:14px 0 8px; font-size:14px;}
+    .boardTable.reservationTable tbody tr td:nth-child(4){font-size:13px;}
+    .boardTable.reservationTable tbody tr td .reservationStatus{font-size:12px;}
+
+}
+
+/* 마이페이지 - 상세 */
+.memberMyPageDetailBox .reservationInfoList{padding-bottom: 0; margin-bottom: 0; border-bottom: 0;}
