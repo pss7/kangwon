@@ -1074,7 +1074,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .faqTable .faqLockIcon{flex:0 0 auto; display:block;}
 .faqTable .faqAnswerContent{min-width:0; display:flex; align-items:center; gap:8px;}
 .faqTable .faqAnswerIndent{margin-top:-6px; width:14px; height:14px; flex:0 0 14px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
-.faqTable .faqAnswerBadge{padding:3px 7px; flex:0 0 auto; border-radius:4px; background-color:#1D439C; color:#fff; font-size:12px; font-weight:500;}
+.faqTable .faqAnswerBadge{padding:2px 8px; flex:0 0 auto; border-radius:8px; background-color:#1D439C; color:#fff; font-size:14px; font-weight:500;}
 
 @media (max-width:1024px){
 
