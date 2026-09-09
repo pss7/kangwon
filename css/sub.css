@@ -1067,3 +1067,41 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .imgBoardList li a .imgBoardTextBox h3{height: 46px;}
 
 }
+
+/* 소식 - FAQ */
+.faqTable .faqTitleLink{min-width:0; display:flex; align-items:center; gap:5px;}
+.faqTable .faqTitleText{min-width:0; overflow:hidden; display:block; flex:0 1 auto; text-overflow:ellipsis; white-space:nowrap;}
+.faqTable .faqLockIcon{flex:0 0 auto; display:block;}
+.faqTable .faqAnswerContent{min-width:0; display:flex; align-items:center; gap:8px;}
+.faqTable .faqAnswerIndent{margin-top:-6px; width:14px; height:14px; flex:0 0 14px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
+.faqTable .faqAnswerBadge{padding:3px 7px; flex:0 0 auto; border-radius:4px; background-color:#1D439C; color:#fff; font-size:12px; font-weight:500;}
+
+@media (max-width:1024px){
+
+    .faqTable{display:block; width:100%; border-top:2px solid #000;}
+    .faqTable thead{display:none;}
+    .faqTable tbody{display:block; width:100%;}
+    .faqTable tbody tr{padding:20px 10px; display:flex; align-items:center; flex-wrap:wrap; gap:8px; width:100%; border-bottom:1px solid #eee;}
+    .faqTable tbody tr td{padding:0; display:block; width:auto; border:0;}
+    .faqTable tbody tr td.id{display:none;}
+    .faqTable tbody tr td.tableTitle{order:1; flex-basis:100%; width:100%; min-width:0;}
+    .faqTable tbody tr td:nth-child(3){order:2; color:#777; font-size:14px;}
+    .faqTable tbody tr td:nth-child(4){order:3; display:flex; align-items:center; color:#999; font-size:14px;}
+    .faqTable tbody tr td:nth-child(4)::before{content:""; margin-right:8px; width:1px; height:10px; background-color:#ddd;}
+    .faqTable .faqTitleLink{max-width:100%; min-width:0; display:flex; align-items:center; gap:5px;}
+    .faqTable .faqTitleText{min-width:0; overflow:hidden; display:block; flex:0 1 auto; text-overflow:ellipsis; white-space:nowrap;}
+    .faqTable .faqAnswerContent{width:100%; min-width:0; display:flex; align-items:center; gap:8px;}
+
+}
+
+@media (max-width:480px){
+
+    .faqTable tbody tr{padding:18px 10px; gap:6px;}
+    .faqTable .faqTitleText{font-size:14px;}
+    .faqTable tbody tr td:nth-child(3),
+    .faqTable tbody tr td:nth-child(4){font-size:13px;}
+    .faqTable .faqAnswerContent{gap:6px;}
+    .faqTable .faqAnswerIndent{width:12px; height:12px; flex-basis:12px;}
+    .faqTable .faqAnswerBadge{padding:2px 6px; font-size:11px;}
+
+}
