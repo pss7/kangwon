@@ -7,11 +7,9 @@ main{flex: 1;}
 
 body.subMenuOpen .overlay{opacity: 1; visibility: visible;}
 
-@media (max-width: 1199px){
-
-  body.mobileMenuOpen .overlay{opacity: 1; visibility: visible;}
-
-}
+/* 스크롤 */
+.customScroll{overflow-y:auto; scrollbar-width:thin; scrollbar-color:#D9D9D9 transparent;}
+.customScroll::-webkit-scrollbar{width:6px;}
 
 /* 스킵 네비게이션 */
 #skipNav a{position: fixed; top: -100px; left: 0;

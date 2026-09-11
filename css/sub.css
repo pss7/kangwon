@@ -757,13 +757,16 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .reservationWrap .reservationApplyBox .sampleTypeBox.active label{color: #333;}
 
 /* 장비예약 완료 */
-.reservationInfoList{margin-bottom: 30px; padding: 20px 0 30px; border: 1px solid #ccc; border-width: 1px 0;}
+.reservationInfoList{margin-bottom: 30px; padding: 20px 0; border: 1px solid #ccc; border-width: 1px 0;}
+.reservationBusinessTypeBox{display: flex;}
+.reservationBusinessTypeBox .reservationInfoItem{width: 50%;}
 .reservationInfoItem{padding: 10px 10px 10px 0; display: flex; align-items: center;}
 .reservationInfoItem .downloadLink{font-size: 14px;
     color: #333; text-decoration: underline;}
 .reservationInfoItem .reservationTimeInfo{justify-content: flex-start;}
 .reservationInfoItem dt{width: 170px; flex-shrink: 0; font-size: 14px; font-weight: 500; color: #333;}
 .reservationInfoItem dd{font-size: 14px; color: #333;}
+.reservationInfoItem dd .reservationFileDownload{font-size:14px; color: #333; text-decoration: underline;}
 .reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{gap: 10px 8px;}
 .reservationWrap .reservationInfoTextBox{padding: 10px 20px; background-color: #F8FCFF; border: 1px solid #CFE8FB; border-radius: 10px;}
 .reservationWrap .reservationInfoTextBox h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
@@ -820,6 +823,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
   
   .reservationWrap .reservationCompleteBox .reservationInfoList{margin-bottom:24px; padding-bottom:24px;}
+  .reservationBusinessTypeBox{flex-direction: column;}
+  .reservationBusinessTypeBox .reservationInfoItem{width: 100%;}
   .reservationInfoItem{padding:9px 0; align-items:flex-start;}
   .reservationInfoItem dt{width:140px;}
   .reservationInfoItem dd{flex:1; width:auto; min-width:0; overflow-wrap:anywhere;}
