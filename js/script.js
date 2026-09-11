@@ -79,28 +79,16 @@ $(function () {
 
   /* 서브메뉴 */
   $('#headerWrap .headerMenu > li').mouseenter(function () {
-    $('#headerWrap').addClass('shadow');
     $('#headerWrap .headerMenu > li').removeClass('active');
     $(this).addClass('active');
-    $('#headerWrap .subMenuWrap')
-      .not($(this).find('.subMenuWrap'))
-      .stop(true, true)
-      .slideUp(300);
-    $(this).find('.subMenuWrap')
-      .stop(true, true)
-      .slideDown(300);
+    $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
+    $(this).find('.subMenuWrap').stop().slideDown(300);
 
     $('body').addClass('subMenuOpen');
   });
 
   $('#headerWrap').mouseleave(function () {
-    $('#headerWrap').removeClass('shadow');
-    $('#headerWrap .subMenuWrap')
-      .stop(true, true)
-      .slideUp(300);
-    $('#headerWrap .headerMenu > li')
-      .removeClass('active');
-
+    $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
     $('body').removeClass('subMenuOpen');
   });
 

@@ -5,7 +5,27 @@ main{flex: 1;}
 #footer{margin-top: auto;}
 .overlay{opacity: 0; visibility: hidden; position: fixed; inset: 0; background-color: rgba(0, 0, 0, .6); backdrop-filter: blur(3px); z-index: 99999; transition: all .3s;}
 
-body.subMenuOpen .overlay{opacity: 1; visibility: visible;}
+@media (max-width:1199px){
+
+    body.mobileMenuOpen{overflow:hidden;}
+
+    body.mobileMenuOpen .overlay{
+        opacity:1;
+        visibility:visible;
+    }
+
+}
+
+@media (min-width:1200px){
+
+    body.subMenuOpen{overflow:hidden;}
+
+    body.subMenuOpen .overlay{
+        opacity:1;
+        visibility:visible;
+    }
+
+}
 
 /* 스크롤 */
 .customScrollBox{overflow-y:auto; scrollbar-width:thin; scrollbar-color:#D9D9D9 transparent;}

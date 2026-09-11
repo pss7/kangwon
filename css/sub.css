@@ -396,9 +396,11 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
 @media (max-width: 1024px){
 
-  #subTitleWrap .subNavBox{overflow-x: auto;}
+  #subTitleWrap .subNavBox{overflow-x: auto; left:-20px; transform: none;}
+  #subTitleWrap .subNav ul{justify-content: flex-start;}
   #subTitleWrap .subNav ul li{flex: none;}
   #subTitleWrap .subNav ul li a{height: 50px; font-size: 16px;}
+  #subTitleWrap .subNav ul li:first-child a{border-radius: 0;}
 
 }
 
