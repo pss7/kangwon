@@ -271,6 +271,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .commonBtnBox .commonBtn{flex:1; max-width:220px;}
 .commonBtn{display:inline-flex; align-items:center; justify-content:center; min-height:60px; padding:10px; border:1px solid transparent; border-radius:20px;font-size:16px; font-weight:700; transition: all .3s;}
 .primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
+.boardBtn.primaryBtn:hover,
 .primaryBtn:hover{border-color:#153577; background-color:#153577;}
 .borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
 .borderBtn:hover{background-color:#f2f5fc;}
@@ -279,6 +280,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .boardBtnWrap.center{justify-content:center;}
 .boardBtnBox{display:flex; gap:10px;}
 .boardBtn{display:inline-block; min-width:130px; min-height: 38px; padding:6px 10px; border:1px solid #ccc; border-radius:8px; color:#333; text-align:center;}
+.boardBtn.primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
 .boardBtn.list,
 .boardBtn.register{border:1px solid #1D439C; background-color:#EDF2FF; color:#1D439C; font-weight:700;}
 
@@ -1074,7 +1076,20 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .faqTable .faqLockIcon{flex:0 0 auto; display:block;}
 .faqTable .faqAnswerContent{min-width:0; display:flex; align-items:center; gap:8px;}
 .faqTable .faqAnswerIndent{margin-top:-6px; width:14px; height:14px; flex:0 0 14px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
-.faqTable .faqAnswerBadge{padding:2px 8px; flex:0 0 auto; border-radius:8px; background-color:#1D439C; color:#fff; font-size:14px; font-weight:500;}
+.faqAnswerBox .faqQuestionBox .faqQuestionHeader{padding: 22px 10px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #ccc; border-width: 1px 0;}
+.faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionTitle{font-size: 20px; font-weight: 500; color: #333;}
+.faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo{display: flex; align-items: center; gap: 0 30px;}
+.faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo .faqQuestionWriter{font-weight: 500; color: #333;}
+.faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo .faqQuestionDate{display: flex; align-items: center; gap: 0 6px; font-weight: 500; color: #999;}
+.faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo .faqQuestionDate::before{content: ''; width: 15px; height: 16px; background: url(../images/sub/claendar_icon02.svg)no-repeat center;}
+.faqAnswerBox .faqQuestionContent{padding: 40px 20px; border-bottom: 1px solid #ccc;}
+.faqAnswerBox .faqQuestionContent p{font-size: 14px; font-weight: 500; color: #333;}
+.faqAnswerBox .faqAnswerFormBox{margin-bottom: 40px; border-bottom: 1px solid #ccc;}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerBadge{position: relative; display: flex; align-items: center; justify-content: center; width: 90px; height: 40px; margin: 30px 0 20px 28px; background-color: #1D439C; border-radius: 10px; color: #fff; font-weight: 500;}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerBadge::before{content:""; position:absolute;
+    top:50%; right:calc(100% + 12px); width:14px; height:12px; border-left:1px solid #bbb;  border-bottom:1px solid #bbb; transform:translateY(-50%);}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerTextareaBox textarea{display: block; width: 100%; padding: 20px; height: 150px; background-color: #F4F4F4; border-radius: 10px; font-size: 14px; font-weight: 500; color: #999; border: 1px solid #eee; border-radius: 10px; color: #999;}
+.faqAnswerBox .boardBtnWrap{margin: 30px auto;}
 
 @media (max-width:1024px){
 
@@ -1092,6 +1107,8 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     .faqTable .faqTitleText{min-width:0; overflow:hidden; display:block; flex:0 1 auto; text-overflow:ellipsis; white-space:nowrap;}
     .faqTable .faqAnswerContent{width:100%; min-width:0; display:flex; align-items:center; gap:8px;}
 
+    .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionTitle{font-size: 18px;}
+
 }
 
 @media (max-width:480px){
@@ -1103,6 +1120,12 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     .faqTable .faqAnswerContent{gap:6px;}
     .faqTable .faqAnswerIndent{width:12px; height:12px; flex-basis:12px;}
     .faqTable .faqAnswerBadge{padding:2px 6px; font-size:11px;}
+
+    .faqAnswerBox .faqQuestionBox .faqQuestionHeader{flex-direction: column; gap:  10px 0;}
+    .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionTitle{font-size: 16px;}
+    .faqAnswerBox .faqAnswerFormBox .faqAnswerBadge,
+    .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo .faqQuestionWriter,
+    .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo .faqQuestionDate{font-size: 14px;}
 
 }
 
