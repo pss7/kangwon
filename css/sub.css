@@ -259,8 +259,9 @@ label{display: block; font-size: 14px; color: #333;}
 .requiredMark{color: #FF443D;}
 input{display: block; width: 100%; padding: 0 10px 0 20px; height: 40px; border-radius: 10px; background-color: #F4F4F4; color: #333; border: 0; font-size: 14px;}
 input[type="checkbox"] + label{display: flex; align-items: center; gap: 0 8px; color: #333; font-weight: 500; font-size: 14px; cursor: pointer;}
-input[type="checkbox"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/check_icon01.svg)no-repeat center / contain!important;}
+input[type="checkbox"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/check_icon01.svg)no-repeat center / contain;}
 input[type="checkbox"]:checked + label{font-weight: 700;}
+input[type="checkbox"]:checked + label::before{background: url(../images/sub/check_on_icon.svg)no-repeat center / contain;}
 .formBox{margin-bottom: 30px;}
 .formBox label{margin-bottom: 8px;}
 
@@ -902,7 +903,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 
 /* 회원가입 - 약관동의 */
 .memberJoinAgreeBox .memberAgreeInfoBox .memberAgreeTopBox{margin-bottom: 24px; display: flex; gap: 20px; align-items: center; justify-content: space-between;}
-.memberJoinAgreeBox .memberAgreeInfoBox .commonShadowBox{margin-bottom: 50px;}
+.memberJoinAgreeBox .memberAgreeInfoBox .commonShadowBox{height: 300px; margin-bottom: 50px; overflow-y: auto;}
 .memberJoinAgreeBox .memberAgreeInfoBox .commonTitle{margin-bottom: 0;}
 .memberJoinAgreeBox .memberAllAgreeBox{display: flex; justify-content: flex-end;}
 .policyContent .policySection,
@@ -1141,7 +1142,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerWriter,
     .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerDate{font-size: 14px;}
 
-  
 }
 
 /* 소식 - 교육 · 세미나 일정 */
@@ -1365,12 +1365,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     padding: 0 10px 0 18px; width: 174px; height: 50px; background-color:#fff;
     border: 1px solid #eee; border-radius: 10px; color: #333;
     font-weight: 500; cursor: pointer;}
-.boardWriteForm input[type="radio"]:checked + .chkBtn,
-.boardWriteForm input[type="checkBox"]:checked + .chkBtn
-{background-color: #1D439C; color:#fff; border: 1px solid #1D439C;}
-.boardWriteForm input[type="radio"]:checked + .chkBtn::before,
-.boardWriteForm input[type="checkBox"]:checked + .chkBtn::before
- {background: url(../images/sub/chk_on_icon.svg) no-repeat center / contain;}
 .boardWriteForm .boardWriteEditor{display: flex; align-items: center; justify-content: center; height: 395px; background-color: #fff;}
 .boardWriteForm .boardWriteContent{width: 100%;}
 .boardWriteForm .boardWriteFileField{margin: 30px 0 0;}
