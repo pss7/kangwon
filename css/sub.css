@@ -270,10 +270,10 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .commonBtnBox{display:flex; align-items:center; justify-content:center; gap:0 14px;}
 .commonBtnBox .commonBtn{flex:1; max-width:220px;}
 .commonBtn{display:inline-flex; align-items:center; justify-content:center; min-height:60px; padding:10px; border:1px solid transparent; border-radius:20px;font-size:16px; font-weight:700; transition: all .3s;}
-.commonBtn.primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
-.commonBtn.primaryBtn:hover{border-color:#153577; background-color:#153577;}
-.commonBtn.borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
-.commonBtn.borderBtn:hover{background-color:#f2f5fc;}
+.primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
+.primaryBtn:hover{border-color:#153577; background-color:#153577;}
+.borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
+.borderBtn:hover{background-color:#f2f5fc;}
 .commonBtn:disabled{opacity:.5; cursor:default;}
 .boardBtnWrap{margin:50px auto; display:flex; align-items:center; justify-content:space-between;}
 .boardBtnWrap.center{justify-content:center;}
@@ -1112,6 +1112,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .calendarBox .calendarHeader{margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 0 40px;}
 .calendarBox .calendarHeader h4{color:#333; font-weight: 600; font-size: 30px;}
 .calendarBox .calendarHeader .calendarBtn{position: relative; width: 40px; height: 40px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,.25); transition: all .3s;}
+.calendarBox .calendarHeader .calendarBtn:hover{background-color: #f0f0f0;}
 .calendarBox .calendarHeader .calendarBtn::after{content: ''; width: 12px; height: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .calendarBox .calendarHeader .calendarBtn.calendarPrev::after{background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
 .calendarBox .calendarHeader .calendarBtn.calendarNext::after{ transform: translate(-50%, -50%) rotate(180deg); background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
@@ -1122,7 +1123,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .calendarBox .calendarWeek .week:last-child{border-radius: 0 10px 10px 0;}
 .calendarBox .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 18px;}
 .calendarBox .calendarGrid .calendarCell{position: relative; min-width: 0; height: 156px;}
-.calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 10px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 10px; overflow: hidden;}
+.calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 10px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 10px; overflow: hidden; }
 .calendarBox .calendarGrid .calendarCell .dateBtn .date{color: #333; font-weight: 600;}
 .calendarBox .calendarGrid .calendarCell .dateBtn .today{display: inline-block; padding: 2px 8px; color: #fff; font-weight: 600; border-radius: 50px; background-color: #365DDD; font-size: 14px; }
 .calendarBox .calendarGrid .calendarCell .dateBtn.disabled{background-color: #F7F8F9; cursor: auto; pointer-events: none;}
@@ -1146,7 +1147,28 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .calendarScheduleAddBox .calendarScheduleFormBox .calendarTimeInputBox{flex-shrink: 0; width: 179px;}
 .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox input{padding: 0 167px 0 20px;}
 .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox{position: relative; width: 100%;}
-.calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox .calendarScheduleRegisterBtn{position: absolute; top: 50%; transform: translateY(-50%); right:20px; display: flex; align-items: center; justify-content: center; width: 130px; height: 38px; border-radius: 8px; background-color: #1D439C; color: #fff; font-weight: 500;}
+.calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox .calendarScheduleRegisterBtn{position: absolute; top:50%; transform: translateY(-50%); right:20px;}
+.calendarScheduleManageList li{margin-bottom: 14px; padding: 20px 310px 20px 20px; position: relative; border: 1px solid #B3D4FF; border-radius: 10px; background-color: #fff;}
+.calendarScheduleManageList li:last-child{margin-bottom: 0;}
+.calendarScheduleManageList li .calendarScheduleInfoBox{display: flex; align-items: center;}
+.calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleTitle{font-weight: 500; font-size: 18px; color: #333;}
+.calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleLine{margin: 0 15px; width: 1px; height: 15px; background-color: #bbb;}
+.calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleTime{flex-shrink: 0; display: flex; align-items: center; gap: 10px; font-size: 18px; color: #365DDD; font-weight: 700;}
+.calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleTime::before{content: ''; flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background-color: #365DDD;}
+.calendarScheduleManageList li .calendarScheduleActionBox{position: absolute; top: 50%; transform: translateY(-50%); right:20px; display: flex; align-items: center; gap: 10px;} 
+.calendarScheduleBtn{width:130px; height:38px; border-radius:8px; font-size:16px; font-weight:500;}
+.calendarScheduleDeleteBtn{border:1px solid #ccc; background-color:#fff; color:#333;}
+.calendarScheduleModifyBtn,
+.calendarScheduleCompleteBtn,
+.calendarScheduleRegisterBtn{border:1px solid #1D439C; background-color:#1D439C; color:#fff;}
+.calendarScheduleEditBox{display: flex; gap: 14px;}
+.calendarScheduleEditBox input{height: 80px;}
+.calendarScheduleEditBox .calendarScheduleEditTitleBox,
+.calendarScheduleEditBox .calendarScheduleEditTimeBox{display: flex; align-items: center; width: 180px;border-radius: 10px; border: 1px solid #365DDD; background-color: #fff; }
+.calendarScheduleEditBox input{background-color: #fff; color: #333; font-size: 18px; font-weight: 500;}
+.calendarScheduleEditBox .calendarScheduleEditTitleBox{position: relative; width: 100%;}
+.calendarScheduleEditBox .calendarScheduleCompleteBtn{position: absolute; top: 50%; transform: translateY(-50%); right:20px;}
+.calendarScheduleEditBox .calendarScheduleEditTitleBox input{padding: 0 160px 0 20px;}
 
 @media (max-width: 1024px){
 
@@ -1161,7 +1183,16 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 
   .calendarScheduleAddBox{padding: 30px 20px;}
   .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 26px;}
+
+  .calendarScheduleEditBox input,
   .calendarScheduleAddBox .calendarScheduleFormBox input{height: 65px;}
+
+  .calendarScheduleManageList li{padding: 20px;}
+  .calendarScheduleManageList li .calendarScheduleActionBox{position: static; transform: none; margin: 20px 0 0;}
+  .calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleTime{font-size: 16px;}
+  .calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleTitle{font-size: 16px;}
+
+  .calendarScheduleEditBox input{font-size: 16px;}
 
 }
 
@@ -1182,12 +1213,24 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .calendarScheduleAddBox{padding: 30px 20px; border-radius: 10px;}
   .calendarScheduleAddBox .calendarScheduleAddHeader .calendarScheduleAddBtn{width: 32px; height: 32px;}
   .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 20px;}
+  .calendarScheduleEditBox input,
   .calendarScheduleAddBox .calendarScheduleFormBox input{height: 55px; font-size: 16px;}
   .calendarScheduleAddBox .calendarScheduleFormBox{flex-direction: column;}
   .calendarScheduleAddBox .calendarScheduleFormBox .calendarTimeInputBox{width: 100%;}
-  .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox .calendarScheduleRegisterBtn{right: 10px; width: 76px;}
   .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox input{padding: 0 100px 0 20px;}
   
+  .calendarScheduleBtn{width:68px;}
+
+  .calendarScheduleEditBox{flex-direction: column;}
+  .calendarScheduleEditBox .calendarScheduleEditTimeBox{ width: 130px;}
+  .calendarScheduleEditBox .calendarScheduleEditTimeBox input{padding: 0 10px; text-align: center;}
+  .calendarScheduleEditBox .calendarScheduleEditTitleBox input{padding: 0 100px 0 20px;}
+  .calendarScheduleEditBox .calendarScheduleEditTitleBox{padding: 10px; flex-direction: column; align-items: flex-start; gap: 10px 0;}
+  .calendarScheduleEditBox .calendarScheduleEditTitleBox input{padding: 0;}
+  .calendarScheduleEditBox .calendarScheduleCompleteBtn{position: static; transform: none;}
+
+  
+
 }
 
 @media (max-width: 480px){
@@ -1205,6 +1248,15 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 
   .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 18px;}
 
+  .calendarScheduleManageList li .calendarScheduleActionBox{justify-content: center;}
+  .calendarScheduleManageList li .calendarScheduleInfoBox{flex-direction: column;}
+  .calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleLine{margin: 10px 0; width: 10px; height: 1px;}
+  .calendarScheduleManageList li .calendarScheduleInfoBox .calendarScheduleTime::before{width: 6px; height: 6px;}
+  
+  .calendarScheduleBtn,
+  .calendarScheduleEditBox .calendarScheduleEditTitleBox input{font-size: 14px;}
+  .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox .calendarScheduleRegisterBtn{right: 10px;}
+  
 }
 
 @media (max-width: 360px){

@@ -918,29 +918,71 @@
                                                 <input type="text" id="scheduleTitle" name="scheduleTitle"
                                                     placeholder="일정입력">
 
-                                                <button type="button" class="calendarScheduleRegisterBtn">
+                                                <button type="button" class="calendarScheduleRegisterBtn calendarScheduleBtn primaryBtn ">
                                                     등록
                                                 </button>
                                             </div>
                                         </div>
+
+                                        <br>
+
+                                        <!-- 등록된 일정 -->
+                                        <ul class="calendarScheduleManageList">
+                                            <li class="calendarScheduleManageItem">
+                                                <div class="calendarScheduleInfoBox">
+                                                    <span class="calendarScheduleTime">
+                                                        10:00 ~ 11:00
+                                                    </span>
+
+                                                    <span class="calendarScheduleLine" aria-hidden="true"></span>
+
+                                                    <span class="calendarScheduleTitle">
+                                                        의생명연구원 논문 작성 교육 세미나 개최
+                                                    </span>
+                                                </div>
+
+                                                <div class="calendarScheduleActionBox">
+                                                    <button type="button" class="calendarScheduleDeleteBtn  calendarScheduleBtn borderBtn">
+                                                        삭제
+                                                    </button>
+
+                                                    <button type="button" class="calendarScheduleModifyBtn calendarScheduleBtn primaryBtn">
+                                                        수정
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- //등록된 일정 -->
+
+                                        <br>
+
+                                        <!-- 일정 수정 -->
+                                        <div class="calendarScheduleEditBox">
+                                            <div class="calendarScheduleEditTimeBox">
+                                                <label for="scheduleEditTime01" class="blind">
+                                                    시간 수정
+                                                </label>
+
+                                                <input type="text" id="scheduleEditTime01" value="10:00 ~ 11:00">
+                                            </div>
+
+                                            <div class="calendarScheduleEditTitleBox">
+                                                <label for="scheduleEditTitle01" class="blind">
+                                                    일정 수정
+                                                </label>
+
+                                                <input type="text" id="scheduleEditTitle01"
+                                                    value="의생명연구원 논문 작성 교육 세미나 개최">
+
+                                                <button type="button" class="calendarScheduleCompleteBtn calendarScheduleBtn primaryBtn">
+                                                    완료
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- //일정 수정 -->
+
                                     </div>
                                     <!-- //일정 추가 영역 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                                 </div>
                             </div>
