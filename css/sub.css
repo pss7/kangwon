@@ -1152,25 +1152,30 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 }
 
 /* 소식 - 교육 · 세미나 일정 */
-.calendarWrap{display: flex; margin-bottom: 40px; min-height: 658px;} 
+.calendarWrap{display: flex; margin-bottom: 40px;} 
 .calendarBox{width: 100%;}
-.calendarBox .calendarHeader{margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 0 40px;}
+.calendarBox .calendarHeader{margin-bottom: 32px; display: flex; align-items: center; justify-content: center; gap: 0 40px;}
 .calendarBox .calendarHeader h4{color:#333; font-weight: 600; font-size: 30px;}
 .calendarBox .calendarHeader .calendarBtn{position: relative; width: 40px; height: 40px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,.25); transition: all .3s;}
 .calendarBox .calendarHeader .calendarBtn:hover{background-color: #f0f0f0;}
 .calendarBox .calendarHeader .calendarBtn::after{content: ''; width: 12px; height: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .calendarBox .calendarHeader .calendarBtn.calendarPrev::after{background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
 .calendarBox .calendarHeader .calendarBtn.calendarNext::after{ transform: translate(-50%, -50%) rotate(180deg); background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
-.calendarBox .calendarWeek{margin-bottom: 18px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden;}
+.calendarBox .calendarWeek{margin-bottom: 20px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden;}
 .calendarBox .calendarWeek .week{display: flex; align-items: center; justify-content: center;
     height: 40px; background-color: #1D439C; color: #fff; text-align: center; font-weight: 600;}
 .calendarBox .calendarWeek .week:first-child{border-radius: 10px 0 0 10px;}
 .calendarBox .calendarWeek .week:last-child{border-radius: 0 10px 10px 0;}
-.calendarBox .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 18px;}
-.calendarBox .calendarGrid .calendarCell{position: relative; min-width: 0; height: 156px;}
-.calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 10px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 10px; overflow: hidden; }
-.calendarBox .calendarGrid .calendarCell .dateBtn .date{color: #333; font-weight: 600;}
-.calendarBox .calendarGrid .calendarCell .dateBtn .today{display: inline-block; padding: 2px 8px; color: #fff; font-weight: 600; border-radius: 50px; background-color: #365DDD; font-size: 14px; }
+.calendarBox .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px;}
+.calendarBox .calendarContentBox{padding: 30px 28px; border-radius: 40px; border-radius: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
+
+.calendarBox .calendarGrid .calendarCell{position: relative; min-width: 0; height: 84px;}
+.calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 10px 10px 10px 15px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; }
+.calendarBox .calendarGrid .calendarCell .dateBtn .date{color: #333; font-weight: 500; line-height: 1;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.today{padding: 10px 10px 10px 8px;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.today .date{display: flex; align-items: center; justify-content: center; min-width: 26px; min-height: 26px; padding: 2px; color: #fff; font-weight: 600; border-radius: 50%; background-color: #365DDD;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.disabled{background-color: #F7F8F9; cursor: auto; pointer-events: none;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.disabled .date{color: #bbb; }
 .calendarBox .calendarGrid .calendarCell .calendarDateBox{display: flex; gap: 13px;}
@@ -1179,9 +1184,11 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .calendarBox .calendarGrid .calendarCell .calendarScheduleList li{padding-left: 10px; position: relative; min-width:0; font-size: 12px; font-weight: 500; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .calendarBox .calendarGrid .calendarCell .calendarScheduleList li::before{content: ''; position: absolute; top:8px; left:2px; width: 3px; height: 3px; border-radius: 50%; background-color: #333;}
 .calendarBox .calendarGrid .calendarCell .calendarScheduleList li:last-child{margin-bottom: 0;}
-.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{content: ''; position: absolute; top:16px; right:9px; width: 8px; height: 8px; border-radius: 50%; background-color: #FF443D;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{content: ''; position: absolute; bottom: 10px; right:4px; left:4px; height: 6px; border-radius: 30px; background-color: #FF7474;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.selected{border: 1px solid #365DDD; background-color: #F8FCFF;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.selected .date{color: #365DDD; font-weight: 700;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.sun .date{color: #FC6259;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.sat .date{color:#4C93FD;}
 .calendarScheduleAddBox{padding: 40px; background-color: #EDF2FF; border-radius: 20px; }
 .calendarScheduleAddBox .calendarScheduleAddHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;}
 .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 30px; color: #365DDD; font-weight: 600;}
@@ -1214,6 +1221,59 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .calendarScheduleEditBox .calendarScheduleEditTitleBox{position: relative; width: 100%;}
 .calendarScheduleEditBox .calendarScheduleCompleteBtn{position: absolute; top: 50%; transform: translateY(-50%); right:20px;}
 .calendarScheduleEditBox .calendarScheduleEditTitleBox input{padding: 0 160px 0 20px;}
+
+.noticeEducationBox{display: flex; gap: 30px 66px;}
+.noticeEducationBox .calendarWrap{width: 692px; flex-shrink: 0;}
+.noticeEducationBox .calendarListWrap{width: 100%; margin-top: 16px;}
+.noticeEducationBox .calendarListWrap .calendarListHeader{display: flex; align-items: center; gap: 8px; margin-bottom: 23px;}
+.noticeEducationBox .calendarListWrap .calendarListHeader .calendarListDate{font-size: 28px; color: #333;}
+.noticeEducationBox .calendarListWrap .calendarListHeader .calendarListToday{padding: 3px; min-width: 50px; min-height: 30px; color: #fff; font-weight: 700; background-color: #365DDD; border-radius: 50px; text-align: center;}
+.noticeEducationBox .calendarListWrap .calendarList li{padding: 18px 0; margin-bottom: -1px; display: flex; align-items: center; gap: 10px 33px; border: 1px solid #ccc; border-width: 1px 0;}
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListCategory{flex-shrink: 0; padding: 2px 8px; color: #fff; font-weight: 500; border-radius: 8px;}
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo{display: flex; flex-direction: column; gap: 5px; }
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo .calendarListTitle{font-weight: 500; color: #1B1D1F;}
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo .calendarListTime{font-weight: 500; color: #999;}
+
+/* 의생명연구원 */
+.noticeEducationBox .calendarListWrap .calendarList li .bri,
+.noticeEducationBox .calendarListWrap .calendarList li .researchSupport{
+    background-color:#1D439C;
+}
+
+.noticeEducationBox .calendarListWrap .calendarList li .clinicalTrial{
+    background-color:#977641;
+}
+
+.noticeEducationBox .calendarListWrap .calendarList li .researchProtection{
+    background-color:#F57692;
+}
+
+.noticeEducationBox .calendarListWrap .calendarList li .humanBiobank{
+    background-color:#B364CE;
+}
+
+/* 강원첨단연구지원센터 */
+.noticeEducationBox .calendarListWrap .calendarList li .advancedResearchSupport,
+.noticeEducationBox .calendarListWrap .calendarList li .multiOmics,
+.noticeEducationBox .calendarListWrap .calendarList li .regenCore{
+    background-color:#4AAF79;
+}
+
+.noticeEducationBox .calendarListWrap .calendarList li .bioImaging{
+    background-color:#FF9232;
+}
+
+.noticeEducationBox .calendarListWrap .calendarList li .basicLab{
+    background-color:#64748B;
+}
+
+@media (max-width: 1199px){
+
+  .noticeEducationBox{flex-direction: column; gap: 30px 0;}
+  .noticeEducationBox .calendarWrap{width: 100%;}
+  .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListDate{font-size: 26px;}
+
+}
 
 @media (max-width: 1024px){
 
@@ -1254,7 +1314,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 14px;}
   .calendarBox .calendarGrid .calendarCell .calendarScheduleListBox{top: 33px;}
   .calendarBox .calendarGrid .calendarCell .dateBtn .today{display: none;}
-  .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{top: 14px; width: 5px; height: 5px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{height: 5px;}
   .calendarScheduleAddBox{padding: 30px 20px; border-radius: 10px;}
   .calendarScheduleAddBox .calendarScheduleAddHeader .calendarScheduleAddBtn{width: 32px; height: 32px;}
   .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 20px;}
@@ -1265,6 +1325,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox input{padding: 0 100px 0 20px;}
   
   .calendarScheduleBtn{width:68px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn{padding: 10px!important;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 12px;}
 
   .calendarScheduleEditBox{flex-direction: column;}
   .calendarScheduleEditBox .calendarScheduleEditTimeBox{ width: 130px;}
@@ -1273,6 +1335,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .calendarScheduleEditBox .calendarScheduleEditTitleBox{padding: 10px; flex-direction: column; align-items: flex-start; gap: 10px 0;}
   .calendarScheduleEditBox .calendarScheduleEditTitleBox input{padding: 0;}
   .calendarScheduleEditBox .calendarScheduleCompleteBtn{position: static; transform: none;}
+
+  .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListDate{font-size: 22px;}
 
 }
 
@@ -1283,10 +1347,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .calendarBox .calendarHeader .calendarBtn::after{width: 6px; height: 10px;}
   .calendarBox .calendarHeader h4{font-size: 20px;}
   .calendarBox .calendarGrid .calendarCell{height: 66px;}
-  .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{top: 10px; right: 5px;}
   .calendarBox .calendarWeek .week{font-size: 14px;}
-  .calendarBox .calendarGrid .calendarCell .dateBtn{padding: 5px; border-radius: 5px;}
-  .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 12px;}
+
   .calendarBox .calendarGrid .calendarCell .calendarScheduleListBox{display: none;}
 
   .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 18px;}
@@ -1299,12 +1361,24 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .calendarScheduleBtn,
   .calendarScheduleEditBox .calendarScheduleEditTitleBox input{font-size: 14px;}
   .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox .calendarScheduleRegisterBtn{right: 10px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn{padding: 7px!important; border-radius: 6px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn.today .date{min-width: 20px; min-height: 20px;}
+  .calendarBox .calendarContentBox{padding: 30px 20px;}
+  .noticeEducationBox{gap:0;}
+  .noticeEducationBox .calendarListWrap .calendarList li{flex-direction: column; align-items: flex-start;}
+  .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListDate{font-size: 18px;}
+  .noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo .calendarListTime,
+  .noticeEducationBox .calendarListWrap .calendarList li .calendarListCategory{font-size: 14px;}
   
 }
 
 @media (max-width: 360px){
 
   .calendarBox .calendarGrid .calendarCell{height: 50px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn{padding: 5px!important;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn.today .date{min-width: 16px; min-height: 16px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 10px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{bottom: 7px;}
 
 }
 
