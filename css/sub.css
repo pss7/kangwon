@@ -270,14 +270,18 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .commonBtnBox{display:flex; align-items:center; justify-content:center; gap:0 14px;}
 .commonBtnBox .commonBtn{flex:1; max-width:220px;}
 .commonBtn{display:inline-flex; align-items:center; justify-content:center; min-height:60px; padding:10px; border:1px solid transparent; border-radius:20px;font-size:16px; font-weight:700; transition: all .3s;}
-.primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
-.boardBtn.primaryBtn:hover,
-.primaryBtn:hover{border-color:#153577; background-color:#153577;}
-.borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
-.borderBtn:hover{background-color:#f2f5fc;}
 .commonBtn:disabled{opacity:.5; cursor:default;}
-.boardBtnWrap{margin:50px auto; display:flex; align-items:center; justify-content:space-between; gap: 10px;}
+.primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
+.primaryBtn:hover{border-color:#153577!important; background-color:#153577!important;}
+
+
+
+
+.boardBtnWrap{margin:50px auto; display:flex; align-items:center; justify-content:space-between;}
 .boardBtnWrap.center{justify-content:center;}
+.borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
+.boardBtn:hover,
+.borderBtn:hover{background-color:#f2f5fc;}
 .boardBtnBox{display:flex; gap:10px;}
 .boardBtn{display:inline-block; min-width:130px; min-height: 38px; padding:6px 10px; border:1px solid #ccc; border-radius:8px; color:#333; text-align:center;}
 .boardBtn.primaryBtn{color:#fff; border-color:#1d439c; background-color:#1d439c;}
@@ -1075,6 +1079,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .faqTable .faqTitleText{min-width:0; overflow:hidden; display:block; flex:0 1 auto; text-overflow:ellipsis; white-space:nowrap;}
 .faqTable .faqLockIcon{flex:0 0 auto; display:block;}
 .faqTable .faqAnswerContent{min-width:0; display:flex; align-items:center; gap:8px;}
+.faqTable .faqAnswerContent .faqAnswerBadge{flex-shrink: 0; padding: 6px 8px; background-color: #1D439C; font-size: 14px; font-weight: 500; color: #fff; border-radius: 8px; line-height: 1;}
 .faqTable .faqAnswerIndent{margin-top:-6px; width:14px; height:14px; flex:0 0 14px; border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
 .faqAnswerBox .faqQuestionBox .faqQuestionHeader{padding: 22px 10px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #ccc; border-width: 1px 0;}
 .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionTitle{font-size: 20px; font-weight: 500; color: #333;}
@@ -1095,17 +1100,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerWriter{font-weight: 500; color: #333;}
 .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerDate{display: flex; align-items: center; gap: 0 6px; font-weight: 500; color: #999;}
 .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerDate::before{content: ''; width: 15px; height: 16px; background: url(../images/sub/claendar_icon02.svg)no-repeat center;}
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width:1024px){
 
@@ -1135,8 +1129,8 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     .faqTable tbody tr td:nth-child(4){font-size:13px;}
     .faqTable .faqAnswerContent{gap:6px;}
     .faqTable .faqAnswerIndent{width:12px; height:12px; flex-basis:12px;}
-    .faqTable .faqAnswerBadge{padding:2px 6px; font-size:11px;}
-
+    .faqTable .faqAnswerContent .faqAnswerBadge{font-size:11px;}
+    
     .faqAnswerBox .faqQuestionBox .faqQuestionHeader{flex-direction: column; gap:  10px 0;}
     .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionTitle{font-size: 16px;}
     .faqAnswerBox .faqAnswerFormBox .faqAnswerBadge,
@@ -1147,7 +1141,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerWriter,
     .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerDate{font-size: 14px;}
 
-
+  
 }
 
 /* 소식 - 교육 · 세미나 일정 */
