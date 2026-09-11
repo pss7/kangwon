@@ -1172,10 +1172,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
     box-shadow: 0 0 10px rgba(0, 139, 239, 0.2);}
 
 .calendarBox .calendarGrid .calendarCell{position: relative; min-width: 0; height: 84px;}
-.calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 10px 10px 10px 15px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; }
+.calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 7px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; }
 .calendarBox .calendarGrid .calendarCell .dateBtn .date{display: flex; align-items: center; justify-content: center; min-width: 26px; min-height: 26px; padding: 2px; color: #fff; font-weight: 600; border-radius: 50%; color: #333; font-weight: 500; line-height: 1;}
-.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule,
-.calendarBox .calendarGrid .calendarCell .dateBtn.today{padding: 10px 10px 10px 8px;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.today .date{background-color: #365DDD; color: #fff;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule{border: 1px solid #3DCD80;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule .date{background-color: #3DCD80; color: #fff;}
@@ -1328,7 +1326,6 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox input{padding: 0 100px 0 20px;}
   
   .calendarScheduleBtn{width:68px;}
-  .calendarBox .calendarGrid .calendarCell .dateBtn{padding: 10px!important;}
   .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 12px;}
 
   .calendarScheduleEditBox{flex-direction: column;}
@@ -1379,7 +1376,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
   .calendarBox .calendarGrid .calendarCell{height: 50px;}
   .calendarBox .calendarGrid .calendarCell .dateBtn{padding: 5px!important;}
-  .calendarBox .calendarGrid .calendarCell .dateBtn .date{min-width: 16px; min-height: 16px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .date{min-width: 15px; min-height: 15px;}
   .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 10px;}
   .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{bottom: 7px;}
   .calendarBox .calendarContentBox{padding: 30px 15px;}
