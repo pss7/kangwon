@@ -8,7 +8,8 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>통합예약 신청</title>
+    <title>
+        교육 · 세미나 일정</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -586,16 +587,28 @@
                     <img src="../images/sub/sub_bg01.jpg" alt="">
                 </div>
                 <h2>
-                    <em>통</em><em>합</em><em>예</em><em>약</em><em>·</em><em>신</em><em>청</em>
+                    <em>소</em><em>식</em>
                 </h2>
                 <div class="subNavBox customScroll">
                     <nav class="subNav">
                         <ul>
                             <li>
-                                <a href="#" class="active">의생명연구원</a>
+                                <a href="#">공지사항</a>
                             </li>
                             <li>
-                                <a href="#">강원첨단연구지원센터</a>
+                                <a href="#" class="active">교육 · 세미나 일정</a>
+                            </li>
+                            <li>
+                                <a href="#">사업 · 공고</a>
+                            </li>
+                            <li>
+                                <a href="#">성과 · 보도자료</a>
+                            </li>
+                            <li>
+                                <a href="#">자료실</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
                             </li>
                         </ul>
                     </nav>
@@ -606,29 +619,19 @@
             <!-- 서브 콘텐츠 레이아웃 영역 -->
             <div id="subContentWrap">
 
-                <!-- 공통 탭 영역 -->
-                <div class="commonTab">
-                    <button type="button" class="commonTabBtn">장비예약</button>
-                    <button type="button" class="commonTabBtn active">통계상담예약</button>
-                    <button type="button" class="commonTabBtn">모니터링실 예약</button>
-                </div>
-                <!-- //공통 탭 영역 -->
-
-
                 <!-- 서브 콘텐츠 헤더 영역 -->
                 <div class="subContentHeaderBox">
                     <div class="container">
 
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                통계상담
+                                교육 · 세미나 일정
                             </h2>
 
                             <div class="breadcrumbBox">
                                 <a href="/" class="breadcrumbLink"><img src="../images/sub/home_icon.svg" alt=""></a>
-                                <a href="#" class="breadcrumbLink">통합 예약 · 신청</a>
-                                <a href="#" class="breadcrumbLink">의생명연구원</a>
-                                <a href="#" class="breadcrumbLink active" aria-current="page">통계상담</a>
+                                <a href="#" class="breadcrumbLink">소식</a>
+                                <a href="#" class="breadcrumbLink active" aria-current="page">교육 · 세미나 일정</a>
                             </div>
                         </div>
 
@@ -639,301 +642,317 @@
                 <!-- 서브 콘텐츠 영역 -->
                 <div class="subContentBox">
 
-                    <!-- 장비예약 영역 -->
-                    <div class="reservationWrap">
+                    <!-- 교육 · 세미나 일정 영역 -->
+                    <div class="noticeWrap">
                         <div class="container">
-                            <div class="reservationBox">
+                            <div class="noticeBox">
 
-                                <!-- 통계상담예약 신청 영역 -->
-                                <div class="reservationApplyBox commonLayoutBox">
+                                <div class="noticeEducationBox">
 
-                                    <!-- 폼 영역 -->
-                                    <div class="commonLeftBox">
+                                    <!-- 달력 영역 -->
+                                    <div class="calendarWrap">
 
-                                        <!-- 단계 영역 -->
-                                        <ol class="equipmentStepList step02" aria-label="통계상담예약 진행 단계">
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 01
-                                                </span>
+                                        <div class="calendarBox">
+                                            <header class="calendarHeader">
+                                                <button type="button" class="calendarBtn calendarPrev"
+                                                    aria-label="이전달"></button>
+                                                <h4>2026.09</h4>
+                                                <button type="button" class="calendarBtn calendarNext"
+                                                    aria-label="다음달"></button>
+                                            </header>
 
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_off_icon01.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    날짜 · 시간선택
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem active">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 02
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_off_icon02.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약자정보 입력
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 03
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon04.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약신청 완료
-                                                </strong>
-                                            </li>
-                                        </ol>
-                                        <!-- //단계 영역 -->
-
-                                        <div class="commonShadowBox">
-                                            <h3 class="commonTitle">
-                                                예약자정보
-                                            </h3>
-
-                                            <form action="" method="">
-
-                                                <!-- 신청자이름 -->
-                                                <div class="formBox">
-                                                    <label for="applicantName">
-                                                        신청자 이름
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="applicantName" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //신청자이름 -->
-
-                                                <!-- 소속 -->
-                                                <div class="formBox">
-                                                    <label for="affiliation">
-                                                        소속
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="affiliation" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //소속 -->
-
-                                                <!-- 연구내 역할 -->
-                                                <div class="formBox">
-                                                    <fieldset class="researchRoleField">
-                                                        <legend>
-                                                            연구내 역할
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </legend>
-
-                                                        <div class="formRadioRowBox">
-
-                                                            <div class="researchRoleRadio">
-                                                                <input type="radio" id="researchRoleFirstAuthor"
-                                                                    name="researchRole" value="firstAuthor"
-                                                                    class="blind" required>
-                                                                <label for="researchRoleFirstAuthor">제1저자</label>
-                                                            </div>
-
-                                                            <div class="researchRoleRadio">
-                                                                <input type="radio" id="researchRoleCorrespondingAuthor"
-                                                                    name="researchRole" value="correspondingAuthor"
-                                                                    class="blind">
-                                                                <label
-                                                                    for="researchRoleCorrespondingAuthor">교신저자</label>
-                                                            </div>
-
-                                                        </div>
-                                                    </fieldset>
-                                                </div>
-                                                <!-- //연구내 역할 -->
-
-                                                <!-- 연구책임자 -->
-                                                <div class="formBox">
-                                                    <label for="principalInvestigator">
-                                                        연구책임자
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="principalInvestigator" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //연구책임자 -->
-
-                                                <!-- 연락처 -->
-                                                <div class="formBox">
-                                                    <label for="contactNumber">
-                                                        연락처
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="contactNumber" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //연락처 -->
-
-                                                <!-- 이메일 -->
-                                                <div class="formBox">
-                                                    <label for="email">
-                                                        이메일
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="email" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //이메일 -->
-
-                                                <!-- 상담 종류 -->
-                                                <div class="formBox">
-                                                    <fieldset class="consultationTypeField">
-                                                        <legend>
-                                                            상담 종류
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </legend>
-
-                                                        <div class="formRadioRowBox">
-
-                                                            <div class="consultationTypeRadio">
-                                                                <input type="radio" id="consultationTypeAdvisory"
-                                                                    name="consultationType" value="advisory"
-                                                                    class="blind" required>
-                                                                <label for="consultationTypeAdvisory">자문</label>
-                                                            </div>
-
-                                                            <div class="consultationTypeRadio">
-                                                                <input type="radio" id="consultationTypeAnalysis"
-                                                                    name="consultationType" value="analysis"
-                                                                    class="blind">
-                                                                <label for="consultationTypeAnalysis">분석</label>
-                                                            </div>
-
-                                                        </div>
-                                                    </fieldset>
-                                                </div>
-                                                <!-- //상담 종류 -->
-
-                                                <span aria-hidden="true" class="border"></span>
-
-                                                <div class="formBox">
-                                                    <h4 class="reservationDetailTableTitle">서식 다운로드</h4>
-                                                    <div class="reservationDetailSection reservationDetailFileSection">
-                                                        <h4 class="commonTitle">
-                                                            관련자료
-                                                        </h4>
-                                                        <div class="boardViewFileBox">
-                                                            <h5 class="boardViewFileTitle">첨부파일</h5>
-                                                            <ul class="boardViewFileList">
-                                                                <li class="boardViewFileItem">
-                                                                    <a href="#" class="boardViewFileLink">
-                                                                        <span class="boardViewFileIcon"
-                                                                            aria-hidden="true"></span>
-                                                                        <span
-                                                                            class="boardViewFileName">연구지원부_통계지원_신청폼.hwp</span>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formBox">
-                                                    <label for="applicationFormFile">
-                                                        신청서 업로드
-                                                    </label>
-
-                                                    <div class="fileUploadBox">
-                                                        <input type="file" id="applicationFormFile"
-                                                            name="applicationFormFile" class="blind"
-                                                            accept=".pdf,.jpg,.jpeg,.png">
-
-                                                        <label for="applicationFormFile" class="fileUploadLabel">
-                                                            <span class="fileUploadText">
-                                                                신청서를 업로드 해주세요
-                                                            </span>
-                                                            <img src="../images/sub/file_icon02.svg" alt="파일">
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formBox">
-                                                    <label for="applicationFormFile">
-                                                        첨부자료
-                                                    </label>
-
-                                                    <div class="fileUploadBox">
-                                                        <input type="file" id="applicationFormFile02"
-                                                            name="applicationFormFile02" class="blind"
-                                                            accept=".pdf,.jpg,.jpeg,.png">
-
-                                                        <label for="applicationFormFile02" class="fileUploadLabel">
-                                                            <span class="fileUploadText">
-                                                                기타 첨부자료를 업로드 해주세요
-                                                            </span>
-                                                            <img src="../images/sub/file_icon02.svg" alt="파일">
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- //폼 영역 -->
-
-                                    <!-- 날짜 및  시간 정보  -->
-                                    <div class="commonRightBox">
-
-                                        <div class="reservationTimeInfoBox commonShadowBox">
-
-                                            <h3 class="commonTitle">
-                                                날짜 및 시간 정보
-                                            </h3>
-
-                                            <div class="reservationTimeInfo">
-                                                <span class="reservationReservationDate">
-                                                    2026.08.12
-                                                </span>
-
-                                                <span class="reservationReservationTime">
-                                                    13:00~14:00
-                                                </span>
+                                            <div class="calendarWeek">
+                                                <div class="week sun">일</div>
+                                                <div class="week">월</div>
+                                                <div class="week">화</div>
+                                                <div class="week">수</div>
+                                                <div class="week">목</div>
+                                                <div class="week">금</div>
+                                                <div class="week sat">토</div>
                                             </div>
 
-                                        </div>
+                                            <div class="calendarGrid">
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sun disabled" disabled="">
+                                                        <span class="date">30</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn disabled" disabled="">
+                                                        <span class="date">31</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn ">
+                                                        <span class="date">1</span>
 
-                                        <div class="commonBtnBox verticalBtnBox">
-                                            <button type="button" class="commonBtn primaryBtn">
-                                                예약 신청하기
-                                            </button>
-                                            <a href="#" class="commonBtn borderBtn">
-                                                이전
-                                            </a>
-                                        </div>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn ">
+                                                        <span class="date">2</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">3</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">4</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sat">
+                                                        <span class="date">5</span>
+                                                    </button>
+                                                </div>
 
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sun">
+                                                        <span class="date">6</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn ">
+                                                        <span class="date">7</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn ">
+                                                        <span class="date">8</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn hasSchedule">
+                                                        <div class="calendarDateBox">
+                                                            <span class="date">9</span>
+                                                            <span class="today">오늘</span>
+                                                        </div>
+                                                    </button>
+
+                                                    <div class="calendarScheduleListBox">
+                                                        <ul class="calendarScheduleList">
+                                                            <li class="calendarScheduleItem">
+                                                                의생명연구원 논문 작성 지원 안내
+                                                            </li>
+                                                            <li class="calendarScheduleItem">
+                                                                연구자 교육 및 세미나 일정 안내
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn ">
+                                                        <span class="date">10</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">11</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sat">
+                                                        <span class="date">12</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sun">
+                                                        <span class="date">13</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">14</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn selected">
+                                                        <span class="date">15</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn hasSchedule">
+                                                        <span class="date">16</span>
+                                                    </button>
+
+                                                    <div class="calendarScheduleListBox">
+                                                        <ul class="calendarScheduleList">
+                                                            <li class="calendarScheduleItem">
+                                                                의생명연구원 논문 작성 지원 안내
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn hasSchedule">
+                                                        <span class="date">17</span>
+                                                    </button>
+
+                                                    <div class="calendarScheduleListBox">
+                                                        <ul class="calendarScheduleList">
+                                                            <li class="calendarScheduleItem">
+                                                                의생명연구원 논문 작성 지원 안내
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">18</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sat">
+                                                        <span class="date">19</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sun">
+                                                        <span class="date">20</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">21</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">22</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">23</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">24</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">25</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sat">
+                                                        <span class="date">26</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sun">
+                                                        <span class="date">27</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">28</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">29</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn">
+                                                        <span class="date">30</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn disabled">
+                                                        <span class="date">1</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn disabled">
+                                                        <span class="date">2</span>
+                                                    </button>
+                                                </div>
+                                                <div class="calendarCell">
+                                                    <button type="button" class="dateBtn sat disabled">
+                                                        <span class="date">3</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- //날짜 및  시간 정보  -->
+                                    <!-- //달력 영역 -->
+
+                                    <!-- 일정 추가 영역 -->
+                                    <div class="calendarScheduleAddBox">
+                                        <div class="calendarScheduleAddHeader">
+                                            <strong class="calendarSelectedDate">
+                                                09.15(화)
+                                            </strong>
+
+                                            <button type="button" class="calendarScheduleAddBtn" aria-label="일정 입력 추가">
+                                            </button>
+                                        </div>
+
+                                        <div class="calendarScheduleFormBox">
+                                            <div class="calendarTimeInputBox">
+                                                <label for="scheduleTime" class="blind">
+                                                    시간 입력
+                                                </label>
+
+                                                <input type="text" id="scheduleTime" name="scheduleTime"
+                                                    placeholder="시간 입력">
+                                            </div>
+
+                                            <div class="calendarScheduleInputBox">
+                                                <label for="scheduleTitle" class="blind">
+                                                    일정 입력
+                                                </label>
+
+                                                <input type="text" id="scheduleTitle" name="scheduleTitle"
+                                                    placeholder="일정입력">
+
+                                                <button type="button" class="calendarScheduleRegisterBtn">
+                                                    등록
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //일정 추가 영역 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                 </div>
-                                <!-- //통계상담예약 영역 -->
-
                             </div>
-                            <!-- //통계상담예약 신청 영역 -->
-
                         </div>
                     </div>
-                    <!-- //장비예약 영역 -->
+                    <!-- //교육 · 세미나 일정 영역 -->
 
                 </div>
                 <!-- //서브 콘텐츠 영역 -->
+
+            </div>
+            <!-- //서브 콘텐츠 레이아웃 영역 -->
 
         </main>
         <!-- //메인 영역 -->

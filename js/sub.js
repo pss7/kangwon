@@ -27,16 +27,22 @@ $(function () {
   });
 
   /* 파일 업로드 */
-  $('.fileUploadBox input[type="file"]').change(function () {
-    const $fileUploadText = $(this)
-      .siblings('.fileUploadLabel')
-      .find('.fileUploadText');
+  $('input[type="file"]').change(function () {
+
+    const $fileUploadLabel = $('label[for="' + this.id + '"]');
+
+    const $fileUploadText = $fileUploadLabel.hasClass('fileUploadText')
+      ? $fileUploadLabel
+      : $fileUploadLabel.find('.fileUploadText');
 
     const fileName = this.files.length
       ? this.files[0].name
       : $fileUploadText.data('placeholder');
 
-    $fileUploadText.text(fileName);
+    $fileUploadText
+      .text(fileName)
+      .toggleClass('isSelected', this.files.length > 0);
+
   });
 
 

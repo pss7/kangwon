@@ -259,8 +259,7 @@ label{display: block; font-size: 14px; color: #333;}
 .requiredMark{color: #FF443D;}
 input{display: block; width: 100%; padding: 0 10px 0 20px; height: 40px; border-radius: 10px; background-color: #F4F4F4; color: #333; border: 0; font-size: 14px;}
 input[type="checkbox"] + label{display: flex; align-items: center; gap: 0 8px; color: #333; font-weight: 500; font-size: 14px; cursor: pointer;}
-input[type="checkbox"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/check_icon.svg)no-repeat center / contain;}
-input[type="checkbox"]:checked + label::before{content: ''; background: url(../images/sub/check_icon02.svg)no-repeat center / contain;}
+input[type="checkbox"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/check_icon01.svg)no-repeat center / contain!important;}
 input[type="checkbox"]:checked + label{font-weight: 700;}
 .formBox{margin-bottom: 30px;}
 .formBox label{margin-bottom: 8px;}
@@ -276,17 +275,18 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .commonBtn.borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
 .commonBtn.borderBtn:hover{background-color:#f2f5fc;}
 .commonBtn:disabled{opacity:.5; cursor:default;}
-.boardBtnBox{margin: 50px auto; display: flex; align-items: center; justify-content: space-between;}
-.boardBtnGroup{display: flex; gap: 10px;}
-.boardBtn{display: inline-block; min-width: 130px; padding: 6px 10px; border: 1px solid #ccc; border-radius: 8px; color: #333; text-align: center;}
-.boardBtn.list{border: 1px solid #1D439C; background-color: #EDF2FF; color: #1D439C; font-weight: 700;}
-
+.boardBtnWrap{margin:50px auto; display:flex; align-items:center; justify-content:space-between;}
+.boardBtnWrap.center{justify-content:center;}
+.boardBtnBox{display:flex; gap:10px;}
+.boardBtn{display:inline-block; min-width:130px; min-height: 38px; padding:6px 10px; border:1px solid #ccc; border-radius:8px; color:#333; text-align:center;}
+.boardBtn.list,
+.boardBtn.register{border:1px solid #1D439C; background-color:#EDF2FF; color:#1D439C; font-weight:700;}
 
 @media (max-width: 480px){
 
   .commonBtn{min-height: 56px; border-radius: 10px;}
-  .boardBtnBox{flex-direction: column; gap: 10px;}
-  .boardBtnGroup{width: 100%; flex-direction: column;}
+  .boardBtnWrap{flex-direction: column; gap: 10px;}
+  .boardBtnBox{width: 100%; flex-direction: column;}
   .boardBtn{width: 100%; }
 
 }
@@ -1103,5 +1103,219 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     .faqTable .faqAnswerContent{gap:6px;}
     .faqTable .faqAnswerIndent{width:12px; height:12px; flex-basis:12px;}
     .faqTable .faqAnswerBadge{padding:2px 6px; font-size:11px;}
+
+}
+
+/* 소식 - 교육 · 세미나 일정 */
+.calendarWrap{display: flex; margin-bottom: 40px; min-height: 658px;} 
+.calendarBox{width: 100%;}
+.calendarBox .calendarHeader{margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 0 40px;}
+.calendarBox .calendarHeader h4{color:#333; font-weight: 600; font-size: 30px;}
+.calendarBox .calendarHeader .calendarBtn{position: relative; width: 40px; height: 40px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,.25); transition: all .3s;}
+.calendarBox .calendarHeader .calendarBtn::after{content: ''; width: 12px; height: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.calendarBox .calendarHeader .calendarBtn.calendarPrev::after{background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
+.calendarBox .calendarHeader .calendarBtn.calendarNext::after{ transform: translate(-50%, -50%) rotate(180deg); background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
+.calendarBox .calendarWeek{margin-bottom: 18px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden;}
+.calendarBox .calendarWeek .week{display: flex; align-items: center; justify-content: center;
+    height: 40px; background-color: #1D439C; color: #fff; text-align: center; font-weight: 600;}
+.calendarBox .calendarWeek .week:first-child{border-radius: 10px 0 0 10px;}
+.calendarBox .calendarWeek .week:last-child{border-radius: 0 10px 10px 0;}
+.calendarBox .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 18px;}
+.calendarBox .calendarGrid .calendarCell{position: relative; min-width: 0; height: 156px;}
+.calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 10px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 10px; overflow: hidden;}
+.calendarBox .calendarGrid .calendarCell .dateBtn .date{color: #333; font-weight: 600;}
+.calendarBox .calendarGrid .calendarCell .dateBtn .today{display: inline-block; padding: 2px 8px; color: #fff; font-weight: 600; border-radius: 50px; background-color: #365DDD; font-size: 14px; }
+.calendarBox .calendarGrid .calendarCell .dateBtn.disabled{background-color: #F7F8F9; cursor: auto; pointer-events: none;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.disabled .date{color: #bbb; }
+.calendarBox .calendarGrid .calendarCell .calendarDateBox{display: flex; gap: 13px;}
+.calendarBox .calendarGrid .calendarCell .calendarScheduleListBox{position: absolute; top:48px; left:10px; right:10px; bottom: 0; overflow-y: auto;}
+.calendarBox .calendarGrid .calendarCell .calendarScheduleList{height: 100%;}
+.calendarBox .calendarGrid .calendarCell .calendarScheduleList li{padding-left: 10px; position: relative; min-width:0; font-size: 12px; font-weight: 500; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.calendarBox .calendarGrid .calendarCell .calendarScheduleList li::before{content: ''; position: absolute; top:8px; left:2px; width: 3px; height: 3px; border-radius: 50%; background-color: #333;}
+.calendarBox .calendarGrid .calendarCell .calendarScheduleList li:last-child{margin-bottom: 0;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{content: ''; position: absolute; top:16px; right:9px; width: 8px; height: 8px; border-radius: 50%; background-color: #FF443D;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.selected{border: 1px solid #365DDD; background-color: #F8FCFF;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.selected .date{color: #365DDD; font-weight: 700;}
+.calendarScheduleAddBox{padding: 40px; background-color: #EDF2FF; border-radius: 20px; }
+.calendarScheduleAddBox .calendarScheduleAddHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;}
+.calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 30px; color: #365DDD; font-weight: 600;}
+.calendarScheduleAddBox .calendarScheduleAddHeader .calendarScheduleAddBtn{width: 38px; height: 38px; border: 1px solid #ccc; border-radius: 8px; background: #fff url(../images/sub/plus_icon.svg)no-repeat center;}
+.calendarScheduleAddBox .calendarScheduleFormBox{display: flex; gap: 10px;}
+.calendarScheduleAddBox .calendarScheduleFormBox input{padding: 0 20px; height: 80px; border: 1px solid #365DDD; background-color: #fff; font-size: 18px; font-weight: 500;}
+.calendarScheduleAddBox .calendarScheduleFormBox input::placeholder{color: #999;}
+.calendarScheduleAddBox .calendarScheduleFormBox .calendarTimeInputBox{flex-shrink: 0; width: 179px;}
+.calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox input{padding: 0 167px 0 20px;}
+.calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox{position: relative; width: 100%;}
+.calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox .calendarScheduleRegisterBtn{position: absolute; top: 50%; transform: translateY(-50%); right:20px; display: flex; align-items: center; justify-content: center; width: 130px; height: 38px; border-radius: 8px; background-color: #1D439C; color: #fff; font-weight: 500;}
+
+@media (max-width: 1024px){
+
+  .calendarWrap{flex-direction: column-reverse; height: auto;}
+  .calendarBox .calendarHeader h4{font-size: 26px;}
+  .calendarBox .calendarHeader .calendarBtn::after{width: 9px; height: 15px;}
+  .calendarBox .calendarGrid{gap: 10px;}
+  .calendarBox .calendarGrid .calendarCell{height: 115px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .today{font-size: 12px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 14px;}
+  .calendarBox .calendarGrid .calendarCell .calendarScheduleListBox{top: 40px;}
+
+  .calendarScheduleAddBox{padding: 30px 20px;}
+  .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 26px;}
+  .calendarScheduleAddBox .calendarScheduleFormBox input{height: 65px;}
+
+}
+
+@media (max-width: 768px){
+
+  .calendarBox .calendarHeader{gap: 0 25px;}
+  .calendarBox .calendarHeader h4{font-size: 22px;}
+  .calendarBox .calendarHeader .calendarBtn{width: 35px; height: 35px;}
+  .calendarBox .calendarHeader .calendarBtn::after{width: 9px; height: 15px;}
+  .calendarBox .calendarWeek{margin-bottom: 10px;}
+  .calendarBox .calendarGrid{gap: 5px;}
+  .calendarBox .calendarGrid .calendarCell{height: 95px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .today{font-size: 12px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 14px;}
+  .calendarBox .calendarGrid .calendarCell .calendarScheduleListBox{top: 33px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .today{display: none;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{top: 14px; width: 5px; height: 5px;}
+  .calendarScheduleAddBox{padding: 30px 20px; border-radius: 10px;}
+  .calendarScheduleAddBox .calendarScheduleAddHeader .calendarScheduleAddBtn{width: 32px; height: 32px;}
+  .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 20px;}
+  .calendarScheduleAddBox .calendarScheduleFormBox input{height: 55px; font-size: 16px;}
+  .calendarScheduleAddBox .calendarScheduleFormBox{flex-direction: column;}
+  .calendarScheduleAddBox .calendarScheduleFormBox .calendarTimeInputBox{width: 100%;}
+  .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox .calendarScheduleRegisterBtn{right: 10px; width: 76px;}
+  .calendarScheduleAddBox .calendarScheduleFormBox .calendarScheduleInputBox input{padding: 0 100px 0 20px;}
+  
+}
+
+@media (max-width: 480px){
+
+  .calendarBox .calendarHeader{margin-bottom: 30px;}
+  .calendarBox .calendarHeader .calendarBtn{width: 30px; height: 30px;}
+  .calendarBox .calendarHeader .calendarBtn::after{width: 6px; height: 10px;}
+  .calendarBox .calendarHeader h4{font-size: 20px;}
+  .calendarBox .calendarGrid .calendarCell{height: 66px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{top: 10px; right: 5px;}
+  .calendarBox .calendarWeek .week{font-size: 14px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn{padding: 5px; border-radius: 5px;}
+  .calendarBox .calendarGrid .calendarCell .dateBtn .date{font-size: 12px;}
+  .calendarBox .calendarGrid .calendarCell .calendarScheduleListBox{display: none;}
+
+  .calendarScheduleAddBox .calendarScheduleAddHeader .calendarSelectedDate{font-size: 18px;}
+
+}
+
+@media (max-width: 360px){
+
+  .calendarBox .calendarGrid .calendarCell{height: 50px;}
+
+}
+
+
+
+
+
+
+
+
+
+/* 공지사항 - 상세 */
+.boardDetailBox .boardDetailHeader{padding: 22px 14px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #ccc; border-width: 1px 0;}
+.boardDetailBox .boardDetailHeader .boardDetailFileIcon img{display: block;}
+.boardDetailBox .boardDetailHeader .boardDetailTitleArea{display: flex; align-items: center; }
+.boardDetailBox .boardDetailHeader .boardDetailTitleArea .boardDetailBadge{margin-right: 20px; display: inline-block; padding: 2px 9px; color: #fff; background-color: #1D439C; border-radius: 8px; font-size: 14px; font-weight: 500;}
+.boardDetailBox .boardDetailHeader .boardDetailTitleArea .boardDetailTitle{gap: 0 6px;  font-weight: 500; font-size: 20px; color: #333;}
+.boardDetailBox .boardDetailHeader .boardDetailTitleArea .boardDetailTitle .boardDetailFileIcon{margin-left: 6px; display: inline-block;}
+.boardDetailBox .boardDetailHeader .boardDetailTitleArea .boardDetailTitle .boardDetailFileIcon img{display: block;}
+.boardDetailBox .boardDetailHeader .boardDetailInfoList{display: flex; align-items: center; gap: 24px;}
+.boardDetailBox .boardDetailHeader .boardDetailInfoList .boardDetailWriter{color: #333; font-weight: 500;}
+.boardDetailBox .boardDetailHeader .boardDetailInfoList .boardDetailDate,
+.boardDetailBox .boardDetailHeader .boardDetailInfoList .boardDetailView{display: flex; align-items: center; gap: 6px;}
+.boardDetailBox .boardDetailHeader .boardDetailInfoList li span{font-weight: 500; color: #999;}
+.boardDetailBox .boardDetailContentBox{padding: 40px 0; border-bottom: 1px solid #ccc;}
+.boardDetailBox .boardDetailContentBox .boardDetailImgBox{margin-bottom: 25px;}
+.boardDetailBox .boardDetailContentBox .boardDetailImgBox img{display: block; max-width: 100%;}
+.boardDetailBox .boardDetailContentBox,
+.boardDetailBox .boardDetailContentBox p,
+.boardDetailBox .boardDetailContentBox span,
+.boardDetailBox .boardDetailContentBox .boardDetailText,
+.boardDetailBox .boardDetailContentBox .boardDetailSubTitle,
+.boardDetailBox .boardDetailContentBox .boardDetailGuideItem{color: #333; font-size: 14px; font-weight: 500;}
+.boardDetailBox .boardDetailContentBox .boardDetailGuideItem dt{flex-shrink: 0;}
+.boardDetailBox .boardDetailContentBox p,
+.boardDetailBox .boardDetailContentBox .boardDetailText{margin: 20px 0;}
+.boardDetailBox .boardDetailContentBox .boardDetailSubTitle{margin: 10px 0; display: flex; align-items: center; gap: 0 5px;}
+.boardDetailBox .boardDetailContentBox .boardDetailSubTitle::before{content: ''; width: 12px; height: 12px; border-radius: 3px; background-color: #333; }
+.boardDetailBox .boardDetailContentBox .boardDetailGuideItem{padding-left: 8px; display: flex; gap: 0 10px;}
+.boardDetailBox .boardDetailContentBox .boardDetailGuideItem::before{content: ''; margin: 9px 0; width: 3px; height: 3px; border-radius: 50%; background-color: #333;}
+.boardDetailBox .boardDetailContentBox .boardDetailGuideItemBox{margin: 20px 0;}
+.boardDetailBox .boardDetailContentBox .boardViewFileBox{padding: 24px; background-color: #F7F8F9; border: 1px solid #eee; border-radius: 20px;}
+
+@media (max-width: 1199px){
+
+  .boardDetailBox .boardDetailHeader .boardDetailTitleArea .boardDetailBadge{margin-right: 10px;}
+  .boardDetailBox .boardDetailHeader .boardDetailTitleArea .boardDetailTitle{font-size: 18px;}
+
+}
+
+@media (max-width: 768px){
+
+  .boardDetailBox .boardDetailHeader .boardDetailTitleArea{flex-direction: column; gap: 10px 0;}
+  .boardDetailBox .boardDetailContentBox br{display: none;}
+  .boardDetailBox .boardDetailHeader{flex-direction: column; gap: 25px;}
+
+}
+
+@media (max-width: 480px){
+
+  .boardDetailBox .boardDetailHeader .boardDetailInfoList{flex-direction: column; gap: 10px 0;}
+
+}
+
+/* 공지사항 - 글작성 */
+.boardWriteForm .row{display: flex;}
+.boardWriteForm .boardWriteOptionBox{display: flex; align-items: center; gap: 14px;}
+.boardWriterBox{padding: 28px 24px; border: 1px solid #ccc; border-radius: 20px; background-color: #F7F8F9;}
+.boardWriteForm .boardWriteField{margin-bottom: 14px;}
+.boardWriteForm input{padding: 0 10px 0 18px; height: 50px; border: 1px solid #eee; border-radius: 10px; background-color: #fff; font-size: 20px;}
+.boardWriteForm input::placeholder{color: #999;}
+.boardWriteForm .chkBtn{display: inline-flex; align-items: center;  gap: 0 14px;
+    padding: 0 10px 0 18px; width: 174px; height: 50px; background-color:#fff;
+    border: 1px solid #eee; border-radius: 10px; color: #333;
+    font-weight: 500; cursor: pointer;}
+.boardWriteForm input[type="radio"]:checked + .chkBtn,
+.boardWriteForm input[type="checkBox"]:checked + .chkBtn
+{background-color: #1D439C; color:#fff; border: 1px solid #1D439C;}
+.boardWriteForm input[type="radio"]:checked + .chkBtn::before,
+.boardWriteForm input[type="checkBox"]:checked + .chkBtn::before
+ {background: url(../images/sub/chk_on_icon.svg) no-repeat center / contain;}
+.boardWriteForm .boardWriteEditor{display: flex; align-items: center; justify-content: center; height: 395px; background-color: #fff;}
+.boardWriteForm .boardWriteContent{width: 100%;}
+.boardWriteForm .boardWriteFileField{margin: 30px 0 0;}
+.boardWriteForm .boardWriteField .boardWriteLabel{flex-shrink: 0; width: 106px; font-weight: 500; color: #333;}
+.boardWriteForm .boardWriteFile{position: relative; margin-bottom: 14px;}
+.boardWriteForm .boardWriteFile .boardWriteFileIcon{position: absolute; top: 50%; transform: translateY(-50%); right: 18px;}
+.boardWriteForm .boardWriteFile:last-child{margin-bottom: 0;}
+.boardWriteForm .boardWriteFile .boardWriteFileBtn{padding: 13px 48px 13px 18px; display: flex; align-items: center; border: 1px solid #eee; border-radius: 10px; background-color: #fff; color: #999; font-size: 14px; font-weight: 500; cursor: pointer;}
+.boardWriteForm .boardWriteFile .boardWriteFileBtn.isSelected{color: #333; text-decoration: underline;}
+.boardWriteForm .boardWriteSelectBox #select{padding: 0 10px 0 18px; width: 174px; height: 50px; background-color: #fff; border-radius: 10px; border: 1px solid #eee; font-weight: 500; color: #333; cursor: pointer; background: #fff url(../images/sub/arrow_icon05.svg) right 16px center no-repeat; appearance: none;-webkit-appearance: none; -moz-appearance: none;}
+
+@media (max-width: 768px){
+
+  .boardWriteForm input{font-size: 16px;}
+  .boardWriterBox{padding: 20px; border-radius: 10px;}
+
+}
+
+@media (max-width: 480px){
+
+  .boardWriteForm .boardWriteOptionBox{flex-direction: column;}
+  .boardWriteForm .boardWriteOptionBox .boardWriteSelectBox,
+  .boardWriteForm .boardWriteSelectBox #select,
+  .boardWriteForm .boardWriteOptionBox .boardWriteNoticeBox .chkBtn,
+  .boardWriteForm .boardWriteOptionBox .boardWriteNoticeBox{width: 100%;}
+  .boardWriteForm .row{flex-direction: column; gap: 14px 0;}
 
 }

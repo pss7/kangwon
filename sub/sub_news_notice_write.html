@@ -8,7 +8,7 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>통합예약 신청</title>
+    <title>공지사항</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -586,16 +586,28 @@
                     <img src="../images/sub/sub_bg01.jpg" alt="">
                 </div>
                 <h2>
-                    <em>통</em><em>합</em><em>예</em><em>약</em><em>·</em><em>신</em><em>청</em>
+                    <em>소</em><em>식</em>
                 </h2>
                 <div class="subNavBox customScroll">
                     <nav class="subNav">
                         <ul>
                             <li>
-                                <a href="#" class="active">의생명연구원</a>
+                                <a href="#" class="active">공지사항</a>
                             </li>
                             <li>
-                                <a href="#">강원첨단연구지원센터</a>
+                                <a href="#">교육 · 세미나 일정</a>
+                            </li>
+                            <li>
+                                <a href="#">사업 · 공고</a>
+                            </li>
+                            <li>
+                                <a href="#">성과 · 보도자료</a>
+                            </li>
+                            <li>
+                                <a href="#">자료실</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
                             </li>
                         </ul>
                     </nav>
@@ -606,29 +618,19 @@
             <!-- 서브 콘텐츠 레이아웃 영역 -->
             <div id="subContentWrap">
 
-                <!-- 공통 탭 영역 -->
-                <div class="commonTab">
-                    <button type="button" class="commonTabBtn">장비예약</button>
-                    <button type="button" class="commonTabBtn active">통계상담예약</button>
-                    <button type="button" class="commonTabBtn">모니터링실 예약</button>
-                </div>
-                <!-- //공통 탭 영역 -->
-
-
                 <!-- 서브 콘텐츠 헤더 영역 -->
                 <div class="subContentHeaderBox">
                     <div class="container">
 
                         <div class="subContentHeader">
                             <h2 class="subContentTitle">
-                                통계상담
+                                글작성
                             </h2>
 
                             <div class="breadcrumbBox">
                                 <a href="/" class="breadcrumbLink"><img src="../images/sub/home_icon.svg" alt=""></a>
-                                <a href="#" class="breadcrumbLink">통합 예약 · 신청</a>
-                                <a href="#" class="breadcrumbLink">의생명연구원</a>
-                                <a href="#" class="breadcrumbLink active" aria-current="page">통계상담</a>
+                                <a href="#" class="breadcrumbLink">소식</a>
+                                <a href="#" class="breadcrumbLink active" aria-current="page">공지사항</a>
                             </div>
                         </div>
 
@@ -639,301 +641,135 @@
                 <!-- 서브 콘텐츠 영역 -->
                 <div class="subContentBox">
 
-                    <!-- 장비예약 영역 -->
-                    <div class="reservationWrap">
+                    <!-- 공지사항 영역 -->
+                    <div class="noticeWrap">
                         <div class="container">
-                            <div class="reservationBox">
+                            <div class="noticeBox">
 
-                                <!-- 통계상담예약 신청 영역 -->
-                                <div class="reservationApplyBox commonLayoutBox">
+                                <!-- 공지사항 작성 영역 -->
+                                <div class="boardWriterBox">
 
-                                    <!-- 폼 영역 -->
-                                    <div class="commonLeftBox">
+                                    <form class="boardWriteForm">
 
-                                        <!-- 단계 영역 -->
-                                        <ol class="equipmentStepList step02" aria-label="통계상담예약 진행 단계">
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 01
-                                                </span>
+                                        <!-- 카테고리선택, 공지설정 -->
+                                        <div class="boardWriteField row">
+                                            <div class="boardWriteContent">
 
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_off_icon01.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    날짜 · 시간선택
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem active">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 02
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_off_icon02.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약자정보 입력
-                                                </strong>
-                                            </li>
-
-                                            <li class="equipmentStepItem">
-                                                <span class="equipmentStepNumber" lang="en">
-                                                    Step 03
-                                                </span>
-
-                                                <div class="equipmentStepImgBox">
-                                                    <img src="../images/sub/step_icon04.svg" alt="">
-                                                </div>
-
-                                                <strong class="equipmentStepTitle">
-                                                    예약신청 완료
-                                                </strong>
-                                            </li>
-                                        </ol>
-                                        <!-- //단계 영역 -->
-
-                                        <div class="commonShadowBox">
-                                            <h3 class="commonTitle">
-                                                예약자정보
-                                            </h3>
-
-                                            <form action="" method="">
-
-                                                <!-- 신청자이름 -->
-                                                <div class="formBox">
-                                                    <label for="applicantName">
-                                                        신청자 이름
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="applicantName" required>
+                                                <div class="boardWriteOptionBox">
+                                                    <div class="boardWriteSelectBox">
+                                                        <label for="select" class="blind">
+                                                            카테고리 선택
+                                                        </label>
+                                                        <select id="select">
+                                                            <option value="">카테고리 선택</option>
+                                                        </select>
                                                     </div>
-                                                </div>
-                                                <!-- //신청자이름 -->
 
-                                                <!-- 소속 -->
-                                                <div class="formBox">
-                                                    <label for="affiliation">
-                                                        소속
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="affiliation" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //소속 -->
-
-                                                <!-- 연구내 역할 -->
-                                                <div class="formBox">
-                                                    <fieldset class="researchRoleField">
-                                                        <legend>
-                                                            연구내 역할
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </legend>
-
-                                                        <div class="formRadioRowBox">
-
-                                                            <div class="researchRoleRadio">
-                                                                <input type="radio" id="researchRoleFirstAuthor"
-                                                                    name="researchRole" value="firstAuthor"
-                                                                    class="blind" required>
-                                                                <label for="researchRoleFirstAuthor">제1저자</label>
-                                                            </div>
-
-                                                            <div class="researchRoleRadio">
-                                                                <input type="radio" id="researchRoleCorrespondingAuthor"
-                                                                    name="researchRole" value="correspondingAuthor"
-                                                                    class="blind">
-                                                                <label
-                                                                    for="researchRoleCorrespondingAuthor">교신저자</label>
-                                                            </div>
-
-                                                        </div>
-                                                    </fieldset>
-                                                </div>
-                                                <!-- //연구내 역할 -->
-
-                                                <!-- 연구책임자 -->
-                                                <div class="formBox">
-                                                    <label for="principalInvestigator">
-                                                        연구책임자
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="principalInvestigator" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //연구책임자 -->
-
-                                                <!-- 연락처 -->
-                                                <div class="formBox">
-                                                    <label for="contactNumber">
-                                                        연락처
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="contactNumber" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //연락처 -->
-
-                                                <!-- 이메일 -->
-                                                <div class="formBox">
-                                                    <label for="email">
-                                                        이메일
-                                                        <span class="requiredMark" aria-hidden="true">*</span>
-                                                    </label>
-                                                    <div class="inputTextBox">
-                                                        <input type="text" id="email" required>
-                                                    </div>
-                                                </div>
-                                                <!-- //이메일 -->
-
-                                                <!-- 상담 종류 -->
-                                                <div class="formBox">
-                                                    <fieldset class="consultationTypeField">
-                                                        <legend>
-                                                            상담 종류
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </legend>
-
-                                                        <div class="formRadioRowBox">
-
-                                                            <div class="consultationTypeRadio">
-                                                                <input type="radio" id="consultationTypeAdvisory"
-                                                                    name="consultationType" value="advisory"
-                                                                    class="blind" required>
-                                                                <label for="consultationTypeAdvisory">자문</label>
-                                                            </div>
-
-                                                            <div class="consultationTypeRadio">
-                                                                <input type="radio" id="consultationTypeAnalysis"
-                                                                    name="consultationType" value="analysis"
-                                                                    class="blind">
-                                                                <label for="consultationTypeAnalysis">분석</label>
-                                                            </div>
-
-                                                        </div>
-                                                    </fieldset>
-                                                </div>
-                                                <!-- //상담 종류 -->
-
-                                                <span aria-hidden="true" class="border"></span>
-
-                                                <div class="formBox">
-                                                    <h4 class="reservationDetailTableTitle">서식 다운로드</h4>
-                                                    <div class="reservationDetailSection reservationDetailFileSection">
-                                                        <h4 class="commonTitle">
-                                                            관련자료
-                                                        </h4>
-                                                        <div class="boardViewFileBox">
-                                                            <h5 class="boardViewFileTitle">첨부파일</h5>
-                                                            <ul class="boardViewFileList">
-                                                                <li class="boardViewFileItem">
-                                                                    <a href="#" class="boardViewFileLink">
-                                                                        <span class="boardViewFileIcon"
-                                                                            aria-hidden="true"></span>
-                                                                        <span
-                                                                            class="boardViewFileName">연구지원부_통계지원_신청폼.hwp</span>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formBox">
-                                                    <label for="applicationFormFile">
-                                                        신청서 업로드
-                                                    </label>
-
-                                                    <div class="fileUploadBox">
-                                                        <input type="file" id="applicationFormFile"
-                                                            name="applicationFormFile" class="blind"
-                                                            accept=".pdf,.jpg,.jpeg,.png">
-
-                                                        <label for="applicationFormFile" class="fileUploadLabel">
-                                                            <span class="fileUploadText">
-                                                                신청서를 업로드 해주세요
-                                                            </span>
-                                                            <img src="../images/sub/file_icon02.svg" alt="파일">
+                                                    <div class="boardWriteNoticeBox">
+                                                        <input type="checkbox" id="noticeChk" class="blind">
+                                                        <label for="noticeChk" class="chkBtn">
+                                                            공지 설정
                                                         </label>
                                                     </div>
                                                 </div>
 
-                                                <div class="formBox">
-                                                    <label for="applicationFormFile">
-                                                        첨부자료
-                                                    </label>
-
-                                                    <div class="fileUploadBox">
-                                                        <input type="file" id="applicationFormFile02"
-                                                            name="applicationFormFile02" class="blind"
-                                                            accept=".pdf,.jpg,.jpeg,.png">
-
-                                                        <label for="applicationFormFile02" class="fileUploadLabel">
-                                                            <span class="fileUploadText">
-                                                                기타 첨부자료를 업로드 해주세요
-                                                            </span>
-                                                            <img src="../images/sub/file_icon02.svg" alt="파일">
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- //폼 영역 -->
-
-                                    <!-- 날짜 및  시간 정보  -->
-                                    <div class="commonRightBox">
-
-                                        <div class="reservationTimeInfoBox commonShadowBox">
-
-                                            <h3 class="commonTitle">
-                                                날짜 및 시간 정보
-                                            </h3>
-
-                                            <div class="reservationTimeInfo">
-                                                <span class="reservationReservationDate">
-                                                    2026.08.12
-                                                </span>
-
-                                                <span class="reservationReservationTime">
-                                                    13:00~14:00
-                                                </span>
                                             </div>
-
                                         </div>
 
-                                        <div class="commonBtnBox verticalBtnBox">
-                                            <button type="button" class="commonBtn primaryBtn">
-                                                예약 신청하기
-                                            </button>
-                                            <a href="#" class="commonBtn borderBtn">
-                                                이전
-                                            </a>
+                                        <!-- 제목 -->
+                                        <div class="boardWriteField">
+                                            <label for="boardTitle" class="blind">제목</label>
+                                            <input type="text" id="boardTitle" placeholder="제목">
                                         </div>
 
-                                    </div>
-                                    <!-- //날짜 및  시간 정보  -->
+
+                                        <!-- 스마트에디터 -->
+                                        <div class="boardWriteField">
+                                            <div class="boardWriteEditor">
+                                                스마트에디터 영역
+                                            </div>
+                                        </div>
+                                        <!-- //boardWriteField -->
+
+                                        <!-- 첨부파일 -->
+                                        <div class="boardWriteField boardWriteFileField row">
+                                            <span class="boardWriteLabel">
+                                                첨부파일
+                                            </span>
+
+                                            <div class="boardWriteContent">
+                                                <div class="boardWriteFileBox">
+
+                                                    <div class="boardWriteFile">
+                                                        <input type="file" id="boardFile01" class="blind">
+
+                                                        <label for="boardFile01"
+                                                            class="boardWriteFileBtn fileUploadText"
+                                                            data-placeholder="첨부파일을 업로드해주세요">
+                                                            첨부파일을 업로드해주세요
+                                                        </label>
+
+                                                        <img src="../images/sub/file_icon02.svg"
+                                                            class="boardWriteFileIcon" alt="">
+                                                    </div>
+
+                                                    <div class="boardWriteFile">
+                                                        <input type="file" id="boardFile02" class="blind">
+
+                                                        <label for="boardFile02"
+                                                            class="boardWriteFileBtn fileUploadText"
+                                                            data-placeholder="첨부파일을 업로드해주세요">
+                                                            첨부파일을 업로드해주세요
+                                                        </label>
+
+                                                        <img src="../images/sub/file_icon02.svg"
+                                                            class="boardWriteFileIcon" alt="">
+                                                    </div>
+
+                                                    <div class="boardWriteFile">
+                                                        <input type="file" id="boardFile03" class="blind">
+
+                                                        <label for="boardFile03"
+                                                            class="boardWriteFileBtn fileUploadText"
+                                                            data-placeholder="첨부파일을 업로드해주세요">
+                                                            첨부파일을 업로드해주세요
+                                                        </label>
+
+                                                        <img src="../images/sub/file_icon02.svg"
+                                                            class="boardWriteFileIcon" alt="">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
 
                                 </div>
-                                <!-- //통계상담예약 영역 -->
+                                <!-- //공지사항 작성 영역 -->
+
+                                <div class="boardBtnWrap center">
+                                    <div class="boardBtnBox">
+                                        <button type="button" class="boardBtn cancel">
+                                            취소
+                                        </button>
+
+                                        <button type="submit" class="boardBtn register">
+                                            등록
+                                        </button>
+                                    </div>
+                                </div>
 
                             </div>
-                            <!-- //통계상담예약 신청 영역 -->
-
                         </div>
                     </div>
-                    <!-- //장비예약 영역 -->
+                    <!-- //공지사항 영역 -->
 
                 </div>
                 <!-- //서브 콘텐츠 영역 -->
+
+            </div>
+            <!-- //서브 콘텐츠 레이아웃 영역 -->
 
         </main>
         <!-- //메인 영역 -->
