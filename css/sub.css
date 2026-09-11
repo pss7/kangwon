@@ -276,7 +276,7 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
 .borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
 .borderBtn:hover{background-color:#f2f5fc;}
 .commonBtn:disabled{opacity:.5; cursor:default;}
-.boardBtnWrap{margin:50px auto; display:flex; align-items:center; justify-content:space-between;}
+.boardBtnWrap{margin:50px auto; display:flex; align-items:center; justify-content:space-between; gap: 10px;}
 .boardBtnWrap.center{justify-content:center;}
 .boardBtnBox{display:flex; gap:10px;}
 .boardBtn{display:inline-block; min-width:130px; min-height: 38px; padding:6px 10px; border:1px solid #ccc; border-radius:8px; color:#333; text-align:center;}
@@ -1090,6 +1090,22 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     top:50%; right:calc(100% + 12px); width:14px; height:12px; border-left:1px solid #bbb;  border-bottom:1px solid #bbb; transform:translateY(-50%);}
 .faqAnswerBox .faqAnswerFormBox .faqAnswerTextareaBox textarea{display: block; width: 100%; padding: 20px; height: 150px; background-color: #F4F4F4; border-radius: 10px; font-size: 14px; font-weight: 500; color: #999; border: 1px solid #eee; border-radius: 10px; color: #999;}
 .faqAnswerBox .boardBtnWrap{margin: 30px auto;}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerHeader{display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap:30px;}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo{display: flex; align-items: center; gap: 0 30px;}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerWriter{font-weight: 500; color: #333;}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerDate{display: flex; align-items: center; gap: 0 6px; font-weight: 500; color: #999;}
+.faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerDate::before{content: ''; width: 15px; height: 16px; background: url(../images/sub/claendar_icon02.svg)no-repeat center;}
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width:1024px){
 
@@ -1126,6 +1142,11 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
     .faqAnswerBox .faqAnswerFormBox .faqAnswerBadge,
     .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo .faqQuestionWriter,
     .faqAnswerBox .faqQuestionBox .faqQuestionHeader .faqQuestionInfo .faqQuestionDate{font-size: 14px;}
+
+    .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader{padding: 0 0 20px; flex-direction: column; align-items: flex-start; gap: 0;}
+    .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerWriter,
+    .faqAnswerBox .faqAnswerFormBox .faqAnswerHeader .faqAnswerInfo .faqAnswerDate{font-size: 14px;}
+
 
 }
 
@@ -1252,8 +1273,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .calendarScheduleEditBox .calendarScheduleEditTitleBox input{padding: 0;}
   .calendarScheduleEditBox .calendarScheduleCompleteBtn{position: static; transform: none;}
 
-  
-
 }
 
 @media (max-width: 480px){
@@ -1287,14 +1306,6 @@ input[type="checkbox"]:checked + label{font-weight: 700;}
   .calendarBox .calendarGrid .calendarCell{height: 50px;}
 
 }
-
-
-
-
-
-
-
-
 
 /* 공지사항 - 상세 */
 .boardDetailBox .boardDetailHeader{padding: 22px 14px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #ccc; border-width: 1px 0;}
