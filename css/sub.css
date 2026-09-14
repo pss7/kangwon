@@ -1503,3 +1503,81 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .boardWriteForm .boardWriteTimeBox .inputTextBox input{width: 100%;}
 
 }
+
+/* 연구소개 - 공통 */
+.researchIntroWrap .commonShadowBox{padding: 60px;}
+
+/* 연구소개 - 공통 상단 영역 */
+.researchIntroWrap .researchIntroTopBox .researchIntroTitle{margin-bottom: 30px; color: #333; font-size: 24px; font-weight: 500; letter-spacing: -1px;}
+.researchIntroWrap .researchIntroTopBox .researchIntroTitle strong{color: #2773FF;}
+.researchIntroWrap .researchIntroTopBox .researchIntroText{color: #444;}
+.researchIntroWrap .researchIntroTopBox.commonShadowBox{margin-bottom: 50px;}
+
+/* 연구소개 - 공통 연구업무 안내 영역 */
+.researchIntroWrap .researchTaskWrap{padding: 60px 156px 60px 60px;}
+.researchIntroWrap .researchTaskBox{margin-bottom: 60px;}
+.researchIntroWrap .researchTaskBox:last-child{margin-bottom: 0;}
+.researchIntroWrap .researchTaskBox .researchTaskTitle{margin-bottom: 30px; font-size: 20px; color: #333; font-weight: 700;}
+.researchIntroWrap .researchTaskContent{display: flex; align-items: center; gap: 30px 0;}
+.researchIntroWrap .researchTaskContent .researchTaskIconBox{padding-left: 20px; flex-shrink: 0; width: 182px;}
+.researchIntroWrap .researchTaskContent .researchTaskIconBox img{display: block; max-width: 100%;}
+.researchIntroWrap .researchTaskList{flex: 1;}
+.researchIntroWrap .researchTaskList li{margin-bottom: 10px; display: flex; gap: 0 10px;}
+.researchIntroWrap .researchTaskList li:last-child{margin-bottom: 0;}
+.researchIntroWrap .researchTaskLink{padding: 16px 20px; max-width: 550px; width: 100%; background-color: #F8FCFF; border: 1px solid #B3D4FF; border-radius: 10px;}
+.researchIntroWrap .researchTaskLink .researchTaskName{padding: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 5px 10px; max-width: none; width: auto; background: 0; border: 0;}
+.researchIntroWrap .researchTaskLink .researchTaskName::after{content: ''; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; border: 1px solid #bbb; box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); background:#fff url(../images/sub/arrow_icon06.svg) no-repeat 9px center / 7px 10px;}
+.researchIntroWrap .researchTaskContact,
+.researchIntroWrap .researchTaskName{padding: 17px 20px; background-color: #F8FCFF; border: 1px solid #B3D4FF; border-radius: 10px; font-weight: 500; color: #333;}
+.researchIntroWrap .researchTaskName{max-width: 550px; width: 100%;}
+.researchIntroWrap .researchTaskContact{flex-shrink: 0; display: flex; gap: 10px; width: 240px;}
+.researchIntroWrap .researchTaskContact::before{content: ''; margin: 4px 0; width: 16px; height: 16px; flex-shrink: 0; background: url(../images/sub/phone_icon.svg)no-repeat center / contain;}
+.researchTaskBox .researchTaskContent.type02 .researchTaskList{max-width: 550px; margin-right: 10px;}
+.researchTaskBox .researchTaskContent.type02{align-items:stretch;}
+.researchTaskBox .researchTaskContent.type02 .researchTaskContact{align-items: center;}
+.researchTaskBox .researchTaskContent.type02 .researchTaskIconBox{align-self: center;}
+
+@media (max-width:1199px){
+
+  .researchIntroWrap .researchIntroTopBox .researchIntroTitle{font-size:22px;}
+  .researchIntroWrap .commonShadowBox{padding:50px;}
+  .researchIntroWrap .researchTaskLink,
+  .researchTaskBox .researchTaskContent.type02 .researchTaskList,
+  .researchIntroWrap .researchTaskName{max-width:none;}
+
+}
+
+@media (max-width:1024px){
+
+  .researchIntroWrap .researchIntroTopBox .researchIntroTitle{font-size:20px;}
+  .researchIntroWrap .researchIntroTopBox .researchIntroText br{display:none;}
+  .researchIntroWrap .commonShadowBox{padding:30px;}
+  .researchIntroWrap .researchTaskBox .researchTaskTitle{font-size:18px;}
+  .researchIntroWrap .researchTaskContent .researchTaskIconBox{display:none;}
+  .researchIntroWrap .researchTaskList li{flex-direction:column; align-items:stretch; gap:0; overflow:hidden; border:1px solid #B3D4FF; border-radius:10px; background-color:#F8FCFF;}
+  .researchIntroWrap .researchTaskLink{padding: 15px 16px;}
+  .researchIntroWrap .researchTaskName{padding:16px; min-width:0; max-width:none; width:100%; flex:none; border:0; border-radius:0; background-color:transparent;}
+  .researchIntroWrap .researchTaskList li .researchTaskContact{padding:14px 16px; width:100%; flex-basis:auto; justify-content:flex-start; border:0; border-top:1px solid #B3D4FF; border-radius:0; background-color:#EDF5FF; color:#1D439C; font-weight:600;}
+  .researchIntroWrap .researchTaskLink{border: 0;}
+  .researchTaskBox .researchTaskContent.type02{display:block;}
+  .researchTaskBox .researchTaskContent.type02 .researchTaskList{max-width:none; margin-right:0;}
+  .researchTaskBox .researchTaskContent.type02 .researchTaskContact{margin-top:10px; width:100%; min-height:52px; justify-content:flex-start; border-color:#9EC7FF; background-color:#EDF5FF; color:#1D439C; font-weight:600;}
+
+}
+
+@media (max-width:480px){
+
+  .researchIntroWrap .researchIntroTopBox .researchIntroTitle{margin-bottom:24px; font-size:18px; text-align:center;}
+  .researchIntroWrap .researchIntroTopBox .researchIntroText{font-size:14px; text-align:center;}
+  .researchIntroWrap .commonShadowBox{padding:24px 20px;}
+  .researchIntroWrap .researchTaskBox{margin-bottom:40px;}
+  .researchIntroWrap .researchTaskBox .researchTaskTitle{margin-bottom:18px; font-size:17px;}
+  .researchIntroWrap .researchTaskName{padding:14px 12px; font-size:13px; line-height:1.5;}
+  .researchIntroWrap .researchTaskList li .researchTaskContact{padding:12px; font-size:13px;}
+  .researchIntroWrap .researchTaskContact{gap: 8px;}
+  .researchIntroWrap .researchTaskContact::before{width: 13px; height: 13px;}
+  .researchTaskBox .researchTaskContent.type02 .researchTaskContact{padding:12px; min-height:48px; font-size:13px;}
+  .researchIntroWrap .researchTaskLink{padding: 13px 12px;}
+  .researchIntroWrap .researchTaskLink .researchTaskName::after{width: 20px; height: 20px; background: #fff url(../images/sub/arrow_icon06.svg) no-repeat 8px center / 6px 10px;}
+
+}
