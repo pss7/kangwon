@@ -1537,7 +1537,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .researchCommonInfoText.researchCommonInfoIcon{display: flex; gap: 0 4px;}
 .researchIntroWrap .researchCommonInfoText.researchCommonInfoIcon::before{content: ""; flex-shrink: 0; margin: 4px 0;
     width: 14px; height: 14px;background: url(../images/sub/info_icon02.svg) no-repeat center;}
-.researchIntroWrap .researchCommonInfoPrimary{color:#1D439C;}
+.researchIntroWrap .researchCommonInfoPrimary{color:#1D439C!important;}
 .researchIntroWrap .researchCommonBorderBox{margin-bottom: 14px; padding: 20px; border: 1px solid #B3D4FF; border-radius: 10px;}
 .researchIntroWrap .researchCommonBorderBox.researchFileBox{background-color: #F7F8F9;}
 .researchIntroWrap .dotList + .researchCommonInfoText{margin-top: 7px;}
@@ -1562,7 +1562,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .processStepBox .processStepList > li:last-child{margin-bottom: 0;}
 .researchIntroWrap .processStepBox .processStepList li .processStepNumber{flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: #1D439C; color: #fff; font-size: 18px; font-weight: 700;}
 .researchIntroWrap .processStepBox .processStepList li .processStepContent{padding: 20px; flex: 1; border: 1px solid #B3D4FF; border-radius: 10px;}
-.researchIntroWrap .processStepBox .processStepList li .processStepContent .processStepTitle{margin-bottom: 6px; display: block; color: #333; font-weight: 700;}
+.researchIntroWrap .processStepBox .processStepList li .processStepContent .processStepTitle{margin-bottom: 6px; display: block; color: #333; font-weight: 700; font-size: 16px;}
 .researchIntroWrap .processStepBox .processStepList02 li{margin-bottom: 5px; position: relative; padding-left: 22px; font-weight: 500; color: #333;} 
 .researchIntroWrap .processStepBox .processStepList02 li:last-child{margin-bottom: 0;}
 .researchIntroWrap .processStepBox .processStepList02 li::before{content: ''; flex-shrink: 0; position: absolute; top:11px; left:10px; width: 3px; height: 3px; border-radius: 50%; background-color: #333;}
@@ -1577,6 +1577,24 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .processStepBox .processStepSummary{position:relative; padding: 20px 90px 20px 20px;}
 .researchIntroWrap .processStepBox .processStepSummary .processDetailBtn{position:absolute; inset:0;}
 .researchIntroWrap .processStepBox .processStepSummary .processDetailBtn::after{content:''; position:absolute; top:50%; right:20px; width:24px; height:24px; border-radius:50%; background:#fff url(../images/sub/arrow_icon05.svg) no-repeat center / 8px 5px; box-shadow:0 0 5px rgba(0, 0, 0, .2); transform:translateY(-50%); transition: all .3s;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .researchIntroWrap .processStepBox .processDetailBox{padding: 0 90px 20px 20px;}
 .researchIntroWrap .processStepBox .processDetailBox .line{display: block; margin: 0 0 20px; width: 100%; height: 1px; background-color: #B3D4FF;}
 .researchIntroWrap .processStepBox .processDetailBox .processDetailArticle.researchCommonInfoIcon .processDetailTitle{display: flex; gap: 0 7px;}
@@ -1587,6 +1605,41 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .processStepBox .processDetailBox .processInfoList li{margin-bottom:5px; position:relative; padding-left:12px; color:#333; font-size:13px;}
 .researchIntroWrap .processStepBox .processDetailBox .processInfoList li:last-child{margin-bottom:0;}
 .researchIntroWrap .processStepBox .processDetailBox .processInfoList li::before{content:''; position:absolute; top:10px; left:2px; width:3px; height:3px; border-radius:50%; background-color:#333;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoText{font-weight: 500; color: #333;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoSection .processInfoStepTitle{color: #333; font-weight: 500; font-size: 16px;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoTitle{font-size: 16px; color: #333;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoNumberList > li{margin-bottom: 20px; font-weight: 500; color: #333;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoNumberList > li:last-child{margin-bottom: 0;}
+.researchIntroWrap .processStepBox .processDetailBox .underline{text-decoration: underline;}
+
+@media (max-width: 768px){
+
+  .researchIntroWrap .processStepBox .processDetailBox .processInfoText br{display: none;}
+  .researchIntroWrap .processStepBox .processDetailBox .processInfoSection .boardViewFileTitle,
+  .researchIntroWrap .processStepBox .processDetailBox .processInfoSection .processInfoStepTitle,
+  .researchIntroWrap .processStepBox .processDetailBox .processInfoTitle{font-size: 15px;}
+  .researchIntroWrap .processStepBox .processDetailBox .dotList li{font-size: 14px;}
+
+}
+
+@media (max-width: 480px){
+
+  .researchIntroWrap .processStepBox .processDetailBox .processInfoSection .boardViewFileTitle,
+  .researchIntroWrap .processStepBox .processDetailBox .processInfoSection .processInfoStepTitle,
+  .researchIntroWrap .processStepBox .processDetailBox .processInfoTitle{font-size: 14px;}
+  .researchIntroWrap .processStepBox .processDetailBox .dotList li{font-size: 13px;}
+
+
+}
+
+
+
+
+
+
+
+
+
 
 /* 연구소개 - 공통 상단 영역 */
 .researchIntroWrap .researchIntroTopBox .researchIntroText{color: #444;}
