@@ -1490,6 +1490,9 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .boardWriteForm .boardWriteFile:last-child{margin-bottom: 0;}
 .boardWriteForm .boardWriteFile .boardWriteFileBtn{padding: 13px 48px 13px 18px; display: flex; align-items: center; border: 1px solid #eee; border-radius: 10px; background-color: #fff; color: #999; font-size: 14px; font-weight: 500; cursor: pointer;}
 .boardWriteForm .boardWriteFile .boardWriteFileBtn.isSelected{color: #333; text-decoration: underline;}
+.boardWriteForm .boardWriteFile .boardWriteFileDeleteBtn{display: none; position: absolute; top: 50%; transform: translateY(-50%); right:14px; width: 20px; height: 20px; background: url(../images/sub/delete_icon.svg)no-repeat center / contain;}
+.boardWriteForm .boardWriteFile.active .boardWriteFileIcon{display: none;}
+.boardWriteForm .boardWriteFile.active .boardWriteFileDeleteBtn{display:block;}
 .boardWriteForm .boardWriteSelectBox #select{padding: 0 10px 0 18px; width: 174px; height: 50px; background-color: #fff; border-radius: 10px; border: 1px solid #eee; font-weight: 500; color: #333; cursor: pointer; background: #fff url(../images/sub/arrow_icon05.svg) right 16px center no-repeat; appearance: none;-webkit-appearance: none; -moz-appearance: none;}
 .boardWriteForm .boardWriteTimeWrap{display:flex; align-items:center; gap:12px;}
 .boardWriteForm .boardWriteTimeBox{padding: 10px 14px; display:flex;  align-items:center;

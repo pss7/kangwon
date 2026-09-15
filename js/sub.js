@@ -41,7 +41,12 @@ $(function () {
 
     $fileUploadText
       .text(fileName)
-      .toggleClass('isSelected', this.files.length > 0);
+      .toggleClass('active', this.files.length > 0);
+
+    /* 삭제 버튼 노출 */
+    $fileUploadLabel
+      .closest('.boardWriteFile')
+      .toggleClass('active', this.files.length > 0);
 
   });
 
