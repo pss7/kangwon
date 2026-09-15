@@ -46,9 +46,8 @@ $(function () {
   });
 
   $('.calendarBox .dateBtn').click(function () {
-    $('.calendarBox .dateBtn').removeClass('hasSchedule');
-    $(this).addClass('hasSchedule');
-
+    $('.calendarBox .dateBtn').removeClass('selected');
+    $(this).addClass('selected');
   });
 
 

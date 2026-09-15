@@ -290,6 +290,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .primaryBtn:hover{border-color:#153577!important; background-color:#153577!important;}
 .boardBtnWrap{margin:50px auto; display:flex; align-items:center; justify-content:space-between;}
 .boardBtnWrap.center{justify-content:center;}
+.boardBtnWrap.right{justify-content:flex-end;}
 .borderBtn{color:#1d439c; border-color:#1d439c; background-color:#fff;}
 .boardBtn:hover,
 .borderBtn:hover{background-color:#f2f5fc;}
@@ -1199,10 +1200,10 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .calendarBox .calendarGrid .calendarCell .dateBtn{position: relative; padding: 7px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px 0; width: 100%; height: 100%; background-color:#fff; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; }
 .calendarBox .calendarGrid .calendarCell .dateBtn .date{display: flex; align-items: center; justify-content: center; min-width: 26px; min-height: 26px; padding: 2px; color: #fff; font-weight: 600; border-radius: 50%; color: #333; font-weight: 500; line-height: 1;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.today .date{background-color: #365DDD; color: #fff;}
-.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule{border: 1px solid #3DCD80;}
-.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule .date{background-color: #3DCD80; color: #fff;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.selected{border: 1px solid #3DCD80;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.selected .date{background-color: #3DCD80; color: #fff;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.today .date,
-.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule .date{font-weight: 700;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.selected .date{font-weight: 700;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.disabled{background-color: #F7F8F9; cursor: auto; pointer-events: none;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.disabled .date{color: #bbb; }
 .calendarBox .calendarGrid .calendarCell .calendarDateBox{display: flex; gap: 13px;}
@@ -1212,8 +1213,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .calendarBox .calendarGrid .calendarCell .calendarScheduleList li::before{content: ''; position: absolute; top:8px; left:2px; width: 3px; height: 3px; border-radius: 50%; background-color: #333;}
 .calendarBox .calendarGrid .calendarCell .calendarScheduleList li:last-child{margin-bottom: 0;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule::after{content: ''; position: absolute; bottom: 10px; right:4px; left:4px; height: 6px; border-radius: 30px; background-color: #FF7474;}
-.calendarBox .calendarGrid .calendarCell .dateBtn.selected{border: 1px solid #365DDD; background-color: #F8FCFF;}
-.calendarBox .calendarGrid .calendarCell .dateBtn.selected .date{color: #365DDD; font-weight: 700;}
+
 .calendarBox .calendarGrid .calendarCell .dateBtn.sun .date{color: #FC6259;}
 .calendarBox .calendarGrid .calendarCell .dateBtn.sat .date{color:#4C93FD;}
 .calendarScheduleAddBox{padding: 40px; background-color: #EDF2FF; border-radius: 20px; }
@@ -1255,11 +1255,16 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .noticeEducationBox .calendarListWrap .calendarListHeader{display: flex; align-items: center; gap: 8px; margin-bottom: 23px;}
 .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListDate{font-size: 28px; color: #333;}
 .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListToday{padding: 3px; min-width: 50px; min-height: 30px; color: #fff; font-weight: 700; background-color: #365DDD; border-radius: 50px; text-align: center;}
-.noticeEducationBox .calendarListWrap .calendarList li{padding: 18px 0; margin-bottom: -1px; display: flex; align-items: center; gap: 10px 33px; border: 1px solid #ccc; border-width: 1px 0;}
+.noticeEducationBox .calendarListWrap .calendarList li{position: relative; padding: 18px 0; margin-bottom: -1px; display: flex; align-items: center; gap: 10px 33px; border: 1px solid #ccc; border-width: 1px 0;}
 .noticeEducationBox .calendarListWrap .calendarList li .calendarListCategory{flex-shrink: 0; padding: 2px 8px; color: #fff; font-weight: 500; border-radius: 8px;}
-.noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo{display: flex; flex-direction: column; gap: 5px; }
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo{flex: 1; display: flex; flex-direction: column; gap: 5px; }
 .noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo .calendarListTitle{font-weight: 500; color: #1B1D1F;}
 .noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo .calendarListTime{font-weight: 500; color: #999;}
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListBtnBox{margin-right: 3px; display: flex; flex-direction: column; gap: 10px;}
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListBtnBox .calendarListBtn{width: 24px; height: 24px;}
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListBtnBox .calendarListBtn.delete{background: url(../images/sub/delete_icon.svg)no-repeat center;}
+.noticeEducationBox .calendarListWrap .calendarList li .calendarListBtnBox .calendarListBtn.edit{background: url(../images/sub/edit_icon.svg)no-repeat center;}
+.noticeEducationBox .calendarListWrap .boardBtnWrap{margin: 30px auto;}
 
 /* 의생명연구원 */
 .noticeEducationBox .calendarListWrap .calendarList li .bri,
@@ -1395,6 +1400,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListDate{font-size: 18px;}
   .noticeEducationBox .calendarListWrap .calendarList li .calendarListInfo .calendarListTime,
   .noticeEducationBox .calendarListWrap .calendarList li .calendarListCategory{font-size: 14px;}
+
+  .noticeEducationBox .calendarListWrap .calendarList li .calendarListBtnBox{margin-right: 0; flex-direction: row;}
   
 }
 
