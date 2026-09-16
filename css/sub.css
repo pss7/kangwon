@@ -342,6 +342,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 }
 
 /* 공통 - 리스트 */
+.dotList.researchCommonInfoPrimary li{color: #1D439C !important;}
 .dotList li{position: relative; padding-left: 23px; margin-bottom: 6px; color: #333; font-weight: 500; text-align: left;}
 .dotList li:last-child{margin-bottom: 0;}
 .dotList li::before{content: ''; position: absolute; top:10px; left:10px; width: 3px; height: 3px; background-color: #333; border-radius: 50%;}
@@ -1601,7 +1602,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .processStepBox .processDetailBox .processDetailArticle.researchCommonInfoIcon .processDetailTitle::before{content:""; flex-shrink: 0; margin: 4px 0; width: 14px; height: 14px; background: url(../images/sub/info_icon02.svg)no-repeat center;}
 .researchIntroWrap .processStepBox .processDetailBox .processDetailArticle.researchCommonInfoIcon .processInfoTextBox{padding-left: 21px;}
 .researchIntroWrap .processStepBox .processDetailBox .processDetailTitle{display: block; margin-bottom:6px;}
-.researchIntroWrap .processStepBox .processDetailBox .processInfoText{ color:#333; line-height: 1.7; font-weight: 500;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoText{ color:#333;  font-weight: 500;}
 .researchIntroWrap .processStepBox .processDetailBox .processInfoList li{margin-bottom:5px; position:relative; padding-left:12px; color:#333; font-size:13px;}
 .researchIntroWrap .processStepBox .processDetailBox .processInfoList li:last-child{margin-bottom:0;}
 .researchIntroWrap .processStepBox .processDetailBox .processInfoList li::before{content:''; position:absolute; top:10px; left:2px; width:3px; height:3px; border-radius:50%; background-color:#333;}
@@ -1610,7 +1611,31 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .processStepBox .processDetailBox .processInfoTitle{font-size: 16px; color: #333;}
 .researchIntroWrap .processStepBox .processDetailBox .processInfoNumberList > li{margin-bottom: 20px; font-weight: 500; color: #333;}
 .researchIntroWrap .processStepBox .processDetailBox .processInfoNumberList > li:last-child{margin-bottom: 0;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoNumberList02 > li{margin: 0;}
 .researchIntroWrap .processStepBox .processDetailBox .underline{text-decoration: underline;}
+.researchIntroWrap .processStepBox .processDetailBox .processContactBox{display: flex; gap: 20px 80px;}
+.researchIntroWrap .processStepBox .processDetailBox .processDetailInfoItem{margin-bottom: 25px; display: flex; gap: 10px;}
+.researchIntroWrap .processStepBox .processDetailBox .processDetailInfoItem:last-child{margin-bottom: 0;}
+.researchIntroWrap .processStepBox .processDetailBox .processDetailInfoItem .processDetailInfoTitle{color: #333;}
+.researchIntroWrap .processStepBox .processDetailBox .processInfoNumberList li{margin-bottom: 0; font-weight: 500; color: #333;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px){
 
@@ -1619,6 +1644,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .researchIntroWrap .processStepBox .processDetailBox .processInfoSection .processInfoStepTitle,
   .researchIntroWrap .processStepBox .processDetailBox .processInfoTitle{font-size: 15px;}
   .researchIntroWrap .processStepBox .processDetailBox .dotList li{font-size: 14px;}
+
+  .researchIntroWrap .processStepBox .processDetailBox .processContactBox{flex-direction: column;}
 
 }
 
