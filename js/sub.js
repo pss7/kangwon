@@ -58,11 +58,21 @@ $(function () {
   //절차
   $('.researchIntroWrap .processDetailBtn').click(function () {
     if ($(this).hasClass('active')) {
-      $(this).removeClass('active');
+
+      $(this)
+        .removeClass('active')
+        .attr('aria-expanded', 'false');
+
       $(this).closest('li').find('.processDetailBox').slideUp();
+
     } else {
-      $(this).addClass('active');
+
+      $(this)
+        .addClass('active')
+        .attr('aria-expanded', 'true');
+
       $(this).closest('li').find('.processDetailBox').slideDown();
+
     }
   });
 
