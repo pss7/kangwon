@@ -1582,7 +1582,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .processStepBox .processStepSummary{position:relative; padding: 20px 90px 20px 20px;}
 .researchIntroWrap .processStepBox .processStepSummary .processDetailBtn{position:absolute; inset:0;}
 .researchIntroWrap .processStepBox .processStepSummary .processDetailBtn::after{content:''; position:absolute; top:50%; right:20px; width:24px; height:24px; border-radius:50%; background:#fff url(../images/sub/arrow_icon05.svg) no-repeat center / 8px 5px; box-shadow:0 0 5px rgba(0, 0, 0, .2); transform:translateY(-50%); transition: all .3s;}
-.researchIntroWrap .processStepBox .processDetailBox{padding: 0 90px 20px 20px;}
+.researchIntroWrap .processStepBox .processStepSummary .processDetailBtn.active::after{transform: translateY(-50%) rotate(-180deg);}
+.researchIntroWrap .processStepBox .processDetailBox{display: none; padding: 0 90px 20px 20px;}
 .researchIntroWrap .processStepBox .processDetailBox .line{display: block; margin: 0 0 20px; width: 100%; height: 1px; background-color: #B3D4FF;}
 .researchIntroWrap .processStepBox .processDetailBox .processDetailArticle.researchCommonInfoIcon .processDetailTitle{display: flex; gap: 0 7px;}
 .researchIntroWrap .processStepBox .processDetailBox .processDetailArticle.researchCommonInfoIcon .processDetailTitle::before{content:""; flex-shrink: 0; margin: 4px 0; width: 14px; height: 14px; background: url(../images/sub/info_icon02.svg)no-repeat center;}

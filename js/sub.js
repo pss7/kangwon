@@ -55,6 +55,18 @@ $(function () {
     $(this).addClass('selected');
   });
 
+  //절차
+  $('.researchIntroWrap .processDetailBtn').click(function () {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).closest('li').find('.processDetailBox').slideUp();
+    } else {
+      $(this).addClass('active');
+      $(this).closest('li').find('.processDetailBox').slideDown();
+    }
+  });
+
+
 
 
 });
