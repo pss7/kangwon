@@ -711,9 +711,17 @@
                                         <!-- //진행 단계 영역 -->
 
                                         <div class="commonShadowBox">
-                                            <h3 class="commonTitle">
-                                                예약자정보
-                                            </h3>
+
+                                            <div class="reservationApplyInfoTopBox">
+                                                <h3 class="commonTitle">
+                                                    예약자정보
+                                                </h3>
+
+                                                <div class="inputCheckBox">
+                                                    <input id="chk01" type="checkbox" class="blind">
+                                                    <label for="chk01">내 정보 불러오기</label>
+                                                </div>
+                                            </div>
 
                                             <form action="" method="">
 
@@ -826,9 +834,16 @@
                                                 <span aria-hidden="true" class="border"></span>
 
                                                 <!-- 세금계산서 발행 정보 -->
-                                                <h3 class="commonTitle">
-                                                    세금계산서 발행 정보
-                                                </h3>
+                                                <div class="reservationApplyInfoTopBox">
+                                                    <h3 class="commonTitle">
+                                                        세금계산서 발행 정보
+                                                    </h3>
+                                                    <div class="inputCheckBox">
+                                                        <input id="chk02" type="checkbox" class="blind">
+                                                        <label for="chk02">이전 정보 불러오기</label>
+                                                    </div>
+                                                </div>
+
                                                 <div class="formBox">
                                                     <label for="businessRegistrationNumber">
                                                         사업자번호
@@ -875,32 +890,6 @@
                                                     <div class="inputTextBox">
                                                         <input type="text" id="businessAddress" name="businessAddress"
                                                             autocomplete="street-address" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="formRowBox">
-                                                    <div class="formBox">
-                                                        <label for="businessType">
-                                                            업태
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </label>
-
-                                                        <div class="inputTextBox">
-                                                            <input type="text" id="businessType" name="businessType"
-                                                                required>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="formBox">
-                                                        <label for="businessItem">
-                                                            종목
-                                                            <span class="requiredMark" aria-hidden="true">*</span>
-                                                        </label>
-
-                                                        <div class="inputTextBox">
-                                                            <input type="text" id="businessItem" name="businessItem"
-                                                                required>
-                                                        </div>
                                                     </div>
                                                 </div>
 
