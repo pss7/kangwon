@@ -1561,20 +1561,10 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
 /* 연구소개 - 공통(절차) */
 .researchIntroWrap .processStepBox{padding: 60px 210px 60px 100px;}
-.researchIntroWrap .processStepBox .processStepList{}
 .researchIntroWrap .processStepBox .processStepList > li{position:relative; margin-bottom: 14px; display: flex; align-items: center; gap: 0 40px;}
 .researchIntroWrap .processStepBox .processStepList > li:last-child{margin-bottom: 0;}
-
-
-
 .researchIntroWrap .processStepBox .processStepList > li:not(:last-child)::before{content:''; position:absolute; top:35px; left:15px; width:10px; height:calc(100% + 60px); background-color:#eee; z-index:0;}
-
 .researchIntroWrap .processStepBox .processStepNumber{position:relative; z-index:1;}
-
-
-
-
-
 .researchIntroWrap .processStepBox .processStepList li .processStepNumber{flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: #1D439C; color: #fff; font-size: 18px; font-weight: 700;}
 .researchIntroWrap .processStepBox .processStepList li .processStepContent{padding: 20px; flex: 1; border: 1px solid #B3D4FF; border-radius: 10px;}
 .researchIntroWrap .processStepBox .processStepList li .processStepContent .processStepTitle{margin-bottom: 6px; display: block; color: #333; font-weight: 700; font-size: 16px;}
@@ -1627,6 +1617,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .researchIntroWrap .processStepBox .processDetailBox .processContactBox{flex-direction: column;}
   .researchIntroWrap .researchCommonInfoIcon::before{margin: 3px 0;}
 
+  .researchIntroWrap .processStepBox .processStepList > li:not(:last-child)::before{width: 6px; left: 13px;}
+
 }
 
 @media (max-width: 480px){
@@ -1638,6 +1630,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .researchIntroWrap .processStepBox .processDetailBox .processInfoTitle{font-size: 14px;}
   .researchIntroWrap .processStepBox .processDetailBox .dotList li{font-size: 13px;}
 
+  .researchIntroWrap .processStepBox .processStepList > li:not(:last-child)::before{width: 5px; left: 12px; top: 20px; height: calc(100% + 12px);}
 
 }
 
