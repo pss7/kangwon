@@ -477,6 +477,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
 /* 인사말 */
 .greetingWrap .greetingBox{display: flex; justify-content: space-between; gap: 60px; padding: 80px 60px; background-color: #fff; border-radius: 30px; border: 1px solid #eee; box-shadow: 0 0 30px rgba(13, 79, 201, 0.2);}
+.greetingWrap .greetingTextBox{max-width: 575px;}
 .greetingWrap .greetingTitle{margin-bottom: 22px; font-size: 30px; font-weight: 500; color: #333; font-family: "HD", sans-serif; word-break: keep-all;} 
 .greetingWrap .greetingTitle strong{color:#1D439C;}
 .greetingWrap .greetingText01{margin-bottom: 30px; font-size: 24px; font-weight: 500; color: #333;}
@@ -499,6 +500,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 @media (max-width: 1024px){
   
   .greetingWrap .greetingBox{flex-direction: column;}
+  .greetingWrap .greetingTextBox{max-width: none;}
   
 }
 
@@ -1812,8 +1814,132 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
 }
 
+/* 연구인프라 - 공통 */
+.researchInfraWrap .researchInfraTopBox{padding: 60px; margin-bottom: 50px;}
+.researchInfraWrap .researchInfraTopBox p{font-size: 20px; font-weight: 500; color: #333; line-height: 1.8; letter-spacing: -1px;}
+.researchInfraWrap .researchInfraTopBox p span{display: block; font-size: 24px;}
+.researchInfraWrap .researchInfraContentBox{padding: 60px;}
+.researchInfraWrap .researchInfraTitle{margin-bottom: 30px; display: flex; align-items: center; gap: 8px; font-size: 24px; color: #333;}
+.researchInfraWrap .researchInfraTitle span{font-size: 14px; font-weight: 700; color: #1D439C;}
+.researchInfraWrap .researchKeyFeaturesBox,
+.researchInfraWrap .researchSupportBox{margin-bottom: 60px;}
+.researchInfraWrap .keyFeaturesList{display: grid; grid-template-columns: repeat(3,1fr); gap:15px;}
+.researchInfraWrap .keyFeaturesList li{padding: 18px 20px 30px; border-radius: 30px; border: 1px solid #B3D4FF;}
+.researchInfraWrap .keyFeaturesList li h4{margin-bottom: 10px; font-size: 18px; color: #333; font-weight: 700; text-align: center; word-break: keep-all;}
+.researchInfraWrap .keyFeaturesList li p{font-weight: 500; color: #333; text-align: center;}
+.researchInfraWrap .keyFeaturesList li img{display: block; margin: 0 auto 10px;}
+.researchInfraWrap .researchSupportList > li{margin-bottom: 8px; padding: 20px; border: 1px solid #B3D4FF; border-radius: 10px; background-color: #F8FCFF;} 
+.researchInfraWrap .researchSupportList > li .researchSupportTitle{display: inline-block; padding: 3px 16px; margin-bottom: 10px; border-radius: 50px; background-color: #fff; box-shadow: 0 0 4px rgba(0,0,0,.1); border: 1px solid #eee; font-size: 16px; color: #1D439C;}
+.researchInfraWrap .researchSupportList > li:last-child{margin-bottom: 0;}
+.researchInfraWrap .researchEquipmentList{margin-bottom: 40px;}
+.researchInfraWrap .researchEquipmentList > li{display: flex; gap: 14px; margin-bottom: 14px;}
+.researchInfraWrap .researchEquipmentList li:last-child{margin-bottom: 0;}
+.researchInfraWrap .researchEquipmentList li .researchEquipmentImgBox{display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 180px; border: 1px solid #B3D4FF; border-radius: 10px;}
+.researchInfraWrap .researchEquipmentList li .researchEquipmentImgBox img{display: block; max-width: 100%;}
+.researchInfraWrap .researchEquipmentList li .researchEquipmentTextBox{flex: 1; padding: 20px; border: 1px solid #B3D4FF; border-radius: 10px;}
+.researchInfraWrap .researchEquipmentList li .researchEquipmentTextBox .researchEquipmentTitle{margin-bottom: 10px; font-size: 18px; font-weight: 700; color: #333;}
+.researchInfraWrap .commonBtn{max-width: 400px; width: 100%;}
+.researchInfraWrap .border{margin: 60px 0; background-color: #B3D4FF;}
+.researchInfraWrap .applicationsList{display: flex; gap: 20px; }
+.researchInfraWrap .applicationsList li{flex: 1; padding: 40px 20px; border: 1px solid #B3D4FF; background-color: #F8FCFF; border-radius: 40px;}
+.researchInfraWrap .applicationsList li img{display: block; max-width: 100%; margin: 0 auto 20px;}
+.researchInfraWrap .applicationsList li p{text-align: center; font-weight: 500; color: #333; line-height: 1.7;}
+.researchInfraWrap .researchMultiomicsBox .researchInfraTopBox p strong{color: #A239F2;}
 
 
+
+
+
+
+
+
+/* 연구인프라 - 센터장인사말 */
+.researchInfraWrap .karcGreetingBox{display:flex; justify-content:space-between; gap:60px; padding:80px 60px; background-color:#fff; border:1px solid #eee; border-radius:30px; box-shadow:0 0 30px rgba(13, 79, 201, 0.2);}
+.researchInfraWrap .karcGreetingBox .karcGreetingTextBox{max-width: 575px;}
+.researchInfraWrap .karcGreetingBox .karcGreetingTitle{margin-bottom:22px; color:#333; font-family:"HD", sans-serif; font-size:30px; font-weight:500; word-break:keep-all;}
+.researchInfraWrap .karcGreetingBox .karcGreetingTitle strong{color:#1D439C;}
+.researchInfraWrap .karcGreetingBox .karcGreetingText01{margin-bottom:30px; color:#333; font-size:24px; font-weight:500;}
+.researchInfraWrap .karcGreetingBox .karcGreetingText02{color:#444;}
+.researchInfraWrap .karcGreetingBox .karcGreetingLogoBox{margin-bottom:26px;}
+.researchInfraWrap .karcGreetingBox .karcGreetingImgBox{flex-shrink:0; padding-top:18px;}
+.researchInfraWrap .karcGreetingBox .karcGreetingProfileImgBox{margin-bottom:33px;}
+.researchInfraWrap .karcGreetingBox .karcGreetingImgBox img{display:block; max-width:100%; margin:0 auto;}
+.researchInfraWrap .karcGreetingBox .karcGreetingDirectorInfo{display:flex; align-items:center; justify-content:center; gap:0 15px; color:#444; font-family:"HD", sans-serif; font-size:16px; font-weight:500;}
+.researchInfraWrap .karcGreetingBox .karcGreetingDirectorName{font-size:24px;}
+
+@media (max-width:1199px){
+
+    .researchInfraWrap .karcGreetingBox{padding:60px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingTitle{font-size:26px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingText01{font-size:20px;}
+
+    .researchInfraWrap .keyFeaturesList{grid-template-columns: 1fr;}
+    .researchInfraWrap .researchInfraContentBox,
+    .researchInfraWrap .researchInfraTopBox{padding: 40px;}
+    .researchInfraWrap .researchInfraTopBox p span{font-size: 22px;}
+    .researchInfraWrap .researchInfraTopBox p{font-size: 18px;}
+
+    .researchInfraWrap .researchInfraTitle{font-size: 22px;}
+    
+
+}
+
+@media (max-width:1024px){
+
+  .researchInfraWrap .karcGreetingBox .karcGreetingTextBox{max-width: none;}
+  .researchInfraWrap .karcGreetingBox{flex-direction:column;}
+
+  .researchInfraWrap .researchInfraTopBox p br{display: none;}
+
+  .researchInfraWrap .applicationsList{flex-direction: column;}
+  .researchInfraWrap .applicationsList li{border-radius: 20px;}
+
+}
+
+@media (max-width:768px){
+
+    .researchInfraWrap .karcGreetingBox{padding:50px 20px; border-radius:20px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingTitle{font-size:24px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingText01{font-size:18px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingDirectorName{font-size:22px;}
+
+    .researchInfraWrap .keyFeaturesList li{border-radius: 20px;}
+    .researchInfraWrap .researchInfraContentBox{padding: 40px 20px;}
+    .researchInfraWrap .researchInfraTopBox{padding: 30px 20px;}
+    .researchInfraWrap .researchInfraTopBox p span{font-size: 20px;}
+    .researchInfraWrap .researchInfraTopBox p{font-size: 16px;}
+
+    .researchInfraWrap .researchInfraTitle{font-size: 20px;}
+    
+    .researchInfraWrap .researchEquipmentList > li{flex-direction: column; gap: 10px 0; margin-bottom: 30px;}
+    .researchInfraWrap .researchEquipmentList li .researchEquipmentImgBox{padding: 30px 20px; width: 100%;}
+
+}
+
+@media (max-width:480px){
+
+    .researchInfraWrap .karcGreetingBox{gap:40px 0;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingTitle{font-size:20px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingText01{margin-bottom:22px; font-size:16px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingText02{font-size:15px;}
+    .researchInfraWrap .karcGreetingBox .karcGreetingDirectorName{font-size:20px;}
+
+    .researchInfraWrap .keyFeaturesList li h4{font-size: 16px;}
+    .researchInfraWrap .keyFeaturesList li p{font-size: 14px;}
+    .researchInfraWrap .keyFeaturesList li p br{display: none;}
+
+    .researchInfraWrap .researchInfraTopBox p span{font-size: 18px;}
+
+    .researchInfraWrap .researchInfraTitle{flex-direction: column; font-size: 18px;}
+    
+    .researchInfraWrap .researchSupportList > li{padding: 20px 10px; text-align: center;}
+    .researchInfraWrap .researchSupportList > li .researchSupportTitle{ margin: 0 auto 10px; font-size: 15px; border-radius: 0; word-break: keep-all;}
+    .researchInfraWrap .researchEquipmentList li .researchEquipmentTextBox .researchEquipmentTitle{font-size: 16px; text-align: center;}
+
+    .researchInfraWrap .applicationsList li p{font-size: 14px;}
+    .researchInfraWrap .applicationsList li p br{display: none;}
+
+}
 
 
 
