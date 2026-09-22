@@ -1821,16 +1821,43 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchInfraWrap .researchInfraContentBox{padding: 60px;}
 .researchInfraWrap .researchInfraTitle{margin-bottom: 30px; display: flex; align-items: center; gap: 8px; font-size: 24px; color: #333;}
 .researchInfraWrap .researchInfraTitle span{font-size: 14px; font-weight: 700; color: #1D439C;}
+.researchInfraWrap .researchServiceBox,
 .researchInfraWrap .researchKeyFeaturesBox,
 .researchInfraWrap .researchSupportBox{margin-bottom: 60px;}
-.researchInfraWrap .keyFeaturesList{display: grid; grid-template-columns: repeat(3,1fr); gap:15px;}
-.researchInfraWrap .keyFeaturesList li{padding: 18px 20px 30px; border-radius: 30px; border: 1px solid #B3D4FF;}
-.researchInfraWrap .keyFeaturesList li h4{margin-bottom: 10px; font-size: 18px; color: #333; font-weight: 700; text-align: center; word-break: keep-all;}
-.researchInfraWrap .keyFeaturesList li p{font-weight: 500; color: #333; text-align: center;}
-.researchInfraWrap .keyFeaturesList li img{display: block; margin: 0 auto 10px;}
+.researchInfraWrap .keyFeaturesList{display:grid; grid-template-columns:repeat(6, minmax(0, 1fr)); gap:15px;}
+.researchInfraWrap .keyFeaturesList > li{display:flex; flex-direction:column; align-items:center; justify-content:center; grid-column:span 2; padding:18px 20px 30px; border:1px solid #B3D4FF; border-radius:30px;}
+.researchInfraWrap .keyFeaturesList > li:nth-child(4),
+.researchInfraWrap .keyFeaturesList > li:nth-child(5){grid-column:span 3;}
+.researchInfraWrap .keyFeaturesList > li h4{margin-bottom:10px; color:#333; font-size:18px; font-weight:700; text-align:center; word-break:keep-all;}
+.researchInfraWrap .keyFeaturesList > li p{color:#333; font-weight:500; text-align:center;}
+.researchInfraWrap .keyFeaturesList > li img{display:block; margin:0 auto 10px;}
 .researchInfraWrap .researchSupportList > li{margin-bottom: 8px; padding: 20px; border: 1px solid #B3D4FF; border-radius: 10px; background-color: #F8FCFF;} 
 .researchInfraWrap .researchSupportList > li .researchSupportTitle{display: inline-block; padding: 3px 16px; margin-bottom: 10px; border-radius: 50px; background-color: #fff; box-shadow: 0 0 4px rgba(0,0,0,.1); border: 1px solid #eee; font-size: 16px; color: #1D439C;}
 .researchInfraWrap .researchSupportList > li:last-child{margin-bottom: 0;}
+.researchInfraWrap .researchSupportListBox{padding: 20px; background-color: #F8FCFF; border-radius: 10px; border: 1px solid #B3D4FF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .researchInfraWrap .researchEquipmentList{margin-bottom: 40px;}
 .researchInfraWrap .researchEquipmentList > li{display: flex; gap: 14px; margin-bottom: 14px;}
 .researchInfraWrap .researchEquipmentList li:last-child{margin-bottom: 0;}
@@ -1838,16 +1865,48 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchInfraWrap .researchEquipmentList li .researchEquipmentImgBox img{display: block; max-width: 100%;}
 .researchInfraWrap .researchEquipmentList li .researchEquipmentTextBox{flex: 1; padding: 20px; border: 1px solid #B3D4FF; border-radius: 10px;}
 .researchInfraWrap .researchEquipmentList li .researchEquipmentTextBox .researchEquipmentTitle{margin-bottom: 10px; font-size: 18px; font-weight: 700; color: #333;}
+.researchInfraWrap .researchEquipmentList.type02{display: grid; grid-template-columns: repeat(2,1fr); gap: 20px;}
+.researchInfraWrap .researchEquipmentList.type02 li{min-height: 126px; height: 100%; padding: 0 20px; align-items: center; border: 1px solid #B3D4FF; border-radius: 10px; overflow: hidden; gap: 0}
+.researchInfraWrap .researchEquipmentList.type02 .researchEquipmentTextBox,
+.researchInfraWrap .researchEquipmentList.type02 .researchEquipmentImgBox{border: 0;}
+.researchInfraWrap .researchEquipmentList.type02 .researchEquipmentImgBox{width: auto;}
+.researchInfraWrap .researchEquipmentList.type02 .researchEquipmentTextBox{padding: 0 20px;}
 .researchInfraWrap .commonBtn{max-width: 400px; width: 100%;}
 .researchInfraWrap .border{margin: 60px 0; background-color: #B3D4FF;}
+.researchInfraWrap .applicationsListBox{padding: 30px 20px; background-color: #F8FCFF; border: 1px solid #B3D4FF; border-radius: 20px;}
+.researchInfraWrap .applicationsListBox .dotList{display:grid;  grid-template-columns:repeat(4, minmax(0, max-content));  gap:5px 24px;}
+.researchInfraWrap .applicationsListBox .dotList li{margin-bottom:0; width:fit-content; max-width:100%;
+    min-width:0;}
 .researchInfraWrap .applicationsList{display: flex; gap: 20px; }
 .researchInfraWrap .applicationsList li{flex: 1; padding: 40px 20px; border: 1px solid #B3D4FF; background-color: #F8FCFF; border-radius: 40px;}
 .researchInfraWrap .applicationsList li img{display: block; max-width: 100%; margin: 0 auto 20px;}
 .researchInfraWrap .applicationsList li p{text-align: center; font-weight: 500; color: #333; line-height: 1.7;}
+.researchInfraWrap .applicationsList.type02{gap: 15px;}
+.researchInfraWrap .applicationsList.type02 li{padding: 30px 20px; border-radius: 20px;}
+.researchInfraWrap .applicationsList.type02 li h4{margin-bottom: 14px; font-size: 18px; color: #333;}
+.researchInfraWrap .applicationsList.type02 li p{text-align: left; letter-spacing: -1px; line-height: 1.5;}
+.researchInfraWrap .researchServiceList{display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;}
+.researchInfraWrap .researchServiceList > li{padding: 26px 10px; border-radius: 10px; border: 1px solid #B3D4FF; box-shadow: 0 0 10px rgba(0,0,0,.1);}
+.researchInfraWrap .researchServiceList > li h4{ font-size: 18px; font-weight: 500; color: #333; text-align: center; word-break: keep-all;}
+
+
+.researchInfraWrap .researchServiceList.type02{display: block;}
+.researchInfraWrap .researchServiceList.type02 > li{padding: 15px 40px; display: flex; align-items: center; gap: 20px; margin-bottom: 14px;}
+.researchInfraWrap .researchServiceList.type02 > li h4{flex-shrink: 0; width: 154px; font-size: 18px; color: #333; font-weight: 700;  text-align: left;}
+.researchInfraWrap .researchServiceList.type02 > li:last-child{margin-bottom: 0;}
+.researchInfraWrap .researchServiceList.type02 > li .dotList{flex: 1;}
+.researchInfraWrap .researchServiceList.type02 > li .dotList li{margin-bottom: 0;}
+
+.researchInfraWrap .researchServiceList.type02 > li:nth-child(3) .dotList{display: grid; grid-template-columns: repeat(2, 1fr);}
+
+
+
+
+
+
 .researchInfraWrap .researchMultiomicsBox .researchInfraTopBox p strong{color: #A239F2;}
-
-
-
+.researchInfraWrap .researchBiomimeticBox .researchInfraTopBox p strong{color: #21B486;}
+.researchInfraWrap .researchBiomarkerBox .researchInfraTopBox p strong{color: #FF9232;}
 
 
 
@@ -1894,6 +1953,18 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .researchInfraWrap .applicationsList{flex-direction: column;}
   .researchInfraWrap .applicationsList li{border-radius: 20px;}
 
+  .researchInfraWrap .researchServiceList{grid-template-columns: 1fr;}
+
+  .researchInfraWrap .researchEquipmentList.type02 li{min-height: auto; height: auto; margin: 0; padding: 20px; flex-direction: column; gap: 20px; text-align: center;}
+  .researchInfraWrap .researchEquipmentList.type02 .researchEquipmentImgBox{height: 155px;}
+
+  .researchInfraWrap .researchServiceList.type02 > li:nth-child(3) .dotList{display: block;}
+
+      .researchInfraWrap .applicationsListBox .dotList{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:8px 20px;
+    }
+
 }
 
 @media (max-width:768px){
@@ -1909,10 +1980,27 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
     .researchInfraWrap .researchInfraTopBox p span{font-size: 20px;}
     .researchInfraWrap .researchInfraTopBox p{font-size: 16px;}
 
-    .researchInfraWrap .researchInfraTitle{font-size: 20px;}
+    .researchInfraWrap .researchInfraTitle{flex-direction: column; font-size: 20px;}
     
     .researchInfraWrap .researchEquipmentList > li{flex-direction: column; gap: 10px 0; margin-bottom: 30px;}
     .researchInfraWrap .researchEquipmentList li .researchEquipmentImgBox{padding: 30px 20px; width: 100%;}
+
+    .researchInfraWrap .researchEquipmentList.type02{grid-template-columns: 1fr;}
+    .researchInfraWrap .researchEquipmentList.type02{gap: 10px;}
+    .researchInfraWrap .researchEquipmentList.type02 .researchEquipmentImgBox{padding: 0; height: auto;}
+    .researchInfraWrap .researchEquipmentList.type02 li{padding: 30px 20px; gap: 30px;}
+    .researchInfraWrap .researchEquipmentList.type02 .researchEquipmentTextBox{padding: 0;}
+
+    .researchInfraWrap .researchServiceList.type02 > li{padding: 30px 20px;}
+    .researchInfraWrap .researchServiceList.type02 > li h4{width: 136px; font-size: 16px;}
+    .researchInfraWrap .researchServiceList.type02 > li .dotList li{font-size: 15px;}
+
+}
+
+@media (max-width: 576px){
+
+  .researchInfraWrap .researchServiceList.type02 > li{padding: 30px 20px 30px 10px; flex-direction: column; align-items: flex-start;}
+  .researchInfraWrap .researchServiceList.type02 > li h4{width: 100%; text-align: center;}
 
 }
 
@@ -1930,7 +2018,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
     .researchInfraWrap .researchInfraTopBox p span{font-size: 18px;}
 
-    .researchInfraWrap .researchInfraTitle{flex-direction: column; font-size: 18px;}
+    .researchInfraWrap .researchInfraTitle{font-size: 18px;}
     
     .researchInfraWrap .researchSupportList > li{padding: 20px 10px; text-align: center;}
     .researchInfraWrap .researchSupportList > li .researchSupportTitle{ margin: 0 auto 10px; font-size: 15px; border-radius: 0; word-break: keep-all;}
@@ -1938,6 +2026,19 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
     .researchInfraWrap .applicationsList li p{font-size: 14px;}
     .researchInfraWrap .applicationsList li p br{display: none;}
+
+    .researchInfraWrap .researchServiceList > li{padding: 20px;}
+    .researchInfraWrap .researchServiceList > li h4{font-size: 14px;}
+
+    .researchInfraWrap .researchEquipmentList li .researchEquipmentTextBox .researchEquipmentTitle{margin-bottom: 3px;}
+
+    .researchInfraWrap .applicationsList.type02 li{padding: 20px; border-radius: 10px;}
+    .researchInfraWrap .applicationsList.type02 li h4{margin-bottom: 5px; font-size: 16px;}
+
+    .researchInfraWrap .researchSupportListBox{padding: 20px 20px 20px 10px;}
+
+    .researchInfraWrap .applicationsListBox .dotList{display: block;}
+    .researchInfraWrap .applicationsListBox{padding: 20px 20px 20px 10px; border-radius: 10px;}
 
 }
 
