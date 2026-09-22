@@ -43,7 +43,7 @@ main{flex: 1;}
 
 }
 
-/* 공통 */
+/* 26.09.22 공통 추가 */
 .servicePreparingWrap .servicePreparingBox{padding-top: 126px; width: 700px; height: 350px; margin: 0 auto; background: url(../images/common/service_notice_img.png)no-repeat center / contain;}
 .servicePreparingWrap .servicePreparingTitle{margin-bottom: 22px; font-size: 32px; font-weight: 700; color: #333; font-family: "HD", sans-serif; text-align: center; line-height: 1.3;}
 .servicePreparingWrap .servicePreparingTitle strong{color: #1D439C;}
@@ -67,6 +67,7 @@ main{flex: 1;}
   .emptyText{font-size: 14px;}
 
 }
+/* //26.09.22 공통 추가 */
 
 /* 공통 - 애니메이션 */
 .fadeEffect{animation: fadeEffect 1.5s .3s both;}
