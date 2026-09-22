@@ -43,6 +43,31 @@ main{flex: 1;}
 
 }
 
+/* 공통 */
+.servicePreparingWrap .servicePreparingBox{padding-top: 126px; width: 700px; height: 350px; margin: 0 auto; background: url(../images/common/service_notice_img.png)no-repeat center / contain;}
+.servicePreparingWrap .servicePreparingTitle{margin-bottom: 22px; font-size: 32px; font-weight: 700; color: #333; font-family: "HD", sans-serif; text-align: center; line-height: 1.3;}
+.servicePreparingWrap .servicePreparingTitle strong{color: #1D439C;}
+.servicePreparingWrap .servicePreparingText{text-align: center; font-size: 12px; font-weight: 500; color: #555;}
+.emptyText{display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; font-size: 16px; font-weight: 500; color: #000; text-align: center;}
+.emptyText::before{content: ''; width: 110px; height: 110px;}
+.emptyText.calendarIcon::before{background: url(../images/common/calendar_icon.svg)no-repeat center / contain;}
+.emptyText.boardIcon::before{background: url(../images/common/board_icon.svg)no-repeat center / contain;}
+
+@media (max-width: 768px){
+
+  .servicePreparingWrap .servicePreparingBox{padding-top: 16.41vw; width: 91.15vw; height: 45.57vw; margin: 0 auto;}
+  .servicePreparingWrap .servicePreparingTitle{margin-bottom: 2.86vw; font-size: 4.17vw;}
+  .servicePreparingWrap .servicePreparingText{font-size: 1.56vw;}
+
+}
+
+@media (max-width: 480px){
+
+  .emptyText::before{width: 90px; height: 90px;}
+  .emptyText{font-size: 14px;}
+
+}
+
 /* 공통 - 애니메이션 */
 .fadeEffect{animation: fadeEffect 1.5s .3s both;}
 

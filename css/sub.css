@@ -44,6 +44,7 @@
 .boardTable tbody tr td .tableDate{color: #999;}
 .boardTable tbody tr td .tableNotification{display: inline-block; padding: 2px 8px; background-color: #1D439C; color: #fff; font-weight: 500; font-size: 14px; border-radius: 8px;}
 .boardTable tbody tr td .tableCategory{display: inline-block; padding: 1px 8px; font-size: 14px; font-weight: 500; border-radius: 8px;}
+.boardTable .emptyRow td{padding: 50px 10px!important;}
 
 /* 의생명연구원 */
 
@@ -91,6 +92,7 @@
     .boardTable.noticeTable tbody tr td:nth-child(5){order:5;}
     .boardTable.noticeTable tbody tr td .tableLink,
     .boardTable.noticeTable tbody tr td .TableLink{padding:16px 0 10px; display:flex; align-items:center; gap:8px;}
+    .boardTable .emptyRow{justify-content: center;}
 
 }
 
@@ -1271,6 +1273,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .noticeEducationBox{display: flex; gap: 30px 66px;}
 .noticeEducationBox .calendarWrap{width: 692px; flex-shrink: 0;}
 .noticeEducationBox .calendarListWrap{width: 100%; margin-top: 16px;}
+.noticeEducationBox .calendarListWrap .emptyBox{padding-top: 34px; border-top: 1px solid #bbb;}
 .noticeEducationBox .calendarListWrap .calendarListHeader{display: flex; align-items: center; gap: 8px; margin-bottom: 23px;}
 .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListDate{font-size: 28px; color: #333;}
 .noticeEducationBox .calendarListWrap .calendarListHeader .calendarListToday{padding: 3px; min-width: 50px; min-height: 30px; color: #fff; font-weight: 700; background-color: #365DDD; border-radius: 50px; text-align: center;}
