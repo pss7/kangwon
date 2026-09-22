@@ -280,6 +280,7 @@ input[type="checkbox"] + label::before{content: ''; width: 22px; height: 22px; b
 input[type="checkbox"]:checked + label{text-shadow:0 0 0 currentColor;}
 input[type="checkbox"]:checked + label::before{background: url(../images/sub/check_on_icon.svg)no-repeat center / contain;}
 .formBox{margin-bottom: 30px;}
+.formBox:last-child{margin-bottom: 0;}
 .formBox label{margin-bottom: 8px;}
 
 /* 공통 - 버튼 */
@@ -1000,9 +1001,6 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 /* 회원가입 - 정보수정 */
 .memberJoinModifyFormBox .commonShadowBox{padding: 60px 100px;}
 
-
-
-
 /* 로그인 */
 .memberLoginBox .commonShadowBox{padding: 80px 20px 40px;}
 .memberLoginBox .memberLoginContentBox{max-width: 420px; margin: 0 auto;}
@@ -1036,6 +1034,35 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .memberLoginBox .memberLoginTopBox h3{font-size: 22px;}
   .memberLoginBox .memberLoginTopBox span{font-size: 14px;}
   .memberLoginBox .memberLoginFormBox input{height: 50px; font-size: 14px;}
+
+}
+
+/* 아이디, 비밀번호 찾기 / 비밀변호 변경 */
+ .memberFindBox .emailFormBox .inputTextBox input{padding: 0 156px 0 10px;}
+.memberFindBox .memberFindInfoText{margin-bottom: 30px; font-size: 14px; color: #333;}
+.memberPasswordChangeBox .commonShadowBox,
+.memberFindBox .commonShadowBox{padding: 60px 100px;}
+.memberFindBox .emailFormBox .inputTextBox{position: relative;}
+.memberFindBox .emailFormBox .codeSendBtn{width: 140px; height: 40px; display: flex; align-items: center; justify-content: center; position: absolute; top:50%; transform: translateY(-50%); right:0; border-radius: 10px; border: 1px solid #ccc; font-size: 14px; color: #333; background-color: #fff;}
+.memberFindBox .formBox input#code::placeholder{color: #bbb;}
+
+@media (max-width: 1024px){
+
+  .memberPasswordChangeBox .commonShadowBox,
+  .memberFindBox .commonShadowBox{padding: 50px 20px;}
+
+}
+
+@media (max-width: 480px){
+
+ .memberFindBox .emailFormBox .inputTextBox input{padding: 0 105px 0 10px;}
+ .memberFindBox .emailFormBox .codeSendBtn{min-width: 68px; width: auto; padding: 0 10px; font-size: 12px;}
+
+}
+
+@media (max-width: 360px){
+
+   .memberFindBox .memberFindInfoText br{display: none;}
 
 }
 
