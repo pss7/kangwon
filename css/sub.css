@@ -733,11 +733,11 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .reservationWrap .reservationDetailTableTitle{margin-bottom: 20px; font-size: 20px; font-weight: 500; color: #333;} 
 .reservationWrap .reservationDetailSection.reservationDetailFileSection{padding: 24px; background-color: #F7F8F9; border-radius: 20px;}
 .reservationWrap .reservationDetailSection{margin-bottom: 30px;}
-.reservationWrap .reservationDetailSection :last-child{margin-bottom: 0;}
+.reservationWrap .reservationDetailSection:last-child{margin-bottom: 0;}
 .reservationWrap .reservationDetailSection .dotList{margin: 0 0 30px;}
 .reservationWrap .reservationDetailTable{width: 100%; table-layout:fixed;}
 .reservationWrap .reservationDetailTable tbody td,
-.reservationWrap .reservationDetailTable tbody th{padding: 12px 10px; font-size: 14px; color: #333; font-weight: 400; text-align: left; border: 1px solid #ccc; border-width: 1px 0;}
+.reservationWrap .reservationDetailTable tbody th{padding: 12px 10px; font-size: 14px; color: #333; font-weight: 400; text-align: left; border: 1px solid #ccc; border-width: 1px 0; word-break: keep-all;}
 .reservationWrap .reservationDetailTable thead th,
 .reservationWrap .reservationDetailTable tbody th{background-color: #F7F8F9;}
 .reservationWrap .reservationDetailCalendarBox{margin-bottom: 30px; padding: 24px 22px;border: 1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,.2); border-radius: 30px;}
@@ -751,9 +751,18 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .reservationWrap .reservationDetailCalendar .calendarWeek .week{margin: 0 auto; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-align: center; color: #666; font-size: 14px;}
 .reservationWrap .reservationDetailCalendar .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px;}
 .reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell {display: flex; align-items: center; justify-content: center; height: 40px; border-bottom: 1px solid rgba(255, 255, 255, .8);}
-.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 40px; height: 40px; border-radius: 8px; color: #666; font-size: 14px; background-color: #f4f4f4;}
+.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn{width: 40px; height: 40px; border-radius: 8px; color: #333; font-size: 14px; background-color: #f4f4f4;}
 .reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn.disabled{cursor: default;}
 .reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn.active{color: #fff; background-color: #365BD3; font-weight: 700;}
+.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn.disabled{color: #A3A3A3; cursor: auto; pointer-events: none;}
+.reservationWrap .reservationDetailCalendar .calendarGrid .calendarCell .dateBtn.unavailable{background-color: #FFBFBF; cursor: auto; pointer-events: none;}
+.reservationWrap .reservationDetailCalendar .calendarLegend{margin-top: 12px; display: flex; justify-content: flex-end;}
+.reservationWrap .reservationDetailCalendar .maintenance{display: flex; align-items: center; gap: 0 4px; font-size: 12px; clear: #333;}
+.reservationWrap .reservationDetailCalendar .maintenance::before{content: ''; flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background-color: #FFBFBF;}
+.reservationWrap .maintenanceInfoBox{margin-top: 20px; padding: 10px 20px; border-radius: 10px; border: 1px solid #FFC9D0; background-color: #FFEEEE;}
+.reservationWrap .maintenanceInfoBox h4{display: flex; gap: 4px; margin-bottom: 7px; font-size: 16px; font-weight: 500; color: #FF4848;}
+.reservationWrap .maintenanceInfoBox h4::before{content: ''; flex-shrink: 0; margin:4px 0; width: 14px; height: 14px; background: url(../images/sub/info_icon03.svg)no-repeat center;}
+.reservationWrap .maintenanceInfoBox p{font-size: 14px; font-weight: 500; color: #333;}
 .reservationWrap .reservationDetailTimeList{display: flex; flex-wrap: wrap; gap: 8px;}
 .reservationWrap .reservationDetailTimeList .reservationTimeBtn{display: flex; align-items: center; justify-content: center; width: 70px; height: 40px; padding: 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; color: #333;}
 .reservationWrap .reservationDetailTimeList .reservationTimeBtn:disabled{background-color: #F4F4F4; color: #666; font-size: 14px; cursor: default; pointer-events: none; border: 0;}
@@ -879,6 +888,17 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .reservationWrap .reservationCompleteBox .commonLeftBox .reservationTimeInfo{gap:6px;}
 
   .reservationWrap .reservationApplyInfoTopBox{flex-direction: column; align-items:flex-start;}
+
+  .reservationWrap .reservationDetailTableBox{overflow-x: auto;}
+  .reservationWrap .reservationDetailTable{width: 480px;}
+  .reservationWrap .reservationDetailTable tbody td,
+  .reservationWrap .reservationDetailTable tbody th{font-size: 13px;}
+
+}
+
+@media (max-width: 360px){
+
+  .reservationWrap .maintenanceInfoBox p br{display: none;}
 
 }
 
