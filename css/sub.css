@@ -743,11 +743,12 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .reservationWrap .reservationDetailTable tbody th{background-color: #F7F8F9;}
 .reservationWrap .reservationDetailCalendarBox{margin-bottom: 30px; padding: 24px 22px;border: 1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,.2); border-radius: 30px;}
 .reservationWrap .reservationDetailCalendar{margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;}
-.reservationWrap .reservationDetailCalendar .calendarHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 0 20px;}
+.reservationWrap .reservationDetailCalendar .calendarHeader{margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 0 13px;}
 .reservationWrap .reservationDetailCalendar .calendarHeader h4{font-weight: 600; font-size: 18px; color: #333; font-weight: 500;}
-.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn{width: 5px; height: 10px; }
-.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn.calendarPrev{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain;}
-.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn.calendarNext{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain; transform: rotate(180deg);}
+.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn{position: relative; width: 25px; height: 25px; }
+.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn::after{content: ''; width: 8px; height: 12px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn.calendarPrev::after{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain;}
+.reservationWrap .reservationDetailCalendar .calendarHeader .calendarBtn.calendarNext::after{background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain; transform: translate(-50%, -50%) rotate(180deg);}
 .reservationWrap .reservationDetailCalendar .calendarWeek{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); overflow: hidden; border: 1px solid rgba(255, 255, 255, .8); border-width: 1px 0;}
 .reservationWrap .reservationDetailCalendar .calendarWeek .week{margin: 0 auto; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-align: center; color: #666; font-size: 14px;}
 .reservationWrap .reservationDetailCalendar .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px;}
