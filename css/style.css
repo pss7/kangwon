@@ -107,7 +107,8 @@ main{flex: 1;}
 .container{max-width: 1560px; width: 100%; margin: 0 auto; padding: 0 20px;}
 
 /* 헤더 */
-.subMenuOpen #headerWrap::after{content: ''; height: 12px; position: absolute; left:0; right:0; bottom: 0; box-shadow: 0 10px 10px rgba(0,0,0, .1); transition: all .3s;}
+.subMenuOpen #headerWrap::after{opacity: 1; visibility: visible;}
+#headerWrap::after{content: ''; opacity: 0; visibility: hidden; height: 12px; position: absolute; left:0; right:0; bottom: 0; box-shadow: 0 10px 10px rgba(0,0,0, .1); transition: all .3s;}
 #headerWrap{padding: 0 60px; position: sticky; top:0; left:0; right:0; background-color: #fff; z-index: 9999999; transition: all .3s;}
 #headerWrap .headerLogoBox h1 a{display: block; color: #fff; font-size: 32px;}
 #headerWrap .headerLogoBox h1 a img{display: block;}
