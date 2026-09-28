@@ -123,6 +123,8 @@ main{flex: 1;}
 #headerWrap .headerMenuBox .headerUtilBox a{display: flex; align-items: center; justify-content: center; width: 110px; height: 38px; font-weight: 500; color: #fff; border-radius: 8px;}
 #mobileMenuWrap{display: none;}
 
+#headerWrap .headerMenuBox .headerMenu > li:hover .subMenuWrap{}
+
 /* 서브메뉴 */
 #headerWrap .subMenuWrap{display: none; position: absolute; top:100px; left:0; right:0; background-color: #F4F4F4; overflow: hidden;}
 #headerWrap .subMenuWrap .subMenuBox{min-height: 280px; display: flex; }
