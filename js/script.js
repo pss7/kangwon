@@ -88,6 +88,7 @@ $(function () {
   });
 
   $('#headerWrap').mouseleave(function () {
+     $('#headerWrap .headerMenu > li').removeClass('active');
     $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
     $('body').removeClass('subMenuOpen');
   });

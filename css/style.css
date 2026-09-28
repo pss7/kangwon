@@ -107,6 +107,7 @@ main{flex: 1;}
 .container{max-width: 1560px; width: 100%; margin: 0 auto; padding: 0 20px;}
 
 /* 헤더 */
+.subMenuOpen #headerWrap::after{content: ''; height: 12px; position: absolute; left:0; right:0; bottom: 0; box-shadow: 0 10px 10px rgba(0,0,0, .1); transition: all .3s;}
 #headerWrap{padding: 0 60px; position: sticky; top:0; left:0; right:0; background-color: #fff; z-index: 9999999; transition: all .3s;}
 #headerWrap .headerLogoBox h1 a{display: block; color: #fff; font-size: 32px;}
 #headerWrap .headerLogoBox h1 a img{display: block;}
@@ -115,6 +116,7 @@ main{flex: 1;}
 #headerWrap .headerMenuBox .headerNav{margin-right: 50px;}
 #headerWrap .headerMenuBox .headerMenu{display: flex; align-items: center;}
 #headerWrap .headerMenuBox .headerMenu li h2 a{display: block; padding: 35px 27px; font-size: 20px; color: #333; font-weight: 500; transition: all .3s;}
+#headerWrap .headerMenuBox .headerMenu li.active h2 a{color: #1D439C; text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;}
 #headerWrap .headerMenuBox .headerMenu li h2 a:hover{color: #1D439C; text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;}
 #headerWrap .headerMenuBox .headerUtilBox{display: flex; gap: 0 16px;}
 #headerWrap .headerMenuBox .headerUtilBox a{display: flex; align-items: center; justify-content: center; width: 110px; height: 38px; font-weight: 500; color: #fff; border-radius: 8px;}
@@ -123,15 +125,18 @@ main{flex: 1;}
 /* 서브메뉴 */
 #headerWrap .subMenuWrap{display: none; position: absolute; top:100px; left:0; right:0; background-color: #F4F4F4; overflow: hidden;}
 #headerWrap .subMenuWrap .subMenuBox{min-height: 280px; display: flex; }
-#headerWrap .subMenuWrap .subMenuTitleBox{padding: 30px 30px 10px 10px; flex: 0 0 370px; border-radius: 0 0 60px 0; background-color: #1D439C;}
-#headerWrap .subMenuWrap .subMenuTitleBox h2{font-size: 30px; font-weight: 700; color: #fff; text-align: right;}
-#headerWrap .subMenuWrap .subMenuListBox{flex: 1; height: 100%; padding: 30px 30px 10px;}
-#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01{display: flex; gap: 8px;  max-width: calc(1142px + (100vw - 1920px));}
-#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 > li{flex: 1;}
-#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 li h3 a{padding: 10px 10px 10px 18px; display: block; color: #333; border: 1px solid #ccc; border-radius: 8px; background-color: #fff; font-weight: 400; font-size: 16px; transition: all .3s; word-break: keep-all;}
+#headerWrap .subMenuWrap .subMenuTitleBox{position: relative; padding: 50px 10px 10px 50px; flex: 0 0 370px; border-radius: 0 0 30px 0; background-color: #20479C;}
+#headerWrap .subMenuWrap .subMenuTitleBox::after{content: ''; position: absolute; bottom: 0; right:0; width: 203px; height: 280px; background: url(../images/common/menu_bg.png)no-repeat center;}
+#headerWrap .subMenuWrap .subMenuTitleBox span{display: block; margin-bottom: 8px; font-size: 14px; color: #B3D4FF; font-weight: 300; letter-spacing: 6px;}
+#headerWrap .subMenuWrap .subMenuTitleBox h2{position: relative; padding-bottom: 40px; display: inline-block; font-size: 34px; font-weight: 700; color: #fff; }
+#headerWrap .subMenuWrap .subMenuTitleBox h2::after{content: ''; position: absolute; left:0; bottom: 0; width: 52px; height: 2px; background-color: #fff;}
+#headerWrap .subMenuWrap .subMenuListBox{flex: 1; height: 100%; padding: 34px 10px 10px 34px;}
+#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01{display: flex; gap: 14px;}
+#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 > li{min-width: 150px;}
+#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 li h3 a{padding: 10px; display: block; color: #333; border: 1px solid #ccc; border-radius: 8px; background-color: #fff; font-weight: 400; font-size: 16px; transition: all .3s; word-break: keep-all; text-align: center;}
 #headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 li:hover h3 a{background-color: #EDF2FF; border: 1px solid #1D439C; color: #1D439C;}
 #headerWrap .subMenuWrap .subMenuListBox .subMenuDepth02{padding: 10px 0;}
-#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth02 li h5 a{display: block; width: 100%; padding: 7px 10px 7px 20px; color: #333; font-weight: 400; font-size: 16px; transition: all .3s;}
+#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth02 li h5 a{display: block; width: 100%; padding: 6px 10px; color: #333; font-weight: 400; font-size: 16px; transition: all .3s; text-align: center;}
 #headerWrap .subMenuWrap .subMenuListBox .subMenuDepth02 li h5 a:hover{transform: translateX(7px);}
 
 @media (max-width: 1480px){
