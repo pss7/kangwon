@@ -1600,7 +1600,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .commonShadowBox{padding: 60px;}
 .researchIntroWrap .researchIntroTitle{color: #333; font-size: 24px; font-weight: 700; letter-spacing: -1px;}
 .researchIntroWrap .researchIntroTitle strong{color: #2773FF;}
-.researchIntroWrap .researchIntroTitle02{margin-bottom: 5px; font-weight: 700;   font-size: 16px;}
+.researchIntroWrap .researchIntroTitle02{margin-bottom: 5px; font-weight: 700; font-size: 20px;}
 .researchIntroWrap .researchIntroTitle03{margin: 15px 0; font-weight: 700; color: #333;}
 .researchIntroWrap .researchCommonInfoText{font-weight: 500;}
 .researchIntroWrap .researchCommonBgBox{padding: 20px; background-color: #F8FCFF; border: 1px solid #B3D4FF; border-radius: 10px;}
@@ -1614,6 +1614,9 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .researchCommonList > li{margin-bottom: 10px; font-weight: 500; color: #333;}
 .researchIntroWrap .researchCommonList > li:last-child{margin-bottom: 0;}
 .researchIntroWrap .border{display: block; margin: 20px 0; background-color: #B3D4FF;}
+.researchIntroWrap .researchIntroBtnBox{margin-top: 80px; display: flex; justify-content: center; gap: 20px 60px;}
+.researchIntroWrap .researchIntroBtnBox a{max-width: 400px; width: 100%; padding: 17px 10px; border-radius: 20px; font-weight: 500; color: #333; text-align: center; border: 1px solid #2DA8E5; transition: all .3s;}
+.researchIntroWrap .researchIntroBtnBox a:hover{ border: 1px solid #2DA8E5; background-color: #2DA8E5; color: #fff;}
 
 /* 연구소개 - 공통(테이블) */
 .researchIntroWrap .researchCommonTableBox{overflow-x:auto; width:100%;}
@@ -1702,7 +1705,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 /* 연구소개 - 공통 상단 영역 */
 .researchIntroWrap .researchIntroTopBox .researchIntroText{color: #444;}
 .researchIntroWrap .researchIntroTopBox.commonShadowBox{margin-bottom: 50px;}
-.researchIntroWrap .researchIntroTopBox .researchIntroTitle{font-weight: 500;}
+.researchIntroWrap .researchIntroTopBox .researchIntroTitle{margin-bottom: 30px; font-weight: 500;}
 
 /* 연구소개 - 공통 연구업무 안내 영역 */
 .researchIntroWrap .researchTaskWrap{padding: 60px 156px 60px 60px;}
@@ -1711,6 +1714,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .researchTaskContent{display: flex; align-items: center; gap: 30px 0;}
 .researchIntroWrap .researchTaskContent .researchTaskIconBox{padding-left: 20px; flex-shrink: 0; width: 182px;}
 .researchIntroWrap .researchTaskContent .researchTaskIconBox img{display: block; max-width: 100%;}
+.researchIntroWrap .researchTaskContent .researchTaskText{flex: 1; padding: 16px 20px; width: 100%; background-color: #F8FCFF; border: 1px solid #B3D4FF; border-radius: 10px;}
 .researchIntroWrap .researchTaskList{flex: 1;}
 .researchIntroWrap .researchTaskList li{margin-bottom: 10px; display: flex; gap: 0 10px;}
 .researchIntroWrap .researchTaskList li:last-child{margin-bottom: 0;}
@@ -1726,6 +1730,16 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchIntroWrap .researchTaskBox .researchTaskContent.type02{align-items:stretch;}
 .researchIntroWrap .researchTaskBox .researchTaskContent.type02 .researchTaskContact{align-items: center;}
 .researchIntroWrap .researchTaskBox .researchTaskContent.type02 .researchTaskIconBox{align-self: center;}
+
+/* 연구소개 - 임상연구보호센터 */
+.researchIntroWrap .researchProtectionBox .researchIntroTitle strong{color: #F57692;}
+.researchIntroWrap .researchProtectionBox a.homepage{border: 1px solid #F57692;}
+.researchIntroWrap .researchProtectionBox a.homepage:hover{border: 1px solid #F57692; background-color: #F57692; color: #fff;}
+
+/* 연구소개 - 인체자원은행 */
+.researchIntroWrap .researchBiobankBox .researchIntroTitle strong{color: #B364CE;}
+.researchIntroWrap .researchBiobankBox a.homepage{border: 1px solid #B364CE;}
+.researchIntroWrap .researchBiobankBox a.homepage:hover{border: 1px solid #B364CE; background-color: #B364CE; color: #fff;}
 
 /* 연구소개 - 임상시험센터 */
 .researchIntroWrap .clinicalTrialCenterBox .researchIntroTitle strong{color: #977641;}
@@ -1791,6 +1805,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
   .researchTaskBox .researchTaskContent.type02 .researchTaskList{max-width:none; margin-right:0;}
   .researchTaskBox .researchTaskContent.type02 .researchTaskContact{margin-top:10px; width:100%; min-height:52px; justify-content:flex-start; border-color:#9EC7FF; background-color:#EDF5FF; color:#1D439C; font-weight:600;}
 
+  .researchIntroWrap .researchIntroTopBox .researchIntroTitle{margin-bottom: 20px;}
+
 }
 
 @media (max-width:768px){
@@ -1829,6 +1845,9 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
     .researchIntroWrap .paperPatentSupportBox .patentProcessSummaryBox .patentProcessList{container-type:normal;}
     .researchIntroWrap .paperPatentSupportBox .patentProcessSummaryBox .patentProcessList > li{width:100%; flex:0 0 auto;}
     .researchIntroWrap .paperPatentSupportBox .patentProcessSummaryBox .patentProcessList > li:not(:last-child)::after{right:auto;}
+
+    .researchIntroWrap .researchIntroBtnBox{margin-top: 50px; flex-direction: column;}
+    .researchIntroWrap .researchIntroBtnBox a{max-width: none; border-radius: 10px;}
 
 }
 
