@@ -36,8 +36,14 @@ $(function () {
   });
 
   //연구소개
+  $('#researchWrap .researchLinkBox').eq(0).addClass('active');
+
+  $('#researchWrap .slick').on('afterChange', function (event, slick, currentSlide) {
+    $('#researchWrap .researchLinkBox').removeClass('active').eq(currentSlide).addClass('active');
+  });
+
   $('#researchWrap .slick').slick({
-    autoplay: true,
+    autoplay: false,
     arrows: true,
     dots: false,
     accessibility: false,
@@ -50,7 +56,7 @@ $(function () {
     autoplaySpeed: 5000,
     speed: 1500,
     prevArrow: $('#researchWrap .prev'),
-    nextArrow: $('#researchWrap .next'),
+    nextArrow: $('#researchWrap .next')
   });
 
   //모아보기
