@@ -1900,8 +1900,9 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchInfraWrap .researchInfraTopBox p{font-size: 20px; font-weight: 500; color: #333; line-height: 1.8; letter-spacing: -1px;}
 .researchInfraWrap .researchInfraTopBox p span{display: block; font-size: 24px;}
 .researchInfraWrap .researchInfraContentBox{padding: 60px;}
-.researchInfraWrap .researchInfraTitle{margin-bottom: 30px; display: flex; align-items: center; gap: 8px; font-size: 24px; color: #333;}
+.researchInfraWrap .researchInfraTitle{margin-bottom: 30px; display: flex; align-items: center; gap: 8px; font-size: 24px; color: #333; font-weight: 700;}
 .researchInfraWrap .researchInfraTitle span{font-size: 14px; font-weight: 700; color: #1D439C;}
+.researchInfraWrap .researchInfraTitle .researchInfraText{color: #444;}
 .researchInfraWrap .researchServiceBox,
 .researchInfraWrap .researchKeyFeaturesBox,
 .researchInfraWrap .researchSupportBox{margin-bottom: 60px;}
@@ -1981,6 +1982,35 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchInfraWrap .researchBiomarkerBox .researchInfraTopBox p strong{color: #FF9232;}
 
 /* 연구인프라 - 센터소개 */
+.researchInfraWrap .researchKarcIntroBox p{line-height: 1.5;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroTextBox{flex-shrink: 0;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroText01{margin-bottom: 20px; font-size: 24px; color: #333;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroText01 strong{color: #1D439C;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroText02{margin-bottom: 70px; color: #444; font-size: 16px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroText03{font-size: 20px; color: #333; font-family: 'HD', sans-serif;}
+.researchInfraWrap .researchKarcIntroBox .researchInfraTopBox{display: flex; align-items: center; justify-content: space-between; gap: 60px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroImgBox img{display: block; max-width: 100%;}
+.researchInfraWrap .researchKarcIntroBox .researchInfraTitle{margin-bottom: 13px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroContentBox03 .researchKarcIntroContentImgBox img{display: block; margin: 0 auto; max-width: 100%;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroContentBox03 .researchInfraText{margin-bottom: 50px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroContentBox03 .researchKarcIntroContentImgBox{margin-bottom: 50px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroContentBox03 .researchKarcIntroContentText{font-weight: 500; font-size: 20px; color: #1D439C; text-align: center;}
+.researchInfraWrap .researchKarcIntroBox .researchInfraText{margin-bottom: 30px;}
+.researchInfraWrap .researchKarcIntroBox .researchSupportList > li{background-color: #fff;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList {margin-top: 40px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li{position: relative; min-width: 0; min-height: 295px; padding: 20px;
+    border: 1px solid #B3D4FF; border-radius: 30px; background: #F8FCFF; text-align: center;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li .researchProcessIcon{ margin:0 auto 10px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li .researchProcessIcon img{display: block; margin: 0 auto;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList h3{color: #333; font-size: 18px; font-weight: 700;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessEnglish{font-size: 14px; font-weight: 500; color: #999;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li > .dotList{margin-top: 10px; padding-top: 10px; border-top: 1px solid #B3D4FF; text-align: left;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li > .dotList li{padding-left: 12px; font-size: 14px; letter-spacing: -1px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li > .dotList li::before{top: 9px; left: 4px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li:not(:last-child)::after {content: ""; position: absolute; top: 50%;
+    right: -30px; width: 15px; height: 24px;transform: translateY(-50%); background: url(../images/sub/arrow_icon07.svg)no-repeat center;}
+
+/* 연구인프라 - 기초실험실 */
 .researchInfraWrap .researchKarcLabBox p{line-height: 1.5;}
 .researchInfraWrap .researchKarcLabBox .researchKarcLabText01{margin-bottom: 30px; font-size: 24px; font-weight: 500; color: #333; line-height: 1.7;}
 .researchInfraWrap .researchKarcLabBox .researchKarcLabText01 strong{color: #1D439C;}
@@ -2019,8 +2049,10 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
     .researchInfraWrap .researchKarcLabBox .researchKarcLabText01{font-size: 22px;}
     .researchInfraWrap .researchKarcLabBox .researchKarcLabText03{font-size: 18px;}
-    
 
+    .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList {grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px;}
+    .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li:nth-child(2)::after {display: none;}
+    
 }
 
 @media (max-width:1024px){
@@ -2040,10 +2072,13 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
   .researchInfraWrap .researchServiceList.type02 > li:nth-child(3) .dotList{display: block;}
 
-      .researchInfraWrap .applicationsListBox .dotList{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-        gap:8px 20px;
-    }
+  .researchInfraWrap .applicationsListBox .dotList{   grid-template-columns:repeat(2, minmax(0, 1fr)); gap:8px 20px;}
+
+  .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText01{font-size: 20px;}
+  .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText02{margin-bottom: 50px;}
+  .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText03{font-size: 18px;}
+  .researchInfraWrap .researchKarcIntroBox .researchInfraTopBox{flex-direction: column;}
+  .researchInfraWrap .researchKarcIntroBox .researchKarcIntroTextBox{flex-shrink: initial;}
 
 }
 
@@ -2079,6 +2114,13 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
     .researchInfraWrap .researchKarcLabBox .researchKarcLabText01,
     .researchInfraWrap .researchKarcLabBox .researchKarcLabText02,
     .researchInfraWrap .researchKarcLabBox .researchKarcLabText02 em{margin-bottom: 25px;}
+
+    .researchInfraWrap .researchKarcIntroBox .researchKarcIntroContentBox03 .researchKarcIntroContentText{font-size: 18px;}
+
+    .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList {grid-template-columns: 1fr; gap: 40px;}
+    .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li {min-height: auto; padding: 20px;}
+    .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li:nth-child(2)::after {display: block;}
+    .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li:not(:last-child)::after {top: auto; right: 50%; bottom: -33px; transform: translateX(50%) rotate(90deg);}
 
 }
 
@@ -2127,6 +2169,13 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 
     .researchInfraWrap .researchKarcLabBox .researchKarcLabText01{font-size: 18px;}
     .researchInfraWrap .researchKarcLabBox .researchKarcLabText03{font-size: 16px;}
+
+    .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText01{font-size: 18px;}
+    .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText02{margin-bottom: 30px;}
+    .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText03{font-size: 16px;}
+
+    .researchInfraWrap .researchKarcIntroBox .researchKarcIntroContentBox03 .researchKarcIntroContentText{font-size: 16px;}
+    .researchInfraWrap .researchKarcIntroBox .researchKarcIntroContentBox03 .researchKarcIntroContentText br{display: none;}
 
 }
 
