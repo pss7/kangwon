@@ -302,7 +302,6 @@
 #researchWrap .researchSlideBox .controlBox .controlBtn::after{content: ''; width: 21px; height: 21px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #researchWrap .researchSlideBox .controlBox .prev::after{background: url(../images/main/arrow_icon02.svg)no-repeat center;}
 #researchWrap .researchSlideBox .controlBox .next::after{background: url(../images/main/arrow_icon02.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
-#researchWrap .researchLayoutBox{border-top: 1px solid #666;}
 
 /* 활성화, 호버 */
 #researchWrap .researchLinkBox .researchLinkList li a:hover{background-color: #1D439C; border-color: #1D439C;}
