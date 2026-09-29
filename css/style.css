@@ -154,14 +154,14 @@ main{flex: 1;}
 @media(max-width: 1199px){
 
   #headerWrap .headerLogoBox h1 a img{width: 260px;}
-  #headerWrap .headerBox{height: 88px;}
+  #headerWrap .headerBox{height: 72px;}
   #headerWrap .headerMenuBox{display: none;}
   #headerWrap .headerLogoBox h1 a{font-size: 20px;}
   #headerWrap .subMenuWrap{display: none;} 
 
 /* 모바일메뉴 */
 #mobileMenuWrap{display:block;}
-#mobileMenuWrap .mobileMenuBox{padding:0 0 20px; max-width:320px; width:100%; display:flex; flex-direction:column; position:fixed; top:88px; right:-100%; bottom:0; z-index:1000; overflow:hidden; border-radius:0 0 0 60px; background-color:#1D439C; box-shadow:-10px 10px 30px rgba(0, 0, 0, .16); transition:right .3s ease;}
+#mobileMenuWrap .mobileMenuBox{padding:0 0 20px; max-width:320px; width:100%; display:flex; flex-direction:column; position:fixed; top:72px; right:-100%; bottom:0; z-index:1000; overflow:hidden; border-radius:0 0 0 60px; background-color:#1D439C; box-shadow:-10px 10px 30px rgba(0, 0, 0, .16); transition:right .3s ease;}
 #mobileMenuWrap.active .mobileMenuBox,
 #mobileMenuWrap .mobileMenuBox.active{right:0;}
 #mobileMenuWrap .mobileMenuNav{min-height:0; flex:1; overflow-y:auto;}
@@ -209,9 +209,7 @@ main{flex: 1;}
 
 @media (max-width: 1024px){
 
-  #headerWrap .headerBox{height: 62px;}
   #headerWrap .headerLogoBox h1 a img{width: 200px;}
-  #mobileMenuWrap .mobileMenuBox{top: 62px;}
 
 }
 

@@ -4,7 +4,7 @@
 .titleBox .title{color: #333; font-size: 30px; font-weight: 700; font-family: "HD", sans-serif;}
 .titleBox .enTitle{font-weight: 800; font-size: 40px; color: #fff; text-shadow: 0 0 30px rgba(1, 145, 68, .6);} 
 
-@media (max-width: 1199px){
+/* @media (max-width: 1199px){
 
     .titleBox .title{font-size: 26px;}
     .titleBox .enTitle{font-size: 30px;}
@@ -23,7 +23,7 @@
     .titleBox .title{font-size: 22px;}
     .titleBox .enTitle{font-size: 26px;}
 
-}
+} */
 
 /* 공통 - 레이아웃 */
 .sectionWrap .container{max-width: 1920px; padding: 0;}
@@ -73,15 +73,8 @@
 
 @media (max-width: 1199px){
 
-    .sectionWrap .titleBox{width: 240px;}
-
-}
-
-@media (max-width: 768px){
-    
     .sectionWrap .sectionLayoutBox{flex-direction: column;}
     .sectionWrap .titleBox{width: 100%; padding: 60px 20px; text-align: center; border: 0;}
-    .sectionWrap .titleBox{border-bottom: 1px solid #ccc;}
 
 }
 
@@ -131,9 +124,9 @@
     #visualWrap .visualLayoutBox{height: 100%;}
     #visualWrap .visualTitleBox{padding-top: 112px;}
     #visualWrap .visualTextBox .visualTitle{font-size: 42px;}
-    #visualWrap .visualLayoutBox{flex-direction: column; align-items: center; justify-content: center; gap: 30px 0;}
+    #visualWrap .visualLayoutBox{flex-direction: column; align-items: center; justify-content: center; gap: 55px 0;}
     #visualWrap .visualLinkBox{padding-top: 0; margin-bottom: 0;}
-    #visualWrap .visualLinkBox .visualTabBtnBox{margin-bottom: 40px; justify-content: center;}
+    #visualWrap .visualLinkBox .visualTabBtnBox{margin-bottom: 35px; justify-content: center;}
     #visualWrap .visualTextBox .visualText,
     #visualWrap .visualTextBox .visualTitle{text-align: center;}
 
@@ -149,41 +142,32 @@
 
     #visualWrap{position: relative; height: 100vh; margin-bottom: 0;}
     #visualWrap .visualTitleBox{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -57%); padding-top: 0;}
-
+    #visualWrap .visualTextBox .visualTitle{margin-bottom: 17px; font-size: 36px;}
+  
 }
 
 @media (max-width: 960px){
 
-    #visualWrap .visualTextBox .visualTitle{margin-bottom: 20px; font-size: 36px;}
     #visualWrap .visualLinkBox{width: 100%;}
-    #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{font-size: 16px;}
     #visualWrap .visualLinkBox .visualLinkList{grid-template-columns: repeat(3, 1fr);}
-    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{width: 100px; height: 100px;}
-    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img{width: 50px;}
-    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img.visualIcon01{width: 60px;}
 
 }
 
 @media (max-width: 768px){
 
     #visualWrap .visualTitleBox{transform: translate(-50%, -55%);}
+    #visualWrap .visualTextBox .visualTitle{font-size: 30px;}
 
 }
 
 @media (max-width: 480px){
 
-    #visualWrap .visualTextBox .visualTitle{ font-size: 28px;}
-    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{margin: 0 auto 6px; width: 80px; height: 80px;}
-    #visualWrap .visualLinkBox .visualLinkList li a h3{font-size: 12px;}
-    #visualWrap .visualLinkBox .visualTabBtnBox{margin-bottom: 28px;}
-    #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{font-size: 14px;}
-    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img{width: 40px;}
-    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox img.visualIcon01{width: 50px;}
-
-}
-
-@media (max-width: 414px){
-
+    #visualWrap{height: 900px;}
+    #visualWrap .visualTitleBox{transform: translate(-50%, -50%);}
+    #visualWrap .visualTextBox .visualTitle{ font-size: 30px;}
+    #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{max-width: 220px; width: 100%; margin: 0 auto;}
+    #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{margin: 0 auto 6px;}
+    #visualWrap .visualLinkBox .visualTabBtnBox{flex-direction: column; margin-bottom: 28px;}
     #visualWrap .visualLinkBox .visualLinkList{grid-template-columns: repeat(2, 1fr);}
 
 }
@@ -219,7 +203,7 @@
 #reserveWrap .reserveCalendarBox .reserveDateBox .reservePrev::before{background: url(../images/main/arrow_icon03.svg)no-repeat center;}
 #reserveWrap .reserveCalendarBox .reserveDateBox .reserveNext::before{background: url(../images/main/arrow_icon03.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
 #reserveWrap .reserveListBox{flex: auto; display: flex; align-items: flex-start; gap: 15px;}
-#reserveWrap .reserveDate{min-width: 102px; font-size: 18px; font-weight: 700; color: #49F498; font-family: "HD", sans-serif;} 
+#reserveWrap .reserveDate{min-width: 102px; font-size: 24px; font-weight: 700; color: #49F498; font-family: "HD", sans-serif;} 
 #reserveWrap .reserveList{max-width: 602px; width: 100%; }
 #reserveWrap .reserveList li{margin-bottom: 14px;}
 #reserveWrap .reserveList li a{display: block; padding: 15px 20px; display: flex; align-items: center; border: 1px solid rgba(255,255,255, .5); background: rgba(255,255,255,.1); border-radius: 8px;}
@@ -250,7 +234,7 @@
     #reserveWrap .reserveCalendarBox{width: 50%; padding: 0 20px;} 
     #reserveWrap .reserveList{max-width: none;}
     #reserveWrap .reserveLayoutBox{padding: 50px 0;}
-    #reserveWrap .titleBox{padding: 60px 20px;}
+    #reserveWrap .titleBox{padding: 40px 20px;}
     #reserveWrap .reserveCalendarBox{max-width: none;}
     #reserveWrap .reserveCalendarBox .reserveDateList li{max-width: none;}
     #reserveWrap .reserveCalendarBox .reserveWeek{margin-bottom: 30px;}    
@@ -259,97 +243,44 @@
 
 @media (max-width: 1199px){
 
-    #reserveWrap .reserveCalendarBox .reserveWeek{margin-bottom: 22px; font-size: 20px;}
-    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDay{font-size: 18px;}
-    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveWeekday{font-size: 16px;}
-    #reserveWrap .reserveCalendarBox .reserveDateList li{height: 92px;}
+    #reserveWrap .reserveCalendarBox .reserveWeek{margin-bottom: 22px;}
     #reserveWrap .reserveCalendarBox .reserveDateBox .reserveArrowBtn{display: none;}
    
 }
 
 @media (max-width: 1024px){
 
-    #reserveWrap{border-color: #666; background-color: transparent;}
-    #reserveWrap .titleBox .title{color: #333;}
-    #reserveWrap .titleBox{border-color: #666;}
+    #reserveWrap{border-color: rgba(255,255,255,.6); background-color: transparent;}
     #reserveWrap .reserveLayoutBox{padding: 0; flex-direction: column; align-items: center;}
-    #reserveWrap .reserveCalendarBox .reserveWeek{padding: 0; text-align: center;}
+    #reserveWrap .reserveCalendarBox .reserveWeek{margin-bottom: 30px; padding: 0; text-align: center;}
     #reserveWrap .reserveCalendarBox .reserveDateBox{justify-content: center;}
-    #reserveWrap .reserveCalendarBox{max-width: none; border-right: 0; border-bottom: 1px solid #666;}
-
+    #reserveWrap .reserveCalendarBox{max-width: none; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .6);}
     #reserveWrap .reserveListBox, 
     #reserveWrap .reserveCalendarBox{width: 100%; padding: 40px 20px;}
     #reserveWrap .reserveDate{text-align: center;}
     #reserveWrap .reserveCalendarBox .reserveWeekBox{padding: 0;}
-    #reserveWrap .reserveCalendarBox .reserveWeek{color: #333}
-    #reserveWrap .titleBox .enTitle{text-shadow: 0 0 30px rgba(13, 79, 201, .6);}
-    #reserveWrap .titleBox .enTitle,
-    #reserveWrap .reserveDate,
-    #reserveWrap .reserveCalendarBox .reserveWeek strong{color: #1D439C;}
-   
-    #reserveWrap .reserveCalendarBox .reserveDateList li span{color: #333;}
-    #reserveWrap .reserveList li a,
-    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn{border: 1px solid #ccc; box-shadow: 0 10px 10px rgba(0,0,0,.1);}
-    #reserveWrap .reserveList li .reserveTime,
-    #reserveWrap .reserveList li .reserveEquipment{color: #333;}
-     #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{color: #fff;}
-
-    #reserveWrap .reserveListBox .emptyText{color: #000;}
-        
+    #reserveWrap .titleBox .enTitle{color: #869BA4; text-shadow: 0 0 30px rgba(13, 79, 201, .6);}
+    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDateBtn.active .reserveDay{color: #fff;}
+    #reserveWrap .reserveListBox{gap: 20px;}  
+    #reserveWrap {background:linear-gradient(rgba(2, 18, 54, 0.5), rgba(1, 18, 54, 0.5)),
+        url(../images/main/bg.jpg) no-repeat center / cover;}
+    #reserveWrap .reserveList li a{border: 1px solid rgba(255, 255, 255, .5);}
+            
 }   
 
-@media (max-width: 768px){
-
-    #reserveWrap .reserveCalendarBox .reserveWeek{font-size: 18px;}
-
-}
 
 @media (max-width: 480px){
 
     #reserveWrap .reserveList li .reserveTime{display: none;}
     #reserveWrap .reserveList li .reserveEquipment{padding-right: 0;}
-    #reserveWrap .reserveCalendarBox .reserveDateList li{height: 87px;}
-    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveDay{font-size: 16px;}
-    #reserveWrap .reserveCalendarBox .reserveDateList li .reserveWeekday{font-size: 14px;}
     #reserveWrap .reserveList li a .reserveEquipment{font-size: 15px;}
 
 }
 
-@media (max-width: 414px){
-
-    #visualWrap .visualTitleBox{transform: translate(-50%, -54%);}
-
-}
-
 /* 연구소개 영역 */
-
-#researchWrap .researchLinkWrap {
-    position: relative;
-      max-width: 917px; width: 100%;
-}
-
-#researchWrap .researchLinkWrap .researchLinkBox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s;
-}
-
-#researchWrap .researchLinkWrap .researchLinkBox.active {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-}
-
-
-
-
-
-
-
+#researchWrap .researchLinkWrap {position: relative; max-width: 917px; width: 100%;}
+#researchWrap .researchLinkWrap .researchLinkBox{position: absolute; top: 0; left: 0; width: 100%; opacity: 0; visibility: hidden; transition: all .3s;}
+#researchWrap .researchLinkWrap .researchLinkBox.active{position: relative; opacity: 1; visibility: visible;}
 #researchWrap .researchLinkBox .researchTitleBox{justify-self: flex-start; padding: 52px 20px 52px 52px;}
 #researchWrap .researchLinkBox .researchTitleBox span,
 #researchWrap .researchLinkBox .researchTitleBox h4{display: block; font-weight: 500; color: #333; font-size: 40px; font-family: "HD", sans-serif; line-height: 1.2;}
@@ -370,7 +301,7 @@
 #researchWrap .researchSlideBox .controlBox .controlBtn::after{content: ''; width: 21px; height: 21px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #researchWrap .researchSlideBox .controlBox .prev::after{background: url(../images/main/arrow_icon02.svg)no-repeat center;}
 #researchWrap .researchSlideBox .controlBox .next::after{background: url(../images/main/arrow_icon02.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
-#researchWrap .researchLayoutBox{margin: 90px 0 0; border-top: 1px solid #666;}
+#researchWrap .researchLayoutBox{border-top: 1px solid #666;}
 
 /* 활성화, 호버 */
 #researchWrap .researchLinkBox .researchLinkList li a:hover{background-color: #1D439C; border-color: #1D439C;}
@@ -404,10 +335,9 @@
 
     #researchWrap .researchLinkBox .researchTitleBox{padding: 40px 20px;}
     #researchWrap .researchLinkBox .researchTitleBox span,
-    #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 22px;}
+    #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 36px;}
     #researchWrap .researchLinkBox .researchTitleBox p{font-size: 18px;}
     #researchWrap .researchLinkBox .researchLinkList li a{padding: 20px;}
-    #researchWrap .researchLinkBox .researchLinkList li a span{font-size: 16px;}
     #researchWrap .researchLinkBox .researchLinkList li a span::after{width: 16px; height: 16px;}
     #researchWrap .researchSlideBox .controlBox{display: none;}
     
@@ -415,31 +345,38 @@
 
 @media (max-width: 1024px){
 
-    #researchWrap .researchLayoutBox{flex-direction: column; width: calc(100% - 240px);}
-    #researchWrap .researchLinkBox{max-width: none;}
     #researchWrap .researchSlideBox{width: 100%;  height: 500px; border-width: 1px 0 0 0;}
+    #researchWrap{border-top: 0;}
+    #researchWrap .researchLinkWrap{max-width: none;}
+    #researchWrap .researchLinkBox .researchLinkList{grid-template-columns: repeat(2, 1fr);}
+    #researchWrap .researchLinkBox .researchTitleBox{padding: 0 20px 30px;}
+    #researchWrap .researchLinkBox .researchTitleBox span,
+    #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 30px;}
+    #researchWrap .researchLinkBox .researchTitleBox p{padding: 12px 10px; font-size: 16px;}
+    #researchWrap .researchLinkBox .researchTitleBox h4{margin-bottom: 17px;}
+    #researchWrap .researchLayoutBox{flex-direction: column; margin: 0; width: 100%; border-top: 0;}
+    #researchWrap .researchLinkBox .researchLinkList li a{padding: 14px;}
+    #researchWrap .researchLinkBox .researchLinkList li a span::after{display: none;}
+    
+    #researchWrap .researchLinkBox .researchLinkList li:nth-child(2n) a{border-right: 0;}
+    #researchWrap .researchLinkBox .researchLinkList li:nth-child(3n) a{border-right: 1px solid #ccc;}
 
 }
 
 @media (max-width: 768px){
 
-    #researchWrap .researchLinkBox .researchLinkList li a{height: 156px;}
-    #researchWrap .researchLinkBox .researchTitleBox span,
-    #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 20px;}
-    #researchWrap .researchLayoutBox{margin: 0; width: 100%; border-top: 0;}
-    #researchWrap .researchSlideBox{height: 350px;}
-    
+    #researchWrap .researchLinkBox .researchLinkList li a{height: 150px;}
+
 }
 
 @media (max-width: 480px){
 
-    #researchWrap .researchLinkBox .researchLinkList{grid-template-columns: repeat(2, 1fr);}
-    #researchWrap .researchLinkBox .researchTitleBox{padding: 30px 20px;}
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(n + 4) a{border-bottom: 1px solid #ccc;}
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(3n) a{border-right: 1px solid #ccc;}
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(2n) a{border-right: 0;}
-    #researchWrap .researchLinkBox .researchLinkList li:last-child{grid-column: 1 / -1;}
     #researchWrap .researchLinkBox .researchLinkList li:last-child a{border-right: 0;}
+
+    #researchWrap .researchSlideBox{display: none;}
 
 }
 
@@ -538,20 +475,22 @@
 
 @media (max-width: 1024px){
 
-    #noticeWrap .noticeTabContentBox .noticeContentLayoutBox{flex-direction: column; gap: 50px;}
+    #noticeWrap{padding: 0 0 70px;}
+    #noticeWrap .noticeLayoutBox{padding: 0 20px;}
+    #noticeWrap .noticeTabContentBox .noticeContentLayoutBox{flex-direction: column; gap: 36px 0;}
     #noticeWrap .noticeListBox,
     #noticeWrap .noticeLinkList{width: 100%;}
-
+    #noticeWrap .noticeLinkList li a{padding: 32px 110px 32px 0;}
+    #noticeWrap .noticeTabBtnBox{margin-bottom: 30px;}
     #noticeWrap .emptyBox{height: 350px; flex: none;}
+    #noticeWrap .noticeViewBox .noticeViewLink span::after{width: 40px; height: 28px;}
 
 }
 
 @media (max-width: 768px){
 
     #noticeWrap{flex-direction: column;}
-    #noticeWrap .noticeLayoutBox{padding: 58px 20px;}
     #noticeWrap .noticeTabBtnBox .noticeTabBtn{flex: 1; min-width: 0;}
-    #noticeWrap .noticeLinkList li a .noticeTitle{font-size: 16px;}
     #noticeWrap .noticeViewBox .noticeViewLink::before{width: 130px; height: 130px;}
     #noticeWrap .noticeViewBox .noticeViewLink span::after{width: 30px; height: 21px;}
 
@@ -559,14 +498,11 @@
 
 @media (max-width: 480px){
 
+    #noticeWrap{border: 1px solid #ccc; border-width: 1px 0 0 0;}
     #noticeWrap .noticeLinkList li a .noticeDate{display: none;}
     #noticeWrap .noticeLinkList li a{padding: 30px 20px 30px 10px;}
-
-}
-
-@media (max-width: 414px){
-
     #noticeWrap .noticeLinkList li a .noticeCategory{display: none;}
+    #noticeWrap .noticeTabContentBox .noticeContent .noticeViewLink::before{display: none;}
 
 }
 
@@ -593,17 +529,17 @@ box-sizing: border-box;}
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
 
+    #contentWrap{padding: 0 0 70px;}
     #contentWrap .contentList li a{width: 211px; height: 280px;}
-    #contentWrap .contentLayoutBox{padding: 60px 0 60px 20px;}
+    #contentWrap .contentLayoutBox{padding: 0 20px;}
 
 }
 
 @media (max-width: 480px){
 
-    #contentWrap .contentLayoutBox{padding: 30px 0 30px 20px;}
-    #contentWrap .contentList li a{width: 160px; height: 230px;}
+    #contentWrap{display: none;}
 
 }
 
@@ -626,31 +562,24 @@ box-sizing: border-box;}
 #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.selected{background-color: #49F498; font-weight: 700;}
 #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.scheduled{position: relative;}
 #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.scheduled::after{content: ''; position: absolute; bottom:-8px; left:-5px; right:-5px; height: 4px; border-radius: 30px; background-color: #FF7474;}
-
-
-
-
-
-
-
 #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn{width: 34px; height: 34px; border-radius: 50%; color: #fff;}
 #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.disabled{cursor: default;}
-#calendarWrap .calendarBox .calendarLegend{margin-right: 10px; padding: 30px 0 0; display: flex; align-items: center; justify-content: flex-end; gap: 20px;}
+#calendarWrap .calendarBox .calendarLegend{margin-right: 10px; padding: 30px 0 0; display: flex; align-items: center; justify-content: flex-end; gap: 12px;}
 #calendarWrap .calendarBox .calendarLegendItem{display: flex; align-items: center; gap: 0 9px; color: #fff;}
-#calendarWrap .calendarBox .calendarLegendDot{width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%;}
+#calendarWrap .calendarBox .calendarLegendDot{width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%;}
 #calendarWrap .calendarBox .calendarLegendDot.today{background-color: #365DDD;}
 #calendarWrap .calendarBox .calendarLegendDot.choice{background-color: #49F498;}
 #calendarWrap .calendarBox .calendarLegendDot.schedule{background-color: #FF7474;}
 #calendarWrap .calendarListBox .emptyBox{margin-top: 67px; display: flex; align-items: center; justify-content: center; width: 100%; height: 380px; border-radius:8px; border: 1px solid rgba(255,255,255, .5); background-color: rgba(255, 255, 255, .1);}
-#calendarWrap .calendarListBox{padding: 90px 70px; flex: auto; display: flex; gap: 45px;}
+#calendarWrap .calendarListBox{padding: 90px 70px; flex: auto; display: flex; gap: 20px 16px;}
 #calendarWrap .calendarListBox .calendarDateBox{flex-shrink: 0; display: flex; flex-direction: column;}
-#calendarWrap .calendarListBox .calendarDay{font-size: 30px; font-weight: 600; color: #49F498;}
+#calendarWrap .calendarListBox .calendarDay{font-size: 24px; font-weight: 600; color: #49F498; font-family: 'HD',sans-serif;}
 #calendarWrap .calendarListBox .calendarMonth{font-size: 20px; font-weight: 600; color: #49F498;}
-#calendarWrap .calendarListBox .calendarList{max-width: 602px; width: 100%; padding-top: 70px;}
+#calendarWrap .calendarListBox .calendarList{max-width: 602px; width: 100%; padding-top: 40px;}
 #calendarWrap .calendarListBox .calendarList li{margin-bottom: 20px;}
 #calendarWrap .calendarListBox .calendarList li:last-child{margin-bottom: 0;}
 #calendarWrap .calendarListBox .calendarList li a{position: relative; display: block; padding: 15px 118px 15px 20px;
-    display: flex; align-items: center; border: 1px solid rgba(255, 255, 255.5); background: rgba(255, 255, 255, .1); border-radius: 8px; color: #fff;}
+    display: flex; align-items: center; border: 1px solid rgba(255, 255, 255, .5); background: rgba(255, 255, 255, .1); border-radius: 8px; color: #fff;}
 #calendarWrap .calendarListBox .calendarList li a .calendarCategory{flex-shrink: 0;
     margin-right: 14px; padding: 2px 8px; border-radius: 8px; color: #fff; font-size: 14px;
     font-weight: 500;}
@@ -678,7 +607,7 @@ box-sizing: border-box;}
     #calendarWrap .calendarListBox,
     #calendarWrap .calendarBox{padding: 70px 40px; max-width: none; width: 50%;}
     #calendarWrap .calendarListBox .calendarList{max-width: none;}
-    #calendarWrap .calendar .calendarHeader{margin-bottom: 30px;}
+    #calendarWrap .calendar .calendarHeader{margin-bottom: 25px;}
 
 }
 
@@ -686,26 +615,27 @@ box-sizing: border-box;}
 
     #calendarWrap .calendarListBox .calendarDay{font-size: 26px;}
     #calendarWrap .calendarListBox .calendarMonth{font-size: 18px;}
-    #calendarWrap .calendar .calendarHeader h4{font-size: 22px;}
-    #calendarWrap .calendar .calendarHeader .calendarBtn{width: 10px; height: 18px;}
-
+    #calendarWrap .calendarBox .calendarLegend{margin: 0; justify-content: center;}
+   
 }
 
 @media (max-width: 1024px){
 
-  #calendarWrap .calendarLayoutBox{flex-direction: column;}
-  #calendarWrap .calendarBox{ border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .6);}
+  #calendarWrap{padding: 0 0 90px;}
+  #calendarWrap .titleBox{border-bottom: 0;}
+  #calendarWrap .calendarLayoutBox{flex-direction: column; gap: 60px 0;}
+  #calendarWrap .calendarBox{ border-right: 0;}
   #calendarWrap .calendarBox,
-  #calendarWrap .calendarListBox{width: 100%; padding: 60px 20px;} 
+  #calendarWrap .calendarListBox{width: 100%; padding: 0 20px;} 
   #calendarWrap .calendarListBox .calendarDateBox{align-items: center;}
-
   #calendarWrap .calendarListBox .emptyBox{height: 350px;}
+  #calendarWrap .calendar .calendarWeek .week{height: 49px;}
   
 }
 
 @media (max-width: 576px){
 
-  #calendarWrap .calendar .calendarGrid .calendarCell{min-height: 66px;}
+  #calendarWrap .calendar .calendarGrid .calendarCell{min-height: 60px;}
   #calendarWrap .calendar .calendarGrid .calendarCell .scheduleDot{width: 4px; height: 4px;}
   #calendarWrap .calendar .calendarGrid .calendarCell .scheduleInfoText{display: none;}
 
@@ -715,9 +645,9 @@ box-sizing: border-box;}
 
     #calendarWrap .calendarListBox .calendarList li a .calendarTime{display: none;}
     #calendarWrap .calendarListBox .calendarList li a{padding: 15px 20px;}
-    #calendarWrap .calendar{padding: 30px 20px;}
-    #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn{width: 36px; height: 36px;}
-    #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn .date{font-size: 14px;}
+    #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn.scheduled::after{height: 6px; bottom: -11px;}
+    #calendarWrap .calendar{padding: 30px 20px; border-radius: 10px;}
+    #calendarWrap .calendar .calendarGrid .calendarCell .dateBtn{width: 26px; height: 26px;}
 
 }
 
