@@ -279,9 +279,17 @@
 }
 
 /* 연구소개 영역 */
-#researchWrap .researchLinkWrap {position: relative; max-width: 917px; width: 100%;}
-#researchWrap .researchLinkWrap .researchLinkBox{position: absolute; top: 0; left: 0; width: 100%; opacity: 0; visibility: hidden; transition: all .3s;}
-#researchWrap .researchLinkWrap .researchLinkBox.active{position: relative; opacity: 1; visibility: visible;}
+#researchWrap .researchLayoutBox{width: 100%; flex: 1; overflow: hidden;}
+#researchWrap .researchLinkWrap{width: 100%; overflow: hidden;}
+#researchWrap .researchLinkWrap .researchLinkBox{max-width: 917px; width: 100%;}
+#researchWrap .researchLinkWrap .researchSlide{display: flex;}
+#researchWrap .researchLinkWrap .researchImgBox{position: relative; flex-shrink: 0; width: 523px; border: 1px solid #666; border-width: 0 1px 0 1px;}
+#researchWrap .researchLinkWrap .researchImgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
+#researchWrap .researchLinkWrap .researchImgBox .controlBox{display: flex; gap: 0 16px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 35px;}
+#researchWrap .researchLinkWrap .researchImgBox .controlBox .controlBtn{position: relative; width: 40px; height: 40px; border-radius: 50%; background-color: #fff;}
+#researchWrap .researchLinkWrap .researchImgBox .controlBox .controlBtn::after{content: ''; width: 21px; height: 21px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#researchWrap .researchLinkWrap .researchImgBox .controlBox .prev::after{background: url(../images/main/arrow_icon02.svg)no-repeat center;}
+#researchWrap .researchLinkWrap .researchImgBox .controlBox .next::after{background: url(../images/main/arrow_icon02.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
 #researchWrap .researchLinkBox .researchTitleBox{justify-self: flex-start; padding: 52px 20px 52px 52px;}
 #researchWrap .researchLinkBox .researchTitleBox span,
 #researchWrap .researchLinkBox .researchTitleBox h4{display: block; font-weight: 500; color: #333; font-size: 40px; font-family: "HD", sans-serif; line-height: 1.2;}
@@ -295,13 +303,7 @@
 #researchWrap .researchLinkBox .researchLinkList li a{display: flex; align-items: flex-end; justify-content: flex-end; padding: 24px; position: relative; height: 194px; border: 1px solid #ccc; border-width: 1px 1px 1px 0; transition: all .3s;}
 #researchWrap .researchLinkBox .researchLinkList li a span{display: flex; align-items: center; gap: 0 12px; color: #555; font-size: 19px; word-break: keep-all; letter-spacing: -1px; text-align: right;}
 #researchWrap .researchLinkBox .researchLinkList li a span::after{content: ''; flex-shrink: 0; width: 21px; height: 21px; background: url(../images/main/arrow_icon01.svg)no-repeat center / contain; transition: all .3s;}
-#researchWrap .researchSlideBox{position: relative; flex-shrink: 0; width: 523px; border: 1px solid #666; border-width: 0 1px 0 1px;}
-#researchWrap .researchSlideBox .researchSlide img{display: block; width: 100%; height: 100%; object-fit: cover;}
-#researchWrap .researchSlideBox .controlBox{display: flex; gap: 0 16px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 35px;}
-#researchWrap .researchSlideBox .controlBox .controlBtn{position: relative; width: 40px; height: 40px; border-radius: 50%; background-color: #fff;}
-#researchWrap .researchSlideBox .controlBox .controlBtn::after{content: ''; width: 21px; height: 21px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-#researchWrap .researchSlideBox .controlBox .prev::after{background: url(../images/main/arrow_icon02.svg)no-repeat center;}
-#researchWrap .researchSlideBox .controlBox .next::after{background: url(../images/main/arrow_icon02.svg)no-repeat center; transform: translate(-50%, -50%) rotate(180deg);}
+
 
 /* 활성화, 호버 */
 #researchWrap .researchLinkBox .researchLinkList li a:hover{background-color: #1D439C; border-color: #1D439C;}
@@ -323,17 +325,16 @@
 
 @media (max-width: 1480px){
 
-    #researchWrap .researchSlideBox{width: 435px;}
-    #researchWrap .researchSlideBox .slick-slider,
-    #researchWrap .researchSlideBox .slick-track,
-    #researchWrap .researchSlideBox .slick-list,
-    #researchWrap .researchSlideBox .slick-slide{height: 100%;}
+    #researchWrap .researchLinkWrap .researchImgBox{width: 435px;}
+    #researchWrap .researchLinkWrap .researchImgBox .slick-slider,
+    #researchWrap .researchLinkWrap .researchImgBox .slick-track,
+    #researchWrap .researchLinkWrap .researchImgBox .slick-list,
+    #researchWrap .researchLinkWrap .researchImgBox .slick-slide{height: 100%;}
 
 }
 
 @media (max-width: 1199px){
 
-    #researchWrap .researchLinkWrap{max-width: none;}
     #researchWrap .researchLayoutBox{flex-direction: column; margin: 0; width: 100%; border-top: 0;}
     #researchWrap .researchLinkBox .researchTitleBox{padding: 0 20px 30px;}
     #researchWrap .researchLinkBox .researchTitleBox span,
@@ -341,8 +342,12 @@
     #researchWrap .researchLinkBox .researchTitleBox p{font-size: 18px;}
     #researchWrap .researchLinkBox .researchLinkList li a{padding: 20px;}
     #researchWrap .researchLinkBox .researchLinkList li a span::after{width: 16px; height: 16px;}
-    #researchWrap .researchSlideBox .controlBox{display: none;}
-    #researchWrap .researchSlideBox{width: 100%;  height: 500px; border-width: 1px 0 0 0;}
+    #researchWrap .researchLinkWrap .researchImgBox .controlBox{display: none;}
+    #researchWrap .researchLinkWrap .researchImgBox{width: 100%;  height: 500px; border-width: 1px 0 0 0;}
+
+    #researchWrap .researchLinkWrap .researchLinkBox{max-width: none;}
+    #researchWrap .researchLinkWrap .researchSlide{display: block;}
+
     
 }
 
@@ -355,10 +360,12 @@
     #researchWrap .researchLinkBox .researchTitleBox p{padding: 12px 10px; font-size: 16px;}
     #researchWrap .researchLinkBox .researchTitleBox h4{margin-bottom: 17px;}
 
+    #researchWrap .researchLinkBox .researchLinkList{border-bottom: 1px solid #ccc;}
     #researchWrap .researchLinkBox .researchLinkList li a{padding: 14px;}
     #researchWrap .researchLinkBox .researchLinkList li a span::after{display: none;}
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(2n) a{border-right: 0;}
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(3n) a{border-right: 1px solid #ccc;}
+    #researchWrap .researchLinkWrap .researchImgBox{display: none;}
 
 }
 
@@ -375,7 +382,7 @@
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(2n) a{border-right: 0;}
     #researchWrap .researchLinkBox .researchLinkList li:last-child a{border-right: 0;}
 
-    #researchWrap .researchSlideBox{display: none;}
+    #researchWrap .researchLinkWrap .researchImgBox{display: none;}
 
 }
 
@@ -480,6 +487,12 @@
 
 }
 
+@media (max-width: 1024px){
+
+    #noticeWrap{padding: 40px 0 70px; border: 0;}
+
+}
+
 @media (max-width: 768px){
 
     #noticeWrap{flex-direction: column;}
@@ -491,7 +504,7 @@
 
 @media (max-width: 480px){
 
-    #noticeWrap{border: 1px solid #ccc; border-width: 1px 0 0 0;}
+
     #noticeWrap .noticeLinkList li a .noticeDate{display: none;}
     #noticeWrap .noticeLinkList li a{padding: 30px 20px 30px 10px;}
     #noticeWrap .noticeLinkList li a .noticeCategory{display: none;}
