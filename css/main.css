@@ -151,7 +151,7 @@
 
 @media (max-width: 768px){
 
-    #visualWrap .visualTitleBox{transform: translate(-50%, -55%);}
+    #visualWrap .visualTitleBox{transform: translate(-50%, -50%);}
     #visualWrap .visualTextBox .visualTitle{font-size: 30px;}
     #visualWrap .visualImgBox img{display: none;}
     #visualWrap .visualImgBox::before{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: 
@@ -163,7 +163,7 @@
 @media (max-width: 480px){
 
     #visualWrap{height: 900px;}
-    #visualWrap .visualTitleBox{transform: translate(-50%, -50%);}
+    #visualWrap .visualTitleBox{transform: none; left: auto; top: 64px}
     #visualWrap .visualTextBox .visualTitle{ font-size: 30px;}
     #visualWrap .visualLinkBox .visualTabBtnBox .visualTabBtn{max-width: 220px; width: 100%; margin: 0 auto;}
     #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{margin: 0 auto 6px;}
