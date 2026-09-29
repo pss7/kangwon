@@ -37,7 +37,7 @@ $(function () {
 
   //연구소개
   $('#researchWrap .slick').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: true,
     dots: false,
     accessibility: false,

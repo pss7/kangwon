@@ -78,20 +78,20 @@ $(function () {
   });
 
   /* 서브메뉴 */
-  // $('#headerWrap .headerMenu > li').mouseenter(function () {
-  //   $('#headerWrap .headerMenu > li').removeClass('active');
-  //   $(this).addClass('active');
-  //   $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
-  //   $(this).find('.subMenuWrap').stop().slideDown(300);
+  $('#headerWrap .headerMenu > li').mouseenter(function () {
+    $('#headerWrap .headerMenu > li').removeClass('active');
+    $(this).addClass('active');
+    $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
+    $(this).find('.subMenuWrap').stop().slideDown(300);
 
-  //   $('body').addClass('subMenuOpen');
-  // });
+    $('body').addClass('subMenuOpen');
+  });
 
-  // $('#headerWrap').mouseleave(function () {
-  //    $('#headerWrap .headerMenu > li').removeClass('active');
-  //   $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
-  //   $('body').removeClass('subMenuOpen');
-  // });
+  $('#headerWrap').mouseleave(function () {
+     $('#headerWrap .headerMenu > li').removeClass('active');
+    $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
+    $('body').removeClass('subMenuOpen');
+  });
 
   /* 서브메뉴 키보드 포커스 */
   $('#headerWrap .headerMenu > li').focusin(function () {
