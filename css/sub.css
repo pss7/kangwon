@@ -8,6 +8,14 @@
 .infoText h4::before{content: ''; flex-shrink: 0; width: 14px; height: 14px; background: url(../images/sub/info_icon.svg)no-repeat center;}
 .infoText h4{display: flex; align-items: center; gap: 0 4px; margin-bottom: 7px; font-weight: 500; font-size: 16px; color: #1D439C;}
 .infoText .dotList li{font-size: 14px; font-weight: 500; color: #333;}
+.zoomImgBox{position: relative;}
+.zoomImgBox .zoomView{display: none; position: absolute; bottom: 0px; right: 0px; width: 42px; height: 42px; background: url(../images/common/zoom-view.png) no-repeat; background-size: 42px 42px;}
+
+@media (max-width: 768px){
+
+  .zoomImgBox .zoomView{display: block;}
+
+}
 
 /* 공통 - 여백 */
 .mb10{margin-bottom:10px!important;}
@@ -21,7 +29,6 @@
   .mb20{margin-bottom: 10px!important;}
 
 }
-
 
 /* 공통 - 정렬 */
 .textCenter{text-align: center!important;}
@@ -1986,7 +1993,7 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
 .researchInfraWrap .researchKarcIntroBox .researchKarcIntroTextBox{flex-shrink: 0;}
 .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText01{margin-bottom: 20px; font-size: 24px; color: #333;}
 .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText01 strong{color: #1D439C;}
-.researchInfraWrap .researchKarcIntroBox .researchKarcIntroText02{margin-bottom: 70px; color: #444; font-size: 16px;}
+.researchInfraWrap .researchKarcIntroBox .researchKarcIntroText02{margin-bottom: 70px; color: #444; font-size: 16px; line-height: 1.7;}
 .researchInfraWrap .researchKarcIntroBox .researchKarcIntroText03{font-size: 20px; color: #333; font-family: 'HD', sans-serif;}
 .researchInfraWrap .researchKarcIntroBox .researchInfraTopBox{display: flex; align-items: center; justify-content: space-between; gap: 60px;}
 .researchInfraWrap .researchKarcIntroBox .researchKarcIntroImgBox img{display: block; max-width: 100%;}
@@ -2121,6 +2128,8 @@ input[type="checkbox"]:checked + label::before{background: url(../images/sub/che
     .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li {min-height: auto; padding: 20px;}
     .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li:nth-child(2)::after {display: block;}
     .researchInfraWrap .researchKarcIntroBox .researchKarcProcessList > li:not(:last-child)::after {top: auto; right: 50%; bottom: -33px; transform: translateX(50%) rotate(90deg);}
+
+    .researchInfraWrap .researchKarcIntroBox .researchInfraTopBox{gap: 20px;}
 
 }
 
