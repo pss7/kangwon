@@ -153,6 +153,10 @@
 
     #visualWrap .visualTitleBox{transform: translate(-50%, -55%);}
     #visualWrap .visualTextBox .visualTitle{font-size: 30px;}
+    #visualWrap .visualImgBox img{display: none;}
+    #visualWrap .visualImgBox::before{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: 
+        url(../images/main/main_img.jpg)no-repeat center / cover;         background-position-x: 0;}
+    
 
 }
 
@@ -165,6 +169,7 @@
     #visualWrap .visualLinkBox .visualLinkList li a .visualLinkIconBox{margin: 0 auto 6px;}
     #visualWrap .visualLinkBox .visualTabBtnBox{flex-direction: column; margin-bottom: 28px;}
     #visualWrap .visualLinkBox .visualLinkList{grid-template-columns: repeat(2, 1fr);}
+    #visualWrap .visualImgBox::before{left: 0;}
 
 }
 
