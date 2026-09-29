@@ -112,13 +112,9 @@
 #visualWrap.active .visualTextBox .visualText{opacity: 1; filter: blur(0); letter-spacing: 0;}
 #visualWrap .visualLinkBox .visualLinkList li a:hover .visualLinkIconBox{transform: translateY(-7px); background-color: #fff;}
 
-
-
-
-
 @media (max-width: 1480px) {
     
-    #visualWrap{height: 1249px; margin-bottom: -640px;}
+    #visualWrap{height: 1249px; margin-bottom: -610px;}
     #visualWrap .container,
     #visualWrap .visualBox,
     #visualWrap .visualLayoutBox{height: 100%;}
@@ -134,7 +130,7 @@
 
 @media (max-width: 1199px){
 
-    #visualWrap{height: 1212px; margin-bottom: -613px;}
+    #visualWrap{height: 1212px;}
 
 }
 
@@ -333,31 +329,30 @@
 
 @media (max-width: 1199px){
 
-    #researchWrap .researchLinkBox .researchTitleBox{padding: 40px 20px;}
+    #researchWrap .researchLinkWrap{max-width: none;}
+    #researchWrap .researchLayoutBox{flex-direction: column; margin: 0; width: 100%; border-top: 0;}
+    #researchWrap .researchLinkBox .researchTitleBox{padding: 0 20px 30px;}
     #researchWrap .researchLinkBox .researchTitleBox span,
     #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 36px;}
     #researchWrap .researchLinkBox .researchTitleBox p{font-size: 18px;}
     #researchWrap .researchLinkBox .researchLinkList li a{padding: 20px;}
     #researchWrap .researchLinkBox .researchLinkList li a span::after{width: 16px; height: 16px;}
     #researchWrap .researchSlideBox .controlBox{display: none;}
+    #researchWrap .researchSlideBox{width: 100%;  height: 500px; border-width: 1px 0 0 0;}
     
 }
 
 @media (max-width: 1024px){
 
-    #researchWrap .researchSlideBox{width: 100%;  height: 500px; border-width: 1px 0 0 0;}
     #researchWrap{border-top: 0;}
-    #researchWrap .researchLinkWrap{max-width: none;}
     #researchWrap .researchLinkBox .researchLinkList{grid-template-columns: repeat(2, 1fr);}
-    #researchWrap .researchLinkBox .researchTitleBox{padding: 0 20px 30px;}
     #researchWrap .researchLinkBox .researchTitleBox span,
     #researchWrap .researchLinkBox .researchTitleBox h4{font-size: 30px;}
     #researchWrap .researchLinkBox .researchTitleBox p{padding: 12px 10px; font-size: 16px;}
     #researchWrap .researchLinkBox .researchTitleBox h4{margin-bottom: 17px;}
-    #researchWrap .researchLayoutBox{flex-direction: column; margin: 0; width: 100%; border-top: 0;}
+
     #researchWrap .researchLinkBox .researchLinkList li a{padding: 14px;}
     #researchWrap .researchLinkBox .researchLinkList li a span::after{display: none;}
-    
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(2n) a{border-right: 0;}
     #researchWrap .researchLinkBox .researchLinkList li:nth-child(3n) a{border-right: 1px solid #ccc;}
 
@@ -469,15 +464,9 @@
 
 @media (max-width: 1199px){
 
-    #noticeWrap .noticeLayoutBox{padding: 58px 20px; flex-direction: column; gap: 58px 0;} 
-
-}
-
-@media (max-width: 1024px){
-
     #noticeWrap{padding: 0 0 70px;}
-    #noticeWrap .noticeLayoutBox{padding: 0 20px;}
     #noticeWrap .noticeTabContentBox .noticeContentLayoutBox{flex-direction: column; gap: 36px 0;}
+    #noticeWrap .noticeLayoutBox{padding: 0 20px; flex-direction: column; gap: 58px 0;} 
     #noticeWrap .noticeListBox,
     #noticeWrap .noticeLinkList{width: 100%;}
     #noticeWrap .noticeLinkList li a{padding: 32px 110px 32px 0;}
@@ -524,6 +513,8 @@ box-sizing: border-box;}
 
 @media (max-width: 1199px){
 
+    #contentWrap{padding: 0 0 70px;}
+    #contentWrap .contentLayoutBox{padding: 0 20px;}
     #contentWrap .contentList li a::before,
     #contentWrap .contentList li a::after{display: none;}
 
@@ -531,9 +522,7 @@ box-sizing: border-box;}
 
 @media (max-width: 1024px){
 
-    #contentWrap{padding: 0 0 70px;}
     #contentWrap .contentList li a{width: 211px; height: 280px;}
-    #contentWrap .contentLayoutBox{padding: 0 20px;}
 
 }
 
