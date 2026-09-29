@@ -495,7 +495,7 @@
     #noticeWrap .noticeLinkList li a .noticeDate{display: none;}
     #noticeWrap .noticeLinkList li a{padding: 30px 20px 30px 10px;}
     #noticeWrap .noticeLinkList li a .noticeCategory{display: none;}
-    #noticeWrap .noticeTabContentBox .noticeContent .noticeViewLink::before{display: none;}
+    #noticeWrap .noticeViewBox .noticeViewLink::before{display: none!important;}
 
 }
 
