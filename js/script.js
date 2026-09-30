@@ -79,43 +79,85 @@ $(function () {
 
   /* 서브메뉴 */
   $('#headerWrap .headerMenu > li').mouseenter(function () {
+
+    if ($(this).hasClass('active')) {
+      return;
+    }
+
     $('#headerWrap .headerMenu > li').removeClass('active');
     $(this).addClass('active');
-    $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
-    $(this).find('.subMenuWrap').stop().slideDown(300);
+
+    if ($('body').hasClass('subMenuOpen')) {
+      $('#headerWrap .headerMenu > li')
+        .find('.subMenuWrap').hide();
+      $(this).find('.subMenuWrap').show();
+    } else {
+      $(this)
+        .find('.subMenuWrap').slideDown(300);
+    }
 
     $('body').addClass('subMenuOpen');
+
   });
 
   $('#headerWrap').mouseleave(function () {
-     $('#headerWrap .headerMenu > li').removeClass('active');
-    $('#headerWrap .headerMenu > li').find('.subMenuWrap').stop().slideUp(300);
+
+    $('#headerWrap .headerMenu > li').removeClass('active');
+
+    $('#headerWrap .headerMenu > li')
+      .find('.subMenuWrap:visible')
+      .stop(true, true)
+      .slideUp(300);
+
     $('body').removeClass('subMenuOpen');
+
   });
 
   /* 서브메뉴 키보드 포커스 */
   $('#headerWrap .headerMenu > li').focusin(function () {
-    $('#headerWrap').addClass('shadow');
+
+    if ($(this).hasClass('active')) {
+      return;
+    }
+
     $('#headerWrap .headerMenu > li').removeClass('active');
     $(this).addClass('active');
-    $('.subMenuWrap')
-      .stop(true, true)
-      .hide();
-    $(this)
-      .find('.subMenuWrap')
-      .stop(true, true)
-      .slideDown(300);
+
+    if ($('body').hasClass('subMenuOpen')) {
+
+      $('#headerWrap .subMenuWrap')
+        .stop(true, true)
+        .hide();
+
+      $(this).find('.subMenuWrap').show();
+
+    } else {
+
+      $(this)
+        .find('.subMenuWrap')
+        .stop(true, true)
+        .slideDown(300);
+
+    }
+
+    $('body').addClass('subMenuOpen');
+
   });
 
   /* 헤더 영역에서 포커스가 벗어났을 때 */
-  $('#headerWrap').focusout(function () {
-    if (!$(this).find(':focus').length) {
-      $('#headerWrap').removeClass('shadow');
-      $('.subMenuWrap')
+  $('#headerWrap').focusout(function (event) {
+
+    if (!event.relatedTarget || !this.contains(event.relatedTarget)) {
+
+      $('#headerWrap .subMenuWrap:visible')
         .stop(true, true)
         .slideUp(300);
+
       $('#headerWrap .headerMenu > li').removeClass('active');
+      $('body').removeClass('subMenuOpen');
+
     }
+
   });
 
   //헤더 스크롤

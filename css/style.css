@@ -3,7 +3,7 @@
 #wrap{display: flex; flex-direction: column; min-height: 100vh;}
 main{flex: 1;}
 #footer{margin-top: auto;}
-.overlay{opacity: 0; visibility: hidden; position: fixed; inset: 0; background-color: rgba(0, 0, 0, .6); backdrop-filter: blur(3px); z-index: 99999; transition: all .3s;}
+.overlay{opacity: 0; visibility: hidden; position: fixed; inset: 0; background-color: rgba(0, 0, 0, .6); z-index: 99999; transition: all .3s;}
 
 @media (max-width:1199px){
 
@@ -123,8 +123,6 @@ main{flex: 1;}
 #headerWrap .headerMenuBox .headerUtilBox a{display: flex; align-items: center; justify-content: center; width: 110px; height: 38px; font-weight: 500; color: #fff; border-radius: 8px;}
 #mobileMenuWrap{display: none;}
 
-#headerWrap .headerMenuBox .headerMenu > li:hover .subMenuWrap{}
-
 /* 서브메뉴 */
 #headerWrap .subMenuWrap{display: none; position: absolute; top:100px; left:0; right:0; background-color: #F4F4F4; overflow: hidden;}
 #headerWrap .subMenuWrap .subMenuBox{min-height: 280px; display: flex; }
@@ -148,6 +146,20 @@ main{flex: 1;}
   #headerWrap .headerMenuBox .headerMenu li h2 a{padding: 35px 20px; font-size: 18px;}
   #headerWrap .headerMenuBox .headerNav{margin-right: 20px;}
   #headerWrap .subMenuWrap{top: 97px;}
+#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 > li{
+    flex:1 1 0;
+    width:auto;
+    min-width:0;
+}
+
+#headerWrap .subMenuWrap .subMenuListBox .subMenuDepth01 > li:only-child{
+    flex:0 1 150px;
+}
+}
+
+@media (max-width: 1280px){
+
+
 
 }
 
